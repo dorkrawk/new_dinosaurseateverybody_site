@@ -10,4 +10,4 @@ require './app'
 # use coffeescript for javascript
 #use Rack::Coffee, root: 'public', urls: '/javascripts'
 
-run Sinatra::Application
+run DinosaursEatEverybody

@@ -20,7 +20,10 @@ GEM
       rack
     rack-protection (1.5.0)
       rack
+    redcarpet (3.0.0)
     sass (3.2.9)
+    shotgun (0.9)
+      rack (>= 1.0)
     sinatra (1.4.3)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -33,5 +36,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   rack-coffee
+  redcarpet
   sass
+  shotgun
   sinatra
