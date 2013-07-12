@@ -7,20 +7,25 @@ class SassHandler < Sinatra::Base
   
   get '/stylesheets/*.css' do
       filename = params[:splat].first
-      sass filename.to_sym
+      scss filename.to_sym
   end  
 end
 
 class DinosaursEatEverybody < Sinatra::Base
   use SassHandler
 
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
+
   # routes
   get '/' do
+    @page_title = "index"
     erb :index
   end
 
   get '/post/:id' do
-    @body = "hi everybody!"
+    @title = "This is post #{params[:id]}"
+    @page_title = @title
+    @body = markdown.render("How does *this* look? will this turn into a link? www.dinosaurseateverybody.com")
     erb :post
   end
 
