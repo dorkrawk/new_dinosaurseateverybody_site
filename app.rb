@@ -11,23 +11,41 @@ class SassHandler < Sinatra::Base
   end  
 end
 
-class DinosaursEatEverybody < Sinatra::Base
-  use SassHandler
+module DinosaursEatEverybody
+  class App < Sinatra::Base
+    use SassHandler
 
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
 
-  # routes
-  get '/' do
-    @page_title = "index"
-    erb :index
+    # routes
+    get '/' do
+      @page_title = "index"
+      erb :index
+    end
+
+    get '/post/:id' do
+      @title = "This is post #{params[:id]}"
+      @page_title = @title
+      @body = markdown.render("How does *this* look? will this turn into a link? www.dinosaurseateverybody.com")
+      erb :post
+    end
+
+    get '/about' do
+      erb :about
+    end
+
+    get '/music' do
+      erb :music
+    end
+
+    get '/links' do
+      erb :links
+    end
+
+    get '/projects' do
+      erb :projects
+    end
+
+    run! if app_file == $0
   end
-
-  get '/post/:id' do
-    @title = "This is post #{params[:id]}"
-    @page_title = @title
-    @body = markdown.render("How does *this* look? will this turn into a link? www.dinosaurseateverybody.com")
-    erb :post
-  end
-
-  run! if app_file == $0
 end
