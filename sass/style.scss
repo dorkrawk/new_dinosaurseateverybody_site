@@ -1,0 +1,24 @@
+$bg_color: white;
+$text_color: #292724; /* fake black */
+$alt_color1: #8fae46; /* pukey greenish */ 
+
+$title_size: 24px;
+$color: blue;
+
+body {
+  background-color: $bg_color;
+  color: $text_color;
+  font-family: 'Ariel', sans-serif; 
+}
+
+#shell {
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  min-width: 900px;
+}
+
+#post_title {
+	font-size: $title_size;
+	color: $color;
+}

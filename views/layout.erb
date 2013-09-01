@@ -2,15 +2,22 @@
 <html>
 <head>
   <title>Dinosaurs Eat Everybody :: <%= @page_title %></title>
-  <link href="/stylesheets/style.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="../stylesheets/style.css" media="all" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<header>
-		Dinosaurs Eat Everybody
-	</header>
-	<%= yield %>
-	<footer>
-		all content unless obvious or otherwise noted belongs to Dave Schwantes ©2013
-	</footer>
+  <div id="shell">
+  	<header>
+  		<h1>Dinosaurs Eat Everybody</h1>
+  	</header>
+    <nav>
+      <%= erb :_nav %>
+    </nav>
+    <div id="content">
+  	 <%= yield %>
+    </div>
+  	<footer>
+  		all content unless obvious or otherwise noted belongs to Dave Schwantes ©<%= Time.now.year %>
+  	</footer>
+  </div>
 </body>
 </html>

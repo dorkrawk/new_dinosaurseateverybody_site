@@ -1,0 +1,16 @@
+/* fake black */
+/* pukey greenish */
+body {
+  background-color: white;
+  color: #292724;
+  font-family: 'Ariel', sans-serif; }
+
+#shell {
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  min-width: 900px; }
+
+#post_title {
+  font-size: 24px;
+  color: blue; }
