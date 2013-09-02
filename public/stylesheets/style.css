@@ -16,6 +16,9 @@ a {
 a:hover {
   color: #bad776; }
 
+li {
+  list-style: none; }
+
 #shell {
   margin-right: auto;
   margin-left: auto;
@@ -42,7 +45,6 @@ nav {
 ul#nav {
   margin-top: -8px; }
   ul#nav li {
-    list-style: none;
     margin-left: -40px;
     font-weight: bold;
     font-size: 40px; }
@@ -58,6 +60,13 @@ footer {
   width: 100%;
   text-align: center;
   color: #94908a; }
+
+/* Page specific stuff */
+.project_box {
+  margin-bottom: 20px; }
+  .project_box .project_title {
+    font-weight: bold;
+    font-size: 20px; }
 
 #post_title {
   font-size: 24px;
