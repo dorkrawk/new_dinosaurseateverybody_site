@@ -8,7 +8,12 @@ $color: blue;
 body {
   background-color: $bg_color;
   color: $text_color;
-  font-family: 'Ariel', sans-serif; 
+  font-family: 'Ariel', sans-serif;
+  font-size: 14px; 
+}
+
+a {
+  text-decoration: none;
 }
 
 #shell {
@@ -16,6 +21,51 @@ body {
   margin-left: auto;
   width: 900px;
   min-width: 900px;
+}
+
+header {
+  width: 100%;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.page_title {
+  font-size: 40px;
+  color: $alt_color1;
+}
+
+.page_subtitle {
+  margin-top: -30px;
+}
+
+nav {
+  float: left;
+  width: 33%;
+}
+
+ul#nav {
+  li {
+    list-style: none;
+    margin-left: -20px;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  a {
+    color: $alt_color1;
+  }
+}
+
+#content {
+  float: right;
+  width: 66%;
+}
+
+footer {
+  clear: both;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 #post_title {
