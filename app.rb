@@ -19,7 +19,7 @@ module DinosaursEatEverybody
 
     # routes
     get '/' do
-      @page_title = "index"
+      @page_title = "home"
       erb :index
     end
 
@@ -31,18 +31,22 @@ module DinosaursEatEverybody
     end
 
     get '/about' do
+      @page_title = "about"
       erb :about
     end
 
     get '/music' do
+      @page_title = "music"
       erb :music
     end
 
     get '/links' do
+      @page_title = "links"
       erb :links
     end
 
     get '/projects' do
+      @page_title = "projects"
       erb :projects
     end
 

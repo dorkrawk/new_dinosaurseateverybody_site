@@ -1,5 +1,8 @@
 /* fake black */
+/* light gray */
 /* pukey greenish */
+/* light pukey greenish */
+/* dark pukey greenish */
 body {
   background-color: white;
   color: #292724;
@@ -7,7 +10,11 @@ body {
   font-size: 14px; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #8fae46; }
+
+a:hover {
+  color: #bad776; }
 
 #shell {
   margin-right: auto;
@@ -21,33 +28,36 @@ header {
   margin-bottom: 20px; }
 
 .page_title {
-  font-size: 40px;
-  color: #8fae46; }
+  font-size: 50px;
+  color: #567117; }
 
 .page_subtitle {
-  margin-top: -30px; }
+  margin-top: -40px;
+  color: #94908a; }
 
 nav {
   float: left;
-  width: 33%; }
+  width: 25%; }
 
-ul#nav li {
-  list-style: none;
-  margin-left: -20px;
-  font-weight: bold;
-  font-size: 40px; }
-ul#nav a {
-  color: #8fae46; }
+ul#nav {
+  margin-top: -8px; }
+  ul#nav li {
+    list-style: none;
+    margin-left: -40px;
+    font-weight: bold;
+    font-size: 40px; }
 
 #content {
   float: right;
-  width: 66%; }
+  width: 75%;
+  font-size: 16px; }
 
 footer {
   clear: both;
   display: block;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  color: #94908a; }
 
 #post_title {
   font-size: 24px;

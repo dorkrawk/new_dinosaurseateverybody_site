@@ -1,7 +1,9 @@
 $bg_color: white;
 $text_color: #292724; /* fake black */
+$light_text_color: #94908a; /* light gray */ 
 $alt_color1: #8fae46; /* pukey greenish */ 
-
+$alt_color2: #bad776; /* light pukey greenish */
+$alt_color3: #567117; /* dark pukey greenish */
 $title_size: 24px;
 $color: blue;
 
@@ -13,7 +15,12 @@ body {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color: $alt_color1;
+  }
+
+a:hover {
+  color: $alt_color2;
 }
 
 #shell {
@@ -30,35 +37,35 @@ header {
 }
 
 .page_title {
-  font-size: 40px;
-  color: $alt_color1;
+  font-size: 50px;
+  color: $alt_color3;
 }
 
 .page_subtitle {
-  margin-top: -30px;
+  margin-top: -40px;
+  color: $light_text_color;
 }
 
 nav {
   float: left;
-  width: 33%;
+  width: 25%;
 }
 
 ul#nav {
+  margin-top: -8px;
+  
   li {
     list-style: none;
-    margin-left: -20px;
+    margin-left: -40px;
     font-weight: bold;
     font-size: 40px;
-  }
-
-  a {
-    color: $alt_color1;
   }
 }
 
 #content {
   float: right;
-  width: 66%;
+  width: 75%;
+  font-size: 16px;
 }
 
 footer {
@@ -66,6 +73,7 @@ footer {
   display: block;
   width: 100%;
   text-align: center;
+  color: $light_text_color;
 }
 
 #post_title {
