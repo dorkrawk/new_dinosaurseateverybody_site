@@ -1,0 +1,52 @@
+{
+  "facts" : [
+    {
+      "id" : 0,
+      "fact" : "Dave Schwantes can't be killed by conventional means."
+    },
+    {
+      "id" : 1,
+      "fact" : "Dave Schwantes is a superposition."
+    },
+    {
+      "id" : 2,
+      "fact" : "Dave Schwantes is the wave of the future."
+    },
+    {
+      "id" : 3,
+      "fact" : "Dave Schwantes will probably outlive you."
+    },
+    {
+      "id" : 4,
+      "fact" : "Pound for pound, Dave Schwantes is the world's most awesome mammal."
+    },
+    {
+      "id" : 5,
+      "fact" : "Dave Schwantes is staunchly pro-corndog."
+    },
+    {
+      "id" : 6,
+      "fact" : "Dave Schwantes would like to eat a cloud, just once."
+    },
+    {
+      "id" : 7,
+      "fact" : "Dave Schwantes won't eat reptiles out of principle."
+    },
+    {
+      "id" : 8,
+      "fact" : "Millions of years ago, Dave Schwantes was the most feared marine hunter in the Pacific Ocean."
+    },
+    {
+      "id" : 9,
+      "fact" : "Dave Schwantes puts way too much cheese on things."
+    },
+    {
+      "id" : 10,
+      "fact" : "Dave Schwantes can taste shapes."
+    },
+    {
+      "id" : 11,
+      "fact" : "Dave Schwantes could eat a whole sandwich in one bite if he really tried."
+    }
+  ]
+}
