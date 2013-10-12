@@ -18,13 +18,9 @@ module DinosaursEatEverybody
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
 
-    the_facts = Facts.new
-
     # routes
     get '/' do
       @page_title = "home"
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :index
     end
 
@@ -32,37 +28,35 @@ module DinosaursEatEverybody
       @title = "This is post #{params[:id]}"
       @page_title = @title
       @body = markdown.render("How does *this* look? will this turn into a link? www.dinosaurseateverybody.com")
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :post
     end
 
     get '/about' do
       @page_title = "about"
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :about
     end
 
     get '/music' do
       @page_title = "music"
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :music
     end
 
     get '/links' do
       @page_title = "links"
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :links
     end
 
     get '/projects' do
       @page_title = "projects"
-      fact_id = (0..the_facts.count-1).to_a.sample
-      @fact = the_facts.get_fact(fact_id)
       erb :projects
+    end
+
+    helpers do
+      def dave_fact 
+        the_facts = Facts.new
+        fact_id = (0..the_facts.count-1).to_a.sample
+        the_facts.get_fact(fact_id)
+      end
     end
 
     run! if app_file == $0
