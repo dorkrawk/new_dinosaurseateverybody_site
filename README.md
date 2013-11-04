@@ -4,4 +4,4 @@ New Dinosaurs Eat Everybody Site
 
 # THIS IS A TOTALLY "IN PROGRESS" PERSONAL PROJECT
 
-In prep for moving my personal website/blog off of the PHP/Wordpress Frankenstein I currently have, I'm building a new site that might involve a home rolled blogging system because for some reason I don't think the wheel has been reinvented enough times.
+So I have now gotten rid of my old PHP based site and this is the new Dinosaurs Eat Everybody.  It still need some work but it's coming along.
