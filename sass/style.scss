@@ -5,7 +5,6 @@ $alt_color1: #8fae46; /* pukey greenish */
 $alt_color2: #bad776; /* light pukey greenish */
 $alt_color3: #567117; /* dark pukey greenish */
 $title_size: 24px;
-$color: blue;
 
 body {
   background-color: $bg_color;
@@ -90,7 +89,11 @@ footer {
   }
 }
 
-#post_title {
+h2.post_title {
 	font-size: $title_size;
-	color: $color;
+  margin-bottom: 2px;
+}
+
+.post_date {
+  color: $light_text_color;
 }

@@ -5,7 +5,7 @@ gem 'sinatra'
 gem 'compass'
 gem 'sass'
 gem 'rack-coffee'
-gem 'redcarpet'
+gem 'jekyll'
 
 gem 'twitter'
 

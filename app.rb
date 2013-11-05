@@ -24,6 +24,10 @@ module DinosaursEatEverybody
       erb :index
     end
 
+    get '/blog/?*' do
+      jekyll_blog(request.path)
+    end
+
     get '/post/:id' do
       @title = "This is post #{params[:id]}"
       @page_title = @title
@@ -56,6 +60,31 @@ module DinosaursEatEverybody
         the_facts = Facts.new
         fact_id = (0..the_facts.count-1).to_a.sample
         the_facts.get_fact(fact_id)
+      end
+    end
+
+    def jekyll_blog(path)
+      @page_title = "blog"
+
+      puts "path>............."
+      puts path
+
+      file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
+      file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i 
+
+      puts "file_path is.........................."
+      puts file_path
+
+      if File.exist?(file_path)
+        file = File.open(file_path, "rb")
+        contents = file.read
+        file.close
+    
+        if (file_path.include?('.xml') || file_path.include?('.css'))
+          erb contents, :content_type => 'text/xml'
+        else
+          erb contents
+        end
       end
     end
 
