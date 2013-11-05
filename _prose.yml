@@ -1,4 +1,3 @@
 prose:
   rooturl: 'jekyll_blog/_posts'
-  siteurl: 'http://dinosaurseateverybody.com/blog/'
   media: 'public/images/blog_media'
