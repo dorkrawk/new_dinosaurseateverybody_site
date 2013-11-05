@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sinatra + Jekyll + Prose
-date: {}
+date: 2013-11-05
 categories: ruby tech
 published: true
 ---
@@ -17,25 +17,24 @@ To add Jekyll to Sinatra I first just created a new Jekyll site in a seperate di
 The real meat of this is a custom function in the /blog route:
 
 {% highlight ruby %}
-	get '/blog/?*' do
-		jekyll_blog(request.path)
-	end
-	
-	def jekyll_blog(path)
-      @page_title = "blog"
+get '/blog/?*' do
+	jekyll_blog(request.path)
+end
 
-      file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
-      file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i 
+def jekyll_blog(path)
+  @page_title = "blog"
 
-      if File.exist?(file_path)
-        file = File.open(file_path, "rb")
-        contents = file.read
-        file.close
-    
-        erb contents
-      end
-    end
+  file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
+  file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i 
 
+  if File.exist?(file_path)
+    file = File.open(file_path, "rb")
+    contents = file.read
+    file.close
+
+    erb contents
+  end
+end
 {% endhighlight %}
 
 This just calls the `jekyll_blog(path)` function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the `<%= yield %>` in my Sinatra erb layout.
@@ -50,5 +49,5 @@ prose:
   media: 'public/images/blog_media'
 {% endhighlight %}
 
-I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I'm still not totally won over by Prose but it has been really fun to set this up. Hopefully now I'll make this work worthwhile and actually write a few blog posts every now and then.
+I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I'm still not totally won over by Prose but it has been really fun to set this up. I'd also like to add comments through [Disqus](http://disqus.com/) soon. Hopefully now I'll make this work worthwhile and actually write a few blog posts every now and then.
 
