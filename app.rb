@@ -20,8 +20,9 @@ module DinosaursEatEverybody
 
     # routes
     get '/' do
-      @page_title = "home"
-      erb :index
+      #@page_title = "home"
+      #erb :index
+      redirect '/blog'
     end
 
     get '/blog/?*' do
@@ -79,6 +80,8 @@ module DinosaursEatEverybody
         file = File.open(file_path, "rb")
         contents = file.read
         file.close
+
+        puts contents
     
         if (file_path.include?('.xml') || file_path.include?('.css'))
           erb contents, :content_type => 'text/xml'

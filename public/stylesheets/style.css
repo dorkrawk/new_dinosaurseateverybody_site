@@ -99,12 +99,33 @@ footer {
 }
 
 /* line 92, ../../sass/style.scss */
+.back_to_blog {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 98, ../../sass/style.scss */
+.pagination {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 105, ../../sass/style.scss */
 h2.post_title {
   font-size: 24px;
   margin-bottom: 2px;
+  margin-top: 0px;
 }
 
-/* line 97, ../../sass/style.scss */
+/* line 111, ../../sass/style.scss */
 .post_date {
   color: #94908a;
+}
+
+/* line 115, ../../sass/style.scss */
+.post {
+  margin-bottom: 30px;
 }

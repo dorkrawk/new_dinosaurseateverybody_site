@@ -1,6 +1,8 @@
 <h2 class="post_title">{{ page.title }}</h2>
-<div class="post_date">{{ page.date | date_to_string }}</div>
+<div class="post_date">{{ page.date | date: "%B %-d, %Y" }}</div>
 
 <div class="post">
 {{ content }}
 </div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>

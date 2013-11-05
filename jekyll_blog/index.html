@@ -1,11 +1,24 @@
 ---
 title: Your New Jekyll Site
 ---
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="./blog{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+{% for post in paginator.posts %}
+  <h2 class="post_title"><a href="../blog{{ post.url }}">{{ post.title }}</a></h2>
+  <div class="post_date">{{ post.date | date: "%B %-d, %Y" }}</div>
+  <div class="post">
+    {{ post.content }}
+  </div>
+{% endfor %}
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="../blog{{ paginator.previous_page_path }}" class="previous"><i class="icon-arrow-left"></i></a>
+  {% else %}
+    <span class="previous"><i class="icon-arrow-left"></i></span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="../blog{{ paginator.next_page_path }}" class="next"><i class="icon-arrow-right"></i></a>
+  {% else %}
+    <span class="next "><i class="icon-arrow-right"></i></span>
+  {% endif %}
 </div>
