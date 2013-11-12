@@ -123,3 +123,10 @@ h2.post_title {
   white-space: -o-pre-wrap;   /* Opera 7 */    
   word-wrap: break-word;      /* IE */
 }
+
+.inline_right {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

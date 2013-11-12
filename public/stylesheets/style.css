@@ -143,3 +143,11 @@ h2.post_title {
   word-wrap: break-word;
   /* IE */
 }
+
+/* line 127, ../../sass/style.scss */
+.inline_right {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
