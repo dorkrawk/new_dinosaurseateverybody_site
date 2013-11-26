@@ -5,3 +5,4 @@ permalink: /:title
 baseurl: /blog/
 paginate: 10
 paginate_path: /page:num
+comments: true
