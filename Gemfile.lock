@@ -40,6 +40,7 @@ GEM
       safe_yaml (~> 0.7.0)
     liquid (2.5.3)
     maruku (0.7.0)
+    mini_portile (0.5.1)
     multi_json (1.7.9)
     multipart-post (1.2.0)
     net-scp (1.1.2)
@@ -49,6 +50,8 @@ GEM
     net-ssh (2.6.8)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     posix-spawn (0.3.6)
     pygments.rb (0.5.4)
       posix-spawn (~> 0.3.6)
@@ -84,6 +87,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   jekyll
+  nokogiri
   rack-coffee
   rvm-capistrano
   sass

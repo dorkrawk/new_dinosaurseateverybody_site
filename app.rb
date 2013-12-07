@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sass'
 require 'redcarpet'
+require 'nokogiri'
 require './models/facts'
 
 class SassHandler < Sinatra::Base   
@@ -74,6 +75,11 @@ module DinosaursEatEverybody
         file = File.open(file_path, "rb")
         contents = file.read
         file.close
+
+        blog_parse = Nokogiri::XML.parse( open( file_path ))
+        blog_title = blog_parse.xpath("//h2[@class='post_title']/text()")[0]
+        
+        @page_title = blog_title.nil? ? "blog" : blog_title
     
         erb contents
       end

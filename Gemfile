@@ -6,6 +6,7 @@ gem 'compass'
 gem 'sass'
 gem 'rack-coffee'
 gem 'jekyll'
+gem 'nokogiri'
 
 gem 'twitter'
 
