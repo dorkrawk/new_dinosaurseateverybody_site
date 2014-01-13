@@ -76,9 +76,10 @@ ul#nav li {
   float: right;
   width: 75%;
   font-size: 16px;
+  line-height: 1.4em;
 }
 
-/* line 73, ../../sass/style.scss */
+/* line 74, ../../sass/style.scss */
 footer {
   clear: both;
   display: block;
@@ -88,24 +89,24 @@ footer {
 }
 
 /* Page specific stuff */
-/* line 83, ../../sass/style.scss */
+/* line 84, ../../sass/style.scss */
 .project_box {
   margin-bottom: 20px;
 }
-/* line 86, ../../sass/style.scss */
+/* line 87, ../../sass/style.scss */
 .project_box .project_title {
   font-weight: bold;
   font-size: 20px;
 }
 
-/* line 92, ../../sass/style.scss */
+/* line 93, ../../sass/style.scss */
 .back_to_blog {
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 98, ../../sass/style.scss */
+/* line 99, ../../sass/style.scss */
 .pagination {
   width: 100%;
   text-align: center;
@@ -113,24 +114,24 @@ footer {
   margin-bottom: 10px;
 }
 
-/* line 105, ../../sass/style.scss */
+/* line 106, ../../sass/style.scss */
 h2.post_title {
   font-size: 24px;
   margin-bottom: 2px;
   margin-top: 0px;
 }
 
-/* line 111, ../../sass/style.scss */
+/* line 112, ../../sass/style.scss */
 .post_date {
   color: #94908a;
 }
 
-/* line 115, ../../sass/style.scss */
+/* line 116, ../../sass/style.scss */
 .post {
   margin-bottom: 30px;
 }
 
-/* line 119, ../../sass/style.scss */
+/* line 120, ../../sass/style.scss */
 .highlight {
   white-space: pre-wrap;
   /* CSS3 */
@@ -144,7 +145,7 @@ h2.post_title {
   /* IE */
 }
 
-/* line 127, ../../sass/style.scss */
+/* line 128, ../../sass/style.scss */
 .inline_right {
   float: right;
   margin-left: 5px;
