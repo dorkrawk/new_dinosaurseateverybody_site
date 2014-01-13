@@ -14,7 +14,7 @@ From there I sat down and did a bit of planning to figure out what sort of game 
 
 Perhaps I was in a bit over my head, having never built a game before.
 
-In the end, I was able to create a rather buggy game where you can move around a dark green square in a forest (made of light green squares) and go after gray squares (the parts!) while avoiding some brown squares (probably a rodent of some kind?). I wouldn't really call it a game, but I suppose I know a lot more about game building with JavaScript than I did last week. I did really like the idea for the game, especially the name "Professor Rex VonScience" and I got to draw several dinosaurs wearing a lab coat and a bow tie, so it wasn't a total loss.
+In the end, I was able to create a rather buggy game where you can move around a dark green square in a forest (made of light green squares) and go after gray squares (the parts!) while avoiding some brown squares (probably a rodent of some kind?). I wouldn't really call it a game, but I suppose I know a lot more about game building with JavaScript than I did last week. I did really like the idea for the game, especially the name "Professor Rex VonScience" and I got to draw [several](http://instagram.com/p/jApVmuhWQX/) [dinosaurs](http://instagram.com/p/i-kO0FhWb9/) wearing a lab coat and a bow tie, so it wasn't a total loss.
 
 If you'd like to "play" the "game" you can take a look here: [Professor Rex VonScience Saves The World](../stuff/prof_rex_vonscience/index.html) and the code is available on my [Github](https://github.com/dorkrawk/prof_rex_vonscience).
 
