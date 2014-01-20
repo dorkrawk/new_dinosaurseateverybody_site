@@ -152,3 +152,11 @@ h2.post_title {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+/* line 135, ../../sass/style.scss */
+.inline_left {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
