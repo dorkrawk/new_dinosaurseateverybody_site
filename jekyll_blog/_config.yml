@@ -1,4 +1,6 @@
-name: Your New Jekyll Site
+name: Dinosaurs Eat Everybody
+description: For all your Dave Schwantes related needs.
+url: http://dinosaurseateverybody.com/blog
 markdown: redcarpet
 pygments: true
 permalink: /:title

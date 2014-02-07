@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dinosaurs Eat Everybody</title>
+    <description>For all your Dave Schwantes related needs.</description>    
+    <link>http://dinosaurseateverybody.com/blog</link>
+    <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Thing A Week 4 - Bird Watcher</title>
+        <description>&lt;p&gt;This week might count as a partial failure plus I&amp;#39;m getting the post up pretty late, so that&amp;#39;s probably not good either.&lt;/p&gt;
+
+&lt;p&gt;Once again I tackled a project for the wedding. I want to build a system that listens to Twitter and Instagram for photos that are tagged #daveandeileen then pulls them in and displays them somewhere at the wedding. This week I decided to finish up the Twitter listener.&lt;/p&gt;
+
+&lt;p&gt;This listener is basically just a small Sinatra app that uses &lt;a href=&quot;https://github.com/tweetstream/tweetstream&quot;&gt;TweetStream&lt;/a&gt; to listen for tagged tweets and then if it matches the criteria (has image and is properly tagged) it stores info about the tweet into a database. This same database will eventually hold Instagram (this was the whole reason I signed up for &lt;a href=&quot;http://instagram.com/dorkrawk&quot;&gt;Instragram&lt;/a&gt;) data and then I&amp;#39;ll need to write a nice front end that pulls the photo data out and displays the pictures in some nice way.&lt;/p&gt;
+
+&lt;p&gt;I call this week a partial failure because I got the app working locally, but ran into some trouble getting it deployed properly. I am not a great sys admin, but I&amp;#39;m learning a few things. This is also the first time I&amp;#39;ve set up a database on my VPS. I&amp;#39;ve really been spoiled by always working with databases through a nice visual interface so doing some Postgres work while sshed into my server felt like pulling teeth. I was just running into some issues pretty late on Sunday night so I ended up admitting defeat and went to bed. You can check out the code for this project on &lt;a href=&quot;https://github.com/dorkrawk/bird-watcher&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This next week (the week we are currently experiencing right now) is pretty busy. We&amp;#39;re trying to finish up a bunch of other big wedding things (stuff that doesn&amp;#39;t involve coding) and my parents are in town this weekend, so I know I&amp;#39;m going to be limited for &amp;quot;thing a week&amp;quot; time. I would like to use this week to finish off the deployment for Bird Watcher. I feel bad about letting a project spread over two weeks but I think it&amp;#39;s best for my schedule and this project. &lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</guid>
+      </item>
+    
+      <item>
+        <title>Thing A Week 3 - Save The Date Comic</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/std_crop.png&quot; class=&quot;inline_right&quot; /&gt;Sorry, but this week you can&amp;#39;t see the full final product of my Thing A Week. I used this last week to write and draw a comic that we might use as part of our Save The Date cards (if you didn&amp;#39;t know already, I&amp;#39;m getting &lt;a href=&quot;http://daveandeileen.com&quot;&gt;married&lt;/a&gt; soon) so I want to keep the final comic unpublished until we send those out.&lt;/p&gt;
+
+&lt;p&gt;This Thing A Week was pretty straight forward: write and draw a comic. This is something I&amp;#39;ve done many times before. The main challenge was getting it good enough to print on cards and mail to friends and family. It just feels like because this is for the wedding, I should set the bar heigher than I would for a web comic. I&amp;#39;m always worried about my art not being good enough, so this comic was a bit stressful at times.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/std_work.jpg&quot; class=&quot;inline_left&quot; /&gt;The layout wasn&amp;#39;t too complicated but some of the poses and body positions were just a little odd for me and it took a bit to get them right. Like most comics I spent some time planning out the pannels and doing some quick sketches of a few poses before starting on the actual comic. I also decided to work at a larger scale, using 8.5 x 14 paper. This is always nice because I feel like I can work on details a lot better at this size.&lt;/p&gt;
+
+&lt;p&gt;I suppose there&amp;#39;s not much more to say about this project. I&amp;#39;m a bit torn on what to work on next week, it&amp;#39;s currently between writing a song that uses my &lt;a href=&quot;../blog/thing-a-week-2-bass-overdrive-pedal&quot;&gt;new bass pedal&lt;/a&gt;, working on a programming project for the wedding, or starting to work on a new idea for Big CoreUs.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jan 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</guid>
+      </item>
+    
+      <item>
+        <title>Thing A Week 2 - Bass Overdrive Pedal</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/bass_pedal1.jpg&quot; class=&quot;inline_right&quot; /&gt; Success!&lt;/p&gt;
+
+&lt;p&gt;This week I built a bass overdrive pedal. I had received a &lt;a href=&quot;http://buildyourownclone.com/bassfx/bassoverdrive.html&quot;&gt;kit&lt;/a&gt; for this pedal for Xmas (as well as an arm for holding circuit boards while soldering, which may be the nerdiest gift I&amp;#39;ve ever received) and I was excited to finally have time to work on it. Last year I built a &lt;a href=&quot;http://buildyourownclone.com/effects-pedals/overdrive/classic-overdrive.html&quot;&gt;Tube Screamer overdrive clone&lt;/a&gt; from a kit, so I&amp;#39;ve had a little experience building pedals from kits already.&lt;/p&gt;
+
+&lt;p&gt;The choice of a bass overdrive pedal was motivated a bit by listening to some newer Ben Folds. He has some great songs on his new record that are really carried by piano and gruff sounding bass. Now that I have this new pedal, one of my upcoming Thing A Week things will hopefully be a song written in that style.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/bass_pedal2.jpg&quot; class=&quot;inline_left&quot; /&gt;This build was a bit more complicated than the last pedal I built, but I didn&amp;#39;t have any major problems with it. It took a while to solder all the little components onto the board but I actually found it to be very relaxing. It takes a lot of focus but it isn&amp;#39;t really mentally taxing. Soldering was a nice way to unwind after work this week. The biggest addition I made to this build was the choice to paint the enclosure. I had never painted metal before so I had to learn a bit about that (it&amp;#39;s not that complicated). It really just involved sanding the enclosure, priming it, then adding a few layers of indoor/outdoor spray paint. I picked a nice ugly yellow, which ended up looking really cool with the black nobs. I had originally planned to label the nobs and draw some sort of design, but I just didn&amp;#39;t find anything I like so I kept it totally clean, which ended up being a nice look.&lt;/p&gt;
+
+&lt;p&gt;The tone of the pedal itself it pretty cool. It has treble and bass levels as well as a blend control which lets you blend the drive and clean tones nicely. I did a quick recording so you can hear what it sounds like. I started with a clean bass sound for comparison then turned on the overdrive.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130409131&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It felt good to finish a Thing A Week project, I was a little worried about the viability of this project after falling short the first week. Next week I will probably try to do something artistic, maybe comic related.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Jan 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal</guid>
+      </item>
+    
+      <item>
+        <title>Thing A Week 1 - Professor Rex VonScience Saves The World (an HTML5/JavaScript game)</title>
+        <description>&lt;p&gt;So, the first Thing A Week project was kind of a failure. &lt;/p&gt;
+
+&lt;p&gt;My goal was to build my first HTML5/JavaScript based game. I started out by picking a JS game framework suggested by my buddy &lt;a href=&quot;http://www.urgack.com/&quot;&gt;Bryan&lt;/a&gt;. I ended up using &lt;a href=&quot;http://craftyjs.com/&quot;&gt;Crafty&lt;/a&gt; and getting started with &lt;a href=&quot;http://buildnewgames.com/introduction-to-crafty/&quot;&gt;this tutorial&lt;/a&gt;. It was really good and by the end I had a top down adventure game thing that looked very Zelda-like.&lt;/p&gt;
+
+&lt;p&gt;From there I sat down and did a bit of planning to figure out what sort of game I wanted to make. This is where I may have gotten a bit ambitious. I decided to make a top down adventure game (similar to the one in the tutorial) about a T-rex/scientist who must fight off mammals and time travelers to gather parts to build a spaceship and blow up the asteroid that will cause the mass extinction of all dinosaurs. I planned out 4 stages, each with new mobs and planned to hand draw all the sprite fames.&lt;/p&gt;
+
+&lt;p&gt;Perhaps I was in a bit over my head, having never built a game before.&lt;/p&gt;
+
+&lt;p&gt;In the end, I was able to create a rather buggy game where you can move around a dark green square in a forest (made of light green squares) and go after gray squares (the parts!) while avoiding some brown squares (probably a rodent of some kind?). I wouldn&amp;#39;t really call it a game, but I suppose I know a lot more about game building with JavaScript than I did last week. I did really like the idea for the game, especially the name &amp;quot;Professor Rex VonScience&amp;quot; and I got to draw &lt;a href=&quot;http://instagram.com/p/jApVmuhWQX/&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;http://instagram.com/p/i-kO0FhWb9/&quot;&gt;dinosaurs&lt;/a&gt; wearing a lab coat and a bow tie, so it wasn&amp;#39;t a total loss.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;d like to &amp;quot;play&amp;quot; the &amp;quot;game&amp;quot; you can take a look here: &lt;a href=&quot;../stuff/prof_rex_vonscience/index.html&quot;&gt;Professor Rex VonScience Saves The World&lt;/a&gt; and the code is available on my &lt;a href=&quot;https://github.com/dorkrawk/prof_rex_vonscience&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, now that I&amp;#39;ve already had an unsuccessful Thing A Week week, I need to figure out how to deal with failure in the project. I&amp;#39;d like to keep working on this game but I&amp;#39;d also like to avoid sticking with the same project several weeks in a row, particularly this early. Perhaps in an upcoming week I&amp;#39;ll pick a subset of this game as my project and work from there now that I have a better idea about the kind of work it takes to make a game. I&amp;#39;m also not sure if I&amp;#39;m ready to set next week&amp;#39;s project yet. I&amp;#39;m leaning towards building a bass distortion pedal, though.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 12 Jan 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world</guid>
+      </item>
+    
+      <item>
+        <title>Thing A Week</title>
+        <description>&lt;p&gt;I like New Years resolutions. Sure they&amp;#39;re kind of cheesy and I always tend to make similar resolutions each year (run more, get better at guitar, write more music, update &lt;a href=&quot;http://mountsaintawesome.com&quot;&gt;Mount Saint Awesome&lt;/a&gt; more regularly, etc.) but I still enjoy the excuse to take stock and think about things I want to be doing.&lt;/p&gt;
+
+&lt;p&gt;A lot of what I want to be doing is making things and in order to stay focused on that I&amp;#39;m going to steal an idea from the brilliant &lt;a href=&quot;http://www.jonathancoulton.com/&quot;&gt;Jonathan Coulton&lt;/a&gt; (of &lt;a href=&quot;http://www.youtube.com/watch?v=qYodWEKCuGg&quot;&gt;Code Monkey&lt;/a&gt; fame!) and try to do &lt;a href=&quot;http://www.jonathancoulton.com/primer/thing-a-week/&quot;&gt;A Thing A Week&lt;/a&gt;. While Jonathan did this entirely with songs I&amp;#39;m going to branch out to include almost anything that I can create within the 1 week time frame. This might involve building a guitar pedal or brewing a beer or making some art or creating a small web app or piece of software or even... writing and recording a song. I have a bit of experience with this schedule from the early days of Mount Saint Awesome. Back when I first started the comic I was VERY dedicated to posting a comic every Monday and I stuck with that schedule for over a year. It really helped me improve as a cartoonist. Here is the &lt;a href=&quot;http://mountsaintawesome.com/band/1/1.php&quot;&gt;first comic&lt;/a&gt; I posted and here is one of the &lt;a href=&quot;http://mountsaintawesome.com/band/3/10.php&quot;&gt;later plot based comic I posted&lt;/a&gt; (this was less than 1 year of comics, but still a noticeable difference.)&lt;/p&gt;
+
+&lt;p&gt;The first thing I&amp;#39;m going to try is building an HTML5/JavaScript game. I&amp;#39;ve been doing web development for a long time now but I&amp;#39;ve never built a game and it seems like a good excuse to play with some new HTML5 stuff, plus I&amp;#39;d really like to get more serious about JavaScript. If all goes to plan I will have a game to show off here next Monday!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 Jan 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week</guid>
+      </item>
+    
+      <item>
+        <title>Chess With a Child</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/chess1.png&quot; class=&quot;inline_right&quot; /&gt; Lately I&amp;#39;ve been getting more and more into playing chess. I had played a bit with my dad when I was a little kid but hadn&amp;#39;t really thought about it much since. Then a year or so ago I started playing online chess with some friends at work. I was REALLY bad and lost constantly. Since then I&amp;#39;ve been studying and playing a lot more and I think I&amp;#39;m getting better and I&amp;#39;ve really been enjoying the process. If you&amp;#39;re interested in playing me, I play as &lt;a href=&quot;http://www.chess.com/members/view/dschwantes&quot;&gt;dschwantes&lt;/a&gt; on chess.com.&lt;/p&gt;
+
+&lt;p&gt;But this post isn&amp;#39;t really about me learning chess. It&amp;#39;s more about a game I played a few weeks ago.&lt;/p&gt;
+
+&lt;p&gt;I had convinced Eileen to go play chess in a coffee shop with me one Sunday evening. We were just going to play a very friendly, open game because she doesn&amp;#39;t really play and last time we played she got really mad that I beat her (and refused to play chess with me ever again). We were sitting at a table next to a family with two young children, maybe 4 and 6 years old and as we started our game, the older child kept craning his head over to our table. Eventually his willpower failed him and he just came straight over and sat next to Eileen, asked what she was doing, and started suggesting moves.&lt;/p&gt;
+
+&lt;p&gt;His parents came over to apologize (and retrieve their stray child) and the father explained that he had started to introduce his son to chess a little while ago. Eileen and I were just having a friendly game so we ended up inviting the kid to play &amp;quot;on Eileen&amp;#39;s team&amp;quot; and his parents helped them pick moves too. It was a completely casual game with everybody helping to look for the best moves for both sides and none of us (adults included) were particularly strong players.&lt;/p&gt;
+
+&lt;p&gt;The kid couldn&amp;#39;t sit still for 30 seconds and spent the whole game wiggling around and leaning on Eileen and looking at the board from different angles but the game kept his attention, which was really impressive. It wasn&amp;#39;t the game I had planned on playing but I think we all had a lot of fun. It felt good to help entertain a kid with something productive and it was just a genuinely enjoyable encounter with some random, nice strangers in a coffee shop.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Dec 2013 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/chess-with-a-child</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/chess-with-a-child</guid>
+      </item>
+    
+      <item>
+        <title>In My Head, Behind The Music</title>
+        <description>&lt;p&gt;I just finished writing and recording a fun keyboard-heavy powerpop song called &lt;a href=&quot;https://soundcloud.com/dorkrawk/in-my-head&quot;&gt;In My Head&lt;/a&gt; and in an act of self indulgence I&amp;#39;d like spend a blog post going over some of what into the song. &lt;em&gt;(Pro tip: You can scroll down and start playing the song while you read the rest of this!)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With this song I wanted to just write something straightforward and not get hung up on trying to write anything super technical. I ended up with a simple intro - verse - chorus - verse -chorus - bridge - chorus structure and I tried my best to not overthink the lyrics (more on those later).  By not getting bogged down worrying if my basics were interesting enough I was able to get a solid chord progression and structure down and then build off of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;recording&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/recording1.jpg&quot; class=&quot;inline_right&quot; /&gt;The song started with just guitar recorded over a click track. Rather than trying to set up and mic an amp I ran my guitar through my &lt;a href=&quot;http://buildyourownclone.com/effects-pedals/overdrive/classic-overdrive.html&quot;&gt;homemade overdrive pedal&lt;/a&gt; and then a clean amp model in Garageband. Once I had my basic structure down I went in to write drum parts. I wrote the drum part by hand placing events on the piano roll set to a drumset sound. I&amp;#39;m sure there are better ways to do this, but it worked for this song and I like the freedom I get by beind able to hand pick every hit in a beat.&lt;/p&gt;
+
+&lt;p&gt;I stressed out about my bass tone a bit during this recording session. Usually I need to run my bass through an amp and mic it to get anything remotely usable, but I wanted to get some parts down imediately and plugging in wasn&amp;#39;t an option at 11pm. I plugged directly into my recording interface (an &lt;a href=&quot;http://www.amazon.com/M-Audio-Track-Mobile-Interface-Preamps/dp/B000BD31ZW&quot;&gt;M-Audio Fast Track Pro&lt;/a&gt;) and then just put one of the fuzzy Garageband bass effects on the tracks and the sound was actually ok so I ended up keeping it. &lt;/p&gt;
+
+&lt;p&gt;From there it was time to play with keyboards! The paino parts are all pretty simple, mainly just to add some depth and tone to the song. I had a lot of fun writing some cool little counter-melodies on the synth. I&amp;#39;ve always had a soft spot for bands like Zolf the Rock and Roll Destoyer and Motion City Soundtrack so I really enjoyed being able to write some really poppy synth driven stuff.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;lyrics&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;And now lyrics. Like I said, this song was an exercise in not overthinking things. I just sort of wrote the first things that came to mind so this song ended up overtly being a generic pop sound with vauge romantic sentements. That said, the ideas for the lyrics came from watching &lt;a href=&quot;http://drhorrible.com/&quot;&gt;Doctor Horrible&amp;#39;s Sing-a-long Blog&lt;/a&gt; and from spending a weekend home alone when Eileen was out of town.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;chorus&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Well I can&amp;#39;t get you out of my head &lt;br /&gt;
+I dream about you when I go to bed &lt;br /&gt;
+I can&amp;#39;t get you off of my mind &lt;br /&gt;
+And I don&amp;#39;t mind &lt;br /&gt;
+I can&amp;#39;t get you out of my head &lt;br /&gt;
+I keep replaying every word you said &lt;br /&gt;
+I&amp;#39;d like to give you some of my time &lt;br /&gt;
+If you don&amp;#39;t mind &lt;/p&gt;
+
+&lt;p&gt;The deep insight here is that I had a bunch of songs from Doctor Horrible stuck in my head for a long time. They&amp;#39;re really good! You should seriously watch it. That&amp;#39;s honestly the extent of the depth of that chorus, I just kind of took the theme of having something stuck in your head and presented it in a general enough way to make for a good, hopefully catchy, pop chorus.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;verse 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Well I&amp;#39;ve been spending too much time &lt;br /&gt;
+Home alone on my couch drinking too much wine &lt;br /&gt;
+Watching TV and waiting for &lt;br /&gt;
+You to come here and walk right through my door&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;verse 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now I don&amp;#39;t eat and I barely sleep &lt;br /&gt;
+I don&amp;#39;t know how much longer I can keep &lt;br /&gt;
+Walking through these empty rooms &lt;br /&gt;
+Before I pick up my phone and call you&lt;/p&gt;
+
+&lt;p&gt;I wrote a lot of the music for this song over a weekend when Eileen was out of town so when I was looking for lyrical ideas for the verse I decided to just use the theme of being home alone and again present it in a vague way to make it sound like semi-romantic pop. I did take some liberties with the concepts. For example, there was no wine consumed that weekend but it&amp;#39;s harder to find good words that rhyme with whiskey. I did watch copious amounts of TV, mostly &lt;a href=&quot;http://www.watchtheguild.com/&quot;&gt;The Guild&lt;/a&gt;, and I don&amp;#39;t really do a good job of feeding myself or going to bed at a reasonable time when I am left home alone, so there is some truth to these words. I wasn&amp;#39;t as happy with the vocals I got when recording the verses. I just couldn&amp;#39;t seem to get a tone I was totally happy with, but I don&amp;#39;t think it&amp;#39;s too distracting.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;the song&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m really proud of how this song turned out.  I had a lot of fun with the style and its always rewarding to hear a completed project that has some complextiy to it. If you don&amp;#39;t want to travel all the way over to Soundcloud to hear the song, you can listen to it RIGHT HERE!&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/121317485&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=false&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Mon, 25 Nov 2013 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</guid>
+      </item>
+    
+      <item>
+        <title>Darwinning, My Ruby Gem for Genetic Algorithms</title>
+        <description>&lt;p&gt;Well, this writeup is a bit late. I wanted to write about Darwinning right after I launched it but here we are.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So, what is Darwinning?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Darwinning is a Ruby Gem built to help people write &lt;a href=&quot;http://en.wikipedia.org/wiki/Genetic_algorithm&quot;&gt;genetic algorithms&lt;/a&gt;.  I got into genetic algorithms while taking a machine learning course during my masters and I&amp;#39;ve had a casual interest in them ever since. I even wrote &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=30&quot;&gt;a comic&lt;/a&gt; about them! I have also been enjoying Ruby lately, so I wanted to learn how to build a Gem. This project was started to satisfy both of those interests.&lt;/p&gt;
+
+&lt;p&gt;I also played with the Ruby unit testing framework, RSpec, for the first time with this project.  The test coverage for Darwinning isn&amp;#39;t great, but at least it&amp;#39;s a start.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So, how do I use Darwinning?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Darwinning is totally available via &lt;a href=&quot;http://rubygems.org/gems/darwinning&quot;&gt;RubyGems&lt;/a&gt; so you can install it the same way you would install almost any Gem:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install darwinning
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once it&amp;#39;s installed you can make use of the &lt;code&gt;Population&lt;/code&gt;, &lt;code&gt;Organism&lt;/code&gt;, and &lt;code&gt;Gene&lt;/code&gt; classes to build your own genetic algorithm based programs.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s an dumb example of how you might use Darwinning to solve a pointless problem:&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let&amp;#39;s solve it anyway.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Triple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Organism&lt;/span&gt;
+
+  &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Triple&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@genes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;first digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;second digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;third digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fitness&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Try to get the sum of the 3 digits to add up to 15&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;genotypes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Population&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evolve!&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nice_print&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# prints the member representing the solution&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code declares an organism class that inherits from Darwinning&amp;#39;s Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So, what else can I do with it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If any of this sounds remotely interesting to you, please check out the project on &lt;a href=&quot;https://github.com/dorkrawk/darwinning&quot;&gt;Github&lt;/a&gt;. I&amp;#39;m always happy to take good pull requests if other people want to contribute. I haven&amp;#39;t been very active lately because I&amp;#39;ve been spending a lot of time on &lt;a href=&quot;http://dinosaurseateverybody.com&quot;&gt;this website&lt;/a&gt; and my &lt;a href=&quot;http://daveandeileen.com&quot;&gt;wedding website&lt;/a&gt;, but I do keep an eye on the project.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2013 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</guid>
+      </item>
+    
+      <item>
+        <title>Sinatra + Jekyll + Prose</title>
+        <description>&lt;p&gt;Welcome to the new Dinosaurs Eat Everybody blog! The old site/blog was an interesting mess of custom PHP and some custom build hooks into a Word Press blog and though it worked pretty well but I was tired of maintaining stuff in PHP so when my old hosting was about to expire I decided to move to a &lt;a href=&quot;https://www.digitalocean.com/&quot;&gt;VPS&lt;/a&gt; and build something new. The result is what you see before you today.&lt;/p&gt;
+
+&lt;p&gt;This new site is built mainly on &lt;a href=&quot;http://www.sinatrarb.com/&quot; title=&quot;I like my web frameworks like I like my brews, micro.&quot;&gt;Sinatra&lt;/a&gt; with &lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;a static file blogging platform&quot;&gt;Jekyll&lt;/a&gt; mixed in for some blogging functionality.  I didn&amp;#39;t really need any sort of content management system for most of the site so there is no database behind it and I&amp;#39;m using flat files (mostly just handwritten JSON) for anything that seems dynamic.&lt;/p&gt;
+
+&lt;p&gt;The interesting part was adding a Jekyll blog to an existing Sinatra site. Jekyll is super easy to set up on its own but I didn&amp;#39;t want it to run the whole site. I wanted to be able to serve dynamic pages if I wanted.  With some help from &lt;a href=&quot;http://derekeder.com/blog/hello-world-setting-up-a-jekyll-blog-in-sinatra&quot;&gt;this&lt;/a&gt; blog post it was actually pretty easy to get things up and running.  That post is a bit out of date but still very helpful.  &lt;/p&gt;
+
+&lt;p&gt;To add Jekyll to Sinatra I first just created a new Jekyll site in a seperate directory and copied it over into a &lt;code&gt;jekyll_blog/&lt;/code&gt; folder in the root of my Sinatra project. I then removed the &lt;code&gt;.gitignore&lt;/code&gt;, the &lt;code&gt;default.html&lt;/code&gt; layout and the whole &lt;code&gt;css/&lt;/code&gt; directory (after moving the Pygments &lt;code&gt;syntax.css&lt;/code&gt; into my main stylesheet directory) from the new Jekyll directory. I also adjusted the &lt;code&gt;_post.html&lt;/code&gt; layout to not have a layout of its own by just removing all the YAML Front-matter from the file. This is because I want Sinatra to handle the layouts for everything.&lt;/p&gt;
+
+&lt;p&gt;The real meat of this is a custom function in the /blog route:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/blog/?*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;jekyll_blog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jekyll_blog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@page_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;blog&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll_blog/_site&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/blog&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/\.[a-z]+$/i&lt;/span&gt; 
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exist?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rb&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;erb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This just calls the &lt;code&gt;jekyll_blog(path)&lt;/code&gt; function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the &lt;code&gt;&amp;lt;%= yield %&amp;gt;&lt;/code&gt; in my Sinatra erb layout.&lt;/p&gt;
+
+&lt;p&gt;This is a pretty simplistic solution and I want to add better 404 checking and a way to pull the post title out for use in the page title, but it gets the job done by pulling out the content of the post html file generated by Jekyll and putting it into the content container of Sinatra.  Now all my layouts are handled by the same file and all my CSS comes from the same source.&lt;/p&gt;
+
+&lt;p&gt;While I like the idea of being able to write my blog posts in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I&amp;#39;m trying &lt;a href=&quot;http://prose.io/&quot;&gt;Prose&lt;/a&gt;. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven&amp;#39;t tried that yet).  I&amp;#39;ve included a &lt;code&gt;_prose.rb&lt;/code&gt; config file that sends me right to the &lt;code&gt;_posts/&lt;/code&gt; directory of this project when I&amp;#39;m working on it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll_blog/_posts&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;public/images/blog_media&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I&amp;#39;m still not totally won over by Prose but it has been really fun to set this up. I&amp;#39;d also like to add comments through &lt;a href=&quot;http://disqus.com/&quot;&gt;Disqus&lt;/a&gt; soon. Hopefully now I&amp;#39;ll make this work worthwhile and actually write a few blog posts every now and then.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Nov 2013 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/sinatra-jekyll-prose</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/sinatra-jekyll-prose</guid>
+      </item>
+    
+  </channel>
+</rss>

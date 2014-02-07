@@ -81,7 +81,12 @@ module DinosaursEatEverybody
         
         @page_title = blog_title.nil? ? "blog" : blog_title
     
-        erb contents
+        if file_path.include? "rss.xml"
+          content_type 'text/xml'
+          erb contents, :layout => false
+        else 
+          erb contents
+        end
       end
     end
 
