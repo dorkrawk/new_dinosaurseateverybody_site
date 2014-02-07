@@ -7,6 +7,29 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Does Anyone Still Use RSS?</title>
+        <description>&lt;p&gt;Since the death of Google Reader I feel like I&amp;#39;ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.&lt;/p&gt;
+
+&lt;p&gt;I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra hybrid I have running and had a few minutes tonight so I decided to give it a shot. It turned out to not be bad.  I just followed &lt;a href=&quot;http://blog.drewinglis.com/2013/03/18/adding-rss.html&quot;&gt;this quick tutoral&lt;/a&gt; and found &lt;a href=&quot;https://github.com/snaptortoise/jekyll-rss-feeds&quot;&gt;a nice template here&lt;/a&gt; and 90% of the work was done (basically I just add another template to my Jekyll project and a few lines in my config and an xml file gets generated along with everything else when I run &lt;code&gt;jekyll build&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;include?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rss.xml&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;content_type&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;text/xml&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;erb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:layout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;erb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you can subscribe to this blog via &lt;a href=&quot;http://dinosaurseateverybody.com/blog/rss.xml&quot;&gt;RSS&lt;/a&gt; is you so desire!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/does-anyone-still-use-rss</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/does-anyone-still-use-rss</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 4 - Bird Watcher</title>
         <description>&lt;p&gt;This week might count as a partial failure plus I&amp;#39;m getting the post up pretty late, so that&amp;#39;s probably not good either.&lt;/p&gt;
 

@@ -1,4 +1,25 @@
 
+  <h2 class="post_title"><a href="../blog/does-anyone-still-use-rss">Does Anyone Still Use RSS?</a></h2>
+  <div class="post_date">February 6, 2014</div>
+  <div class="post">
+    <p>Since the death of Google Reader I feel like I&#39;ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.</p>
+
+<p>I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra hybrid I have running and had a few minutes tonight so I decided to give it a shot. It turned out to not be bad.  I just followed <a href="http://blog.drewinglis.com/2013/03/18/adding-rss.html">this quick tutoral</a> and found <a href="https://github.com/snaptortoise/jekyll-rss-feeds">a nice template here</a> and 90% of the work was done (basically I just add another template to my Jekyll project and a few lines in my config and an xml file gets generated along with everything else when I run <code>jekyll build</code>.</p>
+
+<p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">include?</span> <span class="s2">&quot;rss.xml&quot;</span>
+  <span class="n">content_type</span> <span class="s1">&#39;text/xml&#39;</span>
+  <span class="n">erb</span> <span class="n">contents</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+<span class="k">else</span> 
+  <span class="n">erb</span> <span class="n">contents</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Now you can subscribe to this blog via <a href="http://dinosaurseateverybody.com/blog/rss.xml">RSS</a> is you so desire!</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-4-bird-watcher">Thing A Week 4 - Bird Watcher</a></h2>
   <div class="post_date">February 4, 2014</div>
   <div class="post">
