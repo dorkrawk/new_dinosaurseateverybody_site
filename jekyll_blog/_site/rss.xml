@@ -7,6 +7,41 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 5 - Bird Watcher (Part 2)</title>
+        <description>&lt;p&gt;So I took this week to wrap up last week&amp;#39;s project. I was having trouble getting the Twitter listener for my wedding photo project up and running on my server but I&amp;#39;m pleased to report that I managed to get things up and running.&lt;/p&gt;
+
+&lt;p&gt;I ended up changing the format of the project a bit. Instead of a full Sinatra application I put everything into a single Ruby file that I can just leave running whenever I want to fire up the listener. I didn&amp;#39;t need this project to serve any content, only run Tweet Stream and write to a database, so Sinatra was probably overkill to begin with.&lt;/p&gt;
+
+&lt;p&gt;I had some trouble with &lt;a href=&quot;http://sequel.jeremyevans.net/&quot;&gt;Sequel&lt;/a&gt;, the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn&amp;#39;t work:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;store_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tweet_photo_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:photos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:photo_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_photo_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;twitter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:photo_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but this did:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;store_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tweet_photo_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;the_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tweet_photo_url&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  
+  &lt;span class=&quot;vi&quot;&gt;@db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:photos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:photo_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;twitter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:photo_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tweet_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It must have something to do with the way Ruby handles certain strings or how Sequel or Postgres handle certain strings in INSERTs.&lt;/p&gt;
+
+&lt;p&gt;You can see the final file I&amp;#39;m using &lt;code&gt;bird_watcher.rb&lt;/code&gt; in the &lt;a href=&quot;https://github.com/dorkrawk/bird-watcher&quot;&gt;Github repo&lt;/a&gt; for the project.  &lt;/p&gt;
+
+&lt;p&gt;Next I&amp;#39;ll need to write an Instragram listener. Hopefully that will be pretty quick as most of the mechanics will be identical to this listener. I might hold off on working on that for a bit, though. I&amp;#39;m thinking about tackling a musical project next week.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-5-bird-watcher-part-2</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-5-bird-watcher-part-2</guid>
+      </item>
+    
+      <item>
         <title>Does Anyone Still Use RSS?</title>
         <description>&lt;p&gt;Since the death of Google Reader I feel like I&amp;#39;ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.&lt;/p&gt;
 
@@ -244,56 +279,6 @@ Before I pick up my phone and call you&lt;/p&gt;
         <pubDate>Mon, 11 Nov 2013 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</guid>
-      </item>
-    
-      <item>
-        <title>Sinatra + Jekyll + Prose</title>
-        <description>&lt;p&gt;Welcome to the new Dinosaurs Eat Everybody blog! The old site/blog was an interesting mess of custom PHP and some custom build hooks into a Word Press blog and though it worked pretty well but I was tired of maintaining stuff in PHP so when my old hosting was about to expire I decided to move to a &lt;a href=&quot;https://www.digitalocean.com/&quot;&gt;VPS&lt;/a&gt; and build something new. The result is what you see before you today.&lt;/p&gt;
-
-&lt;p&gt;This new site is built mainly on &lt;a href=&quot;http://www.sinatrarb.com/&quot; title=&quot;I like my web frameworks like I like my brews, micro.&quot;&gt;Sinatra&lt;/a&gt; with &lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;a static file blogging platform&quot;&gt;Jekyll&lt;/a&gt; mixed in for some blogging functionality.  I didn&amp;#39;t really need any sort of content management system for most of the site so there is no database behind it and I&amp;#39;m using flat files (mostly just handwritten JSON) for anything that seems dynamic.&lt;/p&gt;
-
-&lt;p&gt;The interesting part was adding a Jekyll blog to an existing Sinatra site. Jekyll is super easy to set up on its own but I didn&amp;#39;t want it to run the whole site. I wanted to be able to serve dynamic pages if I wanted.  With some help from &lt;a href=&quot;http://derekeder.com/blog/hello-world-setting-up-a-jekyll-blog-in-sinatra&quot;&gt;this&lt;/a&gt; blog post it was actually pretty easy to get things up and running.  That post is a bit out of date but still very helpful.  &lt;/p&gt;
-
-&lt;p&gt;To add Jekyll to Sinatra I first just created a new Jekyll site in a seperate directory and copied it over into a &lt;code&gt;jekyll_blog/&lt;/code&gt; folder in the root of my Sinatra project. I then removed the &lt;code&gt;.gitignore&lt;/code&gt;, the &lt;code&gt;default.html&lt;/code&gt; layout and the whole &lt;code&gt;css/&lt;/code&gt; directory (after moving the Pygments &lt;code&gt;syntax.css&lt;/code&gt; into my main stylesheet directory) from the new Jekyll directory. I also adjusted the &lt;code&gt;_post.html&lt;/code&gt; layout to not have a layout of its own by just removing all the YAML Front-matter from the file. This is because I want Sinatra to handle the layouts for everything.&lt;/p&gt;
-
-&lt;p&gt;The real meat of this is a custom function in the /blog route:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/blog/?*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;jekyll_blog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jekyll_blog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@page_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;blog&amp;quot;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll_blog/_site&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/blog&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/\.[a-z]+$/i&lt;/span&gt; 
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exist?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rb&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;erb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This just calls the &lt;code&gt;jekyll_blog(path)&lt;/code&gt; function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the &lt;code&gt;&amp;lt;%= yield %&amp;gt;&lt;/code&gt; in my Sinatra erb layout.&lt;/p&gt;
-
-&lt;p&gt;This is a pretty simplistic solution and I want to add better 404 checking and a way to pull the post title out for use in the page title, but it gets the job done by pulling out the content of the post html file generated by Jekyll and putting it into the content container of Sinatra.  Now all my layouts are handled by the same file and all my CSS comes from the same source.&lt;/p&gt;
-
-&lt;p&gt;While I like the idea of being able to write my blog posts in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I&amp;#39;m trying &lt;a href=&quot;http://prose.io/&quot;&gt;Prose&lt;/a&gt;. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven&amp;#39;t tried that yet).  I&amp;#39;ve included a &lt;code&gt;_prose.rb&lt;/code&gt; config file that sends me right to the &lt;code&gt;_posts/&lt;/code&gt; directory of this project when I&amp;#39;m working on it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll_blog/_posts&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;public/images/blog_media&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I&amp;#39;m still not totally won over by Prose but it has been really fun to set this up. I&amp;#39;d also like to add comments through &lt;a href=&quot;http://disqus.com/&quot;&gt;Disqus&lt;/a&gt; soon. Hopefully now I&amp;#39;ll make this work worthwhile and actually write a few blog posts every now and then.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 05 Nov 2013 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/sinatra-jekyll-prose</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/sinatra-jekyll-prose</guid>
       </item>
     
   </channel>
