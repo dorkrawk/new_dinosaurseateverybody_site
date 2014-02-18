@@ -7,6 +7,29 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 6 - Piano and Bass Song</title>
+        <description>&lt;p&gt;I think that it&amp;#39;s fair to call this Thing A Week a failure and I don&amp;#39;t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn&amp;#39;t go anywhere.&lt;/p&gt;
+
+&lt;p&gt;This tends to happen to me a lot. My Garageband folder is full of 30 second long riffs and fleshed out song chunks, but I often hit a wall and I&amp;#39;m not sure where to go from there. Last week I sat down and tried writing some stuff influenced by a couple songs that either did piano and bass or just bass licks well. The main ones I referred to were &lt;a href=&quot;http://www.rdio.com/artist/Ben_Folds_Five/album/The_Sound_Of_The_Life_Of_The_Mind/track/Erase_Me/&quot;&gt;Erase Me&lt;/a&gt; by Ben Folds Five and &lt;a href=&quot;http://www.rdio.com/artist/Brand_New/album/Deja_Entendu/track/Sic_Transit_Gloria_..._Glory_Fades/&quot;&gt;Sic Transit Gloria...Glory Fades&lt;/a&gt; by Brand New. They are both awesome songs and I especially love the way the piano and bass work together in the Ben Folds song but my ideas just weren&amp;#39;t working. I ended up with some weird meandering minor bass parts thrown over some really weak piano parts.&lt;/p&gt;
+
+&lt;p&gt;I came back the next day and switched to a major key and started with the piano part first. From there I came up with something that I liked and wrote a simple bass part that just harmonized the piano roots in a few parts.&lt;/p&gt;
+
+&lt;p&gt;And that&amp;#39;s where I got stuck. I spent a bit of time playing around with some sparse guitar parts and a few of the new amp models in the new version of Garageband. I also played around with the new Drummer feature of Garageband. It was pretty cool and maybe the most redeeming quality of Garageband X (the removal of the old keyboard shortcuts and export to mp3 are driving me nuts and might send my back to version 6!). The drum sounds are great and it&amp;#39;s a big step up from the midi drum parts I had been working with in the old version of Garageband, but I did feel a bit uncomfortable with the loss of control over every single hit. I suppose it&amp;#39;s a decent compromise.&lt;/p&gt;
+
+&lt;p&gt;So here&amp;#39;s what I came up with. I ended up just doing some random guitar riffing and bigger chords at some point, but it really just felt forced and didn&amp;#39;t take the song anywhere. Take a listen, though, because the piano/bass part turned out pretty nice: &lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135426611&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I&amp;#39;d like to keep working with this song. It&amp;#39;s different than most of the stuff I&amp;#39;ve written lately. I think that throwing lyrics over it will be a bit of a challenge just because I don&amp;#39;t quite trust my voice for something this mellow, but it&amp;#39;s a fun part and I think it could turn into something cool.&lt;/p&gt;
+
+&lt;p&gt;This week I&amp;#39;m leaning towards either a project with Python (I&amp;#39;ve been meaning to brush up on my Python for a while) or something artistic. I&amp;#39;m still not quite sure.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 5 - Bird Watcher (Part 2)</title>
         <description>&lt;p&gt;So I took this week to wrap up last week&amp;#39;s project. I was having trouble getting the Twitter listener for my wedding photo project up and running on my server but I&amp;#39;m pleased to report that I managed to get things up and running.&lt;/p&gt;
 
@@ -224,61 +247,6 @@ Before I pick up my phone and call you&lt;/p&gt;
         <pubDate>Mon, 25 Nov 2013 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</guid>
-      </item>
-    
-      <item>
-        <title>Darwinning, My Ruby Gem for Genetic Algorithms</title>
-        <description>&lt;p&gt;Well, this writeup is a bit late. I wanted to write about Darwinning right after I launched it but here we are.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;So, what is Darwinning?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Darwinning is a Ruby Gem built to help people write &lt;a href=&quot;http://en.wikipedia.org/wiki/Genetic_algorithm&quot;&gt;genetic algorithms&lt;/a&gt;.  I got into genetic algorithms while taking a machine learning course during my masters and I&amp;#39;ve had a casual interest in them ever since. I even wrote &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=30&quot;&gt;a comic&lt;/a&gt; about them! I have also been enjoying Ruby lately, so I wanted to learn how to build a Gem. This project was started to satisfy both of those interests.&lt;/p&gt;
-
-&lt;p&gt;I also played with the Ruby unit testing framework, RSpec, for the first time with this project.  The test coverage for Darwinning isn&amp;#39;t great, but at least it&amp;#39;s a start.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;So, how do I use Darwinning?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Darwinning is totally available via &lt;a href=&quot;http://rubygems.org/gems/darwinning&quot;&gt;RubyGems&lt;/a&gt; so you can install it the same way you would install almost any Gem:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install darwinning
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once it&amp;#39;s installed you can make use of the &lt;code&gt;Population&lt;/code&gt;, &lt;code&gt;Organism&lt;/code&gt;, and &lt;code&gt;Gene&lt;/code&gt; classes to build your own genetic algorithm based programs.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s an dumb example of how you might use Darwinning to solve a pointless problem:&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let&amp;#39;s solve it anyway.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Triple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Organism&lt;/span&gt;
-
-  &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Triple&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@genes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;first digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;second digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gene&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;third digit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fitness&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# Try to get the sum of the 3 digits to add up to 15&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;genotypes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
-
-&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Population&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evolve!&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nice_print&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# prints the member representing the solution&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This code declares an organism class that inherits from Darwinning&amp;#39;s Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;So, what else can I do with it?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If any of this sounds remotely interesting to you, please check out the project on &lt;a href=&quot;https://github.com/dorkrawk/darwinning&quot;&gt;Github&lt;/a&gt;. I&amp;#39;m always happy to take good pull requests if other people want to contribute. I haven&amp;#39;t been very active lately because I&amp;#39;ve been spending a lot of time on &lt;a href=&quot;http://dinosaurseateverybody.com&quot;&gt;this website&lt;/a&gt; and my &lt;a href=&quot;http://daveandeileen.com&quot;&gt;wedding website&lt;/a&gt;, but I do keep an eye on the project.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 Nov 2013 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</guid>
       </item>
     
   </channel>
