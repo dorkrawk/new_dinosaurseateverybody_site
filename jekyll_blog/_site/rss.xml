@@ -7,6 +7,21 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 7 - Flask</title>
+        <description>&lt;p&gt;Now, in my defense I was pretty sick for most of last week so I ended up not getting much done outside of work besides a lot of napping. I started with a vague plan to do &lt;em&gt;something&lt;/em&gt; with &lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask&lt;/a&gt;, the Python micro-webframework and to that end I succeeded in what I set out to do. It had been a while since I had done anything serious with Python and I&amp;#39;ve been feeling the urge to get back into it.&lt;/p&gt;
+
+&lt;p&gt;I ended up spending a lot of time just getting my Python development environment set up. Apparently it&amp;#39;s been so long since I&amp;#39;ve done anything non-trivial in the language that I didn&amp;#39;t even have basic tools set up well on this computer. I wanted to do things right and that took a bit of installing and uninstalling through various channels to get things just so. This meant Python installed threw Homebrew and then using that version of &lt;code&gt;pip&lt;/code&gt; to install &lt;code&gt;virtualenv&lt;/code&gt;. This way I didn&amp;#39;t have to use &lt;code&gt;sudo&lt;/code&gt; to install &lt;code&gt;virtualenv&lt;/code&gt;. While this ended up being more frustrating than it should have been (and at one point led to me asking a &lt;a href=&quot;http://stackoverflow.com/questions/21917619/error-with-installing-virtualenv-with-pip-and-homebrew&quot;&gt;Stack Overflow question&lt;/a&gt; that I later answered for myself) I did get things set up nicely, which is a major win.&lt;/p&gt;
+
+&lt;p&gt;Once I got down to setting up Flask thing were pretty smooth. For the basic stuff I was doing it felt very similar to Sinatra, which I&amp;#39;ve worked with quite a bit. I finally got to use Python&amp;#39;s method decorators in practice which was neat (they drive the routing around the functions related to the routes).&lt;/p&gt;
+
+&lt;p&gt;The end result was a pretty basic first test site. Nothing really worth putting up anywhere. I&amp;#39;d like to keep playing with Flask and get a bit more reacquainted with Python so unless I have another burning project come up, I might just stick with it this week too.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-7-flask</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-7-flask</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 6 - Piano and Bass Song</title>
         <description>&lt;p&gt;I think that it&amp;#39;s fair to call this Thing A Week a failure and I don&amp;#39;t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn&amp;#39;t go anywhere.&lt;/p&gt;
 
@@ -189,64 +204,6 @@
         <pubDate>Sun, 08 Dec 2013 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/chess-with-a-child</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/chess-with-a-child</guid>
-      </item>
-    
-      <item>
-        <title>In My Head, Behind The Music</title>
-        <description>&lt;p&gt;I just finished writing and recording a fun keyboard-heavy powerpop song called &lt;a href=&quot;https://soundcloud.com/dorkrawk/in-my-head&quot;&gt;In My Head&lt;/a&gt; and in an act of self indulgence I&amp;#39;d like spend a blog post going over some of what into the song. &lt;em&gt;(Pro tip: You can scroll down and start playing the song while you read the rest of this!)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;With this song I wanted to just write something straightforward and not get hung up on trying to write anything super technical. I ended up with a simple intro - verse - chorus - verse -chorus - bridge - chorus structure and I tried my best to not overthink the lyrics (more on those later).  By not getting bogged down worrying if my basics were interesting enough I was able to get a solid chord progression and structure down and then build off of it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;recording&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/recording1.jpg&quot; class=&quot;inline_right&quot; /&gt;The song started with just guitar recorded over a click track. Rather than trying to set up and mic an amp I ran my guitar through my &lt;a href=&quot;http://buildyourownclone.com/effects-pedals/overdrive/classic-overdrive.html&quot;&gt;homemade overdrive pedal&lt;/a&gt; and then a clean amp model in Garageband. Once I had my basic structure down I went in to write drum parts. I wrote the drum part by hand placing events on the piano roll set to a drumset sound. I&amp;#39;m sure there are better ways to do this, but it worked for this song and I like the freedom I get by beind able to hand pick every hit in a beat.&lt;/p&gt;
-
-&lt;p&gt;I stressed out about my bass tone a bit during this recording session. Usually I need to run my bass through an amp and mic it to get anything remotely usable, but I wanted to get some parts down imediately and plugging in wasn&amp;#39;t an option at 11pm. I plugged directly into my recording interface (an &lt;a href=&quot;http://www.amazon.com/M-Audio-Track-Mobile-Interface-Preamps/dp/B000BD31ZW&quot;&gt;M-Audio Fast Track Pro&lt;/a&gt;) and then just put one of the fuzzy Garageband bass effects on the tracks and the sound was actually ok so I ended up keeping it. &lt;/p&gt;
-
-&lt;p&gt;From there it was time to play with keyboards! The paino parts are all pretty simple, mainly just to add some depth and tone to the song. I had a lot of fun writing some cool little counter-melodies on the synth. I&amp;#39;ve always had a soft spot for bands like Zolf the Rock and Roll Destoyer and Motion City Soundtrack so I really enjoyed being able to write some really poppy synth driven stuff.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;lyrics&lt;/strong&gt; &lt;/p&gt;
-
-&lt;p&gt;And now lyrics. Like I said, this song was an exercise in not overthinking things. I just sort of wrote the first things that came to mind so this song ended up overtly being a generic pop sound with vauge romantic sentements. That said, the ideas for the lyrics came from watching &lt;a href=&quot;http://drhorrible.com/&quot;&gt;Doctor Horrible&amp;#39;s Sing-a-long Blog&lt;/a&gt; and from spending a weekend home alone when Eileen was out of town.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;chorus&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Well I can&amp;#39;t get you out of my head &lt;br /&gt;
-I dream about you when I go to bed &lt;br /&gt;
-I can&amp;#39;t get you off of my mind &lt;br /&gt;
-And I don&amp;#39;t mind &lt;br /&gt;
-I can&amp;#39;t get you out of my head &lt;br /&gt;
-I keep replaying every word you said &lt;br /&gt;
-I&amp;#39;d like to give you some of my time &lt;br /&gt;
-If you don&amp;#39;t mind &lt;/p&gt;
-
-&lt;p&gt;The deep insight here is that I had a bunch of songs from Doctor Horrible stuck in my head for a long time. They&amp;#39;re really good! You should seriously watch it. That&amp;#39;s honestly the extent of the depth of that chorus, I just kind of took the theme of having something stuck in your head and presented it in a general enough way to make for a good, hopefully catchy, pop chorus.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;verse 1&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Well I&amp;#39;ve been spending too much time &lt;br /&gt;
-Home alone on my couch drinking too much wine &lt;br /&gt;
-Watching TV and waiting for &lt;br /&gt;
-You to come here and walk right through my door&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;verse 2&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Now I don&amp;#39;t eat and I barely sleep &lt;br /&gt;
-I don&amp;#39;t know how much longer I can keep &lt;br /&gt;
-Walking through these empty rooms &lt;br /&gt;
-Before I pick up my phone and call you&lt;/p&gt;
-
-&lt;p&gt;I wrote a lot of the music for this song over a weekend when Eileen was out of town so when I was looking for lyrical ideas for the verse I decided to just use the theme of being home alone and again present it in a vague way to make it sound like semi-romantic pop. I did take some liberties with the concepts. For example, there was no wine consumed that weekend but it&amp;#39;s harder to find good words that rhyme with whiskey. I did watch copious amounts of TV, mostly &lt;a href=&quot;http://www.watchtheguild.com/&quot;&gt;The Guild&lt;/a&gt;, and I don&amp;#39;t really do a good job of feeding myself or going to bed at a reasonable time when I am left home alone, so there is some truth to these words. I wasn&amp;#39;t as happy with the vocals I got when recording the verses. I just couldn&amp;#39;t seem to get a tone I was totally happy with, but I don&amp;#39;t think it&amp;#39;s too distracting.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;the song&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m really proud of how this song turned out.  I had a lot of fun with the style and its always rewarding to hear a completed project that has some complextiy to it. If you don&amp;#39;t want to travel all the way over to Soundcloud to hear the song, you can listen to it RIGHT HERE!&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/121317485&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=false&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Mon, 25 Nov 2013 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</guid>
       </item>
     
   </channel>
