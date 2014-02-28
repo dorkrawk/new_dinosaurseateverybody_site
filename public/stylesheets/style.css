@@ -6,8 +6,8 @@
 /* line 9, ../../sass/style.scss */
 body {
   background-color: white;
-  color: #292724;
-  font-family: 'Ariel', sans-serif;
+  color: #66595c;
+  font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
   font-size: 14px;
 }
 
@@ -76,10 +76,11 @@ ul#nav li {
   float: right;
   width: 75%;
   font-size: 16px;
-  line-height: 1.4em;
+  line-height: 1.7em;
+  word-wrap: break-word;
 }
 
-/* line 74, ../../sass/style.scss */
+/* line 75, ../../sass/style.scss */
 footer {
   clear: both;
   display: block;
@@ -89,24 +90,24 @@ footer {
 }
 
 /* Page specific stuff */
-/* line 84, ../../sass/style.scss */
+/* line 85, ../../sass/style.scss */
 .project_box {
   margin-bottom: 20px;
 }
-/* line 87, ../../sass/style.scss */
+/* line 88, ../../sass/style.scss */
 .project_box .project_title {
   font-weight: bold;
   font-size: 20px;
 }
 
-/* line 93, ../../sass/style.scss */
+/* line 94, ../../sass/style.scss */
 .back_to_blog {
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 99, ../../sass/style.scss */
+/* line 100, ../../sass/style.scss */
 .pagination {
   width: 100%;
   text-align: center;
@@ -114,24 +115,24 @@ footer {
   margin-bottom: 10px;
 }
 
-/* line 106, ../../sass/style.scss */
+/* line 107, ../../sass/style.scss */
 h2.post_title {
   font-size: 24px;
   margin-bottom: 2px;
   margin-top: 0px;
 }
 
-/* line 112, ../../sass/style.scss */
+/* line 113, ../../sass/style.scss */
 .post_date {
   color: #94908a;
 }
 
-/* line 116, ../../sass/style.scss */
+/* line 117, ../../sass/style.scss */
 .post {
   margin-bottom: 30px;
 }
 
-/* line 120, ../../sass/style.scss */
+/* line 121, ../../sass/style.scss */
 .highlight {
   white-space: pre-wrap;
   /* CSS3 */
@@ -145,7 +146,7 @@ h2.post_title {
   /* IE */
 }
 
-/* line 128, ../../sass/style.scss */
+/* line 129, ../../sass/style.scss */
 .inline_right {
   float: right;
   margin-left: 5px;
@@ -153,7 +154,7 @@ h2.post_title {
   margin-top: 5px;
 }
 
-/* line 135, ../../sass/style.scss */
+/* line 136, ../../sass/style.scss */
 .inline_left {
   float: left;
   margin-right: 5px;

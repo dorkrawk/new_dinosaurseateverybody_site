@@ -1,5 +1,5 @@
 $bg_color: white;
-$text_color: #292724; /* fake black */
+$text_color: #66595c; /* fake black */
 $light_text_color: #94908a; /* light gray */ 
 $alt_color1: #8fae46; /* pukey greenish */ 
 $alt_color2: #bad776; /* light pukey greenish */
@@ -9,7 +9,7 @@ $title_size: 24px;
 body {
   background-color: $bg_color;
   color: $text_color;
-  font-family: 'Ariel', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
   font-size: 14px; 
 }
 
@@ -68,7 +68,8 @@ ul#nav {
   float: right;
   width: 75%;
   font-size: 16px;
-  line-height: 1.4em;
+  line-height: 1.7em;
+  word-wrap: break-word;
 }
 
 footer {
