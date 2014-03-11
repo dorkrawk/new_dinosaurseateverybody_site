@@ -7,6 +7,25 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 9 - No Thing</title>
+        <description>&lt;p&gt;So this week was not a good Thing a Week week. I had planned to build the Instragram listener to go along with the Bird Watcher project I was working on a few weeks ago, but I ended up sort of bouncing around between a few ideas instead. This is a bit against the &amp;quot;Thing a Week&amp;quot; idea where I complete something every week rather than randomly playing around with stuff to no clear end.&lt;/p&gt;
+
+&lt;p&gt;That said I did git a bit of work done in a few areas. &lt;/p&gt;
+
+&lt;p&gt;I started the Instagram work and learned a bit more about how their streaming API works. It looks like I&amp;#39;ll need to build a callback endpoint to take in post info and store things in a database and then Instagram will handle most of the hard work. I&amp;#39;ll probably just end up building the callback endpoint as part of the exiting daveandeileen.com &lt;a href=&quot;https://github.com/dorkrawk/daveandeileen_site&quot;&gt;Sinatra application&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I also spent some time doing a bit of research on audio processing libraries for another project I&amp;#39;m planning. As of now I&amp;#39;m leaning towards &lt;a href=&quot;http://pydub.com/&quot;&gt;PyDub&lt;/a&gt;. Hopefully I&amp;#39;ll have some work from that project to post soon.&lt;/p&gt;
+
+&lt;p&gt;Finally, I&amp;#39;m planning to build a ring box for our wedding out of an old book (kind of like &lt;a href=&quot;http://cdn0.pairswellwithfood.com/wp-content/uploads/2012/11/Pommes-Frites-Flask-Book-Holder.jpg&quot;&gt;this&lt;/a&gt;, but with wedding rings). I was able to find a book I like at a used bookstore this weekend, so I consider that a small win.&lt;/p&gt;
+
+&lt;p&gt;This wasn&amp;#39;t a great Thing a Week week, but at least I got a few productive things done.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Mar 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 8 - In The Garage Cover</title>
         <description>&lt;p&gt;I had a little bit of trouble picking my project this week. Originally I had planned to continue working with Flask, but I was just at a loss for a small web app project idea. I had been playing around with some Weezer songs while playing guitar one morning so I decided to record a cover of &lt;a href=&quot;http://www.rdio.com/artist/Weezer/album/Weezer/track/In_The_Garage/&quot;&gt;In The Garage&lt;/a&gt; for this week&amp;#39;s thing. If you don&amp;#39;t feel like reading this to get all the way down to the Soundcloud player here&amp;#39;s &lt;a href=&quot;https://soundcloud.com/dorkrawk/in-the-garage-cover&quot;&gt;a link&lt;/a&gt;.&lt;/p&gt;
 
@@ -201,19 +220,6 @@
         <pubDate>Sun, 12 Jan 2014 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week</title>
-        <description>&lt;p&gt;I like New Years resolutions. Sure they&amp;#39;re kind of cheesy and I always tend to make similar resolutions each year (run more, get better at guitar, write more music, update &lt;a href=&quot;http://mountsaintawesome.com&quot;&gt;Mount Saint Awesome&lt;/a&gt; more regularly, etc.) but I still enjoy the excuse to take stock and think about things I want to be doing.&lt;/p&gt;
-
-&lt;p&gt;A lot of what I want to be doing is making things and in order to stay focused on that I&amp;#39;m going to steal an idea from the brilliant &lt;a href=&quot;http://www.jonathancoulton.com/&quot;&gt;Jonathan Coulton&lt;/a&gt; (of &lt;a href=&quot;http://www.youtube.com/watch?v=qYodWEKCuGg&quot;&gt;Code Monkey&lt;/a&gt; fame!) and try to do &lt;a href=&quot;http://www.jonathancoulton.com/primer/thing-a-week/&quot;&gt;A Thing A Week&lt;/a&gt;. While Jonathan did this entirely with songs I&amp;#39;m going to branch out to include almost anything that I can create within the 1 week time frame. This might involve building a guitar pedal or brewing a beer or making some art or creating a small web app or piece of software or even... writing and recording a song. I have a bit of experience with this schedule from the early days of Mount Saint Awesome. Back when I first started the comic I was VERY dedicated to posting a comic every Monday and I stuck with that schedule for over a year. It really helped me improve as a cartoonist. Here is the &lt;a href=&quot;http://mountsaintawesome.com/band/1/1.php&quot;&gt;first comic&lt;/a&gt; I posted and here is one of the &lt;a href=&quot;http://mountsaintawesome.com/band/3/10.php&quot;&gt;later plot based comic I posted&lt;/a&gt; (this was less than 1 year of comics, but still a noticeable difference.)&lt;/p&gt;
-
-&lt;p&gt;The first thing I&amp;#39;m going to try is building an HTML5/JavaScript game. I&amp;#39;ve been doing web development for a long time now but I&amp;#39;ve never built a game and it seems like a good excuse to play with some new HTML5 stuff, plus I&amp;#39;d really like to get more serious about JavaScript. If all goes to plan I will have a game to show off here next Monday!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 06 Jan 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week</guid>
       </item>
     
   </channel>
