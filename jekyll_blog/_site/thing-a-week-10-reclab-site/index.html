@@ -1,0 +1,34 @@
+<h2 class="post_title">Thing A Week 10 - RecLab Site</h2>
+<div class="post_date">March 17, 2014</div>
+
+<div class="post">
+<p>Once again I feel like I&#39;m stretching the rules of A Thing a Week (which is ok because I sort of just made them up). This week I focused on starting the website for a new larger project I&#39;ve started working on with a friend. We&#39;re trying to build a good way for musicians to collaborate online. There are a few things out there trying to address something similar to this, but none of them seem to have serious traction and it looks like there&#39;s a lot of room for refinement.</p>
+
+<p><img src="../blog_media/reclab1.png" class="inline_right" />
+This week we did a lot of planning and architecture for the project and I started building the Rails application for the site. This is my first non-trivial Rails 4 project and it&#39;s been interesting to see some of the little differences. The biggest one I&#39;ve come across so far is the removal of <code>attr_accessible</code> and moving that functionality into the controller. I need to learn a bit more about how that totally works but so far I&#39;ve been able to use a lot of what I learned building Rails 3.2 stuff.</p>
+
+<p>I&#39;ve been really impressed with the Rails 4 gem compatibility, as well. Major stuff I like to use such as <a href="https://github.com/plataformatec/devise">Devise</a>, <a href="https://github.com/gregbell/active_admin">Active Admin</a>, and <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> are all working just fine. Python could <a href="http://python3wos.appspot.com/">learn a lot</a> here!</p>
+
+<p>This week I was able to get the basic site together, make it look nice enough to work in for a while, build basic user/user profile and login functionality, and start building out some of the core business logic for working with recorded tracks. I also started putting together some survey questions so, musician friends, expect to be bugged to be asked questions soon. It might be a little while before we have an actual site for people to try but I&#39;m always interested in talking with people about the idea.</p>
+
+<p>Now I need to balance working on this with doing a couple other single-week projects, especially the stuff that is needed for the wedding.</p>
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'dinosaurseateverybody'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+
