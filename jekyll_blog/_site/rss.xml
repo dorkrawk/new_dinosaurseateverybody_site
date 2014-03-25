@@ -7,6 +7,19 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 11 - More RecLab</title>
+        <description>&lt;p&gt;Once again this week&amp;#39;s work was devoted more to a long term project than to anything that could be finished in 7 days. I put more work into the site and the audio processing tools for RecLab and we&amp;#39;ve been doing some good planning, too.&lt;/p&gt;
+
+&lt;p&gt;The site is pretty straight forward Rails, so far. Nothing too out of the ordinary there. I&amp;#39;m starting to get deeper into the music objects and business logic of the site, which is fun. I&amp;#39;ve also been working a bit with Flask as a wrapper around some of the audio processing stuff. After &lt;a href=&quot;../blog/thing-a-week-7-flask&quot;&gt;Week 7&lt;/a&gt; I had been looking for a good Flask project and now I&amp;#39;ve found one! I&amp;#39;ve found some great resources on building good APIs in Flask, such as &lt;a href=&quot;http://pycoder.net/bospy/presentation.html&quot;&gt;this one&lt;/a&gt; which have been really helpful for designing non-trivial stuff. I have a bit of experience building APIs with a micro web framework from building the &lt;a href=&quot;https://github.com/dorkrawk/unofficial-fitocracy-runs-api&quot;&gt;Unofficial Fitocracy Runs API&lt;/a&gt; in Sinatra, but this will be a bit more complex than that.&lt;/p&gt;
+
+&lt;p&gt;Hopefully we&amp;#39;ll have something that I can actually show off soon. We&amp;#39;ll certainly need early testers. I do still hope to have work on a few small projects that I can show off from week to week.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Mar 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 10 - RecLab Site</title>
         <description>&lt;p&gt;Once again I feel like I&amp;#39;m stretching the rules of A Thing a Week (which is ok because I sort of just made them up). This week I focused on starting the website for a new larger project I&amp;#39;ve started working on with a friend. We&amp;#39;re trying to build a good way for musicians to collaborate online. There are a few things out there trying to address something similar to this, but none of them seem to have serious traction and it looks like there&amp;#39;s a lot of room for refinement.&lt;/p&gt;
 
@@ -196,27 +209,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Sun, 26 Jan 2014 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 2 - Bass Overdrive Pedal</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/bass_pedal1.jpg&quot; class=&quot;inline_right&quot; /&gt; Success!&lt;/p&gt;
-
-&lt;p&gt;This week I built a bass overdrive pedal. I had received a &lt;a href=&quot;http://buildyourownclone.com/bassfx/bassoverdrive.html&quot;&gt;kit&lt;/a&gt; for this pedal for Xmas (as well as an arm for holding circuit boards while soldering, which may be the nerdiest gift I&amp;#39;ve ever received) and I was excited to finally have time to work on it. Last year I built a &lt;a href=&quot;http://buildyourownclone.com/effects-pedals/overdrive/classic-overdrive.html&quot;&gt;Tube Screamer overdrive clone&lt;/a&gt; from a kit, so I&amp;#39;ve had a little experience building pedals from kits already.&lt;/p&gt;
-
-&lt;p&gt;The choice of a bass overdrive pedal was motivated a bit by listening to some newer Ben Folds. He has some great songs on his new record that are really carried by piano and gruff sounding bass. Now that I have this new pedal, one of my upcoming Thing A Week things will hopefully be a song written in that style.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/bass_pedal2.jpg&quot; class=&quot;inline_left&quot; /&gt;This build was a bit more complicated than the last pedal I built, but I didn&amp;#39;t have any major problems with it. It took a while to solder all the little components onto the board but I actually found it to be very relaxing. It takes a lot of focus but it isn&amp;#39;t really mentally taxing. Soldering was a nice way to unwind after work this week. The biggest addition I made to this build was the choice to paint the enclosure. I had never painted metal before so I had to learn a bit about that (it&amp;#39;s not that complicated). It really just involved sanding the enclosure, priming it, then adding a few layers of indoor/outdoor spray paint. I picked a nice ugly yellow, which ended up looking really cool with the black nobs. I had originally planned to label the nobs and draw some sort of design, but I just didn&amp;#39;t find anything I like so I kept it totally clean, which ended up being a nice look.&lt;/p&gt;
-
-&lt;p&gt;The tone of the pedal itself it pretty cool. It has treble and bass levels as well as a blend control which lets you blend the drive and clean tones nicely. I did a quick recording so you can hear what it sounds like. I started with a clean bass sound for comparison then turned on the overdrive.&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130409131&amp;amp;color=ff6600&amp;amp;auto_play=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;It felt good to finish a Thing A Week project, I was a little worried about the viability of this project after falling short the first week. Next week I will probably try to do something artistic, maybe comic related.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Jan 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal</guid>
       </item>
     
   </channel>
