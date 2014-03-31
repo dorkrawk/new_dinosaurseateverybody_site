@@ -7,6 +7,35 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 12 - FilterFilter</title>
+        <description>&lt;p&gt;So this week I actually made a thing. Back in week&amp;#39;s &lt;a href=&quot;../blog/thing-a-week-4-bird-watcher&quot;&gt;4&lt;/a&gt; and &lt;a href=&quot;../blog/thing-a-week-5-bird-watcher-part-2&quot;&gt;5&lt;/a&gt; I was working on a project to listen to Twitter for pictures with a certain #hastag so I could display them at our wedding. I also wanted to build something similar for Instagram and have it feed into the same database. This became FilterFilter.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://instagram.com/developer/&quot;&gt;Instagram API&lt;/a&gt; works differently than Twitter&amp;#39;s. In order to get real-time information you have to register a callback endpoint with Instagram. This endpoint has to respont to a GET call with a validation code sent by Instgram and then respond to POST with whatever you want. Instagram only notifies you of an event (such as a photo being posted with a certain #hashtag), they don&amp;#39;t actually provide the media info, so you have to find that yourself, which is a bit annoying and kind of clunky.&lt;/p&gt;
+
+&lt;p&gt;Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/instagram_stuff&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;hub.challenge&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# for when you register your callback endpoint&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/instagram_stuff&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# do stuff when Instagram tells you something &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#    new has been posted&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I was able to use a lot of the code I wrote for &lt;a href=&quot;https://github.com/dorkrawk/bird-watcher&quot;&gt;BirdWatcher&lt;/a&gt; (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.&lt;/p&gt;
+
+&lt;p&gt;Of course I spent time this week working on RecLab, too. I got some S3 stuff set up and built out a few site forms. We were able to get a rough prototype of the basic track uploading and song creation functionality, which was fun to see. I also spent a bit of time working on our audio processing API. It&amp;#39;s starting to come together and it&amp;#39;s been very interesting designing something like this from the ground up.&lt;/p&gt;
+
+&lt;p&gt;To help us learn more about the types of people who might use RecLab I&amp;#39;ve put together a quick 10 question survey. If you are a musician, please take a minute and fill this out, it would be a big help! &lt;a href=&quot;https://www.surveymonkey.com/s/DPLMSMV&quot;&gt;RecLab Musician Survey&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 30 Mar 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 11 - More RecLab</title>
         <description>&lt;p&gt;Once again this week&amp;#39;s work was devoted more to a long term project than to anything that could be finished in 7 days. I put more work into the site and the audio processing tools for RecLab and we&amp;#39;ve been doing some good planning, too.&lt;/p&gt;
 
@@ -194,21 +223,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Tue, 04 Feb 2014 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 3 - Save The Date Comic</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/std_crop.png&quot; class=&quot;inline_right&quot; /&gt;Sorry, but this week you can&amp;#39;t see the full final product of my Thing A Week. I used this last week to write and draw a comic that we might use as part of our Save The Date cards (if you didn&amp;#39;t know already, I&amp;#39;m getting &lt;a href=&quot;http://daveandeileen.com&quot;&gt;married&lt;/a&gt; soon) so I want to keep the final comic unpublished until we send those out.&lt;/p&gt;
-
-&lt;p&gt;This Thing A Week was pretty straight forward: write and draw a comic. This is something I&amp;#39;ve done many times before. The main challenge was getting it good enough to print on cards and mail to friends and family. It just feels like because this is for the wedding, I should set the bar heigher than I would for a web comic. I&amp;#39;m always worried about my art not being good enough, so this comic was a bit stressful at times.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/std_work.jpg&quot; class=&quot;inline_left&quot; /&gt;The layout wasn&amp;#39;t too complicated but some of the poses and body positions were just a little odd for me and it took a bit to get them right. Like most comics I spent some time planning out the pannels and doing some quick sketches of a few poses before starting on the actual comic. I also decided to work at a larger scale, using 8.5 x 14 paper. This is always nice because I feel like I can work on details a lot better at this size.&lt;/p&gt;
-
-&lt;p&gt;I suppose there&amp;#39;s not much more to say about this project. I&amp;#39;m a bit torn on what to work on next week, it&amp;#39;s currently between writing a song that uses my &lt;a href=&quot;../blog/thing-a-week-2-bass-overdrive-pedal&quot;&gt;new bass pedal&lt;/a&gt;, working on a programming project for the wedding, or starting to work on a new idea for Big CoreUs.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 26 Jan 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</guid>
       </item>
     
   </channel>
