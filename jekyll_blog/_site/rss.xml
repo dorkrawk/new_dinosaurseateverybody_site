@@ -7,6 +7,44 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 13 - RecLab and Rocktopus</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/reclab2.png&quot; class=&quot;inline_right&quot; /&gt;
+This week was another mainly RecLab week. Actually I didn&amp;#39;t get much done on the RecLab Rails site outside of updating the look and feel with the new logo we&amp;#39;ve settled on (shown here...). I spent most of my time on our audio processing API, Rocktopus.&lt;/p&gt;
+
+&lt;p&gt;The Rocktopus work has been going well. It&amp;#39;s nice to get back into writing some Python again and I&amp;#39;ve been enjoying working with Flask. One of my favorite recent additions is the &lt;code&gt;require_auth&lt;/code&gt; decorator. Python decorators are pretty awesome and make it really simple to roll some common functionality into several methods.&lt;/p&gt;
+
+&lt;p&gt;This allows me to write Flask endpoints like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@app.route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/path_name&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@require_auth&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;path_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# do a bunch of stuff for this endpoint&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# but make sure the POST body contains the proper authentication&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The decorator itself is pretty simple and works something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;require_auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@wraps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;wrapped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;force&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validate_auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response_arm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth_fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# return 401&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrapped&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Rocktopus is really coming along nicely and I&amp;#39;m really close to getting it hooked up to the Rails site soon.&lt;/p&gt;
+
+&lt;p&gt;This week I start my drawing classes. I haven&amp;#39;t had any formal art training since grade school and it seemed time to learn a bit more about drawing, given my interest in comics, so I signed up for a Drawing 101 course at a local art studio. Hopefully I&amp;#39;ll have some cool work from the class over the next few weeks to show off in these posts.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Apr 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-13-reclab-and-roctopus</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-13-reclab-and-roctopus</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 12 - FilterFilter</title>
         <description>&lt;p&gt;So this week I actually made a thing. Back in week&amp;#39;s &lt;a href=&quot;../blog/thing-a-week-4-bird-watcher&quot;&gt;4&lt;/a&gt; and &lt;a href=&quot;../blog/thing-a-week-5-bird-watcher-part-2&quot;&gt;5&lt;/a&gt; I was working on a project to listen to Twitter for pictures with a certain #hastag so I could display them at our wedding. I also wanted to build something similar for Instagram and have it feed into the same database. This became FilterFilter.&lt;/p&gt;
 
@@ -206,23 +244,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Thu, 06 Feb 2014 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/does-anyone-still-use-rss</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/does-anyone-still-use-rss</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 4 - Bird Watcher</title>
-        <description>&lt;p&gt;This week might count as a partial failure plus I&amp;#39;m getting the post up pretty late, so that&amp;#39;s probably not good either.&lt;/p&gt;
-
-&lt;p&gt;Once again I tackled a project for the wedding. I want to build a system that listens to Twitter and Instagram for photos that are tagged #daveandeileen then pulls them in and displays them somewhere at the wedding. This week I decided to finish up the Twitter listener.&lt;/p&gt;
-
-&lt;p&gt;This listener is basically just a small Sinatra app that uses &lt;a href=&quot;https://github.com/tweetstream/tweetstream&quot;&gt;TweetStream&lt;/a&gt; to listen for tagged tweets and then if it matches the criteria (has image and is properly tagged) it stores info about the tweet into a database. This same database will eventually hold Instagram (this was the whole reason I signed up for &lt;a href=&quot;http://instagram.com/dorkrawk&quot;&gt;Instragram&lt;/a&gt;) data and then I&amp;#39;ll need to write a nice front end that pulls the photo data out and displays the pictures in some nice way.&lt;/p&gt;
-
-&lt;p&gt;I call this week a partial failure because I got the app working locally, but ran into some trouble getting it deployed properly. I am not a great sys admin, but I&amp;#39;m learning a few things. This is also the first time I&amp;#39;ve set up a database on my VPS. I&amp;#39;ve really been spoiled by always working with databases through a nice visual interface so doing some Postgres work while sshed into my server felt like pulling teeth. I was just running into some issues pretty late on Sunday night so I ended up admitting defeat and went to bed. You can check out the code for this project on &lt;a href=&quot;https://github.com/dorkrawk/bird-watcher&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This next week (the week we are currently experiencing right now) is pretty busy. We&amp;#39;re trying to finish up a bunch of other big wedding things (stuff that doesn&amp;#39;t involve coding) and my parents are in town this weekend, so I know I&amp;#39;m going to be limited for &amp;quot;thing a week&amp;quot; time. I would like to use this week to finish off the deployment for Bird Watcher. I feel bad about letting a project spread over two weeks but I think it&amp;#39;s best for my schedule and this project. &lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Feb 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</guid>
       </item>
     
   </channel>
