@@ -1,4 +1,19 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-14-drawing-class">Thing A Week 14 - Drawing Class</a></h2>
+  <div class="post_date">April 14, 2014</div>
+  <div class="post">
+    <p><img src="../blog_media/drawing01.jpg" class="inline_right" /></p>
+
+<p>This week I started something new. I&#39;m taking a Drawing 101 class at <a href="http://rootdivision.org/">Root Division</a> art studio in the Mission. I&#39;ve been <a href="http://mountsaintawesome.com">drawing comics</a> for a few years now, it seems like I should start learning how to draw.</p>
+
+<p>The class seems like it&#39;s going to cover the basics and have us work mainly with graphite and charcoal. I think it will be really good for me to take a step back and really learn some of these fundamentals. I haven&#39;t had any formal art training since Jr. High, so I&#39;m about due. I really feel like my comic art has started to hit a wall and I&#39;m having a hard time getting some ideas down on to paper.</p>
+
+<p>The drawing above is the first thing our instructor had us do: first draw an apple from memory, then he put an apple on the table for us to draw. Apples are kind of hard to draw.</p>
+
+<p>Hopefully I&#39;ll have some more impressive work from this class to post in the future.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-13-reclab-and-roctopus">Thing A Week 13 - RecLab and Rocktopus</a></h2>
   <div class="post_date">April 6, 2014</div>
   <div class="post">
@@ -195,27 +210,6 @@ This week we did a lot of planning and architecture for the project and I starte
 <p>You can see the final file I&#39;m using <code>bird_watcher.rb</code> in the <a href="https://github.com/dorkrawk/bird-watcher">Github repo</a> for the project.  </p>
 
 <p>Next I&#39;ll need to write an Instragram listener. Hopefully that will be pretty quick as most of the mechanics will be identical to this listener. I might hold off on working on that for a bit, though. I&#39;m thinking about tackling a musical project next week.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/does-anyone-still-use-rss">Does Anyone Still Use RSS?</a></h2>
-  <div class="post_date">February 6, 2014</div>
-  <div class="post">
-    <p>Since the death of Google Reader I feel like I&#39;ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.</p>
-
-<p>I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra hybrid I have running and had a few minutes tonight so I decided to give it a shot. It turned out to not be bad.  I just followed <a href="http://blog.drewinglis.com/2013/03/18/adding-rss.html">this quick tutoral</a> and found <a href="https://github.com/snaptortoise/jekyll-rss-feeds">a nice template here</a> and 90% of the work was done (basically I just add another template to my Jekyll project and a few lines in my config and an xml file gets generated along with everything else when I run <code>jekyll build</code>.</p>
-
-<p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: </p>
-
-<div class="highlight"><pre><code class="ruby"><span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">include?</span> <span class="s2">&quot;rss.xml&quot;</span>
-  <span class="n">content_type</span> <span class="s1">&#39;text/xml&#39;</span>
-  <span class="n">erb</span> <span class="n">contents</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-<span class="k">else</span> 
-  <span class="n">erb</span> <span class="n">contents</span>
-<span class="k">end</span>
-</code></pre></div>
-
-<p>Now you can subscribe to this blog via <a href="http://dinosaurseateverybody.com/blog/rss.xml">RSS</a> is you so desire!</p>
 
   </div>
 
