@@ -7,6 +7,19 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 16 - No Thing Again</title>
+        <description>&lt;p&gt;Once again I didn&amp;#39;t have a great Thing a Week week. I actually didn&amp;#39;t even get to the point of planning a project for the week. But I did accomplish one thing: &lt;strong&gt;I got a new job&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I spent a bunch of time this week prepping for and going on interviews and on Thursday I accepted a position as a Senior Full-Stack Engineer at &lt;a href=&quot;https://www.couchsurfing.org/&quot;&gt;Couchsurfing&lt;/a&gt;. Today was my first day and so far it&amp;#39;s an awesome gig. The office is amazing, it&amp;#39;s full of dogs, and I get lunch and dinner provided everyday by the staff chefs. The work seems like it will be a lot of fun too. I&amp;#39;m doing Rails development and it seems like I&amp;#39;ll be able to have a lot of say in how the product gets architected.&lt;/p&gt;
+
+&lt;p&gt;While it wasn&amp;#39;t the most productive Thing a Week week, getting a new job certainly qualifies this as a pretty productive life week.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Apr 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 15 - RecLab Song Collaboration</title>
         <description>&lt;p&gt;&lt;img src=&quot;../blog_media/reclab_screen1.png&quot; class=&quot;inline_right&quot; /&gt;
 Once again this was another week where my main productivity was with RecLab. I&amp;#39;m back to mainly working on the Rails application now, focusing on building out some of the song access features.&lt;/p&gt;
@@ -200,29 +213,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Mon, 24 Feb 2014 00:00:00 -0800</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-7-flask</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-7-flask</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 6 - Piano and Bass Song</title>
-        <description>&lt;p&gt;I think that it&amp;#39;s fair to call this Thing A Week a failure and I don&amp;#39;t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn&amp;#39;t go anywhere.&lt;/p&gt;
-
-&lt;p&gt;This tends to happen to me a lot. My Garageband folder is full of 30 second long riffs and fleshed out song chunks, but I often hit a wall and I&amp;#39;m not sure where to go from there. Last week I sat down and tried writing some stuff influenced by a couple songs that either did piano and bass or just bass licks well. The main ones I referred to were &lt;a href=&quot;http://www.rdio.com/artist/Ben_Folds_Five/album/The_Sound_Of_The_Life_Of_The_Mind/track/Erase_Me/&quot;&gt;Erase Me&lt;/a&gt; by Ben Folds Five and &lt;a href=&quot;http://www.rdio.com/artist/Brand_New/album/Deja_Entendu/track/Sic_Transit_Gloria_..._Glory_Fades/&quot;&gt;Sic Transit Gloria...Glory Fades&lt;/a&gt; by Brand New. They are both awesome songs and I especially love the way the piano and bass work together in the Ben Folds song but my ideas just weren&amp;#39;t working. I ended up with some weird meandering minor bass parts thrown over some really weak piano parts.&lt;/p&gt;
-
-&lt;p&gt;I came back the next day and switched to a major key and started with the piano part first. From there I came up with something that I liked and wrote a simple bass part that just harmonized the piano roots in a few parts.&lt;/p&gt;
-
-&lt;p&gt;And that&amp;#39;s where I got stuck. I spent a bit of time playing around with some sparse guitar parts and a few of the new amp models in the new version of Garageband. I also played around with the new Drummer feature of Garageband. It was pretty cool and maybe the most redeeming quality of Garageband X (the removal of the old keyboard shortcuts and export to mp3 are driving me nuts and might send my back to version 6!). The drum sounds are great and it&amp;#39;s a big step up from the midi drum parts I had been working with in the old version of Garageband, but I did feel a bit uncomfortable with the loss of control over every single hit. I suppose it&amp;#39;s a decent compromise.&lt;/p&gt;
-
-&lt;p&gt;So here&amp;#39;s what I came up with. I ended up just doing some random guitar riffing and bigger chords at some point, but it really just felt forced and didn&amp;#39;t take the song anywhere. Take a listen, though, because the piano/bass part turned out pretty nice: &lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135426611&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;I&amp;#39;d like to keep working with this song. It&amp;#39;s different than most of the stuff I&amp;#39;ve written lately. I think that throwing lyrics over it will be a bit of a challenge just because I don&amp;#39;t quite trust my voice for something this mellow, but it&amp;#39;s a fun part and I think it could turn into something cool.&lt;/p&gt;
-
-&lt;p&gt;This week I&amp;#39;m leaning towards either a project with Python (I&amp;#39;ve been meaning to brush up on my Python for a while) or something artistic. I&amp;#39;m still not quite sure.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 17 Feb 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song</guid>
       </item>
     
   </channel>
