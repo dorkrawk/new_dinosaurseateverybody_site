@@ -7,6 +7,29 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 18 - Wine Women and Song Cover</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/recording3.jpg&quot; class=&quot;inline_right&quot; /&gt;
+I didn&amp;#39;t really plan to do anything outside of RecLab work this week but yesterday I got in the mood to play and record some music so I ended up with a new recording for this week&amp;#39;s thing.&lt;/p&gt;
+
+&lt;p&gt;Eileen and I have been talking about doing more recording together (as Packets and Waves) and after a recent Hurray For the Riff Raff show, we were in the mood to do some old country songs. We settled on doing a cover of Loretta Lynn&amp;#39;s &lt;a href=&quot;https://www.youtube.com/watch?v=7Wj_vD20N-Q&quot;&gt;Wine Women and Song&lt;/a&gt;. It&amp;#39;s a short, simple song (which was important because we started learning it at about 11:30pm on Saturday night) and I just like the phrase &amp;quot;wine, women, and song&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/recording2.jpg&quot; class=&quot;inline_left&quot; /&gt;
+We didn&amp;#39;t want to it be an exact copy of the original so I tried to give it a dirty Black Keys-ish guitar sound and keep the guitar part pretty simple. I resisted to urge to layer on a bunch of random instruments and only used guitar, bass, and drums for most of the song. The piano was only added in the chorus and solo sections, even though I tried a few takes where I recorded some sporadic piano comping throughout the whole. In the end, the stripped down version just sounded cooler.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m really coming around the the virtual drummer in Logic Pro. At first I really resisted the idea of letting the software &amp;quot;write&amp;quot; my drum parts for me, but the sound is &lt;em&gt;so&lt;/em&gt; much better than MIDI drums and I can actually get some interesting parts. For this song I used &amp;quot;Logan&amp;quot; with a retro sounding kit. I thought the tom driven verses worked out really well.&lt;/p&gt;
+
+&lt;p&gt;Eileen&amp;#39;s vocals turned out nicely, as usual. I was tempted to dirty up the vocal recording with a tube mic simulator, but I ended up just using a simple &amp;quot;out of the box&amp;quot; compressor effect, which sounded fine.&lt;/p&gt;
+
+&lt;p&gt;This ended up being a really fun little project. It only took a few hours from idea to finished product and the result was really satisfying. Enjoy our cover of &lt;a href=&quot;https://soundcloud.com/dorkrawk/wine-women-and-song&quot;&gt;Wine Women and Song&lt;/a&gt;!&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149068054&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Sun, 11 May 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 17 - RecLab and Drawing Class Update</title>
         <description>&lt;p&gt;This week, while I was busy with the first week of my new job, I did manage to get some RecLab work done. Also, I&amp;#39;m a few weeks into my drawing class, so I wanted to post an update from that.&lt;/p&gt;
 
@@ -198,33 +221,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Mon, 10 Mar 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 8 - In The Garage Cover</title>
-        <description>&lt;p&gt;I had a little bit of trouble picking my project this week. Originally I had planned to continue working with Flask, but I was just at a loss for a small web app project idea. I had been playing around with some Weezer songs while playing guitar one morning so I decided to record a cover of &lt;a href=&quot;http://www.rdio.com/artist/Weezer/album/Weezer/track/In_The_Garage/&quot;&gt;In The Garage&lt;/a&gt; for this week&amp;#39;s thing. If you don&amp;#39;t feel like reading this to get all the way down to the Soundcloud player here&amp;#39;s &lt;a href=&quot;https://soundcloud.com/dorkrawk/in-the-garage-cover&quot;&gt;a link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I was pretty faithful to the original, mainly just taking some liberties with instrumentation in a few parts. I really like the dirty guitar and bass in song so I found some amp models that kept with that style. I did swap out the harmonica riff for a thin, high piano part over a crunchy bass. I really liked the hollow sound it created and it felt in line with my tendency to add keys to things. In that same vein, I used some synth in a few parts as well, replacing the little guitar riff in the verse and working with the guitar in the solo.&lt;/p&gt;
-
-&lt;p&gt;I actually had a lot of fun with the solo, again staying pretty true to the original but taking some liberties here and there. The synth was a fun addition and really beefed things up. I ended up falling back on some blues riffing during the end of the solo because I&amp;#39;m just not as metal as Rivers.&lt;/p&gt;
-
-&lt;p&gt;Again I used Garageband&amp;#39;s Drummer feature for the drums. I spent a bit of time dialing them in and I was pleased with how they turned out. While laying out the song I did discover that Garageband doesn&amp;#39;t let you change time signatures in the middle of a song. There is a single measure of 2/4 time in the verse so I had to just offset thing. I was worried that the automated drumming would sound weird around this change, but it ended up being fine.&lt;/p&gt;
-
-&lt;p&gt;The vocals... This is always tough for me. The verses turned out ok. They&amp;#39;re pretty straight forward and in my range but the chorus was tough. Some of the high notes were a big of a strain for me and in general the choruses felt a bit lack luster. I just don&amp;#39;t know how to get more character out of my voice. The last chorus with the high harmonies was especially difficult. I was &lt;em&gt;really&lt;/em&gt; straining my voice there. As always, doing stuff like this is great practice and helps me improve so I just need to keep that perspective.&lt;/p&gt;
-
-&lt;p&gt;I wasn&amp;#39;t especially pleased with the mixing and production on this song. I felt a bit rushed because I started working on this a little later in the week. I had recorded some of the guitar parts in a chopped up way and I can hear some lack of fluidity. None of the parts were difficult enough to get right to justify this type of recording but I was just in a rush to get something down. In general I think things just feel a bit choppy, but I suppose that&amp;#39;s the price of doing things on a time crunch.&lt;/p&gt;
-
-&lt;p&gt;All in all, it was a fun project and it&amp;#39;s alway nice to spend time recording.  Enjoy:&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137828215&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;strong&gt;bonus thing!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I also posted a comic to &lt;a href=&quot;http://mountsaintawesome.com/&quot;&gt;Mount Saint Awesome&lt;/a&gt; this week (the first in quite a while). It didn&amp;#39;t feel like a big enough art project to be a full Thing a Week thing, but it&amp;#39;s still worth &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=78&quot;&gt;checking out&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 03 Mar 2014 00:00:00 -0800</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-8-in-the-garage-cover</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-8-in-the-garage-cover</guid>
       </item>
     
   </channel>
