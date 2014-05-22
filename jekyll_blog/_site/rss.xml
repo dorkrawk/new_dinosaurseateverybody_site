@@ -7,6 +7,23 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 19 - RecLab Online Presence</title>
+        <description>&lt;p&gt;So this Thing a Week post is late because I was out of town from last Saturday until late yesterday night.&lt;/p&gt;
+
+&lt;p&gt;While I did make some progress on getting the RecLab Rails application to connect to Rocktopus (our audio processing library) the main thing we got accomplished last week was setting up our RecLab presence online.&lt;/p&gt;
+
+&lt;p&gt;A major part of this was building out a Launchrock page to point our domain at. So now if you go to &lt;a href=&quot;http://reclaboratory.com&quot;&gt;reclaboratory.com&lt;/a&gt; you actually see something! Right now we&amp;#39;re just collecting email addresses, but building this out helped us think through some basic service descriptions, a tagline, and formalizing how to write the name. It&amp;#39;s officially &lt;strong&gt;RecLaboratory&lt;/strong&gt;. Note the capital &amp;#39;R&amp;#39; and &amp;#39;L&amp;#39;. It took us a surprising amount of discussion to decide on this convention.&lt;/p&gt;
+
+&lt;p&gt;We also cleaned up our &lt;a href=&quot;https://www.facebook.com/reclaboratory&quot;&gt;Facebook&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/reclaboratory&quot;&gt;Twitter&lt;/a&gt;, and &lt;a href=&quot;http://instagram.com/reclaboratory&quot;&gt;Instagram&lt;/a&gt; accounts, so those are ready to be used.&lt;/p&gt;
+
+&lt;p&gt;Feel free to follow us at any of those places as we&amp;#39;ll be starting to use them soon.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 May 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 18 - Wine Women and Song Cover</title>
         <description>&lt;p&gt;&lt;img src=&quot;../blog_media/recording3.jpg&quot; class=&quot;inline_right&quot; /&gt;
 I didn&amp;#39;t really plan to do anything outside of RecLab work this week but yesterday I got in the mood to play and record some music so I ended up with a new recording for this week&amp;#39;s thing.&lt;/p&gt;
@@ -202,25 +219,6 @@ This week we did a lot of planning and architecture for the project and I starte
         <pubDate>Mon, 17 Mar 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-10-reclab-site</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-10-reclab-site</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 9 - No Thing</title>
-        <description>&lt;p&gt;So this week was not a good Thing a Week week. I had planned to build the Instragram listener to go along with the Bird Watcher project I was working on a few weeks ago, but I ended up sort of bouncing around between a few ideas instead. This is a bit against the &amp;quot;Thing a Week&amp;quot; idea where I complete something every week rather than randomly playing around with stuff to no clear end.&lt;/p&gt;
-
-&lt;p&gt;That said I did git a bit of work done in a few areas. &lt;/p&gt;
-
-&lt;p&gt;I started the Instagram work and learned a bit more about how their streaming API works. It looks like I&amp;#39;ll need to build a callback endpoint to take in post info and store things in a database and then Instagram will handle most of the hard work. I&amp;#39;ll probably just end up building the callback endpoint as part of the exiting daveandeileen.com &lt;a href=&quot;https://github.com/dorkrawk/daveandeileen_site&quot;&gt;Sinatra application&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also spent some time doing a bit of research on audio processing libraries for another project I&amp;#39;m planning. As of now I&amp;#39;m leaning towards &lt;a href=&quot;http://pydub.com/&quot;&gt;PyDub&lt;/a&gt;. Hopefully I&amp;#39;ll have some work from that project to post soon.&lt;/p&gt;
-
-&lt;p&gt;Finally, I&amp;#39;m planning to build a ring box for our wedding out of an old book (kind of like &lt;a href=&quot;http://cdn0.pairswellwithfood.com/wp-content/uploads/2012/11/Pommes-Frites-Flask-Book-Holder.jpg&quot;&gt;this&lt;/a&gt;, but with wedding rings). I was able to find a book I like at a used bookstore this weekend, so I consider that a small win.&lt;/p&gt;
-
-&lt;p&gt;This wasn&amp;#39;t a great Thing a Week week, but at least I got a few productive things done.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 10 Mar 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</guid>
       </item>
     
   </channel>
