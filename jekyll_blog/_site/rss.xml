@@ -7,6 +7,24 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 21 - Wedding Invitations</title>
+        <description>&lt;p&gt;This seems like a bit of a cop out but when I thought back to what took up most of my time last week it turns out, it was putting together and mailing out wedding invitations.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/wedding_thankyous.jpg&quot; class=&quot;inline_right&quot; /&gt;
+Again, this is sort of cheating because most of the creative work was done by our very talented friend &lt;a href=&quot;http://www.debbysu.com/&quot;&gt;Debby&lt;/a&gt;. After listening to our asinine ideas she designed awesome invitations, RSVP cards, and thank you cards.&lt;/p&gt;
+
+&lt;p&gt;Then it was our job to pick out paper and envelopes and all that other stuff (which is a much bigger ordeal than I had ever imagined). Eileen and I both took a morning off of work just to talk to paper stores and printers. It was exhausting.&lt;/p&gt;
+
+&lt;p&gt;Once everything was actually printed on fancy paper we had to do all sorts of crafty things like tie twine around the jackets that hold the invitation and RSVP card, addressed all the envelopes, print return address labels, and puts stamps on everything. None of it was particularly hard (except for maybe addressing everything, but Eileen did that because my handwriting is illegible) but it just took a LONG TIME.&lt;/p&gt;
+
+&lt;p&gt;On Saturday morning we got everything mailed out, which felt good. This was a much bigger project than I expected it to be, but they turned out really cool.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jun 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 20 - RecLab Layouts and Rocutopus Connection</title>
         <description>&lt;p&gt;&lt;img src=&quot;../blog_media/reclab_screen2.png&quot; class=&quot;inline_right&quot; /&gt;
 This week I ended up getting quite a bit of RecLab work done, especially for a shortened week.&lt;/p&gt;
@@ -204,19 +222,6 @@ This week was another mainly RecLab week. Actually I didn&amp;#39;t get much don
         <pubDate>Sun, 30 Mar 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 11 - More RecLab</title>
-        <description>&lt;p&gt;Once again this week&amp;#39;s work was devoted more to a long term project than to anything that could be finished in 7 days. I put more work into the site and the audio processing tools for RecLab and we&amp;#39;ve been doing some good planning, too.&lt;/p&gt;
-
-&lt;p&gt;The site is pretty straight forward Rails, so far. Nothing too out of the ordinary there. I&amp;#39;m starting to get deeper into the music objects and business logic of the site, which is fun. I&amp;#39;ve also been working a bit with Flask as a wrapper around some of the audio processing stuff. After &lt;a href=&quot;../blog/thing-a-week-7-flask&quot;&gt;Week 7&lt;/a&gt; I had been looking for a good Flask project and now I&amp;#39;ve found one! I&amp;#39;ve found some great resources on building good APIs in Flask, such as &lt;a href=&quot;http://pycoder.net/bospy/presentation.html&quot;&gt;this one&lt;/a&gt; which have been really helpful for designing non-trivial stuff. I have a bit of experience building APIs with a micro web framework from building the &lt;a href=&quot;https://github.com/dorkrawk/unofficial-fitocracy-runs-api&quot;&gt;Unofficial Fitocracy Runs API&lt;/a&gt; in Sinatra, but this will be a bit more complex than that.&lt;/p&gt;
-
-&lt;p&gt;Hopefully we&amp;#39;ll have something that I can actually show off soon. We&amp;#39;ll certainly need early testers. I do still hope to have work on a few small projects that I can show off from week to week.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 24 Mar 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab</guid>
       </item>
     
   </channel>
