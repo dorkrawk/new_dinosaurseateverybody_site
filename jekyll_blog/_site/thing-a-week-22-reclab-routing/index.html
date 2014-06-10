@@ -1,0 +1,41 @@
+<h2 class="post_title">Thing A Week 22 - Reclab Routing</h2>
+<div class="post_date">June 10, 2014</div>
+
+<div class="post">
+<p>This was a pretty busy week. I ended up flying back to Chicago on Thursday for my bachelor party, which was really awesome! These good times didn&#39;t leave a lot of time for building things but I managed to get some interesting routing work done on the Reclab site.</p>
+
+<p>I want Reclab to namespace songs and tracks by username, similar to the way Github namespaces <a href="https://github.com/dorkrawk/darwinning">repos</a>. Obviously I also want to use nice identifiers for the resources rather than just id numbers, so I started by setting up <a href="https://github.com/norman/friendly_id">FriendlyId</a>, which is a great gem for this sort of thing.</p>
+
+<p>What&#39;s really cool about FriendlyId is that it can generate a slug that is unique across multiple fields in the object. For example, I want to allow user1 and user2 to both be able to have a song name &quot;My Song One&quot; so I want the path to each song to be something like <code>user1/songs/my-song-one</code> and <code>user2/songs/my-song-one</code>. Note that the song identifier &quot;my-song-one&quot; is only locally unique, not globally unique. To do this FriendlyId lets you scope slugs:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="kp">extend</span> <span class="no">FriendlyId</span>
+<span class="n">friendly_id</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">use</span><span class="p">:</span> <span class="o">[</span><span class="ss">:slugged</span><span class="p">,</span> <span class="ss">:finders</span><span class="p">,</span> <span class="ss">:scoped</span><span class="o">]</span><span class="p">,</span> <span class="ss">scope</span><span class="p">:</span> <span class="ss">:user</span>
+</code></pre></div>
+
+<p>Then, in order to get things to work with ActiveAdmin I had to make Songs &quot;owned&quot; by Users. If you don&#39;t do this, ActiveAdmin tries to use the FriendlyId slug as a globally unique identifier. This is an easy fix in the <code>/admin/song.rb</code>:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">ActiveAdmin</span><span class="o">.</span><span class="n">register</span> <span class="no">Song</span> <span class="k">do</span>
+  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</code></pre></div>
+
+<p>I still need to clean up the routing in the rest of the app but this was a big step forward to some nicer paths.</p>
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'dinosaurseateverybody'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+
