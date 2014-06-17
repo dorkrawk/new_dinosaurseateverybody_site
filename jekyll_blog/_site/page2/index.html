@@ -1,4 +1,40 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-13-reclab-and-roctopus">Thing A Week 13 - RecLab and Rocktopus</a></h2>
+  <div class="post_date">April 6, 2014</div>
+  <div class="post">
+    <p><img src="../blog_media/reclab2.png" class="inline_right" />
+This week was another mainly RecLab week. Actually I didn&#39;t get much done on the RecLab Rails site outside of updating the look and feel with the new logo we&#39;ve settled on (shown here...). I spent most of my time on our audio processing API, Rocktopus.</p>
+
+<p>The Rocktopus work has been going well. It&#39;s nice to get back into writing some Python again and I&#39;ve been enjoying working with Flask. One of my favorite recent additions is the <code>require_auth</code> decorator. Python decorators are pretty awesome and make it really simple to roll some common functionality into several methods.</p>
+
+<p>This allows me to write Flask endpoints like this:</p>
+
+<div class="highlight"><pre><code class="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/path_name&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;POST&#39;</span><span class="p">])</span>
+<span class="nd">@require_auth</span>
+<span class="k">def</span> <span class="nf">path_method</span><span class="p">():</span>
+  <span class="c"># do a bunch of stuff for this endpoint</span>
+  <span class="c"># but make sure the POST body contains the proper authentication</span>
+</code></pre></div>
+
+<p>The decorator itself is pretty simple and works something like this:</p>
+
+<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">validate_auth</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">response_arm</span><span class="o">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c"># return 401</span>
+
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapped</span>
+</code></pre></div>
+
+<p>Rocktopus is really coming along nicely and I&#39;m really close to getting it hooked up to the Rails site soon.</p>
+
+<p>This week I start my drawing classes. I haven&#39;t had any formal art training since grade school and it seemed time to learn a bit more about drawing, given my interest in comics, so I signed up for a Drawing 101 course at a local art studio. Hopefully I&#39;ll have some cool work from the class over the next few weeks to show off in these posts.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-12-filterfilter">Thing A Week 12 - FilterFilter</a></h2>
   <div class="post_date">March 30, 2014</div>
   <div class="post">
@@ -180,21 +216,6 @@ This week we did a lot of planning and architecture for the project and I starte
 </code></pre></div>
 
 <p>Now you can subscribe to this blog via <a href="http://dinosaurseateverybody.com/blog/rss.xml">RSS</a> is you so desire!</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-4-bird-watcher">Thing A Week 4 - Bird Watcher</a></h2>
-  <div class="post_date">February 4, 2014</div>
-  <div class="post">
-    <p>This week might count as a partial failure plus I&#39;m getting the post up pretty late, so that&#39;s probably not good either.</p>
-
-<p>Once again I tackled a project for the wedding. I want to build a system that listens to Twitter and Instagram for photos that are tagged #daveandeileen then pulls them in and displays them somewhere at the wedding. This week I decided to finish up the Twitter listener.</p>
-
-<p>This listener is basically just a small Sinatra app that uses <a href="https://github.com/tweetstream/tweetstream">TweetStream</a> to listen for tagged tweets and then if it matches the criteria (has image and is properly tagged) it stores info about the tweet into a database. This same database will eventually hold Instagram (this was the whole reason I signed up for <a href="http://instagram.com/dorkrawk">Instragram</a>) data and then I&#39;ll need to write a nice front end that pulls the photo data out and displays the pictures in some nice way.</p>
-
-<p>I call this week a partial failure because I got the app working locally, but ran into some trouble getting it deployed properly. I am not a great sys admin, but I&#39;m learning a few things. This is also the first time I&#39;ve set up a database on my VPS. I&#39;ve really been spoiled by always working with databases through a nice visual interface so doing some Postgres work while sshed into my server felt like pulling teeth. I was just running into some issues pretty late on Sunday night so I ended up admitting defeat and went to bed. You can check out the code for this project on <a href="https://github.com/dorkrawk/bird-watcher">Github</a>.</p>
-
-<p>This next week (the week we are currently experiencing right now) is pretty busy. We&#39;re trying to finish up a bunch of other big wedding things (stuff that doesn&#39;t involve coding) and my parents are in town this weekend, so I know I&#39;m going to be limited for &quot;thing a week&quot; time. I would like to use this week to finish off the deployment for Bird Watcher. I feel bad about letting a project spread over two weeks but I think it&#39;s best for my schedule and this project. </p>
 
   </div>
 
