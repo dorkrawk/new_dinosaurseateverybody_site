@@ -1,0 +1,37 @@
+<h2 class="post_title">Thing A Week 24 - RecLab Feed</h2>
+<div class="post_date">June 23, 2014</div>
+
+<div class="post">
+<p>This was another busy week but I manged to get some solid work done on <a href="http://reclaboratory.com">RecLaboratory</a> stuff. </p>
+
+<p>First I took some pictures to use as a cover photo on our <a href="https://twitter.com/reclaboratory">Twitter</a> and <a href="https://www.facebook.com/reclaboratory">Facebook</a> pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I&#39;m pleased with how it looks.  Feel free to follow/friend us on either. We&#39;re starting to post things.</p>
+
+<p>Last Wednesday night I just couldn&#39;t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn&#39;t just rig something together with a bunch of ugly table JOINs I ended up using the <a href="https://github.com/pokonski/public_activity">public_activity</a> gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.</p>
+
+<p>Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I&#39;m using the public_activity <code>params</code> hash to avoid some n+1 database call issues but so far it&#39;s made it really easy to build feeds on User, Track, and Song pages. I&#39;m working on building the main homepage feed now, which is proving a little trickier. Obviously I&#39;d like to do this with a single call to the <code>Activities</code> model but because it&#39;s tracking polymorphic objects, the SQL is taking some work.</p>
+
+<p>I&#39;m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too...</p>
+
+<p><strong>bonus thing</strong></p>
+
+<p>I actually drew a real comic this week, one where I penciled and inked and everything. <a href="http://mountsaintawesome.com/comic.php?id=87">Check it out</a>!</p>
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'dinosaurseateverybody'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+

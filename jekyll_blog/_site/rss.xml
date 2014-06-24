@@ -7,6 +7,27 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 24 - RecLab Feed</title>
+        <description>&lt;p&gt;This was another busy week but I manged to get some solid work done on &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; stuff. &lt;/p&gt;
+
+&lt;p&gt;First I took some pictures to use as a cover photo on our &lt;a href=&quot;https://twitter.com/reclaboratory&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://www.facebook.com/reclaboratory&quot;&gt;Facebook&lt;/a&gt; pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I&amp;#39;m pleased with how it looks.  Feel free to follow/friend us on either. We&amp;#39;re starting to post things.&lt;/p&gt;
+
+&lt;p&gt;Last Wednesday night I just couldn&amp;#39;t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn&amp;#39;t just rig something together with a bunch of ugly table JOINs I ended up using the &lt;a href=&quot;https://github.com/pokonski/public_activity&quot;&gt;public_activity&lt;/a&gt; gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.&lt;/p&gt;
+
+&lt;p&gt;Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I&amp;#39;m using the public_activity &lt;code&gt;params&lt;/code&gt; hash to avoid some n+1 database call issues but so far it&amp;#39;s made it really easy to build feeds on User, Track, and Song pages. I&amp;#39;m working on building the main homepage feed now, which is proving a little trickier. Obviously I&amp;#39;d like to do this with a single call to the &lt;code&gt;Activities&lt;/code&gt; model but because it&amp;#39;s tracking polymorphic objects, the SQL is taking some work.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too...&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;bonus thing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I actually drew a real comic this week, one where I penciled and inked and everything. &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=87&quot;&gt;Check it out&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 23 Jun 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 23 - Bird Watcher Display</title>
         <description>&lt;p&gt;This weekend Eileen was out of the house for her bachelorette party so I tried to knock out a few outstanding wedding related projects (apparently that is coming up pretty quickly). The &lt;a href=&quot;../blog/thing-a-week-4-bird-watcher&quot;&gt;Bird Watcher&lt;/a&gt; project had been dragging on for a while so I thought this would be a good time to wrap it up, too.&lt;/p&gt;
 
@@ -178,29 +199,6 @@ Once again this was another week where my main productivity was with RecLab. I&a
         <pubDate>Mon, 21 Apr 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-15-reclab-song-collaboration</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-15-reclab-song-collaboration</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 14 - Drawing Class</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/drawing01.jpg&quot; class=&quot;inline_right&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I started something new. I&amp;#39;m taking a Drawing 101 class at &lt;a href=&quot;http://rootdivision.org/&quot;&gt;Root Division&lt;/a&gt; art studio in the Mission. I&amp;#39;ve been &lt;a href=&quot;http://mountsaintawesome.com&quot;&gt;drawing comics&lt;/a&gt; for a few years now, it seems like I should start learning how to draw.&lt;/p&gt;
-
-&lt;p&gt;The class seems like it&amp;#39;s going to cover the basics and have us work mainly with graphite and charcoal. I think it will be really good for me to take a step back and really learn some of these fundamentals. I haven&amp;#39;t had any formal art training since Jr. High, so I&amp;#39;m about due. I really feel like my comic art has started to hit a wall and I&amp;#39;m having a hard time getting some ideas down on to paper.&lt;/p&gt;
-
-&lt;p&gt;The drawing above is the first thing our instructor had us do: first draw an apple from memory, then he put an apple on the table for us to draw. Apples are kind of hard to draw.&lt;/p&gt;
-
-&lt;p&gt;Hopefully I&amp;#39;ll have some more impressive work from this class to post in the future.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;bonus thing!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Eileen got me a copy of Logic Pro X for my birthday and so the first thing I did with it was play with all the amp models and pile a bunch of guitar parts on top of each other. The &lt;a href=&quot;https://soundcloud.com/dorkrawk/guitar-pile&quot;&gt;resulting 30 second piece&lt;/a&gt; ended up sounding like some kind of epic video game music: &lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/144725898&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Mon, 14 Apr 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-14-drawing-class</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-14-drawing-class</guid>
       </item>
     
   </channel>
