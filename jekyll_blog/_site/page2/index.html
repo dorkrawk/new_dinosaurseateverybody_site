@@ -1,4 +1,16 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-15-reclab-song-collaboration">Thing A Week 15 - RecLab Song Collaboration</a></h2>
+  <div class="post_date">April 21, 2014</div>
+  <div class="post">
+    <p><img src="../blog_media/reclab_screen1.png" class="inline_right" />
+Once again this was another week where my main productivity was with RecLab. I&#39;m back to mainly working on the Rails application now, focusing on building out some of the song access features.</p>
+
+<p>Our big breakthrough this week was being able to actually collaborate on a song using RecLab. Bobby and I were able to record tracks on our individual computers, create new tracks in RecLab, and combine them together into a song. The process was pretty clunky and the interface is still very sparse but it felt like a big step to use the product for its intended purpose.</p>
+
+<p>There is still lot of work to be done before we can even start letting other people try the product but hitting these little milestones feels good.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-14-drawing-class">Thing A Week 14 - Drawing Class</a></h2>
   <div class="post_date">April 14, 2014</div>
   <div class="post">
@@ -186,45 +198,12 @@ This week we did a lot of planning and architecture for the project and I starte
 
   </div>
 
-  <h2 class="post_title"><a href="../blog/thing-a-week-5-bird-watcher-part-2">Thing A Week 5 - Bird Watcher (Part 2)</a></h2>
-  <div class="post_date">February 9, 2014</div>
-  <div class="post">
-    <p>So I took this week to wrap up last week&#39;s project. I was having trouble getting the Twitter listener for my wedding photo project up and running on my server but I&#39;m pleased to report that I managed to get things up and running.</p>
-
-<p>I ended up changing the format of the project a bit. Instead of a full Sinatra application I put everything into a single Ruby file that I can just leave running whenever I want to fire up the listener. I didn&#39;t need this project to serve any content, only run Tweet Stream and write to a database, so Sinatra was probably overkill to begin with.</p>
-
-<p>I had some trouble with <a href="http://sequel.jeremyevans.net/">Sequel</a>, the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn&#39;t work:</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">store_image</span><span class="p">(</span><span class="n">tweet_photo_url</span><span class="p">,</span> <span class="n">tweet_user</span><span class="p">,</span> <span class="n">tweet_text</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-  <span class="vi">@db</span><span class="o">[</span><span class="ss">:photos</span><span class="o">].</span><span class="n">insert</span><span class="p">(</span> <span class="ss">:photo_url</span> <span class="o">=&gt;</span> <span class="n">tweet_photo_url</span><span class="p">,</span> <span class="ss">:service</span> <span class="o">=&gt;</span> <span class="s2">&quot;twitter&quot;</span><span class="p">,</span> <span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">screen_name</span><span class="p">,</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="nb">name</span><span class="p">,</span> <span class="ss">:photo_text</span> <span class="o">=&gt;</span> <span class="n">tweet_text</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div>
-
-<p>but this did:</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">store_image</span><span class="p">(</span><span class="n">tweet_photo_url</span><span class="p">,</span> <span class="n">tweet_user</span><span class="p">,</span> <span class="n">tweet_text</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-  <span class="n">the_url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">tweet_photo_url</span><span class="si">}</span><span class="s2">&quot;</span>
-  
-  <span class="vi">@db</span><span class="o">[</span><span class="ss">:photos</span><span class="o">].</span><span class="n">insert</span><span class="p">(</span> <span class="ss">:photo_url</span> <span class="o">=&gt;</span> <span class="n">the_url</span><span class="p">,</span> <span class="ss">:service</span> <span class="o">=&gt;</span> <span class="s2">&quot;twitter&quot;</span><span class="p">,</span> <span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">screen_name</span><span class="p">,</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="nb">name</span><span class="p">,</span> <span class="ss">:photo_text</span> <span class="o">=&gt;</span> <span class="n">tweet_text</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div>
-
-<p>It must have something to do with the way Ruby handles certain strings or how Sequel or Postgres handle certain strings in INSERTs.</p>
-
-<p>You can see the final file I&#39;m using <code>bird_watcher.rb</code> in the <a href="https://github.com/dorkrawk/bird-watcher">Github repo</a> for the project.  </p>
-
-<p>Next I&#39;ll need to write an Instragram listener. Hopefully that will be pretty quick as most of the mechanics will be identical to this listener. I might hold off on working on that for a bit, though. I&#39;m thinking about tackling a musical project next week.</p>
-
-  </div>
-
 
 <div class="pagination">
   
     <a href="../blog/index.html" class="previous"><i class="icon-arrow-left"></i></a>
   
-  <span class="page_number ">Page: 2 of 3</span>
+  <span class="page_number ">Page: 2 of 4</span>
   
     <a href="../blog/page3" class="next"><i class="icon-arrow-right"></i></a>
   
