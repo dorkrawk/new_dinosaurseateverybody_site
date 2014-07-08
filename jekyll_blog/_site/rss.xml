@@ -7,6 +7,37 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 26 - More Sauropod</title>
+        <description>&lt;p&gt;Another 7 days, another busy week. With the wedding growing ever closer I&amp;#39;ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/sauropod1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I got Sauropod hooked up into the asset pipeline of the &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLab&lt;/a&gt; Rails site and started attaching it to the various audio controls on the site. While &lt;a href=&quot;https://github.com/goldfire/howler.js&quot;&gt;Howler.js&lt;/a&gt; handles loading the audio file and playing the sound in browser, I still needed to build all the hooks to control and monitor the audio.&lt;/p&gt;
+
+&lt;p&gt;At this point I am able to click a &amp;quot;play&amp;quot; button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an &lt;code&gt;onprogress&lt;/code&gt; event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn&amp;#39;t very hard, I just used a &lt;code&gt;setInterval()&lt;/code&gt; function around my own &lt;code&gt;sauropod.updateProgress()&lt;/code&gt; function:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;playing&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tracks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()});&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;playing&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;updatePlayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauropod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;updateProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I still need to build all the hooks into playing a mutitrack song (though it should work based on how I&amp;#39;ve built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thing A Week Progress Update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So this week marks half a year of this &amp;quot;Thing A Week&amp;quot; project. It hasn&amp;#39;t been exactly what I planned, one discrete project finished every week, but it has really keep me focused on building things and I&amp;#39;ve really enjoyed writing about my progress on all the things I&amp;#39;ve been working on.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 25 - Sauropod and Wedding Stuff</title>
         <description>&lt;p&gt;As seems to be the trend lately, last week was &lt;strong&gt;very&lt;/strong&gt; busy. Between work stuff, wedding stuff, seeing a &lt;a href=&quot;http://triassicparq.com/&quot;&gt;musical&lt;/a&gt;, and going to a &lt;a href=&quot;http://verucasalt.com/&quot;&gt;show&lt;/a&gt; it was hard to find time to get extra things done.&lt;/p&gt;
 
@@ -191,19 +222,6 @@ The art class is going well. Value and shading are still pretty tough for me bec
         <pubDate>Mon, 05 May 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 16 - No Thing Again</title>
-        <description>&lt;p&gt;Once again I didn&amp;#39;t have a great Thing a Week week. I actually didn&amp;#39;t even get to the point of planning a project for the week. But I did accomplish one thing: &lt;strong&gt;I got a new job&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;I spent a bunch of time this week prepping for and going on interviews and on Thursday I accepted a position as a Senior Full-Stack Engineer at &lt;a href=&quot;https://www.couchsurfing.org/&quot;&gt;Couchsurfing&lt;/a&gt;. Today was my first day and so far it&amp;#39;s an awesome gig. The office is amazing, it&amp;#39;s full of dogs, and I get lunch and dinner provided everyday by the staff chefs. The work seems like it will be a lot of fun too. I&amp;#39;m doing Rails development and it seems like I&amp;#39;ll be able to have a lot of say in how the product gets architected.&lt;/p&gt;
-
-&lt;p&gt;While it wasn&amp;#39;t the most productive Thing a Week week, getting a new job certainly qualifies this as a pretty productive life week.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Apr 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again</guid>
       </item>
     
   </channel>
