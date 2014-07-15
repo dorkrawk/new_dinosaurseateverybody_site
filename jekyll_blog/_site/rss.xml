@@ -7,6 +7,35 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 27 - Even More Sauropod</title>
+        <description>&lt;p&gt;Once again, another busy week divided between wedding stuff and side projects.&lt;/p&gt;
+
+&lt;p&gt;I spent this week adding more features to the &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; audio player and I feel like it&amp;#39;s in a pretty good spot for now. Obviously, there&amp;#39;s more I&amp;#39;d like it to do but it&amp;#39;s certainly at a point where it will work for basic track and song playback.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a list of new features that got added this week:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Visual indicators on the in page play buttons to show what is playing in the global player&lt;/li&gt;
+&lt;li&gt;Some basic layout polish and player styling&lt;/li&gt;
+&lt;li&gt;Jump forward or back in the audio by clicking on the progress bar&lt;/li&gt;
+&lt;li&gt;Play/pause using the space bar&lt;/li&gt;
+&lt;li&gt;Some basic (if clunky) error checking to make sure files loaded&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One really interesting thing I found this week that I didn&amp;#39;t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the &lt;code&gt;sauropod.audio&lt;/code&gt; object is empty and playback stops, but not if I&amp;#39;m just clicking links on the site. I haven&amp;#39;t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with &lt;a href=&quot;https://github.com/rails/turbolinks&quot;&gt;TurboLinks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m really happy that is &amp;quot;just works&amp;quot; that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand &lt;strong&gt;&lt;em&gt;WHY&lt;/em&gt;&lt;/strong&gt; it works. It seems dangerous to accidentally get a nice feature like this.&lt;/p&gt;
+
+&lt;p&gt;Like I said, while Sauropod is still a little rough around the edges, it&amp;#39;s good enough to use for the site. I&amp;#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.&lt;/p&gt;
+
+&lt;p&gt;This week I&amp;#39;ll be traveling to New York for a friend&amp;#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 26 - More Sauropod</title>
         <description>&lt;p&gt;Another 7 days, another busy week. With the wedding growing ever closer I&amp;#39;ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.&lt;/p&gt;
 
@@ -195,33 +224,6 @@ We didn&amp;#39;t want to it be an exact copy of the original so I tried to give
         <pubDate>Sun, 11 May 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 17 - RecLab and Drawing Class Update</title>
-        <description>&lt;p&gt;This week, while I was busy with the first week of my new job, I did manage to get some RecLab work done. Also, I&amp;#39;m a few weeks into my drawing class, so I wanted to post an update from that.&lt;/p&gt;
-
-&lt;p&gt;While not the most productive RecLab week, I did finish the basic comment functionality for Users, Songs, and Tracks. I also learned about &lt;code&gt;seed.rb&lt;/code&gt; and wrote some seed code for the Instruments data. The trick there was that I wanted to be able to run &lt;code&gt;rake db:seed&lt;/code&gt; multiple times, so I needed seed code that would let me update or create records. I ended up with a nice solution that lets me break the instruments down into separate arrays by family and then loop through everything to create or update:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;instruments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;woodwinds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;woodwinds&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;brass&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percussion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;percussion&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;other&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;instruments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;instr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Instrument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_or_initialize&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;instr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;family&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;instr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save!&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now I&amp;#39;ll need to use a tagging system to attach both Instruments and general Tags to objects. I&amp;#39;m leaning toward &lt;a href=&quot;https://github.com/mbleigh/acts-as-taggable-on&quot;&gt;As Taggable On&lt;/a&gt;, which apparently was written by an old childhood friend of mine. Awesome!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/drawing02.jpg&quot; class=&quot;inline_right&quot; /&gt;
-The art class is going well. Value and shading are still pretty tough for me because I&amp;#39;ve spent the last few years just doing line drawings for comics. I also have a tendency to draw pretty lightly (which is probably also a result of erasing pencil lines for comics). I don&amp;#39;t think I&amp;#39;ll leave this class a brilliant artist, but but I&amp;#39;m certainly learning things and getting better.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 05 May 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update</guid>
       </item>
     
   </channel>
