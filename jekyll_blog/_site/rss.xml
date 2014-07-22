@@ -7,6 +7,21 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 28 - Not Much</title>
+        <description>&lt;p&gt;So most of this week I was traveling so I wasn&amp;#39;t able to get very much work done on any projects. I did, however, attend an Indian wedding in Long Island which was really cool so the week was not a total loss.&lt;/p&gt;
+
+&lt;p&gt;The work I did get done earlier this week was mainly with the &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; interface to Rocktopus, our audio processing API. I built the interface to the &lt;code&gt;bounce_song&lt;/code&gt; functionality, which will take all the individual tracks of a song and combine them into a single (probably .mp3) file.&lt;/p&gt;
+
+&lt;p&gt;I also set up a sort of hacky but effective, for now, &amp;quot;loading screen&amp;quot; to let users know that their audio is being uploaded/processes. It seems like a little thing but letting the page just hangs after clicking submit is really bad UI. This is a very early version of the product and we haven&amp;#39;t given UI the full focus it needs but this was one thing that would be too awkward to not address early. It was a bit of an awkward fix because we&amp;#39;re not actually doing the audio processing or uploading as a background process. Eventually I&amp;#39;ll build a queuing/callback system in Rocktopus that will work much nicer, but this gets us going now.&lt;/p&gt;
+
+&lt;p&gt;This next week is another busy week. It is the last week in SF before we fly back to Chicago for the wedding (which is less than 2 weeks away now...).  If I get anything Thing A Week thing done this week it will probably be something wedding related.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-28-not-much</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-28-not-much</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 27 - Even More Sauropod</title>
         <description>&lt;p&gt;Once again, another busy week divided between wedding stuff and side projects.&lt;/p&gt;
 
@@ -201,29 +216,6 @@ This week I ended up getting quite a bit of RecLab work done, especially for a s
         <pubDate>Wed, 21 May 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 18 - Wine Women and Song Cover</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/recording3.jpg&quot; class=&quot;inline_right&quot; /&gt;
-I didn&amp;#39;t really plan to do anything outside of RecLab work this week but yesterday I got in the mood to play and record some music so I ended up with a new recording for this week&amp;#39;s thing.&lt;/p&gt;
-
-&lt;p&gt;Eileen and I have been talking about doing more recording together (as Packets and Waves) and after a recent Hurray For the Riff Raff show, we were in the mood to do some old country songs. We settled on doing a cover of Loretta Lynn&amp;#39;s &lt;a href=&quot;https://www.youtube.com/watch?v=7Wj_vD20N-Q&quot;&gt;Wine Women and Song&lt;/a&gt;. It&amp;#39;s a short, simple song (which was important because we started learning it at about 11:30pm on Saturday night) and I just like the phrase &amp;quot;wine, women, and song&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/recording2.jpg&quot; class=&quot;inline_left&quot; /&gt;
-We didn&amp;#39;t want to it be an exact copy of the original so I tried to give it a dirty Black Keys-ish guitar sound and keep the guitar part pretty simple. I resisted to urge to layer on a bunch of random instruments and only used guitar, bass, and drums for most of the song. The piano was only added in the chorus and solo sections, even though I tried a few takes where I recorded some sporadic piano comping throughout the whole. In the end, the stripped down version just sounded cooler.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m really coming around the the virtual drummer in Logic Pro. At first I really resisted the idea of letting the software &amp;quot;write&amp;quot; my drum parts for me, but the sound is &lt;em&gt;so&lt;/em&gt; much better than MIDI drums and I can actually get some interesting parts. For this song I used &amp;quot;Logan&amp;quot; with a retro sounding kit. I thought the tom driven verses worked out really well.&lt;/p&gt;
-
-&lt;p&gt;Eileen&amp;#39;s vocals turned out nicely, as usual. I was tempted to dirty up the vocal recording with a tube mic simulator, but I ended up just using a simple &amp;quot;out of the box&amp;quot; compressor effect, which sounded fine.&lt;/p&gt;
-
-&lt;p&gt;This ended up being a really fun little project. It only took a few hours from idea to finished product and the result was really satisfying. Enjoy our cover of &lt;a href=&quot;https://soundcloud.com/dorkrawk/wine-women-and-song&quot;&gt;Wine Women and Song&lt;/a&gt;!&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149068054&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Sun, 11 May 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</guid>
       </item>
     
   </channel>
