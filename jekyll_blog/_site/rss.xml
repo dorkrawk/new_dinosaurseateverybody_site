@@ -7,6 +7,27 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 29 - Wedding Ring Box</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/ringbox_materials.jpg&quot; class=&quot;inline_right&quot; /&gt;
+So, you may have noticed that I&amp;#39;ve missed the past few Thing a Week weeks. In my defense I did just get married last Saturday, so I&amp;#39;ve been pretty busy with wedding related travel and planning so I haven&amp;#39;t had much time for extra projects. The wedding was amazing and I now have a wife, which is fun. In the spirit of the wedding I wanted to share a project that I worked on a while ago but didn&amp;#39;t want to show until now.&lt;/p&gt;
+
+&lt;p&gt;For the wedding I wanted to build a ring bearer box out of an old book. After looking around some used bookstores I picked an old Tarzan book because 1) it seemed common enough that I didn&amp;#39;t feel bad using it as materials and 2) it had a cool elephant on the cover. I wanted to hollow out part the inside pages and create inlays to hold the rings (like a secret flask holder but for wedding stuff).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/ringbox_slots.jpg&quot; class=&quot;inline_left&quot; /&gt;
+I started by covering the covers in plastic (to avoid getting glue on them) painting the sides of the pages with puzzle glue in order to stick all the pages together. I did about 5 coats of this. Once that glue was dried I measured out the inlay and started carving pieces out using an Excato knife. This took a lot longer than expected and when I was down about half an inch, I coded the new inner wall with glue to give it a nice solid feel.&lt;/p&gt;
+
+&lt;p&gt;After I had my basic inlay I needed to dig out the slots for the actual rings. This was even more tricky. I thought I would be able to make clean cuts, like I did with the inlay but I ended up basically using the knife to turn the paper into pulp and then just digging the pulp out of the the slots.  After removing top page from the inlay, which had been pretty well torn up by all the digging I was left with a nice ring box.&lt;/p&gt;
+
+&lt;p&gt;The pages held the rings perfectly and I could even hold the box open and upside down without the rings falling out. The box was put to use by our ring bearer, Sui Chi, on Saturday and it looked great! This was a cool little project and it was fun to build something non-digital again. It really took a lot longer than I expected but the result was worth it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/ringbox_finished.jpg&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-29-wedding-ring-box</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-29-wedding-ring-box</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 28 - Not Much</title>
         <description>&lt;p&gt;So most of this week I was traveling so I wasn&amp;#39;t able to get very much work done on any projects. I did, however, attend an Indian wedding in Long Island which was really cool so the week was not a total loss.&lt;/p&gt;
 
@@ -199,23 +220,6 @@ This week I ended up getting quite a bit of RecLab work done, especially for a s
         <pubDate>Sun, 25 May 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 19 - RecLab Online Presence</title>
-        <description>&lt;p&gt;So this Thing a Week post is late because I was out of town from last Saturday until late yesterday night.&lt;/p&gt;
-
-&lt;p&gt;While I did make some progress on getting the RecLab Rails application to connect to Rocktopus (our audio processing library) the main thing we got accomplished last week was setting up our RecLab presence online.&lt;/p&gt;
-
-&lt;p&gt;A major part of this was building out a Launchrock page to point our domain at. So now if you go to &lt;a href=&quot;http://reclaboratory.com&quot;&gt;reclaboratory.com&lt;/a&gt; you actually see something! Right now we&amp;#39;re just collecting email addresses, but building this out helped us think through some basic service descriptions, a tagline, and formalizing how to write the name. It&amp;#39;s officially &lt;strong&gt;RecLaboratory&lt;/strong&gt;. Note the capital &amp;#39;R&amp;#39; and &amp;#39;L&amp;#39;. It took us a surprising amount of discussion to decide on this convention.&lt;/p&gt;
-
-&lt;p&gt;We also cleaned up our &lt;a href=&quot;https://www.facebook.com/reclaboratory&quot;&gt;Facebook&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/reclaboratory&quot;&gt;Twitter&lt;/a&gt;, and &lt;a href=&quot;http://instagram.com/reclaboratory&quot;&gt;Instagram&lt;/a&gt; accounts, so those are ready to be used.&lt;/p&gt;
-
-&lt;p&gt;Feel free to follow us at any of those places as we&amp;#39;ll be starting to use them soon.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 May 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</guid>
       </item>
     
   </channel>
