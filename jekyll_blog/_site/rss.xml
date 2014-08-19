@@ -7,6 +7,25 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 30 - RecLaboratory Servers</title>
+        <description>&lt;p&gt;So as of last week I have the RecLab Rails site up and running on Heroku and the audio processing API, Roctopus, up and running on my own server. Amazingly they are able to talk to each other and work pretty much as expected.&lt;/p&gt;
+
+&lt;p&gt;There are still quite a few things to fix up, particularly with Rocktopus, but it&amp;#39;s nice to see the full application working together on remote servers. While the Rails/Heroku setup was pretty straight forward, Rocktopus was uncharted territory for me.&lt;/p&gt;
+
+&lt;p&gt;I had never &amp;quot;launched&amp;quot; a Flask application before so this was all a bit new. As a (&lt;em&gt;temporary, I swear!&lt;/em&gt;) measure I moved the files to my server over SFTP and started up a &lt;a href=&quot;http://gunicorn.org/&quot;&gt;Gunicorn&lt;/a&gt; server to run the application. I still need to put Nginx in front of all of this but for now it works as expected (though I can&amp;#39;t imagine it would handle much traffic). I&amp;#39;d also like to learn more about &lt;a href=&quot;http://www.fabfile.org/&quot;&gt;Fabric&lt;/a&gt; for Python deployments. I&amp;#39;ve never been much of a sysadmin, so this was all a bit new to me.&lt;/p&gt;
+
+&lt;p&gt;The only really new thing I did for the Rails/Heroku app was add &lt;a href=&quot;http://unicorn.bogomips.org/&quot;&gt;Unicorn&lt;/a&gt; as a server. Heroku has a &lt;a href=&quot;https://devcenter.heroku.com/articles/rails-unicorn&quot;&gt;great article&lt;/a&gt; that held my hand through this setup.&lt;/p&gt;
+
+&lt;p&gt;Also, as part of this setup I&amp;#39;ve been playing around with &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; and it&amp;#39;s wonderful integrations for monitoring the app. So far I have it working with Heroku, PaperTrail, and Pingdom. Nothing&amp;#39;s gone wrong yet, but I suppose that is to be expected when there are no users...&lt;/p&gt;
+
+&lt;p&gt;As I mentioned, there are still quite a few rough edges to be worked out, a bunch of minor features, and at least one major feature that still needs to be built but this feels like a big step in getting &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; launched and letting people try it out. We have some people in mind for VERY early alpha testers, but please let me know if you&amp;#39;re interested in trying it out when it&amp;#39;s ready!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-30-reclaboratory-servers</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-30-reclaboratory-servers</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 29 - Wedding Ring Box</title>
         <description>&lt;p&gt;&lt;img src=&quot;../blog_media/ringbox_materials.jpg&quot; class=&quot;inline_right&quot; /&gt;
 So, you may have noticed that I&amp;#39;ve missed the past few Thing a Week weeks. In my defense I did just get married last Saturday, so I&amp;#39;ve been pretty busy with wedding related travel and planning so I haven&amp;#39;t had much time for extra projects. The wedding was amazing and I now have a wife, which is fun. In the spirit of the wedding I wanted to share a project that I worked on a while ago but didn&amp;#39;t want to show until now.&lt;/p&gt;
@@ -204,22 +223,6 @@ Again, this is sort of cheating because most of the creative work was done by ou
         <pubDate>Tue, 03 Jun 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 20 - RecLab Layouts and Rocutopus Connection</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/reclab_screen2.png&quot; class=&quot;inline_right&quot; /&gt;
-This week I ended up getting quite a bit of RecLab work done, especially for a shortened week.&lt;/p&gt;
-
-&lt;p&gt;The major breakthrough was getting the Rails site talking to Rocktopus, the audio processing API I&amp;#39;ve been writing. It&amp;#39;s not perfect but it has some basic authentication and the Rails Track model gets updated based on the response from Rocktopus. This is all just working locally right now but it shouldn&amp;#39;t be hard to set up a server to server connection once I have Rocktopus deployed somewhere.&lt;/p&gt;
-
-&lt;p&gt;The other large chunk of work I got done was due to being home alone this weekend. With Eileen hanging out with friends in Napa I decided to start working on the first real site layouts. I made great progress on the user profile pages and started doing some of the url rewriting work. I considered dropping &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; in favor of &lt;a href=&quot;http://bourbon.io/&quot;&gt;Bourbon/Neat/Bitters&lt;/a&gt; after exploring the latter libraries at work but I think for what we&amp;#39;re trying to build right now Bootstrap will get us up and running much faster.&lt;/p&gt;
-
-&lt;p&gt;As always, there&amp;#39;s still a lot of work to be done but it felt good to make some serious progress this week. Again, if you are interested in this project head over to &lt;a href=&quot;http://reclaboratory.com&quot;&gt;reclaboratory.com&lt;/a&gt; and enter your email. We&amp;#39;ll get in touch with you when we&amp;#39;re ready to start letting people try the site.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 25 May 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection</guid>
       </item>
     
   </channel>
