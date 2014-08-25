@@ -7,6 +7,36 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 31 - RecLaboratory Instrument Icons</title>
+        <description>&lt;p&gt;Along with some other RecLab stuff (which is coming along nicely), this week I finally tackled a little project that I&amp;#39;ve been thinking about for a while. Unlike most of the RecLab work this was much more artistic than technical. I built the first first hand drawn icons for the site.&lt;/p&gt;
+
+&lt;p&gt;I knew that I wanted custom instrument, track, and song icons so I started out with a small set of 8 (with plans to make more as we need them). I did these icons the same way I do my comics: first drawing in pencil, then inking, then scanning into Photoshop, then cleaning up the lines and adding color in Illustrator. They had to look good at a wide range of sizes: 400px to 30px so I didn&amp;#39;t add too much detail.&lt;/p&gt;
+
+&lt;p&gt;To handle what I think will be the most commonly used instruments I started with (electric) guitar, (electric) bass, drums, keys, vocals, sax (perhaps my own bias), percussion, and general track.&lt;/p&gt;
+
+&lt;p&gt;So here they are!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/guitar-medium.png&quot; title=&quot;guitar&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/bass-medium.png&quot; title=&quot;bass&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/drums-medium.png&quot; title=&quot;drums&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/vocals-medium.png&quot; title=&quot;vocals&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/keys-medium.png&quot; title=&quot;keys&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/sax-medium.png&quot; title=&quot;sax&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/percussion-medium.png&quot; title=&quot;percussion&quot; class=&quot;inline_left&quot;&gt;
+&lt;img src=&quot;../blog_media/track-medium.png&quot; title=&quot;general track&quot; class=&quot;inline_left&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br style=&quot;clear: both&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Guitars are still hard to draw.&lt;/p&gt;
+
+&lt;p&gt;I used a small pallet of colors for all the icons in the hopes of creating an overall cohesive effect when they all get seen together on the site. Bobby doesn&amp;#39;t like the percussion one very much and he&amp;#39;s probably right. It&amp;#39;s my least favorite too, but this seems like a good start and really adds some nice visual variety to the site. Plus it&amp;#39;s always fun to draw things!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 30 - RecLaboratory Servers</title>
         <description>&lt;p&gt;So as of last week I have the RecLab Rails site up and running on Heroku and the audio processing API, Roctopus, up and running on my own server. Amazingly they are able to talk to each other and work pretty much as expected.&lt;/p&gt;
 
@@ -205,24 +235,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
         <pubDate>Tue, 10 Jun 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-22-reclab-routing</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-22-reclab-routing</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 21 - Wedding Invitations</title>
-        <description>&lt;p&gt;This seems like a bit of a cop out but when I thought back to what took up most of my time last week it turns out, it was putting together and mailing out wedding invitations.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/wedding_thankyous.jpg&quot; class=&quot;inline_right&quot; /&gt;
-Again, this is sort of cheating because most of the creative work was done by our very talented friend &lt;a href=&quot;http://www.debbysu.com/&quot;&gt;Debby&lt;/a&gt;. After listening to our asinine ideas she designed awesome invitations, RSVP cards, and thank you cards.&lt;/p&gt;
-
-&lt;p&gt;Then it was our job to pick out paper and envelopes and all that other stuff (which is a much bigger ordeal than I had ever imagined). Eileen and I both took a morning off of work just to talk to paper stores and printers. It was exhausting.&lt;/p&gt;
-
-&lt;p&gt;Once everything was actually printed on fancy paper we had to do all sorts of crafty things like tie twine around the jackets that hold the invitation and RSVP card, addressed all the envelopes, print return address labels, and puts stamps on everything. None of it was particularly hard (except for maybe addressing everything, but Eileen did that because my handwriting is illegible) but it just took a LONG TIME.&lt;/p&gt;
-
-&lt;p&gt;On Saturday morning we got everything mailed out, which felt good. This was a much bigger project than I expected it to be, but they turned out really cool.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 Jun 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</guid>
       </item>
     
   </channel>
