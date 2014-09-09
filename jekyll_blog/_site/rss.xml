@@ -7,6 +7,24 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 33 - Watercolor Painting</title>
+        <description>&lt;p&gt;This week I&amp;#39;ll take a break from talking about &lt;a href=&quot;http://www.reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; stuff and talk about art. This week I started playing around with watercolors.&lt;/p&gt;
+
+&lt;p&gt;One of my favorite cartoonists, &lt;a href=&quot;http://mitchclem.tumblr.com/&quot;&gt;Mitch Clem&lt;/a&gt;, has been working with his wife(?), &lt;a href=&quot;http://nationofamanda.tumblr.com/&quot;&gt;Amanda&lt;/a&gt; to use watercolors in his comics for a while. They&amp;#39;ve done some really cool stuff in both &lt;a href=&quot;http://mitchclem.tumblr.com/post/20382657189/nationofamanda-mitch-drew-this-i-painted-it&quot;&gt;color&lt;/a&gt; and &lt;a href=&quot;http://38.media.tumblr.com/8fe73051e12fef257a7d7cd4284cea14/tumblr_n2cdcqm9yL1qdt757o1_1280.jpg&quot;&gt;black and white&lt;/a&gt;.  I&amp;#39;ve seen other comic artists do it too and I&amp;#39;ve always loved the effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/watercolors_msa.jpg&quot; class=&quot;inline_right&quot; /&gt;
+After a trip to the &lt;a href=&quot;http://www.waltdisney.org/&quot;&gt;Walt Disney Museum&lt;/a&gt;, particularly the &lt;a href=&quot;http://www.waltdisney.org/mary-blair&quot;&gt;Mary Blair exhibit&lt;/a&gt;, with Eileen I was really inspired to try painting something so we went to the art store later that weekend and picked up some supplies. As a first project I wrote a short (questionably funny/comprehensible) &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=89&quot;&gt;comic&lt;/a&gt; and tried to paint that.  The result was pretty cool, for my first time, and a lot of fun to do. It was a bit tricky working with watercolors in such a small size (the panels were maybe 2&amp;quot; x 3&amp;quot;) but I learned a bit and really enjoyed the medium.&lt;/p&gt;
+
+&lt;p&gt;Then over the weekend I wanted to do a single scene and had the idea of just doing a simple girl playing guitar on stage. After watching a whole season of Inkmaster I decided to throw a few tattoos on her, as well. I am particularly proud of the hands in this piece. Usually I just give up and let the hands sort of fall apart, especially on guitars but I thought these turned out well. I&amp;#39;m really happy with how this turned out and I plan to keep working with watercolors in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/watercolors_guitargirl.jpg&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Sep 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 32 - In Browser Audio Recording</title>
         <description>&lt;p&gt;This week my major work was around building an in-browser audio recording system. I&amp;#39;ve been reading about using new HTML5 APIs to get access to the user&amp;#39;s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff &lt;strong&gt;Basement&lt;/strong&gt;.&lt;/p&gt;
 
@@ -206,27 +224,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
         <pubDate>Mon, 23 Jun 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 23 - Bird Watcher Display</title>
-        <description>&lt;p&gt;This weekend Eileen was out of the house for her bachelorette party so I tried to knock out a few outstanding wedding related projects (apparently that is coming up pretty quickly). The &lt;a href=&quot;../blog/thing-a-week-4-bird-watcher&quot;&gt;Bird Watcher&lt;/a&gt; project had been dragging on for a while so I thought this would be a good time to wrap it up, too.&lt;/p&gt;
-
-&lt;p&gt;For those who don&amp;#39;t remember, Bird Watcher is a system that listens for photos with certain #hashtags and displays them to a live page. I plan to use it to let people take pictures during our wedding and show them on a projector during the reception.&lt;/p&gt;
-
-&lt;p&gt;This project has spanned a few &lt;a href=&quot;../blog/thing-a-week-4-bird-watcher&quot;&gt;Thing&lt;/a&gt; &lt;a href=&quot;../blog/thing-a-week-5-bird-watcher-part-2&quot;&gt;A&lt;/a&gt; &lt;a href=&quot;../blog/thing-a-week-12-filterfilter&quot;&gt;Week&lt;/a&gt; posts and involved playing with the &lt;a href=&quot;https://dev.twitter.com/&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;http://instagram.com/developer/&quot;&gt;Instagram&lt;/a&gt; APIs, as well as learning a bit more about Postgresql and the Sequel gem.&lt;/p&gt;
-
-&lt;p&gt;At this point most of the hard work had been done. I have Twitter and Instagram listeners (which both work in very different ways) that store info about photo posts in a database. I just needed to write something to pull them out and display them.&lt;/p&gt;
-
-&lt;p&gt;Originally I had written some nice code for prioritizing new photos and minimizing database calls but that ended up being a scoping pain in the ass in Sinatra. I would have had to build some sort of session object persistence system and honestly, the scale of this project just wasn&amp;#39;t worth it.&lt;/p&gt;
-
-&lt;p&gt;I ended up with a simple AJAX loop on a timer that pulls a random &amp;quot;photo card&amp;quot; with the image and some information about it, and displays it on a page that should work nicely full screened on a projector. I still need to run some tests to make sure I don&amp;#39;t get any weird image sizes but it&amp;#39;s working well right now.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m a little worried that I&amp;#39;ll spend part of my own wedding reception tweaking code or sshing into my server to restart some service, but I think everything should run pretty smoothly. This was a fun little project and made me play with some new technologies. Hopefully lots of people use it at the wedding.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 17 Jun 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-23-bird-watcher-display</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-23-bird-watcher-display</guid>
       </item>
     
   </channel>
