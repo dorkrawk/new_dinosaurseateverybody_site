@@ -7,6 +7,23 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 34 - Instrumental Indie Music</title>
+        <description>&lt;p&gt;Hey look! Another non-code related Thing a Week! On Saturday night, Eileen was at hockey so I grabbed my (much neglected) guitar and popped open Logic Pro for some quick recording. The end product was a nice, kind of dark sounding &lt;a href=&quot;https://soundcloud.com/dorkrawk/indie-mess&quot;&gt;instrumental track&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I had been messing around with a little arpeggiated riff and I wanted to build something pretty repetitive, getting away from a verse-chorus-bridge structure. After I had the riff, I started building the drum part. The real breakthrough there was throwing in the handclaps, which start off sounding so happy but then sound more ominous under the bass and main guitar riff. Despite being pretty core to the whole song, the bass part didn&amp;#39;t come in until much later in the writing process. I also ended up using amp models with a lot more reverb than I typically use. I have a tendency to seek out drier guitar tones, but the more spacious sounds really worked for this piece.&lt;/p&gt;
+
+&lt;p&gt;I resisted the urge to just keep stacking more and more tracks on top of each other in this song and let some parts be pretty sparse. I think I could put some lyrics over this but it was getting late and nothing was really jumping out to me, so I&amp;#39;m pretty happy with it being instrumental for now.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/167850797&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Mon, 15 Sep 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 33 - Watercolor Painting</title>
         <description>&lt;p&gt;This week I&amp;#39;ll take a break from talking about &lt;a href=&quot;http://www.reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; stuff and talk about art. This week I started playing around with watercolors.&lt;/p&gt;
 
@@ -203,27 +220,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
         <pubDate>Mon, 30 Jun 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 24 - RecLab Feed</title>
-        <description>&lt;p&gt;This was another busy week but I manged to get some solid work done on &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; stuff. &lt;/p&gt;
-
-&lt;p&gt;First I took some pictures to use as a cover photo on our &lt;a href=&quot;https://twitter.com/reclaboratory&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://www.facebook.com/reclaboratory&quot;&gt;Facebook&lt;/a&gt; pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I&amp;#39;m pleased with how it looks.  Feel free to follow/friend us on either. We&amp;#39;re starting to post things.&lt;/p&gt;
-
-&lt;p&gt;Last Wednesday night I just couldn&amp;#39;t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn&amp;#39;t just rig something together with a bunch of ugly table JOINs I ended up using the &lt;a href=&quot;https://github.com/pokonski/public_activity&quot;&gt;public_activity&lt;/a&gt; gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.&lt;/p&gt;
-
-&lt;p&gt;Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I&amp;#39;m using the public_activity &lt;code&gt;params&lt;/code&gt; hash to avoid some n+1 database call issues but so far it&amp;#39;s made it really easy to build feeds on User, Track, and Song pages. I&amp;#39;m working on building the main homepage feed now, which is proving a little trickier. Obviously I&amp;#39;d like to do this with a single call to the &lt;code&gt;Activities&lt;/code&gt; model but because it&amp;#39;s tracking polymorphic objects, the SQL is taking some work.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too...&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;bonus thing&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I actually drew a real comic this week, one where I penciled and inked and everything. &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=87&quot;&gt;Check it out&lt;/a&gt;!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 23 Jun 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</guid>
       </item>
     
   </channel>

@@ -1,4 +1,19 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-34-instrumental-indie-music">Thing A Week 34 - Instrumental Indie Music</a></h2>
+  <div class="post_date">September 15, 2014</div>
+  <div class="post">
+    <p>Hey look! Another non-code related Thing a Week! On Saturday night, Eileen was at hockey so I grabbed my (much neglected) guitar and popped open Logic Pro for some quick recording. The end product was a nice, kind of dark sounding <a href="https://soundcloud.com/dorkrawk/indie-mess">instrumental track</a>.</p>
+
+<p>I had been messing around with a little arpeggiated riff and I wanted to build something pretty repetitive, getting away from a verse-chorus-bridge structure. After I had the riff, I started building the drum part. The real breakthrough there was throwing in the handclaps, which start off sounding so happy but then sound more ominous under the bass and main guitar riff. Despite being pretty core to the whole song, the bass part didn&#39;t come in until much later in the writing process. I also ended up using amp models with a lot more reverb than I typically use. I have a tendency to seek out drier guitar tones, but the more spacious sounds really worked for this piece.</p>
+
+<p>I resisted the urge to just keep stacking more and more tracks on top of each other in this song and let some parts be pretty sparse. I think I could put some lyrics over this but it was getting late and nothing was really jumping out to me, so I&#39;m pretty happy with it being instrumental for now.</p>
+
+<p>Enjoy!</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/167850797&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-33-watercolor-painting">Thing A Week 33 - Watercolor Painting</a></h2>
   <div class="post_date">September 8, 2014</div>
   <div class="post">
@@ -177,25 +192,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 <p>Right now Sauropod is in it&#39;s VERY early stages, mainly just building out method names to architect the system. The basic idea is to build a library to work with songs and tracks that contain metadata and possibly multiple audio tracks that need to be played simultaneously or adjusted individually. I&#39;m using <a href="https://github.com/goldfire/howler.js">Howler.js</a> to handle most of the audio heavy lifting. It&#39;s been pretty awesome so far. I&#39;m also trying out <a href="http://underscorejs.org/">Underscore.js</a> to give me a bit of functional programming in JavaScript. This is mainly to make working with arrays nicer, which I will have to do quite a bit with the arrays of Howler.js Sounds that make up songs.</p>
 
 <p>Sauropod is still in it&#39;s very early stages, but I have a pretty good architecture planned out and I&#39;m excited to see it develop.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-24-reclab-feed">Thing A Week 24 - RecLab Feed</a></h2>
-  <div class="post_date">June 23, 2014</div>
-  <div class="post">
-    <p>This was another busy week but I manged to get some solid work done on <a href="http://reclaboratory.com">RecLaboratory</a> stuff. </p>
-
-<p>First I took some pictures to use as a cover photo on our <a href="https://twitter.com/reclaboratory">Twitter</a> and <a href="https://www.facebook.com/reclaboratory">Facebook</a> pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I&#39;m pleased with how it looks.  Feel free to follow/friend us on either. We&#39;re starting to post things.</p>
-
-<p>Last Wednesday night I just couldn&#39;t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn&#39;t just rig something together with a bunch of ugly table JOINs I ended up using the <a href="https://github.com/pokonski/public_activity">public_activity</a> gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.</p>
-
-<p>Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I&#39;m using the public_activity <code>params</code> hash to avoid some n+1 database call issues but so far it&#39;s made it really easy to build feeds on User, Track, and Song pages. I&#39;m working on building the main homepage feed now, which is proving a little trickier. Obviously I&#39;d like to do this with a single call to the <code>Activities</code> model but because it&#39;s tracking polymorphic objects, the SQL is taking some work.</p>
-
-<p>I&#39;m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too...</p>
-
-<p><strong>bonus thing</strong></p>
-
-<p>I actually drew a real comic this week, one where I penciled and inked and everything. <a href="http://mountsaintawesome.com/comic.php?id=87">Check it out</a>!</p>
 
   </div>
 
