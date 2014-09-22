@@ -7,6 +7,20 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 35 - RecLaboratory Record Track From Song</title>
+        <description>&lt;p&gt;Last week was a pretty busy week so I didn&amp;#39;t get too many &amp;quot;projects&amp;quot; done outside of some &lt;a href=&quot;http://www.reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; work and even most of that was done in between sessions at the &lt;a href=&quot;http://gogaruco.com/&quot;&gt;Golden Gate Ruby Conference&lt;/a&gt;. The major piece of work I finished up, apart from some UI cleanup, was a modal to create (and record!) a new track from a song&amp;#39;s page. I think this will be a very common use case, so I wanted it working before we did the friendly release.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/reclab_recfromsong.png&quot; class=&quot;inline_right&quot; /&gt;
+After getting the in-browser track recording to a working place the previous week, I wanted to reuse most of that functionality in this new modal. Building this new feature on top of that existing code caused me to refactor a few things, which was great. I also had to add the ability to use multiple tracks as a &amp;quot;backing track&amp;quot; for the recording because I imagine that users won&amp;#39;t want to bounce the song after every recorded track. This takes advantage of the track pre-loading I had already built into the song page and a little bit of html5 audio object abuse.&lt;/p&gt;
+
+&lt;p&gt;This is one of the last functional pieces of the site that needed to be built before we start soliciting alpha testers. Originally we had wanted to open RecLaboratory to early users on September 8th (almost exactly 6 months after Bobby and I first started talking about the idea) but we really wanted to get the last features in so that we could offer users a compelling reason to interact with the service. I think we&amp;#39;re getting REALLY close now!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 22 Sep 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song</guid>
+      </item>
+    
+      <item>
         <title>Thing A Week 34 - Instrumental Indie Music</title>
         <description>&lt;p&gt;Hey look! Another non-code related Thing a Week! On Saturday night, Eileen was at hockey so I grabbed my (much neglected) guitar and popped open Logic Pro for some quick recording. The end product was a nice, kind of dark sounding &lt;a href=&quot;https://soundcloud.com/dorkrawk/indie-mess&quot;&gt;instrumental track&lt;/a&gt;.&lt;/p&gt;
 
@@ -201,25 +215,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
         <pubDate>Tue, 08 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 25 - Sauropod and Wedding Stuff</title>
-        <description>&lt;p&gt;As seems to be the trend lately, last week was &lt;strong&gt;very&lt;/strong&gt; busy. Between work stuff, wedding stuff, seeing a &lt;a href=&quot;http://triassicparq.com/&quot;&gt;musical&lt;/a&gt;, and going to a &lt;a href=&quot;http://verucasalt.com/&quot;&gt;show&lt;/a&gt; it was hard to find time to get extra things done.&lt;/p&gt;
-
-&lt;p&gt;Almost all of the weekend was devoted to knocking off extra wedding things, like designing take-home gifts for guests and buying a bunch of ties. There is a big list of things that we apparently need to do, but we&amp;#39;re making good progress on it.&lt;/p&gt;
-
-&lt;p&gt;We had a really productive &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLab&lt;/a&gt; meeting on Tuesday where we worked out some good layout stuff and got the feed stuff into a good place. With the basic feed working, I am now able to move on to the audio player component: &lt;strong&gt;Sauropod&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why is called Sauropod? Well a while ago I had to build an HTML5 based mp3 player for a job interview and I decided to call it 5auropod because &amp;#39;sauropod&amp;#39; kind of sounded like &amp;#39;iPod&amp;quot; and the &amp;#39;5&amp;#39; because of HTML5. Also &lt;a href=&quot;http://en.wikipedia.org/wiki/Sauropoda&quot;&gt;sauropods&lt;/a&gt; are cool, enormous dinosaurs. When I started working on a player for RecLab I wanted to use the same name, but I was worried about starting JavaScript variables with a number so I just used &amp;quot;Sauropod&amp;quot;. Convoluted, I know, but it makes sense to me.&lt;/p&gt;
-
-&lt;p&gt;Right now Sauropod is in it&amp;#39;s VERY early stages, mainly just building out method names to architect the system. The basic idea is to build a library to work with songs and tracks that contain metadata and possibly multiple audio tracks that need to be played simultaneously or adjusted individually. I&amp;#39;m using &lt;a href=&quot;https://github.com/goldfire/howler.js&quot;&gt;Howler.js&lt;/a&gt; to handle most of the audio heavy lifting. It&amp;#39;s been pretty awesome so far. I&amp;#39;m also trying out &lt;a href=&quot;http://underscorejs.org/&quot;&gt;Underscore.js&lt;/a&gt; to give me a bit of functional programming in JavaScript. This is mainly to make working with arrays nicer, which I will have to do quite a bit with the arrays of Howler.js Sounds that make up songs.&lt;/p&gt;
-
-&lt;p&gt;Sauropod is still in it&amp;#39;s very early stages, but I have a pretty good architecture planned out and I&amp;#39;m excited to see it develop.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 30 Jun 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff</guid>
       </item>
     
   </channel>

@@ -1,4 +1,16 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-35-reclaboratory-record-track-from-song">Thing A Week 35 - RecLaboratory Record Track From Song</a></h2>
+  <div class="post_date">September 22, 2014</div>
+  <div class="post">
+    <p>Last week was a pretty busy week so I didn&#39;t get too many &quot;projects&quot; done outside of some <a href="http://www.reclaboratory.com">RecLaboratory</a> work and even most of that was done in between sessions at the <a href="http://gogaruco.com/">Golden Gate Ruby Conference</a>. The major piece of work I finished up, apart from some UI cleanup, was a modal to create (and record!) a new track from a song&#39;s page. I think this will be a very common use case, so I wanted it working before we did the friendly release.</p>
+
+<p><img src="../blog_media/reclab_recfromsong.png" class="inline_right" />
+After getting the in-browser track recording to a working place the previous week, I wanted to reuse most of that functionality in this new modal. Building this new feature on top of that existing code caused me to refactor a few things, which was great. I also had to add the ability to use multiple tracks as a &quot;backing track&quot; for the recording because I imagine that users won&#39;t want to bounce the song after every recorded track. This takes advantage of the track pre-loading I had already built into the song page and a little bit of html5 audio object abuse.</p>
+
+<p>This is one of the last functional pieces of the site that needed to be built before we start soliciting alpha testers. Originally we had wanted to open RecLaboratory to early users on September 8th (almost exactly 6 months after Bobby and I first started talking about the idea) but we really wanted to get the last features in so that we could offer users a compelling reason to interact with the service. I think we&#39;re getting REALLY close now!</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-34-instrumental-indie-music">Thing A Week 34 - Instrumental Indie Music</a></h2>
   <div class="post_date">September 15, 2014</div>
   <div class="post">
@@ -178,29 +190,12 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 
   </div>
 
-  <h2 class="post_title"><a href="../blog/thing-a-week-25-sauropod-and-wedding-stuff">Thing A Week 25 - Sauropod and Wedding Stuff</a></h2>
-  <div class="post_date">June 30, 2014</div>
-  <div class="post">
-    <p>As seems to be the trend lately, last week was <strong>very</strong> busy. Between work stuff, wedding stuff, seeing a <a href="http://triassicparq.com/">musical</a>, and going to a <a href="http://verucasalt.com/">show</a> it was hard to find time to get extra things done.</p>
-
-<p>Almost all of the weekend was devoted to knocking off extra wedding things, like designing take-home gifts for guests and buying a bunch of ties. There is a big list of things that we apparently need to do, but we&#39;re making good progress on it.</p>
-
-<p>We had a really productive <a href="http://reclaboratory.com">RecLab</a> meeting on Tuesday where we worked out some good layout stuff and got the feed stuff into a good place. With the basic feed working, I am now able to move on to the audio player component: <strong>Sauropod</strong>.</p>
-
-<p>Why is called Sauropod? Well a while ago I had to build an HTML5 based mp3 player for a job interview and I decided to call it 5auropod because &#39;sauropod&#39; kind of sounded like &#39;iPod&quot; and the &#39;5&#39; because of HTML5. Also <a href="http://en.wikipedia.org/wiki/Sauropoda">sauropods</a> are cool, enormous dinosaurs. When I started working on a player for RecLab I wanted to use the same name, but I was worried about starting JavaScript variables with a number so I just used &quot;Sauropod&quot;. Convoluted, I know, but it makes sense to me.</p>
-
-<p>Right now Sauropod is in it&#39;s VERY early stages, mainly just building out method names to architect the system. The basic idea is to build a library to work with songs and tracks that contain metadata and possibly multiple audio tracks that need to be played simultaneously or adjusted individually. I&#39;m using <a href="https://github.com/goldfire/howler.js">Howler.js</a> to handle most of the audio heavy lifting. It&#39;s been pretty awesome so far. I&#39;m also trying out <a href="http://underscorejs.org/">Underscore.js</a> to give me a bit of functional programming in JavaScript. This is mainly to make working with arrays nicer, which I will have to do quite a bit with the arrays of Howler.js Sounds that make up songs.</p>
-
-<p>Sauropod is still in it&#39;s very early stages, but I have a pretty good architecture planned out and I&#39;m excited to see it develop.</p>
-
-  </div>
-
 
 <div class="pagination">
   
     <span class="previous"><i class="icon-arrow-left"></i></span>
   
-  <span class="page_number ">Page: 1 of 4</span>
+  <span class="page_number ">Page: 1 of 5</span>
   
     <a href="../blog/page2" class="next"><i class="icon-arrow-right"></i></a>
   
