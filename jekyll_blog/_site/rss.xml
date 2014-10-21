@@ -7,6 +7,33 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Thing A Week 36 - Theremino</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../blog_media/theremino2.jpg&quot; class=&quot;inline_right&quot; /&gt;
+This last week I built something cool that was actually in the spirit of the Thing a Week project!&lt;/p&gt;
+
+&lt;p&gt;Last Christmas my mom got me a distance sensor that could be easily used with an Arduio (which is a totally normal gift) and I finally got around to playing with it. I had originally wanted to start working on some sort of robot but first I wanted to just play around with it and see what I could do.&lt;/p&gt;
+
+&lt;p&gt;After running through a few tutorials I decided it would be fun to make some sort of crude musical instrument using the distance sensor. I learned a bit about how to hook up a tiny speaker and then used the value of the distance sensor specify which tones to generate.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/theremino1.jpg&quot; class=&quot;inline_left&quot; /&gt;
+This created something that just constantly made steady sine wave sounding noise. I wanted to add the ability to do start and stop notes so I attached a small pressure sensor to the project. Then the tone would only play if you were pressing down on that sensor.&lt;/p&gt;
+
+&lt;p&gt;I also added a small LED light that turns on when a note is being played because lights are neat.&lt;/p&gt;
+
+&lt;p&gt;Because you control the instrument by moving one hand around, like you would on a theremin I decided to call my new creation a &lt;strong&gt;theremino&lt;/strong&gt; (like theremin + Arduino... get it?). Unlike a theremin, the theremino plays discrete notes from a regular chromatic scale, changing notes every 4cm you move your hand from the sensor. It has a range from B2 to C6.&lt;/p&gt;
+
+&lt;p&gt;As you can see from the video below this instrument is actually kind of hard to play. It&amp;#39;s tough to be accurate with your notes when moving around in mid air.&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/RecPQEhI1DM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It had been a while since I had tinkered around with an Arduino, so this what a really fun little project. For those interested, I have the the Arduino code for this project available &lt;a href=&quot;https://gist.github.com/dorkrawk/d871b15ea69638be710f&quot;&gt;here&lt;/a&gt; and a wiring diagram for the Ardunio and breadboard &lt;a href=&quot;../blog_media/theremino_bb.png&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Oct 2014 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/thing-a-week-36-theremino</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-36-theremino</guid>
+      </item>
+    
+      <item>
         <title>RecLaboratory Early Tester Launch</title>
         <description>&lt;p&gt;Unfortunately I&amp;#39;ve broken my &amp;quot;Thing a Week&amp;quot; streak due to some busy weeks where I just didn&amp;#39;t have time to make much of anything. I did, however, have time to clean up some of the last few things for the &lt;strong&gt;RecLaboratory early tester launch&lt;/strong&gt;. Bobby and I spent last Tuesday fixing bugs and cleaning up the UI to get RecLab to a place where we were happy enough to let other people check it out.&lt;/p&gt;
 
@@ -172,35 +199,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
         <pubDate>Tue, 22 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-28-not-much</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-28-not-much</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 27 - Even More Sauropod</title>
-        <description>&lt;p&gt;Once again, another busy week divided between wedding stuff and side projects.&lt;/p&gt;
-
-&lt;p&gt;I spent this week adding more features to the &lt;a href=&quot;http://reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; audio player and I feel like it&amp;#39;s in a pretty good spot for now. Obviously, there&amp;#39;s more I&amp;#39;d like it to do but it&amp;#39;s certainly at a point where it will work for basic track and song playback.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a list of new features that got added this week:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Visual indicators on the in page play buttons to show what is playing in the global player&lt;/li&gt;
-&lt;li&gt;Some basic layout polish and player styling&lt;/li&gt;
-&lt;li&gt;Jump forward or back in the audio by clicking on the progress bar&lt;/li&gt;
-&lt;li&gt;Play/pause using the space bar&lt;/li&gt;
-&lt;li&gt;Some basic (if clunky) error checking to make sure files loaded&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One really interesting thing I found this week that I didn&amp;#39;t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the &lt;code&gt;sauropod.audio&lt;/code&gt; object is empty and playback stops, but not if I&amp;#39;m just clicking links on the site. I haven&amp;#39;t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with &lt;a href=&quot;https://github.com/rails/turbolinks&quot;&gt;TurboLinks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m really happy that is &amp;quot;just works&amp;quot; that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand &lt;strong&gt;&lt;em&gt;WHY&lt;/em&gt;&lt;/strong&gt; it works. It seems dangerous to accidentally get a nice feature like this.&lt;/p&gt;
-
-&lt;p&gt;Like I said, while Sauropod is still a little rough around the edges, it&amp;#39;s good enough to use for the site. I&amp;#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.&lt;/p&gt;
-
-&lt;p&gt;This week I&amp;#39;ll be traveling to New York for a friend&amp;#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...&lt;/p&gt;
-</description>
-        <pubDate>Tue, 15 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod</guid>
       </item>
     
   </channel>

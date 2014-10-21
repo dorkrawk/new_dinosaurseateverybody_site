@@ -1,4 +1,31 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-27-even-more-sauropod">Thing A Week 27 - Even More Sauropod</a></h2>
+  <div class="post_date">July 15, 2014</div>
+  <div class="post">
+    <p>Once again, another busy week divided between wedding stuff and side projects.</p>
+
+<p>I spent this week adding more features to the <a href="http://reclaboratory.com">RecLaboratory</a> audio player and I feel like it&#39;s in a pretty good spot for now. Obviously, there&#39;s more I&#39;d like it to do but it&#39;s certainly at a point where it will work for basic track and song playback.</p>
+
+<p>Here&#39;s a list of new features that got added this week:</p>
+
+<ul>
+<li>Visual indicators on the in page play buttons to show what is playing in the global player</li>
+<li>Some basic layout polish and player styling</li>
+<li>Jump forward or back in the audio by clicking on the progress bar</li>
+<li>Play/pause using the space bar</li>
+<li>Some basic (if clunky) error checking to make sure files loaded</li>
+</ul>
+
+<p>One really interesting thing I found this week that I didn&#39;t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the <code>sauropod.audio</code> object is empty and playback stops, but not if I&#39;m just clicking links on the site. I haven&#39;t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with <a href="https://github.com/rails/turbolinks">TurboLinks</a>.</p>
+
+<p>I&#39;m really happy that is &quot;just works&quot; that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand <strong><em>WHY</em></strong> it works. It seems dangerous to accidentally get a nice feature like this.</p>
+
+<p>Like I said, while Sauropod is still a little rough around the edges, it&#39;s good enough to use for the site. I&#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.</p>
+
+<p>This week I&#39;ll be traveling to New York for a friend&#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-26-more-sauropod">Thing A Week 26 - More Sauropod</a></h2>
   <div class="post_date">July 8, 2014</div>
   <div class="post">
@@ -169,31 +196,6 @@ We didn&#39;t want to it be an exact copy of the original so I tried to give it 
 <p>This ended up being a really fun little project. It only took a few hours from idea to finished product and the result was really satisfying. Enjoy our cover of <a href="https://soundcloud.com/dorkrawk/wine-women-and-song">Wine Women and Song</a>!</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149068054&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-17-reclab-and-drawing-class-update">Thing A Week 17 - RecLab and Drawing Class Update</a></h2>
-  <div class="post_date">May 5, 2014</div>
-  <div class="post">
-    <p>This week, while I was busy with the first week of my new job, I did manage to get some RecLab work done. Also, I&#39;m a few weeks into my drawing class, so I wanted to post an update from that.</p>
-
-<p>While not the most productive RecLab week, I did finish the basic comment functionality for Users, Songs, and Tracks. I also learned about <code>seed.rb</code> and wrote some seed code for the Instruments data. The trick there was that I wanted to be able to run <code>rake db:seed</code> multiple times, so I needed seed code that would let me update or create records. I ended up with a nice solution that lets me break the instruments down into separate arrays by family and then loop through everything to create or update:</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">instruments</span> <span class="o">=</span> <span class="o">[[</span><span class="n">strings</span><span class="p">,</span> <span class="s2">&quot;strings&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">woodwinds</span><span class="p">,</span> <span class="s2">&quot;woodwinds&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">brass</span><span class="p">,</span> <span class="s2">&quot;brass&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">percussion</span><span class="p">,</span> <span class="s2">&quot;percussion&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">keys</span><span class="p">,</span> <span class="s2">&quot;keys&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">other</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="o">]]</span>
-
-<span class="n">instruments</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-  <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
-    <span class="n">instr</span> <span class="o">=</span> <span class="no">Instrument</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">first_or_initialize</span>
-    <span class="n">instr</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
-    <span class="n">instr</span><span class="o">.</span><span class="n">save!</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div>
-
-<p>Now I&#39;ll need to use a tagging system to attach both Instruments and general Tags to objects. I&#39;m leaning toward <a href="https://github.com/mbleigh/acts-as-taggable-on">As Taggable On</a>, which apparently was written by an old childhood friend of mine. Awesome!</p>
-
-<p><img src="../blog_media/drawing02.jpg" class="inline_right" />
-The art class is going well. Value and shading are still pretty tough for me because I&#39;ve spent the last few years just doing line drawings for comics. I also have a tendency to draw pretty lightly (which is probably also a result of erasing pencil lines for comics). I don&#39;t think I&#39;ll leave this class a brilliant artist, but but I&#39;m certainly learning things and getting better.</p>
 
   </div>
 
