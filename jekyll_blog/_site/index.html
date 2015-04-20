@@ -1,4 +1,35 @@
 
+  <h2 class="post_title"><a href="../blog/bloomfilter-rs">Bloomfilter RS</a></h2>
+  <div class="post_date">April 20, 2015</div>
+  <div class="post">
+    <p>I spend the vast majority of programming time working with Ruby these days. I&#39;ve gotten to know it pretty well and it is honestly a joy to use, but I want to make sure that I don&#39;t just limit myself to a single language or even a single type of language (the occasional Python project doesn&#39;t quite count as adventurous). Out of curiosity and a desire to work with a more low level language I&#39;ve started playing around with <a href="http://www.rust-lang.org/">Rust</a>.</p>
+
+<p>Rust is a systems level language created by Mozilla that might be used in similar situations as C++. I haven&#39;t done anything this low level since I had to use C++ for a data structures class my sophmore year of college, which was a surprisingly long time ago.</p>
+
+<p>I needed a small project to build if I was going to learn anything about the language so I decided to build a <a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom filter</a>. A Bloom filter is a probabilistic data structure that is designed to be really space efficient and allows you to determine if something is &quot;probably in the set&quot; or &quot;definitely not in the set&quot;. For example, web browsers use Bloom filters to store lists of dangerous websites, which is why you sometime get a warning for an obviously safe site.</p>
+
+<p>The end result of this little project was <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a>, a small Rust library that implements a Bloom filter. It can be used like this to create a Bloom filter with 100 buckets and 5 hash functions:</p>
+
+<div class="highlight"><pre><code class="rust"><span class="k">let</span> <span class="k">mut</span> <span class="n">bf</span> <span class="o">=</span> <span class="n">BloomFilter</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
+<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;coffee&quot;</span><span class="p">);</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
+<span class="c1">// (probably) true</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;oatmeal&quot;</span><span class="p">);</span>
+<span class="c1">// false</span>
+</code></pre></div>
+
+<p>It was pretty interesting working with a lower level language coming from Ruby. I had to think about passing pointers and dealing with a much more robust type system. Fortunately working with Scala in the past prepared me a bit for dealing with generics and default immutability, but it really felt MUCH slower than working with a high level language like Ruby (which I suppose should be obvious).</p>
+
+<p>I don&#39;t really have a major project in mind that needs a language like Rust right now, but I&#39;d like to keep tinkering around with it just to expose myself to other types of langues. It&#39;s also just fun to follow a language as it&#39;s being built (as of this post Rust is still a few weeks away from it&#39;s official 1.0 release and some of the API still isn&#39;t quite stable).</p>
+
+<p>Feel free to dig through my <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a> code and give me any feedback about style or a better way to use language features. It was certainly built as a learning experience.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/aaron-west-and-the-roaring-twenties-drawings">Aaron West and the Roaring Twenties Drawings</a></h2>
   <div class="post_date">February 7, 2015</div>
   <div class="post">
@@ -173,23 +204,6 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
 <p>Guitars are still hard to draw.</p>
 
 <p>I used a small pallet of colors for all the icons in the hopes of creating an overall cohesive effect when they all get seen together on the site. Bobby doesn&#39;t like the percussion one very much and he&#39;s probably right. It&#39;s my least favorite too, but this seems like a good start and really adds some nice visual variety to the site. Plus it&#39;s always fun to draw things!</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-30-reclaboratory-servers">Thing A Week 30 - RecLaboratory Servers</a></h2>
-  <div class="post_date">August 18, 2014</div>
-  <div class="post">
-    <p>So as of last week I have the RecLab Rails site up and running on Heroku and the audio processing API, Roctopus, up and running on my own server. Amazingly they are able to talk to each other and work pretty much as expected.</p>
-
-<p>There are still quite a few things to fix up, particularly with Rocktopus, but it&#39;s nice to see the full application working together on remote servers. While the Rails/Heroku setup was pretty straight forward, Rocktopus was uncharted territory for me.</p>
-
-<p>I had never &quot;launched&quot; a Flask application before so this was all a bit new. As a (<em>temporary, I swear!</em>) measure I moved the files to my server over SFTP and started up a <a href="http://gunicorn.org/">Gunicorn</a> server to run the application. I still need to put Nginx in front of all of this but for now it works as expected (though I can&#39;t imagine it would handle much traffic). I&#39;d also like to learn more about <a href="http://www.fabfile.org/">Fabric</a> for Python deployments. I&#39;ve never been much of a sysadmin, so this was all a bit new to me.</p>
-
-<p>The only really new thing I did for the Rails/Heroku app was add <a href="http://unicorn.bogomips.org/">Unicorn</a> as a server. Heroku has a <a href="https://devcenter.heroku.com/articles/rails-unicorn">great article</a> that held my hand through this setup.</p>
-
-<p>Also, as part of this setup I&#39;ve been playing around with <a href="https://slack.com/">Slack</a> and it&#39;s wonderful integrations for monitoring the app. So far I have it working with Heroku, PaperTrail, and Pingdom. Nothing&#39;s gone wrong yet, but I suppose that is to be expected when there are no users...</p>
-
-<p>As I mentioned, there are still quite a few rough edges to be worked out, a bunch of minor features, and at least one major feature that still needs to be built but this feels like a big step in getting <a href="http://reclaboratory.com">RecLaboratory</a> launched and letting people try it out. We have some people in mind for VERY early alpha testers, but please let me know if you&#39;re interested in trying it out when it&#39;s ready!</p>
 
   </div>
 

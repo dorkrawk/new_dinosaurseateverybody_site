@@ -1,0 +1,49 @@
+<h2 class="post_title">Bloomfilter RS</h2>
+<div class="post_date">April 20, 2015</div>
+
+<div class="post">
+<p>I spend the vast majority of programming time working with Ruby these days. I&#39;ve gotten to know it pretty well and it is honestly a joy to use, but I want to make sure that I don&#39;t just limit myself to a single language or even a single type of language (the occasional Python project doesn&#39;t quite count as adventurous). Out of curiosity and a desire to work with a more low level language I&#39;ve started playing around with <a href="http://www.rust-lang.org/">Rust</a>.</p>
+
+<p>Rust is a systems level language created by Mozilla that might be used in similar situations as C++. I haven&#39;t done anything this low level since I had to use C++ for a data structures class my sophmore year of college, which was a surprisingly long time ago.</p>
+
+<p>I needed a small project to build if I was going to learn anything about the language so I decided to build a <a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom filter</a>. A Bloom filter is a probabilistic data structure that is designed to be really space efficient and allows you to determine if something is &quot;probably in the set&quot; or &quot;definitely not in the set&quot;. For example, web browsers use Bloom filters to store lists of dangerous websites, which is why you sometime get a warning for an obviously safe site.</p>
+
+<p>The end result of this little project was <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a>, a small Rust library that implements a Bloom filter. It can be used like this to create a Bloom filter with 100 buckets and 5 hash functions:</p>
+
+<div class="highlight"><pre><code class="rust"><span class="k">let</span> <span class="k">mut</span> <span class="n">bf</span> <span class="o">=</span> <span class="n">BloomFilter</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
+<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;coffee&quot;</span><span class="p">);</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
+<span class="c1">// (probably) true</span>
+
+<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;oatmeal&quot;</span><span class="p">);</span>
+<span class="c1">// false</span>
+</code></pre></div>
+
+<p>It was pretty interesting working with a lower level language coming from Ruby. I had to think about passing pointers and dealing with a much more robust type system. Fortunately working with Scala in the past prepared me a bit for dealing with generics and default immutability, but it really felt MUCH slower than working with a high level language like Ruby (which I suppose should be obvious).</p>
+
+<p>I don&#39;t really have a major project in mind that needs a language like Rust right now, but I&#39;d like to keep tinkering around with it just to expose myself to other types of langues. It&#39;s also just fun to follow a language as it&#39;s being built (as of this post Rust is still a few weeks away from it&#39;s official 1.0 release and some of the API still isn&#39;t quite stable).</p>
+
+<p>Feel free to dig through my <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a> code and give me any feedback about style or a better way to use language features. It was certainly built as a learning experience.</p>
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'dinosaurseateverybody'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+
