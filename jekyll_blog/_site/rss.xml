@@ -7,6 +7,29 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Divorce and the American South Cover</title>
+        <description>&lt;p&gt;Eileen was out of town this weekend so, as I typically do in these situations, I took advantage of the time do some recording. As mentioned in &lt;a href=&quot;../blog/aaron-west-and-the-roaring-twenties-drawings&quot;&gt;previous posts&lt;/a&gt;, I&amp;#39;ve really been into the Aaron West and the Roaring Twenties record so I decided to finally record one of those songs, &lt;a href=&quot;http://www.rdio.com/artist/Aaron_West_and_The_Roaring_Twenties/album/We_Don%27t_Have_Each_Other/track/Divorce_And_The_American_South/&quot;&gt;Divorce and the American South&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here&amp;#39;s a &lt;a href=&quot;https://soundcloud.com/dorkrawk/divorce-and-the-american-south-cover&quot;&gt;link to the song&lt;/a&gt; if you want to listen right away.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a pretty faithful cover. I didn&amp;#39;t deviate too much from the original version and actually resisted my urge to add some lead guitar parts to the song. In place of the slide guitar, prominently featured in the original song, I focused more on the organ part to do something tonally interesting against the acoustic guitar. The organ also just fills the song out nicely without adding a bass part.&lt;/p&gt;
+
+&lt;p&gt;I also recorded some saxophone for the first time since recording the last Captain Supreme song, which was pretty fun.&lt;/p&gt;
+
+&lt;p&gt;This recording session gave me the chance to really work with with my new vocal mic (&lt;a href=&quot;http://www.amazon.com/MXL-2003A-Diaphragm-Condenser-Microphone/dp/B001ECQOI0&quot;&gt;MLX 2003A&lt;/a&gt;) and my new monitors (&lt;a href=&quot;http://www.amazon.com/JBL-Professional-LSR305-Studio-Monitor/dp/B00DUKP37C&quot;&gt;JBL LSR305s&lt;/a&gt;). I ended up using the MLX for both vocals and the acoustic guitar and just used my SM57 for the sax. It was really nice to be able actually &lt;em&gt;hear&lt;/em&gt; things in the mix with the new monitors. Hopefully the end result is better for that clarity.&lt;/p&gt;
+
+&lt;p&gt;As always, vocals were a challenge. They&amp;#39;re not perfect but I feel like I&amp;#39;m making progress, which is always nice.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204860615&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Mon, 11 May 2015 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/divorce-and-the-american-south-cover</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/divorce-and-the-american-south-cover</guid>
+      </item>
+    
+      <item>
         <title>Bloomfilter RS</title>
         <description>&lt;p&gt;I spend the vast majority of programming time working with Ruby these days. I&amp;#39;ve gotten to know it pretty well and it is honestly a joy to use, but I want to make sure that I don&amp;#39;t just limit myself to a single language or even a single type of language (the occasional Python project doesn&amp;#39;t quite count as adventurous). Out of curiosity and a desire to work with a more low level language I&amp;#39;ve started playing around with &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;.&lt;/p&gt;
 
@@ -202,36 +225,6 @@ After a trip to the &lt;a href=&quot;http://www.waltdisney.org/&quot;&gt;Walt Di
         <pubDate>Tue, 02 Sep 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 31 - RecLaboratory Instrument Icons</title>
-        <description>&lt;p&gt;Along with some other RecLab stuff (which is coming along nicely), this week I finally tackled a little project that I&amp;#39;ve been thinking about for a while. Unlike most of the RecLab work this was much more artistic than technical. I built the first first hand drawn icons for the site.&lt;/p&gt;
-
-&lt;p&gt;I knew that I wanted custom instrument, track, and song icons so I started out with a small set of 8 (with plans to make more as we need them). I did these icons the same way I do my comics: first drawing in pencil, then inking, then scanning into Photoshop, then cleaning up the lines and adding color in Illustrator. They had to look good at a wide range of sizes: 400px to 30px so I didn&amp;#39;t add too much detail.&lt;/p&gt;
-
-&lt;p&gt;To handle what I think will be the most commonly used instruments I started with (electric) guitar, (electric) bass, drums, keys, vocals, sax (perhaps my own bias), percussion, and general track.&lt;/p&gt;
-
-&lt;p&gt;So here they are!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/guitar-medium.png&quot; title=&quot;guitar&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/bass-medium.png&quot; title=&quot;bass&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/drums-medium.png&quot; title=&quot;drums&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/vocals-medium.png&quot; title=&quot;vocals&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/keys-medium.png&quot; title=&quot;keys&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/sax-medium.png&quot; title=&quot;sax&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/percussion-medium.png&quot; title=&quot;percussion&quot; class=&quot;inline_left&quot;&gt;
-&lt;img src=&quot;../blog_media/track-medium.png&quot; title=&quot;general track&quot; class=&quot;inline_left&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br style=&quot;clear: both&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Guitars are still hard to draw.&lt;/p&gt;
-
-&lt;p&gt;I used a small pallet of colors for all the icons in the hopes of creating an overall cohesive effect when they all get seen together on the site. Bobby doesn&amp;#39;t like the percussion one very much and he&amp;#39;s probably right. It&amp;#39;s my least favorite too, but this seems like a good start and really adds some nice visual variety to the site. Plus it&amp;#39;s always fun to draw things!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 Aug 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons</guid>
       </item>
     
   </channel>
