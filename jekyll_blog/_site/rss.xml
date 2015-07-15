@@ -7,6 +7,37 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Input Coffee (v2)</title>
+        <description>&lt;p&gt;So back when I was working at Berkeley (and had more free time) I decided to formalize the tracking of some of my skill improvements. These were mainly things like drawing, playing guitar, playing piano, vocals, comptuer science theory, etc. I set up a small WordPress blog called &lt;strong&gt;Input Coffee&lt;/strong&gt; and just made posts for every session in order to keep track of what I had been working on. I liked seeing all the posts every month and having a record of what I was doing, but a blog wasn&amp;#39;t the perfect solution. I wanted better ways to add up time per week or month for each type of task.&lt;/p&gt;
+
+&lt;p&gt;I decided to start tracking this sort of thing again, partially in response to reading &lt;a href=&quot;http://www.amazon.com/Make-It-Stick-Successful-Learning/dp/0674729013&quot;&gt;Make It Stick&lt;/a&gt;, and I wanted a simple way to track my practice sessions for things like guitar, chess, drawing, and other stuff I&amp;#39;m working on these days.&lt;/p&gt;
+
+&lt;p&gt;I started by just creating Google Docs for each session, which worked fine and helped me not avoid doing real practice by spending a bunch of time building a complex system to track my practice. But then I gave in and built a system to track my practice. Like the original WordPress blog, it&amp;#39;s called &lt;a href=&quot;https://github.com/dorkrawk/input-coffee&quot;&gt;Input Coffee&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This system is pretty simplistic, just a Sinatra app that reads some Markdown files and turns them into CoffeePost objects so I can examine them based on tags, subject, date, and a few other fields. The Markdown files use a format very similar to Jekyll&amp;#39;s posts and I just parse out meta data from the little header. 
+Here&amp;#39;s an example post:&lt;/p&gt;
+
+&lt;pre&gt;
+---
+date: 2015-07-14
+subject: guitar
+tags: acoustic electric
+hours: 1.0
+---
+
+Spent most of this session doing acoustic stuff...
+&lt;/pre&gt;
+
+&lt;p&gt;I don&amp;#39;t even have this hosted anywhere, I just run a local server when I want to see stats about my practice. Right now I just show total posts/hours (since May 25th, 2015), some breakdowns by subject (guitar, vocals, chess, drawing, etc.), and some numbers for the current and past week&lt;/p&gt;
+
+&lt;p&gt;Obviously, I&amp;#39;d like build out some more metrics and it might be fun to make a nicer interface, but for now this works for me and I&amp;#39;ve avoided overly-over engineering the solution.  Being able to track this sort of stuff really helps keep me in good habits.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jul 2015 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/input-coffee-v2</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/input-coffee-v2</guid>
+      </item>
+    
+      <item>
         <title>Divorce and the American South Cover</title>
         <description>&lt;p&gt;Eileen was out of town this weekend so, as I typically do in these situations, I took advantage of the time do some recording. As mentioned in &lt;a href=&quot;../blog/aaron-west-and-the-roaring-twenties-drawings&quot;&gt;previous posts&lt;/a&gt;, I&amp;#39;ve really been into the Aaron West and the Roaring Twenties record so I decided to finally record one of those songs, &lt;a href=&quot;http://www.rdio.com/artist/Aaron_West_and_The_Roaring_Twenties/album/We_Don%27t_Have_Each_Other/track/Divorce_And_The_American_South/&quot;&gt;Divorce and the American South&lt;/a&gt;.&lt;/p&gt;
 
@@ -208,23 +239,6 @@ After a trip to the &lt;a href=&quot;http://www.waltdisney.org/&quot;&gt;Walt Di
         <pubDate>Mon, 08 Sep 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 32 - In Browser Audio Recording</title>
-        <description>&lt;p&gt;This week my major work was around building an in-browser audio recording system. I&amp;#39;ve been reading about using new HTML5 APIs to get access to the user&amp;#39;s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff &lt;strong&gt;Basement&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;The core technology for this whole process is &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia&quot;&gt;getUserMedia()&lt;/a&gt;. This is what prompts the user to allow the page to access the mic (or camera or whatever) and then handle a &lt;code&gt;LocalMediaStream&lt;/code&gt; object. From there you can work with whatever is being picked up by the mic.&lt;/p&gt;
-
-&lt;p&gt;Outputing the audio in real time was very easy (hey I built a monitor!) and after doing a bit of research I found a fantastic library to help with the recording aspect of this project: &lt;a href=&quot;https://github.com/mattdiamond/Recorderjs&quot;&gt;Recorderjs&lt;/a&gt;. It provides a nice &lt;code&gt;Recorder&lt;/code&gt; object to work with and, best of all, it&amp;#39;s a VERY small, easy to understand library so I can go through every line of code and understand exactly what is being done. This is very important because all of this in-browser media work is very new and deep tutorials are rare. Plus I&amp;#39;m going to need to do a few things that haven&amp;#39;t been done perfectly yet.&lt;/p&gt;
-
-&lt;p&gt;Right now I&amp;#39;m working on taking the recorded audio, which exists as a Blob tied to the page it was created on, and sending it back to the server to be uploaded in a way that works nicely with our existing &lt;a href=&quot;https://github.com/thoughtbot/paperclip&quot;&gt;Paperclip&lt;/a&gt; system. I&amp;#39;m really digging into some of the new HTML5 APIs for all this work and it&amp;#39;s been really interesting.&lt;/p&gt;
-
-&lt;p&gt;The in-browser recording is the last new major feature we need to build before polishing up the &lt;a href=&quot;http://www.reclaboratory.com&quot;&gt;RecLaboratory&lt;/a&gt; site (which I updated this week, too!) for a very early, very small beta. I&amp;#39;m really excited to get people using this tool soon!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 02 Sep 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording</guid>
       </item>
     
   </channel>
