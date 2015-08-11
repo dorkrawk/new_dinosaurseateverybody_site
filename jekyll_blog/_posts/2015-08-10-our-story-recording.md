@@ -16,6 +16,8 @@ After recording the acoustic part, I got to have a lot of fun writing all the ot
 
 As usual, I was tempted to do more electric guitar noodling than I should but some after some editing I was pretty happy with the little theme I had in the verses. The lead part in the choruses ended up acting as more of a harmony that gave the chords an interesting sound at times.
 
+There's a part in the 3rd verse right after the line "together with our furry child" where it sounds like someone just stepped on a piano. That's because the cat just stepped on the piano there. Since the line was actually about him I mixed it down but left it in.
+
 The outro was interesting in this song. It was originally the verse or chorus of an early draft of this song that never really panned out, but I liked the lyrics and it was in the same key as the rest of the song so I really wanted to make it work. Also it was a nice held chord segue into actually popping the question, which was pretty important at the time. 
 
 I wanted to be sure this still sounded cohesive with the rest of the song, but still go out big and I think it turned out well. While I could have mixed it a little better, the pick slide into distorted power chords is just a lot of fun. The piano part was just something simple I stumbled on while I was messing around, but I really like what it adds. I ended up doing a lot of editing to decide which instruments should stop when and I'm happy with those choices. There was a lot of value in editing this song a few days after I had done most of the recording.
