@@ -7,6 +7,53 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Darwinning Updates</title>
+        <description>&lt;p&gt;One of the &lt;a href=&quot;http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms&quot;&gt;first posts&lt;/a&gt; I wrote on the new version of this blog was about my genetic algorithm Ruby gem, &lt;strong&gt;Darwinning&lt;/strong&gt;. I actually started building the library back in December of 2012 when I was first learning Ruby and it&amp;#39;s gone through several updates and periods of inactivity. Usually I&amp;#39;ll just add some tests or make a small update when I have some free time. It&amp;#39;s been a pretty casual project. I just didn&amp;#39;t think that there was that much of a need for a Ruby GA library, I just thought it would be fun to make.&lt;/p&gt;
+
+&lt;p&gt;Recently I&amp;#39;ve seen a steady stream of people starring and forking the &lt;a href=&quot;https://github.com/dorkrawk/darwinning&quot;&gt;Darwinning repo&lt;/a&gt; on Github and I&amp;#39;ve received some really thoughtful and helpful pull requests from people, so I wanted to give the library a bit more attention. I had some free time this weekend and used it to finish off a major feature that I had been working on and finally published the &lt;a href=&quot;https://rubygems.org/gems/darwinning&quot;&gt;0.1.0 version of the gem&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The major feature I added was the ability to use Darwinning in existing Ruby models via &lt;code&gt;include&lt;/code&gt;. This lets you utilize the library in projects that might not be specifically about genetic algorithms.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s my dumb, contrived example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;darwinning&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Triple&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Darwinning&lt;/span&gt;
+
+  &lt;span class=&quot;no&quot;&gt;GENE_RANGES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;first_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;second_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;third_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;attr_accessor&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:first_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:second_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:third_number&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fitness&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Try to get the sum of the 3 digits to add up to 100&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;third_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you can use some nice built in methods to generate a population of these objects and evolve them towards a fitness goal:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_evolveable?&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;triple_pop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build_population&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;triple_pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evolve!&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# evolve until fitness goal is or generations limit is met&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;pp&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Best member: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;triple_pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_member&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I&amp;#39;ve been having fun working on this project and it&amp;#39;s really cool to see some other people contribute to the project. If you want to play around with the library or have an interest in &lt;a href=&quot;https://en.wikipedia.org/wiki/Genetic_algorithm&quot;&gt;genetic algorithms&lt;/a&gt; just &lt;code&gt;gem install darwinning&lt;/code&gt; or check out the &lt;a href=&quot;https://github.com/dorkrawk/darwinning&quot;&gt;Darwinning Github repo&lt;/a&gt;. There are always more updates to do, but it felt good to make some progress on this project.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/darwinning-updates</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/darwinning-updates</guid>
+      </item>
+    
+      <item>
         <title>Our Story Recording</title>
         <description>&lt;p&gt;Last weekend was my first wedding anniversary. We didn&amp;#39;t really have big plans to exchange gifts but I thought it would be a good opportunity to finally record &lt;strong&gt;&amp;quot;Our Story&amp;quot;&lt;/strong&gt;, the song I used to propose to Eileen. I had been meaning to do this for a while, partially because I knew if I didn&amp;#39;t I&amp;#39;d probably forget how to play it and that would make me a terrible husband.&lt;/p&gt;
 
@@ -231,23 +278,6 @@ After getting the in-browser track recording to a working place the previous wee
         <pubDate>Mon, 22 Sep 2014 00:00:00 -0700</pubDate>
         <link>http://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song</guid>
-      </item>
-    
-      <item>
-        <title>Thing A Week 34 - Instrumental Indie Music</title>
-        <description>&lt;p&gt;Hey look! Another non-code related Thing a Week! On Saturday night, Eileen was at hockey so I grabbed my (much neglected) guitar and popped open Logic Pro for some quick recording. The end product was a nice, kind of dark sounding &lt;a href=&quot;https://soundcloud.com/dorkrawk/indie-mess&quot;&gt;instrumental track&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I had been messing around with a little arpeggiated riff and I wanted to build something pretty repetitive, getting away from a verse-chorus-bridge structure. After I had the riff, I started building the drum part. The real breakthrough there was throwing in the handclaps, which start off sounding so happy but then sound more ominous under the bass and main guitar riff. Despite being pretty core to the whole song, the bass part didn&amp;#39;t come in until much later in the writing process. I also ended up using amp models with a lot more reverb than I typically use. I have a tendency to seek out drier guitar tones, but the more spacious sounds really worked for this piece.&lt;/p&gt;
-
-&lt;p&gt;I resisted the urge to just keep stacking more and more tracks on top of each other in this song and let some parts be pretty sparse. I think I could put some lyrics over this but it was getting late and nothing was really jumping out to me, so I&amp;#39;m pretty happy with it being instrumental for now.&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/167850797&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Mon, 15 Sep 2014 00:00:00 -0700</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music</guid>
       </item>
     
   </channel>
