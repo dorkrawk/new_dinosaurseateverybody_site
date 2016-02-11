@@ -1,4 +1,19 @@
 
+  <h2 class="post_title"><a href="../blog/reclaboratory-early-tester-launch">RecLaboratory Early Tester Launch</a></h2>
+  <div class="post_date">October 14, 2014</div>
+  <div class="post">
+    <p>Unfortunately I&#39;ve broken my &quot;Thing a Week&quot; streak due to some busy weeks where I just didn&#39;t have time to make much of anything. I did, however, have time to clean up some of the last few things for the <strong>RecLaboratory early tester launch</strong>. Bobby and I spent last Tuesday fixing bugs and cleaning up the UI to get RecLab to a place where we were happy enough to let other people check it out.</p>
+
+<p>This doesn&#39;t mean it is complete or bug-free by any means. I&#39;m sure there a lots of little rough spots and the UI, while not terrible, is still pretty bare-bones. But our goal for this &quot;release&quot; was to get the site to a point where we could show some friends and let them try things out. We really just want to see if we&#39;re headed in the right direction with what we have so far before we devote a lot of time to polishing the UI and the code base.</p>
+
+<p>It&#39;s pretty exciting to finally start showing off something we&#39;ve been working on for a long time (on and off for about 6 months now). While it&#39;s kind of nerve-wracking to worry about something breaking now that people other than Bobby and I are on the site it&#39;ll be fun to see how people start to use what we&#39;ve built. We&#39;re rolling out invites <em>very</em> slowly as we become more confident about the feature set and stability of the system.</p>
+
+<p>I also started a <a href="http://reclaboratory.tumblr.com/">RecLab Blog</a> (my first Tumblr account!) to act as a sort of company blog now that we&#39;re trying to involve other people in the site. As always you should follow/friend/read/whatever our <a href="https://www.facebook.com/reclaboratory">Facebook</a>, <a href="https://twitter.com/reclaboratory">Twitter</a>, <a href="http://instagram.com/reclaboratory">Instagram</a>, and <a href="http://reclaboratory.tumblr.com/">blog</a>. </p>
+
+<p><strong>Please go to <a href="http://www.reclaboratory.com">www.reclaboratory.com</a> and sign up to become an early tester and we&#39;ll probably send you and invite soon!</strong></p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-35-reclaboratory-record-track-from-song">Thing A Week 35 - RecLaboratory Record Track From Song</a></h2>
   <div class="post_date">September 22, 2014</div>
   <div class="post">
@@ -158,35 +173,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 <p>Like I said, while Sauropod is still a little rough around the edges, it&#39;s good enough to use for the site. I&#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.</p>
 
 <p>This week I&#39;ll be traveling to New York for a friend&#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-26-more-sauropod">Thing A Week 26 - More Sauropod</a></h2>
-  <div class="post_date">July 8, 2014</div>
-  <div class="post">
-    <p>Another 7 days, another busy week. With the wedding growing ever closer I&#39;ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.</p>
-
-<p><img src="../blog_media/sauropod1.png" /></p>
-
-<p>I got Sauropod hooked up into the asset pipeline of the <a href="http://reclaboratory.com">RecLab</a> Rails site and started attaching it to the various audio controls on the site. While <a href="https://github.com/goldfire/howler.js">Howler.js</a> handles loading the audio file and playing the sound in browser, I still needed to build all the hooks to control and monitor the audio.</p>
-
-<p>At this point I am able to click a &quot;play&quot; button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an <code>onprogress</code> event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn&#39;t very hard, I just used a <code>setInterval()</code> function around my own <code>sauropod.updateProgress()</code> function:</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">sauropod</span><span class="o">.</span><span class="n">play</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">sauropod</span><span class="o">.</span><span class="n">audio</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="s2">&quot;playing&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">_</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">sauropod</span><span class="o">.</span><span class="n">audio</span><span class="o">.</span><span class="n">tracks</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">play</span><span class="p">()});</span>
-    <span class="n">sauropod</span><span class="o">.</span><span class="n">audio</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;playing&quot;</span><span class="p">;</span>
-    <span class="n">sauropod</span><span class="o">.</span><span class="n">updatePlayer</span><span class="p">();</span>
-    <span class="n">sauropod</span><span class="o">.</span><span class="n">tid</span> <span class="o">=</span> <span class="n">setInterval</span><span class="p">(</span><span class="n">sauropod</span><span class="o">.</span><span class="n">updateProgress</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p>I still need to build all the hooks into playing a mutitrack song (though it should work based on how I&#39;ve built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.</p>
-
-<p><strong>Thing A Week Progress Update</strong></p>
-
-<p>So this week marks half a year of this &quot;Thing A Week&quot; project. It hasn&#39;t been exactly what I planned, one discrete project finished every week, but it has really keep me focused on building things and I&#39;ve really enjoyed writing about my progress on all the things I&#39;ve been working on.</p>
 
   </div>
 
