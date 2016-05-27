@@ -1,4 +1,29 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-36-theremino">Thing A Week 36 - Theremino</a></h2>
+  <div class="post_date">October 20, 2014</div>
+  <div class="post">
+    <p><img src="../blog_media/theremino2.jpg" class="inline_right" />
+This last week I built something cool that was actually in the spirit of the Thing a Week project!</p>
+
+<p>Last Christmas my mom got me a distance sensor that could be easily used with an Arduio (which is a totally normal gift) and I finally got around to playing with it. I had originally wanted to start working on some sort of robot but first I wanted to just play around with it and see what I could do.</p>
+
+<p>After running through a few tutorials I decided it would be fun to make some sort of crude musical instrument using the distance sensor. I learned a bit about how to hook up a tiny speaker and then used the value of the distance sensor specify which tones to generate.</p>
+
+<p><img src="../blog_media/theremino1.jpg" class="inline_left" />
+This created something that just constantly made steady sine wave sounding noise. I wanted to add the ability to do start and stop notes so I attached a small pressure sensor to the project. Then the tone would only play if you were pressing down on that sensor.</p>
+
+<p>I also added a small LED light that turns on when a note is being played because lights are neat.</p>
+
+<p>Because you control the instrument by moving one hand around, like you would on a theremin I decided to call my new creation a <strong>theremino</strong> (like theremin + Arduino... get it?). Unlike a theremin, the theremino plays discrete notes from a regular chromatic scale, changing notes every 4cm you move your hand from the sensor. It has a range from B2 to C6.</p>
+
+<p>As you can see from the video below this instrument is actually kind of hard to play. It&#39;s tough to be accurate with your notes when moving around in mid air.</p>
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/RecPQEhI1DM" frameborder="0" allowfullscreen></iframe>
+
+<p>It had been a while since I had tinkered around with an Arduino, so this what a really fun little project. For those interested, I have the the Arduino code for this project available <a href="https://gist.github.com/dorkrawk/d871b15ea69638be710f">here</a> and a wiring diagram for the Ardunio and breadboard <a href="../blog_media/theremino_bb.png">here</a>.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/reclaboratory-early-tester-launch">RecLaboratory Early Tester Launch</a></h2>
   <div class="post_date">October 14, 2014</div>
   <div class="post">
@@ -146,33 +171,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 <p>I also set up a sort of hacky but effective, for now, &quot;loading screen&quot; to let users know that their audio is being uploaded/processes. It seems like a little thing but letting the page just hangs after clicking submit is really bad UI. This is a very early version of the product and we haven&#39;t given UI the full focus it needs but this was one thing that would be too awkward to not address early. It was a bit of an awkward fix because we&#39;re not actually doing the audio processing or uploading as a background process. Eventually I&#39;ll build a queuing/callback system in Rocktopus that will work much nicer, but this gets us going now.</p>
 
 <p>This next week is another busy week. It is the last week in SF before we fly back to Chicago for the wedding (which is less than 2 weeks away now...).  If I get anything Thing A Week thing done this week it will probably be something wedding related.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-27-even-more-sauropod">Thing A Week 27 - Even More Sauropod</a></h2>
-  <div class="post_date">July 15, 2014</div>
-  <div class="post">
-    <p>Once again, another busy week divided between wedding stuff and side projects.</p>
-
-<p>I spent this week adding more features to the <a href="http://reclaboratory.com">RecLaboratory</a> audio player and I feel like it&#39;s in a pretty good spot for now. Obviously, there&#39;s more I&#39;d like it to do but it&#39;s certainly at a point where it will work for basic track and song playback.</p>
-
-<p>Here&#39;s a list of new features that got added this week:</p>
-
-<ul>
-<li>Visual indicators on the in page play buttons to show what is playing in the global player</li>
-<li>Some basic layout polish and player styling</li>
-<li>Jump forward or back in the audio by clicking on the progress bar</li>
-<li>Play/pause using the space bar</li>
-<li>Some basic (if clunky) error checking to make sure files loaded</li>
-</ul>
-
-<p>One really interesting thing I found this week that I didn&#39;t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the <code>sauropod.audio</code> object is empty and playback stops, but not if I&#39;m just clicking links on the site. I haven&#39;t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with <a href="https://github.com/rails/turbolinks">TurboLinks</a>.</p>
-
-<p>I&#39;m really happy that is &quot;just works&quot; that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand <strong><em>WHY</em></strong> it works. It seems dangerous to accidentally get a nice feature like this.</p>
-
-<p>Like I said, while Sauropod is still a little rough around the edges, it&#39;s good enough to use for the site. I&#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.</p>
-
-<p>This week I&#39;ll be traveling to New York for a friend&#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...</p>
 
   </div>
 
