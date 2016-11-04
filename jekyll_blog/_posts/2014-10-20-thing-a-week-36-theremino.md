@@ -22,7 +22,4 @@ Because you control the instrument by moving one hand around, like you would on 
 
 As you can see from the video below this instrument is actually kind of hard to play. It's tough to be accurate with your notes when moving around in mid air.
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/RecPQEhI1DM" frameborder="0" allowfullscreen></iframe>
-
 It had been a while since I had tinkered around with an Arduino, so this what a really fun little project. For those interested, I have the the Arduino code for this project available [here](https://gist.github.com/dorkrawk/d871b15ea69638be710f) and a wiring diagram for the Ardunio and breadboard [here](../blog_media/theremino_bb.png).
-
