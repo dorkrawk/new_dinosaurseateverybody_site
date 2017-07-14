@@ -14,8 +14,7 @@
 
 <p>Darwinning is totally available via <a href="http://rubygems.org/gems/darwinning">RubyGems</a> so you can install it the same way you would install almost any Gem:</p>
 
-<div class="highlight"><pre><code class="bash">gem install darwinning
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install darwinning</code></pre></figure>
 
 <p>Once it&#39;s installed you can make use of the <code>Population</code>, <code>Organism</code>, and <code>Gene</code> classes to build your own genetic algorithm based programs.</p>
 
@@ -23,26 +22,25 @@
 
 <p>Let&#39;s say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let&#39;s solve it anyway.</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">class</span> <span class="nc">Triple</span> <span class="o">&lt;</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Organism</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Triple</span> <span class="o">&lt;</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Organism</span>
 
-  <span class="vi">@name</span> <span class="o">=</span> <span class="s2">&quot;Triple&quot;</span>
-  <span class="vi">@genes</span> <span class="o">=</span> <span class="o">[</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;first digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;second digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;third digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">))</span>
-    <span class="o">]</span>
+  <span class="vi">@name</span> <span class="o">=</span> <span class="s2">"Triple"</span>
+  <span class="vi">@genes</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"first digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">)),</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"second digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">)),</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"third digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">))</span>
+    <span class="p">]</span>
 
   <span class="k">def</span> <span class="nf">fitness</span>
     <span class="c1"># Try to get the sum of the 3 digits to add up to 15</span>
-    <span class="p">(</span><span class="n">genotypes</span><span class="o">.</span><span class="n">inject</span><span class="p">{</span> <span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span> <span class="o">-</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span>
+    <span class="p">(</span><span class="n">genotypes</span><span class="p">.</span><span class="nf">inject</span><span class="p">{</span> <span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span> <span class="o">-</span> <span class="mi">15</span><span class="p">).</span><span class="nf">abs</span>
   <span class="k">end</span>
 <span class="k">end</span> 
 
-<span class="nb">p</span> <span class="o">=</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Population</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Triple</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">p</span><span class="o">.</span><span class="n">evolve!</span>
+<span class="nb">p</span> <span class="o">=</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Population</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Triple</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">p</span><span class="p">.</span><span class="nf">evolve!</span>
 
-<span class="nb">p</span><span class="o">.</span><span class="n">best_member</span><span class="o">.</span><span class="n">nice_print</span> <span class="c1"># prints the member representing the solution</span>
-</code></pre></div>
+<span class="nb">p</span><span class="p">.</span><span class="nf">best_member</span><span class="p">.</span><span class="nf">nice_print</span> <span class="c1"># prints the member representing the solution</span></code></pre></figure>
 
 <p>This code declares an organism class that inherits from Darwinning&#39;s Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.</p>
 

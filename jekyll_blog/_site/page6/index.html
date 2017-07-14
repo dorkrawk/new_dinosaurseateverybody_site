@@ -1,4 +1,23 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-1-professor-rex-vonscience-saves-the-world">Thing A Week 1 - Professor Rex VonScience Saves The World (an HTML5/JavaScript game)</a></h2>
+  <div class="post_date">January 12, 2014</div>
+  <div class="post">
+    <p>So, the first Thing A Week project was kind of a failure. </p>
+
+<p>My goal was to build my first HTML5/JavaScript based game. I started out by picking a JS game framework suggested by my buddy <a href="http://www.urgack.com/">Bryan</a>. I ended up using <a href="http://craftyjs.com/">Crafty</a> and getting started with <a href="http://buildnewgames.com/introduction-to-crafty/">this tutorial</a>. It was really good and by the end I had a top down adventure game thing that looked very Zelda-like.</p>
+
+<p>From there I sat down and did a bit of planning to figure out what sort of game I wanted to make. This is where I may have gotten a bit ambitious. I decided to make a top down adventure game (similar to the one in the tutorial) about a T-rex/scientist who must fight off mammals and time travelers to gather parts to build a spaceship and blow up the asteroid that will cause the mass extinction of all dinosaurs. I planned out 4 stages, each with new mobs and planned to hand draw all the sprite fames.</p>
+
+<p>Perhaps I was in a bit over my head, having never built a game before.</p>
+
+<p>In the end, I was able to create a rather buggy game where you can move around a dark green square in a forest (made of light green squares) and go after gray squares (the parts!) while avoiding some brown squares (probably a rodent of some kind?). I wouldn&#39;t really call it a game, but I suppose I know a lot more about game building with JavaScript than I did last week. I did really like the idea for the game, especially the name &quot;Professor Rex VonScience&quot; and I got to draw <a href="http://instagram.com/p/jApVmuhWQX/">several</a> <a href="http://instagram.com/p/i-kO0FhWb9/">dinosaurs</a> wearing a lab coat and a bow tie, so it wasn&#39;t a total loss.</p>
+
+<p>If you&#39;d like to &quot;play&quot; the &quot;game&quot; you can take a look here: <a href="../stuff/prof_rex_vonscience/index.html">Professor Rex VonScience Saves The World</a> and the code is available on my <a href="https://github.com/dorkrawk/prof_rex_vonscience">Github</a>.</p>
+
+<p>So, now that I&#39;ve already had an unsuccessful Thing A Week week, I need to figure out how to deal with failure in the project. I&#39;d like to keep working on this game but I&#39;d also like to avoid sticking with the same project several weeks in a row, particularly this early. Perhaps in an upcoming week I&#39;ll pick a subset of this game as my project and work from there now that I have a better idea about the kind of work it takes to make a game. I&#39;m also not sure if I&#39;m ready to set next week&#39;s project yet. I&#39;m leaning towards building a bass distortion pedal, though.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week">Thing A Week</a></h2>
   <div class="post_date">January 6, 2014</div>
   <div class="post">
@@ -96,8 +115,7 @@ Before I pick up my phone and call you</p>
 
 <p>Darwinning is totally available via <a href="http://rubygems.org/gems/darwinning">RubyGems</a> so you can install it the same way you would install almost any Gem:</p>
 
-<div class="highlight"><pre><code class="bash">gem install darwinning
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install darwinning</code></pre></figure>
 
 <p>Once it&#39;s installed you can make use of the <code>Population</code>, <code>Organism</code>, and <code>Gene</code> classes to build your own genetic algorithm based programs.</p>
 
@@ -105,26 +123,25 @@ Before I pick up my phone and call you</p>
 
 <p>Let&#39;s say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let&#39;s solve it anyway.</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">class</span> <span class="nc">Triple</span> <span class="o">&lt;</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Organism</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Triple</span> <span class="o">&lt;</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Organism</span>
 
-  <span class="vi">@name</span> <span class="o">=</span> <span class="s2">&quot;Triple&quot;</span>
-  <span class="vi">@genes</span> <span class="o">=</span> <span class="o">[</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;first digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;second digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;third digit&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="p">))</span>
-    <span class="o">]</span>
+  <span class="vi">@name</span> <span class="o">=</span> <span class="s2">"Triple"</span>
+  <span class="vi">@genes</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"first digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">)),</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"second digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">)),</span>
+      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"third digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">9</span><span class="p">))</span>
+    <span class="p">]</span>
 
   <span class="k">def</span> <span class="nf">fitness</span>
     <span class="c1"># Try to get the sum of the 3 digits to add up to 15</span>
-    <span class="p">(</span><span class="n">genotypes</span><span class="o">.</span><span class="n">inject</span><span class="p">{</span> <span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span> <span class="o">-</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span>
+    <span class="p">(</span><span class="n">genotypes</span><span class="p">.</span><span class="nf">inject</span><span class="p">{</span> <span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span> <span class="o">-</span> <span class="mi">15</span><span class="p">).</span><span class="nf">abs</span>
   <span class="k">end</span>
 <span class="k">end</span> 
 
-<span class="nb">p</span> <span class="o">=</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Population</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Triple</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">p</span><span class="o">.</span><span class="n">evolve!</span>
+<span class="nb">p</span> <span class="o">=</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Population</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Triple</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">p</span><span class="p">.</span><span class="nf">evolve!</span>
 
-<span class="nb">p</span><span class="o">.</span><span class="n">best_member</span><span class="o">.</span><span class="n">nice_print</span> <span class="c1"># prints the member representing the solution</span>
-</code></pre></div>
+<span class="nb">p</span><span class="p">.</span><span class="nf">best_member</span><span class="p">.</span><span class="nf">nice_print</span> <span class="c1"># prints the member representing the solution</span></code></pre></figure>
 
 <p>This code declares an organism class that inherits from Darwinning&#39;s Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.</p>
 
@@ -147,25 +164,24 @@ Before I pick up my phone and call you</p>
 
 <p>The real meat of this is a custom function in the /blog route:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">get</span> <span class="s1">&#39;/blog/?*&#39;</span> <span class="k">do</span>
-    <span class="n">jekyll_blog</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">'/blog/?*'</span> <span class="k">do</span>
+    <span class="n">jekyll_blog</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="nf">path</span><span class="p">)</span>
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">jekyll_blog</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-  <span class="vi">@page_title</span> <span class="o">=</span> <span class="s2">&quot;blog&quot;</span>
+  <span class="vi">@page_title</span> <span class="o">=</span> <span class="s2">"blog"</span>
 
-  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s1">&#39;jekyll_blog/_site&#39;</span><span class="p">,</span>  <span class="n">path</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39;/blog&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">)</span> <span class="k">unless</span> <span class="n">file_path</span> <span class="o">=~</span> <span class="sr">/\.[a-z]+$/i</span> 
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="kp">__FILE__</span><span class="p">),</span> <span class="s1">'jekyll_blog/_site'</span><span class="p">,</span>  <span class="n">path</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'/blog'</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span>
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">)</span> <span class="k">unless</span> <span class="n">file_path</span> <span class="o">=~</span> <span class="sr">/\.[a-z]+$/i</span> 
 
-  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-    <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">close</span>
+  <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">read</span>
+    <span class="n">file</span><span class="p">.</span><span class="nf">close</span>
 
     <span class="n">erb</span> <span class="n">contents</span>
   <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>This just calls the <code>jekyll_blog(path)</code> function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the <code>&lt;%= yield %&gt;</code> in my Sinatra erb layout.</p>
 
@@ -173,10 +189,9 @@ Before I pick up my phone and call you</p>
 
 <p>While I like the idea of being able to write my blog posts in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I&#39;m trying <a href="http://prose.io/">Prose</a>. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven&#39;t tried that yet).  I&#39;ve included a <code>_prose.rb</code> config file that sends me right to the <code>_posts/</code> directory of this project when I&#39;m working on it:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="ss">prose</span><span class="p">:</span>
-  <span class="ss">rooturl</span><span class="p">:</span> <span class="s1">&#39;jekyll_blog/_posts&#39;</span>
-  <span class="ss">media</span><span class="p">:</span> <span class="s1">&#39;public/images/blog_media&#39;</span>
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">prose:
+  rooturl: </span><span class="s1">'jekyll_blog/_posts'</span>
+  <span class="ss">media: </span><span class="s1">'public/images/blog_media'</span></code></pre></figure>
 
 <p>I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I&#39;m still not totally won over by Prose but it has been really fun to set this up. I&#39;d also like to add comments through <a href="http://disqus.com/">Disqus</a> soon. Hopefully now I&#39;ll make this work worthwhile and actually write a few blog posts every now and then.</p>
 

@@ -8,15 +8,14 @@
 
 <p>Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">get</span> <span class="s1">&#39;/instagram_stuff&#39;</span> <span class="k">do</span>
-  <span class="n">params</span><span class="o">[</span><span class="s1">&#39;hub.challenge&#39;</span><span class="o">]</span> <span class="c1"># for when you register your callback endpoint</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">'/instagram_stuff'</span> <span class="k">do</span>
+  <span class="n">params</span><span class="p">[</span><span class="s1">'hub.challenge'</span><span class="p">]</span> <span class="c1"># for when you register your callback endpoint</span>
 <span class="k">end</span>
 
-<span class="n">post</span> <span class="s1">&#39;/instagram_stuff&#39;</span> <span class="k">do</span>
+<span class="n">post</span> <span class="s1">'/instagram_stuff'</span> <span class="k">do</span>
   <span class="c1"># do stuff when Instagram tells you something </span>
   <span class="c1">#    new has been posted</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>I was able to use a lot of the code I wrote for <a href="https://github.com/dorkrawk/bird-watcher">BirdWatcher</a> (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.</p>
 

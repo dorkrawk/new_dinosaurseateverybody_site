@@ -1,4 +1,18 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection">Thing A Week 20 - RecLab Layouts and Rocutopus Connection</a></h2>
+  <div class="post_date">May 25, 2014</div>
+  <div class="post">
+    <p><img src="../blog_media/reclab_screen2.png" class="inline_right" />
+This week I ended up getting quite a bit of RecLab work done, especially for a shortened week.</p>
+
+<p>The major breakthrough was getting the Rails site talking to Rocktopus, the audio processing API I&#39;ve been writing. It&#39;s not perfect but it has some basic authentication and the Rails Track model gets updated based on the response from Rocktopus. This is all just working locally right now but it shouldn&#39;t be hard to set up a server to server connection once I have Rocktopus deployed somewhere.</p>
+
+<p>The other large chunk of work I got done was due to being home alone this weekend. With Eileen hanging out with friends in Napa I decided to start working on the first real site layouts. I made great progress on the user profile pages and started doing some of the url rewriting work. I considered dropping <a href="http://getbootstrap.com/">Bootstrap</a> in favor of <a href="http://bourbon.io/">Bourbon/Neat/Bitters</a> after exploring the latter libraries at work but I think for what we&#39;re trying to build right now Bootstrap will get us up and running much faster.</p>
+
+<p>As always, there&#39;s still a lot of work to be done but it felt good to make some serious progress this week. Again, if you are interested in this project head over to <a href="http://reclaboratory.com">reclaboratory.com</a> and enter your email. We&#39;ll get in touch with you when we&#39;re ready to start letting people try the site.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-19-reclab-online-presence">Thing A Week 19 - RecLab Online Presence</a></h2>
   <div class="post_date">May 21, 2014</div>
   <div class="post">
@@ -42,16 +56,15 @@ We didn&#39;t want to it be an exact copy of the original so I tried to give it 
 
 <p>While not the most productive RecLab week, I did finish the basic comment functionality for Users, Songs, and Tracks. I also learned about <code>seed.rb</code> and wrote some seed code for the Instruments data. The trick there was that I wanted to be able to run <code>rake db:seed</code> multiple times, so I needed seed code that would let me update or create records. I ended up with a nice solution that lets me break the instruments down into separate arrays by family and then loop through everything to create or update:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">instruments</span> <span class="o">=</span> <span class="o">[[</span><span class="n">strings</span><span class="p">,</span> <span class="s2">&quot;strings&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">woodwinds</span><span class="p">,</span> <span class="s2">&quot;woodwinds&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">brass</span><span class="p">,</span> <span class="s2">&quot;brass&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">percussion</span><span class="p">,</span> <span class="s2">&quot;percussion&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">keys</span><span class="p">,</span> <span class="s2">&quot;keys&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="n">other</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="o">]]</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">instruments</span> <span class="o">=</span> <span class="p">[[</span><span class="n">strings</span><span class="p">,</span> <span class="s2">"strings"</span><span class="p">],</span> <span class="p">[</span><span class="n">woodwinds</span><span class="p">,</span> <span class="s2">"woodwinds"</span><span class="p">],</span> <span class="p">[</span><span class="n">brass</span><span class="p">,</span> <span class="s2">"brass"</span><span class="p">],</span> <span class="p">[</span><span class="n">percussion</span><span class="p">,</span> <span class="s2">"percussion"</span><span class="p">],</span> <span class="p">[</span><span class="n">keys</span><span class="p">,</span> <span class="s2">"keys"</span><span class="p">],</span> <span class="p">[</span><span class="n">other</span><span class="p">,</span> <span class="s2">"other"</span><span class="p">]]</span>
 
-<span class="n">instruments</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-  <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
-    <span class="n">instr</span> <span class="o">=</span> <span class="no">Instrument</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">first_or_initialize</span>
-    <span class="n">instr</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
-    <span class="n">instr</span><span class="o">.</span><span class="n">save!</span>
+<span class="n">instruments</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+    <span class="n">instr</span> <span class="o">=</span> <span class="no">Instrument</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="ss">name: </span><span class="n">i</span><span class="p">).</span><span class="nf">first_or_initialize</span>
+    <span class="n">instr</span><span class="p">.</span><span class="nf">family</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">instr</span><span class="p">.</span><span class="nf">save!</span>
   <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>Now I&#39;ll need to use a tagging system to attach both Instruments and general Tags to objects. I&#39;m leaning toward <a href="https://github.com/mbleigh/acts-as-taggable-on">As Taggable On</a>, which apparently was written by an old childhood friend of mine. Awesome!</p>
 
@@ -114,16 +127,15 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
 
 <p>This allows me to write Flask endpoints like this:</p>
 
-<div class="highlight"><pre><code class="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/path_name&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;POST&#39;</span><span class="p">])</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">'/path_name'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
 <span class="nd">@require_auth</span>
 <span class="k">def</span> <span class="nf">path_method</span><span class="p">():</span>
   <span class="c"># do a bunch of stuff for this endpoint</span>
-  <span class="c"># but make sure the POST body contains the proper authentication</span>
-</code></pre></div>
+  <span class="c"># but make sure the POST body contains the proper authentication</span></code></pre></figure>
 
 <p>The decorator itself is pretty simple and works something like this:</p>
 
-<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -131,8 +143,7 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
             <span class="k">return</span> <span class="n">response_arm</span><span class="o">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c"># return 401</span>
 
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapped</span>
-</code></pre></div>
+    <span class="k">return</span> <span class="n">wrapped</span></code></pre></figure>
 
 <p>Rocktopus is really coming along nicely and I&#39;m really close to getting it hooked up to the Rails site soon.</p>
 
@@ -149,15 +160,14 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
 
 <p>Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">get</span> <span class="s1">&#39;/instagram_stuff&#39;</span> <span class="k">do</span>
-  <span class="n">params</span><span class="o">[</span><span class="s1">&#39;hub.challenge&#39;</span><span class="o">]</span> <span class="c1"># for when you register your callback endpoint</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">'/instagram_stuff'</span> <span class="k">do</span>
+  <span class="n">params</span><span class="p">[</span><span class="s1">'hub.challenge'</span><span class="p">]</span> <span class="c1"># for when you register your callback endpoint</span>
 <span class="k">end</span>
 
-<span class="n">post</span> <span class="s1">&#39;/instagram_stuff&#39;</span> <span class="k">do</span>
+<span class="n">post</span> <span class="s1">'/instagram_stuff'</span> <span class="k">do</span>
   <span class="c1"># do stuff when Instagram tells you something </span>
   <span class="c1">#    new has been posted</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>I was able to use a lot of the code I wrote for <a href="https://github.com/dorkrawk/bird-watcher">BirdWatcher</a> (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.</p>
 
@@ -175,22 +185,6 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
 <p>The site is pretty straight forward Rails, so far. Nothing too out of the ordinary there. I&#39;m starting to get deeper into the music objects and business logic of the site, which is fun. I&#39;ve also been working a bit with Flask as a wrapper around some of the audio processing stuff. After <a href="../blog/thing-a-week-7-flask">Week 7</a> I had been looking for a good Flask project and now I&#39;ve found one! I&#39;ve found some great resources on building good APIs in Flask, such as <a href="http://pycoder.net/bospy/presentation.html">this one</a> which have been really helpful for designing non-trivial stuff. I have a bit of experience building APIs with a micro web framework from building the <a href="https://github.com/dorkrawk/unofficial-fitocracy-runs-api">Unofficial Fitocracy Runs API</a> in Sinatra, but this will be a bit more complex than that.</p>
 
 <p>Hopefully we&#39;ll have something that I can actually show off soon. We&#39;ll certainly need early testers. I do still hope to have work on a few small projects that I can show off from week to week.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-10-reclab-site">Thing A Week 10 - RecLab Site</a></h2>
-  <div class="post_date">March 17, 2014</div>
-  <div class="post">
-    <p>Once again I feel like I&#39;m stretching the rules of A Thing a Week (which is ok because I sort of just made them up). This week I focused on starting the website for a new larger project I&#39;ve started working on with a friend. We&#39;re trying to build a good way for musicians to collaborate online. There are a few things out there trying to address something similar to this, but none of them seem to have serious traction and it looks like there&#39;s a lot of room for refinement.</p>
-
-<p><img src="../blog_media/reclab1.png" class="inline_right" />
-This week we did a lot of planning and architecture for the project and I started building the Rails application for the site. This is my first non-trivial Rails 4 project and it&#39;s been interesting to see some of the little differences. The biggest one I&#39;ve come across so far is the removal of <code>attr_accessible</code> and moving that functionality into the controller. I need to learn a bit more about how that totally works but so far I&#39;ve been able to use a lot of what I learned building Rails 3.2 stuff.</p>
-
-<p>I&#39;ve been really impressed with the Rails 4 gem compatibility, as well. Major stuff I like to use such as <a href="https://github.com/plataformatec/devise">Devise</a>, <a href="https://github.com/gregbell/active_admin">Active Admin</a>, and <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> are all working just fine. Python could <a href="http://python3wos.appspot.com/">learn a lot</a> here!</p>
-
-<p>This week I was able to get the basic site together, make it look nice enough to work in for a while, build basic user/user profile and login functionality, and start building out some of the core business logic for working with recorded tracks. I also started putting together some survey questions so, musician friends, expect to be bugged to be asked questions soon. It might be a little while before we have an actual site for people to try but I&#39;m always interested in talking with people about the idea.</p>
-
-<p>Now I need to balance working on this with doing a couple other single-week projects, especially the stuff that is needed for the wedding.</p>
 
   </div>
 

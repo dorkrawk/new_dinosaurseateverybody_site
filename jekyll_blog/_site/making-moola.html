@@ -1,0 +1,46 @@
+<h2 class="post_title">Making Moola</h2>
+<div class="post_date">July 11, 2017</div>
+
+<div class="post">
+<p>If one listens to enough Ruby related blogs and talks and podcasts they are likely to run in to <a href="https://crystal-lang.org/">Crystal</a>. Have you every thought, &quot;I like Ruby, but I wish is were fast and compiled on LLVM&quot;? Well, that&#39;s Crystal. It&#39;s a <strong>fast language with Ruby inspired syntax</strong>. If the performance benchmarks shown on the Crystal site are even remotely accurate, it&#39;s worth checking out.</p>
+
+<p>I enjoy writing Ruby and I like things that are fast, so I&#39;ve been trying it out. While it is still pre-1.0 it&#39;s been pretty nice to work with. And since it&#39;s a new language, there&#39;s an opportunity to write new libraries (known as &quot;<a href="http://crystalshards.xyz/">Shards</a>&quot; in Crystal).</p>
+
+<p>My first Crystal Shard has been a money handling library, inspired by <a href="https://github.com/RubyMoney/money">Ruby Money</a>, that I call <a href="https://github.com/dorkrawk/moola">Moola</a>. It gives uses the ability to define Money objects and do basic operations and conversions with them.  Here are a few examples:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">money</span> <span class="o">=</span> <span class="no">Moola</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">42_00</span><span class="p">)</span> <span class="c1"># creates a new Moola::Money object</span>
+<span class="n">money</span><span class="p">.</span><span class="nf">format</span> <span class="c1"># "$42.00"</span>
+<span class="n">money</span><span class="p">.</span><span class="nf">cents</span>  <span class="c1"># 4200</span>
+<span class="n">money</span><span class="p">.</span><span class="nf">zero?</span>  <span class="c1"># false</span>
+<span class="n">money</span><span class="p">.</span><span class="nf">to_f</span> <span class="c1"># 42.0</span>
+
+<span class="no">Moola</span><span class="o">::</span><span class="no">Money</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">5_00</span><span class="p">)</span> <span class="o">==</span> <span class="no">Moola</span><span class="o">::</span><span class="no">Money</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">5_00</span><span class="p">)</span> <span class="c1"># true</span>
+<span class="no">Moola</span><span class="o">::</span><span class="no">Money</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">5_00</span><span class="p">,</span> <span class="s2">"USD"</span><span class="p">)</span> <span class="o">==</span> <span class="no">Moola</span><span class="o">::</span><span class="no">Money</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">5_00</span><span class="p">,</span> <span class="s2">"EUR"</span><span class="p">)</span> <span class="c1"># false</span>
+
+<span class="no">Moola</span><span class="o">::</span><span class="no">Exchange</span><span class="p">.</span><span class="nf">add_conversion</span><span class="p">(</span><span class="no">Moola</span><span class="o">::</span><span class="no">Currency</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">"usd"</span><span class="p">),</span> <span class="no">Moola</span><span class="o">::</span><span class="no">Currency</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">"cad"</span><span class="p">),</span> <span class="mi">1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">money</span> <span class="o">=</span> <span class="no">Moola</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">1_00</span><span class="p">,</span> <span class="s2">"USD"</span><span class="p">)</span>
+<span class="n">money</span><span class="p">.</span><span class="nf">convert_to</span><span class="p">(</span><span class="no">Moola</span><span class="o">::</span><span class="no">Currency</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">"cad"</span><span class="p">))</span> <span class="c1"># Moola::Money(1_30, "cad")</span></code></pre></figure>
+
+<p>I don&#39;t have much to say other than it seems like a great language if you like writing Ruby. For a newer language it&#39;s been a joy to work with and it&#39;s fun to build some basic libraries.</p>
+
+<p>If you every find yourself writing Ruby and dealing with money, I encourage you to try out <a href="https://github.com/dorkrawk/moola">Moola</a>.</p>
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'dinosaurseateverybody'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+

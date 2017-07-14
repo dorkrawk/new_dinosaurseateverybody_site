@@ -4,13 +4,13 @@ require 'redcarpet'
 require 'nokogiri'
 require './models/facts'
 
-class SassHandler < Sinatra::Base   
+class SassHandler < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/templates/sass'
-  
+
   get '/stylesheets/*.css' do
       filename = params[:splat].first
       scss filename.to_sym
-  end  
+  end
 end
 
 module DinosaursEatEverybody
@@ -58,7 +58,7 @@ module DinosaursEatEverybody
     end
 
     helpers do
-      def dave_fact 
+      def dave_fact
         the_facts = Facts.new
         fact_id = (0..the_facts.count-1).to_a.sample
         the_facts.get_fact(fact_id)
@@ -69,7 +69,11 @@ module DinosaursEatEverybody
       @page_title = "blog"
 
       file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
-      file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i 
+      if file_path[-1] == "/"
+        file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
+      else
+        file_path += '.html' unless file_path =~ /\.[a-z]+$/i
+      end
 
       if File.exist?(file_path)
         file = File.open(file_path, "rb")
@@ -78,13 +82,13 @@ module DinosaursEatEverybody
 
         blog_parse = Nokogiri::XML.parse( open( file_path ))
         blog_title = blog_parse.xpath("//h2[@class='post_title']/text()")[0]
-        
+
         @page_title = blog_title.nil? ? "blog" : blog_title
-    
+
         if file_path.include? "rss.xml"
           content_type 'text/xml'
           erb contents, :layout => false
-        else 
+        else
           erb contents
         end
       end

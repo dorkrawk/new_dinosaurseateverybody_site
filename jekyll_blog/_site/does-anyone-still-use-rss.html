@@ -8,13 +8,12 @@
 
 <p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: </p>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">include?</span> <span class="s2">&quot;rss.xml&quot;</span>
-  <span class="n">content_type</span> <span class="s1">&#39;text/xml&#39;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="n">file_path</span><span class="p">.</span><span class="nf">include?</span> <span class="s2">"rss.xml"</span>
+  <span class="n">content_type</span> <span class="s1">'text/xml'</span>
   <span class="n">erb</span> <span class="n">contents</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
 <span class="k">else</span> 
   <span class="n">erb</span> <span class="n">contents</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>Now you can subscribe to this blog via <a href="http://dinosaurseateverybody.com/blog/rss.xml">RSS</a> is you so desire!</p>
 

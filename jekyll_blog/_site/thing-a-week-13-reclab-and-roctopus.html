@@ -9,16 +9,15 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
 
 <p>This allows me to write Flask endpoints like this:</p>
 
-<div class="highlight"><pre><code class="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/path_name&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;POST&#39;</span><span class="p">])</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">'/path_name'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
 <span class="nd">@require_auth</span>
 <span class="k">def</span> <span class="nf">path_method</span><span class="p">():</span>
   <span class="c"># do a bunch of stuff for this endpoint</span>
-  <span class="c"># but make sure the POST body contains the proper authentication</span>
-</code></pre></div>
+  <span class="c"># but make sure the POST body contains the proper authentication</span></code></pre></figure>
 
 <p>The decorator itself is pretty simple and works something like this:</p>
 
-<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -26,8 +25,7 @@ This week was another mainly RecLab week. Actually I didn&#39;t get much done on
             <span class="k">return</span> <span class="n">response_arm</span><span class="o">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c"># return 401</span>
 
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapped</span>
-</code></pre></div>
+    <span class="k">return</span> <span class="n">wrapped</span></code></pre></figure>
 
 <p>Rocktopus is really coming along nicely and I&#39;m really close to getting it hooked up to the Rails site soon.</p>
 

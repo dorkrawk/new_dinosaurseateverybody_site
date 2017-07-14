@@ -12,25 +12,24 @@
 
 <p>The real meat of this is a custom function in the /blog route:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">get</span> <span class="s1">&#39;/blog/?*&#39;</span> <span class="k">do</span>
-    <span class="n">jekyll_blog</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">'/blog/?*'</span> <span class="k">do</span>
+    <span class="n">jekyll_blog</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="nf">path</span><span class="p">)</span>
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">jekyll_blog</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-  <span class="vi">@page_title</span> <span class="o">=</span> <span class="s2">&quot;blog&quot;</span>
+  <span class="vi">@page_title</span> <span class="o">=</span> <span class="s2">"blog"</span>
 
-  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s1">&#39;jekyll_blog/_site&#39;</span><span class="p">,</span>  <span class="n">path</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39;/blog&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">)</span> <span class="k">unless</span> <span class="n">file_path</span> <span class="o">=~</span> <span class="sr">/\.[a-z]+$/i</span> 
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="kp">__FILE__</span><span class="p">),</span> <span class="s1">'jekyll_blog/_site'</span><span class="p">,</span>  <span class="n">path</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'/blog'</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span>
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">)</span> <span class="k">unless</span> <span class="n">file_path</span> <span class="o">=~</span> <span class="sr">/\.[a-z]+$/i</span> 
 
-  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-    <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">close</span>
+  <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">read</span>
+    <span class="n">file</span><span class="p">.</span><span class="nf">close</span>
 
     <span class="n">erb</span> <span class="n">contents</span>
   <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>This just calls the <code>jekyll_blog(path)</code> function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the <code>&lt;%= yield %&gt;</code> in my Sinatra erb layout.</p>
 
@@ -38,10 +37,9 @@
 
 <p>While I like the idea of being able to write my blog posts in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I&#39;m trying <a href="http://prose.io/">Prose</a>. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven&#39;t tried that yet).  I&#39;ve included a <code>_prose.rb</code> config file that sends me right to the <code>_posts/</code> directory of this project when I&#39;m working on it:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="ss">prose</span><span class="p">:</span>
-  <span class="ss">rooturl</span><span class="p">:</span> <span class="s1">&#39;jekyll_blog/_posts&#39;</span>
-  <span class="ss">media</span><span class="p">:</span> <span class="s1">&#39;public/images/blog_media&#39;</span>
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">prose:
+  rooturl: </span><span class="s1">'jekyll_blog/_posts'</span>
+  <span class="ss">media: </span><span class="s1">'public/images/blog_media'</span></code></pre></figure>
 
 <p>I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I&#39;m still not totally won over by Prose but it has been really fun to set this up. I&#39;d also like to add comments through <a href="http://disqus.com/">Disqus</a> soon. Hopefully now I&#39;ll make this work worthwhile and actually write a few blog posts every now and then.</p>
 

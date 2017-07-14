@@ -10,17 +10,16 @@
 
 <p>The end result of this little project was <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a>, a small Rust library that implements a Bloom filter. It can be used like this to create a Bloom filter with 100 buckets and 5 hash functions:</p>
 
-<div class="highlight"><pre><code class="rust"><span class="k">let</span> <span class="k">mut</span> <span class="n">bf</span> <span class="o">=</span> <span class="n">BloomFilter</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-rust" data-lang="rust"><span class="k">let</span> <span class="k">mut</span> <span class="n">bf</span> <span class="o">=</span> <span class="nn">BloomFilter</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
 
-<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
-<span class="n">bf</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&quot;coffee&quot;</span><span class="p">);</span>
+<span class="n">bf</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"hamster"</span><span class="p">);</span>
+<span class="n">bf</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"coffee"</span><span class="p">);</span>
 
-<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;hamster&quot;</span><span class="p">);</span>
-<span class="c1">// (probably) true</span>
+<span class="n">bf</span><span class="nf">.check</span><span class="p">(</span><span class="s">"hamster"</span><span class="p">);</span>
+<span class="c">// (probably) true</span>
 
-<span class="n">bf</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="s">&quot;oatmeal&quot;</span><span class="p">);</span>
-<span class="c1">// false</span>
-</code></pre></div>
+<span class="n">bf</span><span class="nf">.check</span><span class="p">(</span><span class="s">"oatmeal"</span><span class="p">);</span>
+<span class="c">// false</span></code></pre></figure>
 
 <p>It was pretty interesting working with a lower level language coming from Ruby. I had to think about passing pointers and dealing with a much more robust type system. Fortunately working with Scala in the past prepared me a bit for dealing with generics and default immutability, but it really felt MUCH slower than working with a high level language like Ruby (which I suppose should be obvious).</p>
 
