@@ -1,4 +1,19 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-32-in-browser-audio-recording">Thing A Week 32 - In Browser Audio Recording</a></h2>
+  <div class="post_date">September 2, 2014</div>
+  <div class="post">
+    <p>This week my major work was around building an in-browser audio recording system. I&#39;ve been reading about using new HTML5 APIs to get access to the user&#39;s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff <strong>Basement</strong>.</p>
+
+<p>The core technology for this whole process is <a href="https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia">getUserMedia()</a>. This is what prompts the user to allow the page to access the mic (or camera or whatever) and then handle a <code>LocalMediaStream</code> object. From there you can work with whatever is being picked up by the mic.</p>
+
+<p>Outputing the audio in real time was very easy (hey I built a monitor!) and after doing a bit of research I found a fantastic library to help with the recording aspect of this project: <a href="https://github.com/mattdiamond/Recorderjs">Recorderjs</a>. It provides a nice <code>Recorder</code> object to work with and, best of all, it&#39;s a VERY small, easy to understand library so I can go through every line of code and understand exactly what is being done. This is very important because all of this in-browser media work is very new and deep tutorials are rare. Plus I&#39;m going to need to do a few things that haven&#39;t been done perfectly yet.</p>
+
+<p>Right now I&#39;m working on taking the recorded audio, which exists as a Blob tied to the page it was created on, and sending it back to the server to be uploaded in a way that works nicely with our existing <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> system. I&#39;m really digging into some of the new HTML5 APIs for all this work and it&#39;s been really interesting.</p>
+
+<p>The in-browser recording is the last new major feature we need to build before polishing up the <a href="http://www.reclaboratory.com">RecLaboratory</a> site (which I updated this week, too!) for a very early, very small beta. I&#39;m really excited to get people using this tool soon!</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-31-reclaboratory-instrument-icons">Thing A Week 31 - RecLaboratory Instrument Icons</a></h2>
   <div class="post_date">August 24, 2014</div>
   <div class="post">
@@ -183,27 +198,6 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 <p>I ended up with a simple AJAX loop on a timer that pulls a random &quot;photo card&quot; with the image and some information about it, and displays it on a page that should work nicely full screened on a projector. I still need to run some tests to make sure I don&#39;t get any weird image sizes but it&#39;s working well right now.</p>
 
 <p>I&#39;m a little worried that I&#39;ll spend part of my own wedding reception tweaking code or sshing into my server to restart some service, but I think everything should run pretty smoothly. This was a fun little project and made me play with some new technologies. Hopefully lots of people use it at the wedding.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-22-reclab-routing">Thing A Week 22 - Reclab Routing</a></h2>
-  <div class="post_date">June 10, 2014</div>
-  <div class="post">
-    <p>This was a pretty busy week. I ended up flying back to Chicago on Thursday for my bachelor party, which was really awesome! These good times didn&#39;t leave a lot of time for building things but I managed to get some interesting routing work done on the Reclab site.</p>
-
-<p>I want Reclab to namespace songs and tracks by username, similar to the way Github namespaces <a href="https://github.com/dorkrawk/darwinning">repos</a>. Obviously I also want to use nice identifiers for the resources rather than just id numbers, so I started by setting up <a href="https://github.com/norman/friendly_id">FriendlyId</a>, which is a great gem for this sort of thing.</p>
-
-<p>What&#39;s really cool about FriendlyId is that it can generate a slug that is unique across multiple fields in the object. For example, I want to allow user1 and user2 to both be able to have a song name &quot;My Song One&quot; so I want the path to each song to be something like <code>user1/songs/my-song-one</code> and <code>user2/songs/my-song-one</code>. Note that the song identifier &quot;my-song-one&quot; is only locally unique, not globally unique. To do this FriendlyId lets you scope slugs:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">extend</span> <span class="no">FriendlyId</span>
-<span class="n">friendly_id</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">use: </span><span class="p">[</span><span class="ss">:slugged</span><span class="p">,</span> <span class="ss">:finders</span><span class="p">,</span> <span class="ss">:scoped</span><span class="p">],</span> <span class="ss">scope: :user</span></code></pre></figure>
-
-<p>Then, in order to get things to work with ActiveAdmin I had to make Songs &quot;owned&quot; by Users. If you don&#39;t do this, ActiveAdmin tries to use the FriendlyId slug as a globally unique identifier. This is an easy fix in the <code>/admin/song.rb</code>:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">ActiveAdmin</span><span class="p">.</span><span class="nf">register</span> <span class="no">Song</span> <span class="k">do</span>
-  <span class="n">belongs_to</span> <span class="ss">:user</span></code></pre></figure>
-
-<p>I still need to clean up the routing in the rest of the app but this was a big step forward to some nicer paths.</p>
 
   </div>
 

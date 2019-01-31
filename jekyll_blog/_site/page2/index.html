@@ -1,4 +1,33 @@
 
+  <h2 class="post_title"><a href="../blog/input-coffee-v2">Input Coffee (v2)</a></h2>
+  <div class="post_date">July 14, 2015</div>
+  <div class="post">
+    <p>So back when I was working at Berkeley (and had more free time) I decided to formalize the tracking of some of my skill improvements. These were mainly things like drawing, playing guitar, playing piano, vocals, comptuer science theory, etc. I set up a small WordPress blog called <strong>Input Coffee</strong> and just made posts for every session in order to keep track of what I had been working on. I liked seeing all the posts every month and having a record of what I was doing, but a blog wasn&#39;t the perfect solution. I wanted better ways to add up time per week or month for each type of task.</p>
+
+<p>I decided to start tracking this sort of thing again, partially in response to reading <a href="http://www.amazon.com/Make-It-Stick-Successful-Learning/dp/0674729013">Make It Stick</a>, and I wanted a simple way to track my practice sessions for things like guitar, chess, drawing, and other stuff I&#39;m working on these days.</p>
+
+<p>I started by just creating Google Docs for each session, which worked fine and helped me not avoid doing real practice by spending a bunch of time building a complex system to track my practice. But then I gave in and built a system to track my practice. Like the original WordPress blog, it&#39;s called <a href="https://github.com/dorkrawk/input-coffee">Input Coffee</a>.</p>
+
+<p>This system is pretty simplistic, just a Sinatra app that reads some Markdown files and turns them into CoffeePost objects so I can examine them based on tags, subject, date, and a few other fields. The Markdown files use a format very similar to Jekyll&#39;s posts and I just parse out meta data from the little header. 
+Here&#39;s an example post:</p>
+
+<pre>
+---
+date: 2015-07-14
+subject: guitar
+tags: acoustic electric
+hours: 1.0
+---
+
+Spent most of this session doing acoustic stuff...
+</pre>
+
+<p>I don&#39;t even have this hosted anywhere, I just run a local server when I want to see stats about my practice. Right now I just show total posts/hours (since May 25th, 2015), some breakdowns by subject (guitar, vocals, chess, drawing, etc.), and some numbers for the current and past week</p>
+
+<p>Obviously, I&#39;d like build out some more metrics and it might be fun to make a nicer interface, but for now this works for me and I&#39;ve avoided overly-over engineering the solution.  Being able to track this sort of stuff really helps keep me in good habits.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/divorce-and-the-american-south-cover">Divorce and the American South Cover</a></h2>
   <div class="post_date">May 11, 2015</div>
   <div class="post">
@@ -179,21 +208,6 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
 <p>Then over the weekend I wanted to do a single scene and had the idea of just doing a simple girl playing guitar on stage. After watching a whole season of Inkmaster I decided to throw a few tattoos on her, as well. I am particularly proud of the hands in this piece. Usually I just give up and let the hands sort of fall apart, especially on guitars but I thought these turned out well. I&#39;m really happy with how this turned out and I plan to keep working with watercolors in the future.</p>
 
 <p><img src="../blog_media/watercolors_guitargirl.jpg" /></p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-32-in-browser-audio-recording">Thing A Week 32 - In Browser Audio Recording</a></h2>
-  <div class="post_date">September 2, 2014</div>
-  <div class="post">
-    <p>This week my major work was around building an in-browser audio recording system. I&#39;ve been reading about using new HTML5 APIs to get access to the user&#39;s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff <strong>Basement</strong>.</p>
-
-<p>The core technology for this whole process is <a href="https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia">getUserMedia()</a>. This is what prompts the user to allow the page to access the mic (or camera or whatever) and then handle a <code>LocalMediaStream</code> object. From there you can work with whatever is being picked up by the mic.</p>
-
-<p>Outputing the audio in real time was very easy (hey I built a monitor!) and after doing a bit of research I found a fantastic library to help with the recording aspect of this project: <a href="https://github.com/mattdiamond/Recorderjs">Recorderjs</a>. It provides a nice <code>Recorder</code> object to work with and, best of all, it&#39;s a VERY small, easy to understand library so I can go through every line of code and understand exactly what is being done. This is very important because all of this in-browser media work is very new and deep tutorials are rare. Plus I&#39;m going to need to do a few things that haven&#39;t been done perfectly yet.</p>
-
-<p>Right now I&#39;m working on taking the recorded audio, which exists as a Blob tied to the page it was created on, and sending it back to the server to be uploaded in a way that works nicely with our existing <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> system. I&#39;m really digging into some of the new HTML5 APIs for all this work and it&#39;s been really interesting.</p>
-
-<p>The in-browser recording is the last new major feature we need to build before polishing up the <a href="http://www.reclaboratory.com">RecLaboratory</a> site (which I updated this week, too!) for a very early, very small beta. I&#39;m really excited to get people using this tool soon!</p>
 
   </div>
 
