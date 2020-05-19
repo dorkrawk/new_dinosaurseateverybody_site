@@ -1,17 +1,16 @@
 source "https://rubygems.org"
 
-ruby "2.2.0"
+ruby '~> 2.7.0'
 
 gem 'sinatra'
 
 gem 'compass'
 gem 'sass'
-gem 'rack-coffee'
-gem 'jekyll', '3.5.0'
+gem 'jekyll', '3.6.3'
 gem 'jekyll-paginate'
 gem 'redcarpet'
 gem 'rouge'
-gem 'nokogiri'
+gem 'nokogiri', ">= 1.10.8"
 
 gem 'twitter'
 
