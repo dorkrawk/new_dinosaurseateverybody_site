@@ -10,7 +10,9 @@ gem 'jekyll', '3.6.3'
 gem 'jekyll-paginate'
 gem 'redcarpet'
 gem 'rouge'
-gem 'nokogiri', ">= 1.10.8"
+gem 'nokogiri', '>= 1.10.8'
+gem 'rack', '>= 1.6.12'
+gem 'rack-protection', '>= 1.5.1'
 
 gem 'twitter'
 

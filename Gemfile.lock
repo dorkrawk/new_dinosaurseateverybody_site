@@ -58,8 +58,8 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.5)
-    rack (1.5.2)
-    rack-protection (1.5.0)
+    rack (1.6.13)
+    rack-protection (1.5.5)
       rack
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -91,6 +91,8 @@ DEPENDENCIES
   jekyll (= 3.6.3)
   jekyll-paginate
   nokogiri (>= 1.10.8)
+  rack (>= 1.6.12)
+  rack-protection (>= 1.5.1)
   redcarpet
   rouge
   rvm-capistrano
