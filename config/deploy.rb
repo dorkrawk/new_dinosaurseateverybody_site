@@ -1,75 +1,38 @@
-require "rvm/capistrano"
-require "bundler/capistrano"
+# config valid for current version and patch releases of Capistrano
+lock "~> 3.14.0"
 
 set :application, "new_dinosaurseateverybody_site"
-set :repository,  "https://github.com/dorkrawk/new_dinosaurseateverybody_site.git"
+set :repo_url, "https://github.com/dorkrawk/new_dinosaurseateverybody_site.git"
 
-set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-
-role :web, "zoidberg"                          # Your HTTP server, Apache/etc
-role :app, "zoidberg"                          # This may be the same as your `Web` server
-#role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-#role :db,  "your slave db-server here"
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :deploy_to, "/var/www/dinosaurseateverybody"
-# set :deploy_via, :remote_cache
 
-set :user, "dave"
-# Don't use sudo when running the commands
-set :use_sudo, false
+# Default value for :format is :airbrussh.
+# set :format, :airbrussh
 
-# Forward public keys for GitHub etc. authentication.
-# Prevents us having deployment server public keys.
-ssh_options[:forward_agent] = true
+# You can configure the Airbrussh format using :format_options.
+# These are the defaults.
+# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
-# After an initial (cold) deploy, symlink the app and restart nginx
-after "deploy:cold" do
-  admin.symlink_config
-  admin.nginx_restart
-end
+# Default value for :pty is false
+# set :pty, true
 
-# As this isn't a rails app, we don't start and stop the app invidually
-namespace :deploy do
-  desc "Not starting as we're running passenger."
-  task :start do
-  end
+# Default value for :linked_files is []
+# append :linked_files, "config/database.yml"
 
-  desc "Not stopping as we're running passenger."
-  task :stop do
-  end
+# Default value for linked_dirs is []
+# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
-  desc "Restart the app."
-  task :restart, roles: :app, except: { :no_release => true } do
-    run "touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-  # This will make sure that Capistrano doesn't try to run rake:migrate (this is not a Rails project!)
-  task :cold do
-    deploy.update
-    deploy.start
-  end
-end
+# Default value for local_user is ENV['USER']
+# set :local_user, -> { `git config user.name`.chomp }
 
-# These task are used for un/symlinking the app, and restarting the server (nginx)
-namespace :admin do
-  desc "Restart nginx."
-  task :nginx_restart, roles: :app do
-    run "#{sudo} service nginx restart"
-  end
-end
+# Default value for keep_releases is 5
+# set :keep_releases, 5
 
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+# Uncomment the following to require manually verifying the host key before first deploy.
+# set :ssh_options, verify_host_key: :secure
