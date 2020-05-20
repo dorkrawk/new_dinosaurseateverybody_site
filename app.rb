@@ -21,8 +21,6 @@ module DinosaursEatEverybody
 
     # routes
     get '/' do
-      #@page_title = "home"
-      #erb :index
       redirect '/blog'
     end
 
@@ -65,11 +63,15 @@ module DinosaursEatEverybody
       end
     end
 
+    def is_integer?(str)
+      str.to_i.to_s == str
+    end
+
     def jekyll_blog(path)
       @page_title = "blog"
 
       file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
-      if file_path[-1] == "/"
+      if file_path[-1] == "/" || is_integer?(File.split(file_path).last)
         file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
       else
         file_path += '.html' unless file_path =~ /\.[a-z]+$/i

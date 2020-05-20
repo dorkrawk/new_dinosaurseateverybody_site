@@ -1,7 +1,6 @@
-New Dinosaurs Eat Everybody Site
+Dinosaurs Eat Everybody 
 ================================
 [Dinosaurs Eat Everybody](http://dinosaurseateverybody.com)
 
-# THIS IS A TOTALLY "IN PROGRESS" PERSONAL PROJECT
+This is the code for my personal website. It's a basic Sinatra app with Jekyll bolted on to support some simple blogging.
 
-So I have now gotten rid of my old PHP based site and this is the new Dinosaurs Eat Everybody.  It still need some work but it's coming along.

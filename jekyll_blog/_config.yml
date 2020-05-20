@@ -7,5 +7,5 @@ permalink: /:title
 baseurl: /blog/
 plugins: [jekyll-paginate]
 paginate: 10
-paginate_path: /page:num
+paginate_path: /:num
 comments: true
