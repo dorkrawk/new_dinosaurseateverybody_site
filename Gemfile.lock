@@ -63,6 +63,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pkg-config (1.4.1)
     public_suffix (4.0.5)
     rack (1.6.13)
     rack-protection (1.5.5)
@@ -103,6 +104,7 @@ DEPENDENCIES
   jekyll (= 3.6.3)
   jekyll-paginate
   nokogiri
+  pkg-config
   rack (>= 1.6.12)
   rack-protection (>= 1.5.1)
   redcarpet
