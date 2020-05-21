@@ -10,6 +10,7 @@ set :repo_url, "https://github.com/dorkrawk/new_dinosaurseateverybody_site.git"
 set :deploy_to, "/var/www/dinosaurseateverybody"
 
 set :passenger_restart_with_touch, true
+set :bundle_env_variables, { nokogiri_use_system_libraries: 1 }
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
