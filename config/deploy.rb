@@ -9,6 +9,8 @@ set :repo_url, "https://github.com/dorkrawk/new_dinosaurseateverybody_site.git"
 
 set :deploy_to, "/var/www/dinosaurseateverybody"
 
+set :passenger_restart_with_touch, true
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -36,3 +38,4 @@ set :deploy_to, "/var/www/dinosaurseateverybody"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
