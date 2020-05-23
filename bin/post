@@ -1,3 +1,20 @@
 #!/usr/bin/env bash
 
-# TODO: basic script to create a new file in the _posts dir with the right format
+posts_dir='/Users/dave/Documents/Projects/new_dinosaurseateverybody_site/jekyll_blog/_posts/'
+title=$1
+title_stub=`echo $1 | tr "[:upper:]" "[:lower:]" | sed 's/[^a-z  A-Z]//g' | tr " " -`
+date=`date +%F`
+filename="${date}-${title_stub}.md"
+
+post_file_path="${posts_dir}${filename}"
+
+echo "---" >> $post_file_path
+echo "layout: post" >> $post_file_path
+echo "title: ${title}" >> $post_file_path
+echo "date: ${date}" >> $post_file_path
+echo "categories: " >> $post_file_path
+echo "published: true" >> $post_file_path
+echo "---" >> $post_file_path
+echo "\n" >> $post_file_path
+
+echo "New blog post created: ${filename}"
