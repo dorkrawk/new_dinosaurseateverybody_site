@@ -6,4 +6,7 @@ cd jekyll_blog
 jekyll build
 
 # deploy via capitrano
-bundle exec cap production deploy
+# bundle exec cap production deploy
+
+# deploy via Heroku
+git push heroku master

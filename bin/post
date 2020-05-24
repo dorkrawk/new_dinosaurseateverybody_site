@@ -15,6 +15,8 @@ echo "date: ${date}" >> $post_file_path
 echo "categories: " >> $post_file_path
 echo "published: true" >> $post_file_path
 echo "---" >> $post_file_path
-echo "\n" >> $post_file_path
+echo "" >> $post_file_path
 
 echo "New blog post created: ${filename}"
+
+open $post_file_path
