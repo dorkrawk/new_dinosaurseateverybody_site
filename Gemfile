@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem 'sinatra'
+gem 'sinatra', '>= 2.0'
 
-gem 'compass'
+#gem 'compass'
 gem 'sass'
 gem 'jekyll', '4.0.1'
 gem 'jekyll-paginate'

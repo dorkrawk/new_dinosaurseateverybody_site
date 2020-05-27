@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'compass'
 require 'sass'
 require './app'
 
