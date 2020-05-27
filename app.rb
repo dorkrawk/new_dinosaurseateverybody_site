@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require 'sass'
-require 'redcarpet'
 require 'nokogiri'
 require './models/facts'
 
