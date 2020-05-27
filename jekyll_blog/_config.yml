@@ -4,7 +4,7 @@ url: http://dinosaurseateverybody.com/blog
 markdown: redcarpet
 highlighter: rouge
 permalink: /:title
-baseurl: /blog/
+baseurl: /blog
 plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: /:num

@@ -70,6 +70,8 @@ module DinosaursEatEverybody
     def jekyll_blog(path)
       @page_title = "blog"
 
+      file_name = path.split(File::SEPARATOR).last
+
       file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
       if file_path[-1] == "/" || is_integer?(File.split(file_path).last)
         file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
@@ -86,7 +88,8 @@ module DinosaursEatEverybody
         blog_title = blog_parse.xpath("//h2[@class='post_title']/text()")[0]
 
         @page_title = blog_title.nil? ? "blog" : blog_title
-
+        @page_title = "archives" if file_name == "archives"
+        
         if file_path.include? "rss.xml"
           content_type 'text/xml'
           erb contents, :layout => false

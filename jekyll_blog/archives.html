@@ -1,0 +1,19 @@
+---
+title: Blog Archives
+---
+
+{%- assign posts = site.posts -%}
+{%- assign groupedByYear = posts | group_by_exp:"post","post.date | date:'%Y' " -%}
+
+{%- for yearitem in groupedByYear -%}
+  <h2>{{yearitem.name}}</h2>
+  <ol class="home-page__post-list">
+
+  {%- for item in yearitem.items -%}
+    <li class="post">
+      <span class="date">{{ item.date | date:'%B %e'}} </span>
+      <span><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></span>
+    </li>
+  {% endfor %}
+  </ol>
+{% endfor %}
