@@ -16,12 +16,12 @@
   <span class="kp">include</span> <span class="no">Darwinning</span>
 
   <span class="no">GENE_RANGES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="ss">first_number: </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">),</span>
-    <span class="ss">second_number: </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">),</span>
-    <span class="ss">third_number: </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">)</span>
+    <span class="ss">first_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
+    <span class="ss">second_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
+    <span class="ss">third_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">)</span>
   <span class="p">}</span>
 
-  <span class="kp">attr_accessor</span> <span class="ss">:first_number</span><span class="p">,</span> <span class="ss">:second_number</span><span class="p">,</span> <span class="ss">:third_number</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:first_number</span><span class="p">,</span> <span class="ss">:second_number</span><span class="p">,</span> <span class="ss">:third_number</span>
 
   <span class="k">def</span> <span class="nf">fitness</span>
     <span class="c1"># Try to get the sum of the 3 digits to add up to 100</span>

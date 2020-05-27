@@ -165,21 +165,21 @@ This week was another mainly RecLab week. Actually I didn’t get much done on t
 
 <p>This allows me to write Flask endpoints like this:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">'/path_name'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
-<span class="nd">@require_auth</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/path_name'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
+<span class="o">@</span><span class="n">require_auth</span>
 <span class="k">def</span> <span class="nf">path_method</span><span class="p">():</span>
-  <span class="c"># do a bunch of stuff for this endpoint</span>
-  <span class="c"># but make sure the POST body contains the proper authentication</span></code></pre></figure>
+  <span class="c1"># do a bunch of stuff for this endpoint
+</span>  <span class="c1"># but make sure the POST body contains the proper authentication</span></code></pre></figure>
 
 <p>The decorator itself is pretty simple and works something like this:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="o">@</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">validate_auth</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">response_arm</span><span class="o">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c"># return 401</span>
-
+            <span class="k">return</span> <span class="n">response_arm</span><span class="p">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c1"># return 401
+</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">wrapped</span></code></pre></figure>
 
