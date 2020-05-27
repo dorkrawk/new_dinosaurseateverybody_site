@@ -17,8 +17,6 @@ module DinosaursEatEverybody
   class App < Sinatra::Base
     use SassHandler
 
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
-
     # routes
     get '/' do
       redirect '/blog'
@@ -26,13 +24,6 @@ module DinosaursEatEverybody
 
     get '/blog/?*' do
       jekyll_blog(request.path)
-    end
-
-    get '/post/:id' do
-      @title = "This is post #{params[:id]}"
-      @page_title = @title
-      @body = markdown.render("How does *this* look? will this turn into a link? www.dinosaurseateverybody.com")
-      erb :post
     end
 
     get '/about' do

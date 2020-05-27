@@ -2,9 +2,9 @@
   <h2 class="post_title"><a href="../blog/thing-a-week-12-filterfilter">Thing A Week 12 - FilterFilter</a></h2>
   <div class="post_date">March 30, 2014</div>
   <div class="post">
-    <p>So this week I actually made a thing. Back in week&#39;s <a href="../blog/thing-a-week-4-bird-watcher">4</a> and <a href="../blog/thing-a-week-5-bird-watcher-part-2">5</a> I was working on a project to listen to Twitter for pictures with a certain #hastag so I could display them at our wedding. I also wanted to build something similar for Instagram and have it feed into the same database. This became FilterFilter.</p>
+    <p>So this week I actually made a thing. Back in week’s <a href="../blog/thing-a-week-4-bird-watcher">4</a> and <a href="../blog/thing-a-week-5-bird-watcher-part-2">5</a> I was working on a project to listen to Twitter for pictures with a certain #hastag so I could display them at our wedding. I also wanted to build something similar for Instagram and have it feed into the same database. This became FilterFilter.</p>
 
-<p>The <a href="http://instagram.com/developer/">Instagram API</a> works differently than Twitter&#39;s. In order to get real-time information you have to register a callback endpoint with Instagram. This endpoint has to respont to a GET call with a validation code sent by Instgram and then respond to POST with whatever you want. Instagram only notifies you of an event (such as a photo being posted with a certain #hashtag), they don&#39;t actually provide the media info, so you have to find that yourself, which is a bit annoying and kind of clunky.</p>
+<p>The <a href="http://instagram.com/developer/">Instagram API</a> works differently than Twitter’s. In order to get real-time information you have to register a callback endpoint with Instagram. This endpoint has to respont to a GET call with a validation code sent by Instgram and then respond to POST with whatever you want. Instagram only notifies you of an event (such as a photo being posted with a certain #hashtag), they don’t actually provide the media info, so you have to find that yourself, which is a bit annoying and kind of clunky.</p>
 
 <p>Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:</p>
 
@@ -19,34 +19,34 @@
 
 <p>I was able to use a lot of the code I wrote for <a href="https://github.com/dorkrawk/bird-watcher">BirdWatcher</a> (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.</p>
 
-<p>Of course I spent time this week working on RecLab, too. I got some S3 stuff set up and built out a few site forms. We were able to get a rough prototype of the basic track uploading and song creation functionality, which was fun to see. I also spent a bit of time working on our audio processing API. It&#39;s starting to come together and it&#39;s been very interesting designing something like this from the ground up.</p>
+<p>Of course I spent time this week working on RecLab, too. I got some S3 stuff set up and built out a few site forms. We were able to get a rough prototype of the basic track uploading and song creation functionality, which was fun to see. I also spent a bit of time working on our audio processing API. It’s starting to come together and it’s been very interesting designing something like this from the ground up.</p>
 
-<p>To help us learn more about the types of people who might use RecLab I&#39;ve put together a quick 10 question survey. If you are a musician, please take a minute and fill this out, it would be a big help! <a href="https://www.surveymonkey.com/s/DPLMSMV">RecLab Musician Survey</a></p>
+<p>To help us learn more about the types of people who might use RecLab I’ve put together a quick 10 question survey. If you are a musician, please take a minute and fill this out, it would be a big help! <a href="https://www.surveymonkey.com/s/DPLMSMV">RecLab Musician Survey</a></p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-11-more-reclab">Thing A Week 11 - More RecLab</a></h2>
   <div class="post_date">March 24, 2014</div>
   <div class="post">
-    <p>Once again this week&#39;s work was devoted more to a long term project than to anything that could be finished in 7 days. I put more work into the site and the audio processing tools for RecLab and we&#39;ve been doing some good planning, too.</p>
+    <p>Once again this week’s work was devoted more to a long term project than to anything that could be finished in 7 days. I put more work into the site and the audio processing tools for RecLab and we’ve been doing some good planning, too.</p>
 
-<p>The site is pretty straight forward Rails, so far. Nothing too out of the ordinary there. I&#39;m starting to get deeper into the music objects and business logic of the site, which is fun. I&#39;ve also been working a bit with Flask as a wrapper around some of the audio processing stuff. After <a href="../blog/thing-a-week-7-flask">Week 7</a> I had been looking for a good Flask project and now I&#39;ve found one! I&#39;ve found some great resources on building good APIs in Flask, such as <a href="http://pycoder.net/bospy/presentation.html">this one</a> which have been really helpful for designing non-trivial stuff. I have a bit of experience building APIs with a micro web framework from building the <a href="https://github.com/dorkrawk/unofficial-fitocracy-runs-api">Unofficial Fitocracy Runs API</a> in Sinatra, but this will be a bit more complex than that.</p>
+<p>The site is pretty straight forward Rails, so far. Nothing too out of the ordinary there. I’m starting to get deeper into the music objects and business logic of the site, which is fun. I’ve also been working a bit with Flask as a wrapper around some of the audio processing stuff. After <a href="../blog/thing-a-week-7-flask">Week 7</a> I had been looking for a good Flask project and now I’ve found one! I’ve found some great resources on building good APIs in Flask, such as <a href="http://pycoder.net/bospy/presentation.html">this one</a> which have been really helpful for designing non-trivial stuff. I have a bit of experience building APIs with a micro web framework from building the <a href="https://github.com/dorkrawk/unofficial-fitocracy-runs-api">Unofficial Fitocracy Runs API</a> in Sinatra, but this will be a bit more complex than that.</p>
 
-<p>Hopefully we&#39;ll have something that I can actually show off soon. We&#39;ll certainly need early testers. I do still hope to have work on a few small projects that I can show off from week to week.</p>
+<p>Hopefully we’ll have something that I can actually show off soon. We’ll certainly need early testers. I do still hope to have work on a few small projects that I can show off from week to week.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-10-reclab-site">Thing A Week 10 - RecLab Site</a></h2>
   <div class="post_date">March 17, 2014</div>
   <div class="post">
-    <p>Once again I feel like I&#39;m stretching the rules of A Thing a Week (which is ok because I sort of just made them up). This week I focused on starting the website for a new larger project I&#39;ve started working on with a friend. We&#39;re trying to build a good way for musicians to collaborate online. There are a few things out there trying to address something similar to this, but none of them seem to have serious traction and it looks like there&#39;s a lot of room for refinement.</p>
+    <p>Once again I feel like I’m stretching the rules of A Thing a Week (which is ok because I sort of just made them up). This week I focused on starting the website for a new larger project I’ve started working on with a friend. We’re trying to build a good way for musicians to collaborate online. There are a few things out there trying to address something similar to this, but none of them seem to have serious traction and it looks like there’s a lot of room for refinement.</p>
 
 <p><img src="../blog_media/reclab1.png" class="inline_right" />
-This week we did a lot of planning and architecture for the project and I started building the Rails application for the site. This is my first non-trivial Rails 4 project and it&#39;s been interesting to see some of the little differences. The biggest one I&#39;ve come across so far is the removal of <code>attr_accessible</code> and moving that functionality into the controller. I need to learn a bit more about how that totally works but so far I&#39;ve been able to use a lot of what I learned building Rails 3.2 stuff.</p>
+This week we did a lot of planning and architecture for the project and I started building the Rails application for the site. This is my first non-trivial Rails 4 project and it’s been interesting to see some of the little differences. The biggest one I’ve come across so far is the removal of <code class="highlighter-rouge">attr_accessible</code> and moving that functionality into the controller. I need to learn a bit more about how that totally works but so far I’ve been able to use a lot of what I learned building Rails 3.2 stuff.</p>
 
-<p>I&#39;ve been really impressed with the Rails 4 gem compatibility, as well. Major stuff I like to use such as <a href="https://github.com/plataformatec/devise">Devise</a>, <a href="https://github.com/gregbell/active_admin">Active Admin</a>, and <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> are all working just fine. Python could <a href="http://python3wos.appspot.com/">learn a lot</a> here!</p>
+<p>I’ve been really impressed with the Rails 4 gem compatibility, as well. Major stuff I like to use such as <a href="https://github.com/plataformatec/devise">Devise</a>, <a href="https://github.com/gregbell/active_admin">Active Admin</a>, and <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> are all working just fine. Python could <a href="http://python3wos.appspot.com/">learn a lot</a> here!</p>
 
-<p>This week I was able to get the basic site together, make it look nice enough to work in for a while, build basic user/user profile and login functionality, and start building out some of the core business logic for working with recorded tracks. I also started putting together some survey questions so, musician friends, expect to be bugged to be asked questions soon. It might be a little while before we have an actual site for people to try but I&#39;m always interested in talking with people about the idea.</p>
+<p>This week I was able to get the basic site together, make it look nice enough to work in for a while, build basic user/user profile and login functionality, and start building out some of the core business logic for working with recorded tracks. I also started putting together some survey questions so, musician friends, expect to be bugged to be asked questions soon. It might be a little while before we have an actual site for people to try but I’m always interested in talking with people about the idea.</p>
 
 <p>Now I need to balance working on this with doing a couple other single-week projects, especially the stuff that is needed for the wedding.</p>
 
@@ -55,87 +55,87 @@ This week we did a lot of planning and architecture for the project and I starte
   <h2 class="post_title"><a href="../blog/thing-a-week-9-no-thing">Thing A Week 9 - No Thing</a></h2>
   <div class="post_date">March 10, 2014</div>
   <div class="post">
-    <p>So this week was not a good Thing a Week week. I had planned to build the Instragram listener to go along with the Bird Watcher project I was working on a few weeks ago, but I ended up sort of bouncing around between a few ideas instead. This is a bit against the &quot;Thing a Week&quot; idea where I complete something every week rather than randomly playing around with stuff to no clear end.</p>
+    <p>So this week was not a good Thing a Week week. I had planned to build the Instragram listener to go along with the Bird Watcher project I was working on a few weeks ago, but I ended up sort of bouncing around between a few ideas instead. This is a bit against the “Thing a Week” idea where I complete something every week rather than randomly playing around with stuff to no clear end.</p>
 
-<p>That said I did git a bit of work done in a few areas. </p>
+<p>That said I did git a bit of work done in a few areas.</p>
 
-<p>I started the Instagram work and learned a bit more about how their streaming API works. It looks like I&#39;ll need to build a callback endpoint to take in post info and store things in a database and then Instagram will handle most of the hard work. I&#39;ll probably just end up building the callback endpoint as part of the exiting daveandeileen.com <a href="https://github.com/dorkrawk/daveandeileen_site">Sinatra application</a>.</p>
+<p>I started the Instagram work and learned a bit more about how their streaming API works. It looks like I’ll need to build a callback endpoint to take in post info and store things in a database and then Instagram will handle most of the hard work. I’ll probably just end up building the callback endpoint as part of the exiting daveandeileen.com <a href="https://github.com/dorkrawk/daveandeileen_site">Sinatra application</a>.</p>
 
-<p>I also spent some time doing a bit of research on audio processing libraries for another project I&#39;m planning. As of now I&#39;m leaning towards <a href="http://pydub.com/">PyDub</a>. Hopefully I&#39;ll have some work from that project to post soon.</p>
+<p>I also spent some time doing a bit of research on audio processing libraries for another project I’m planning. As of now I’m leaning towards <a href="http://pydub.com/">PyDub</a>. Hopefully I’ll have some work from that project to post soon.</p>
 
-<p>Finally, I&#39;m planning to build a ring box for our wedding out of an old book (kind of like <a href="http://cdn0.pairswellwithfood.com/wp-content/uploads/2012/11/Pommes-Frites-Flask-Book-Holder.jpg">this</a>, but with wedding rings). I was able to find a book I like at a used bookstore this weekend, so I consider that a small win.</p>
+<p>Finally, I’m planning to build a ring box for our wedding out of an old book (kind of like <a href="http://cdn0.pairswellwithfood.com/wp-content/uploads/2012/11/Pommes-Frites-Flask-Book-Holder.jpg">this</a>, but with wedding rings). I was able to find a book I like at a used bookstore this weekend, so I consider that a small win.</p>
 
-<p>This wasn&#39;t a great Thing a Week week, but at least I got a few productive things done.</p>
+<p>This wasn’t a great Thing a Week week, but at least I got a few productive things done.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-8-in-the-garage-cover">Thing A Week 8 - In The Garage Cover</a></h2>
   <div class="post_date">March 3, 2014</div>
   <div class="post">
-    <p>I had a little bit of trouble picking my project this week. Originally I had planned to continue working with Flask, but I was just at a loss for a small web app project idea. I had been playing around with some Weezer songs while playing guitar one morning so I decided to record a cover of <a href="http://www.rdio.com/artist/Weezer/album/Weezer/track/In_The_Garage/">In The Garage</a> for this week&#39;s thing. If you don&#39;t feel like reading this to get all the way down to the Soundcloud player here&#39;s <a href="https://soundcloud.com/dorkrawk/in-the-garage-cover">a link</a>.</p>
+    <p>I had a little bit of trouble picking my project this week. Originally I had planned to continue working with Flask, but I was just at a loss for a small web app project idea. I had been playing around with some Weezer songs while playing guitar one morning so I decided to record a cover of <a href="http://www.rdio.com/artist/Weezer/album/Weezer/track/In_The_Garage/">In The Garage</a> for this week’s thing. If you don’t feel like reading this to get all the way down to the Soundcloud player here’s <a href="https://soundcloud.com/dorkrawk/in-the-garage-cover">a link</a>.</p>
 
 <p>I was pretty faithful to the original, mainly just taking some liberties with instrumentation in a few parts. I really like the dirty guitar and bass in song so I found some amp models that kept with that style. I did swap out the harmonica riff for a thin, high piano part over a crunchy bass. I really liked the hollow sound it created and it felt in line with my tendency to add keys to things. In that same vein, I used some synth in a few parts as well, replacing the little guitar riff in the verse and working with the guitar in the solo.</p>
 
-<p>I actually had a lot of fun with the solo, again staying pretty true to the original but taking some liberties here and there. The synth was a fun addition and really beefed things up. I ended up falling back on some blues riffing during the end of the solo because I&#39;m just not as metal as Rivers.</p>
+<p>I actually had a lot of fun with the solo, again staying pretty true to the original but taking some liberties here and there. The synth was a fun addition and really beefed things up. I ended up falling back on some blues riffing during the end of the solo because I’m just not as metal as Rivers.</p>
 
-<p>Again I used Garageband&#39;s Drummer feature for the drums. I spent a bit of time dialing them in and I was pleased with how they turned out. While laying out the song I did discover that Garageband doesn&#39;t let you change time signatures in the middle of a song. There is a single measure of 2/4 time in the verse so I had to just offset thing. I was worried that the automated drumming would sound weird around this change, but it ended up being fine.</p>
+<p>Again I used Garageband’s Drummer feature for the drums. I spent a bit of time dialing them in and I was pleased with how they turned out. While laying out the song I did discover that Garageband doesn’t let you change time signatures in the middle of a song. There is a single measure of 2/4 time in the verse so I had to just offset thing. I was worried that the automated drumming would sound weird around this change, but it ended up being fine.</p>
 
-<p>The vocals... This is always tough for me. The verses turned out ok. They&#39;re pretty straight forward and in my range but the chorus was tough. Some of the high notes were a big of a strain for me and in general the choruses felt a bit lack luster. I just don&#39;t know how to get more character out of my voice. The last chorus with the high harmonies was especially difficult. I was <em>really</em> straining my voice there. As always, doing stuff like this is great practice and helps me improve so I just need to keep that perspective.</p>
+<p>The vocals… This is always tough for me. The verses turned out ok. They’re pretty straight forward and in my range but the chorus was tough. Some of the high notes were a big of a strain for me and in general the choruses felt a bit lack luster. I just don’t know how to get more character out of my voice. The last chorus with the high harmonies was especially difficult. I was <em>really</em> straining my voice there. As always, doing stuff like this is great practice and helps me improve so I just need to keep that perspective.</p>
 
-<p>I wasn&#39;t especially pleased with the mixing and production on this song. I felt a bit rushed because I started working on this a little later in the week. I had recorded some of the guitar parts in a chopped up way and I can hear some lack of fluidity. None of the parts were difficult enough to get right to justify this type of recording but I was just in a rush to get something down. In general I think things just feel a bit choppy, but I suppose that&#39;s the price of doing things on a time crunch.</p>
+<p>I wasn’t especially pleased with the mixing and production on this song. I felt a bit rushed because I started working on this a little later in the week. I had recorded some of the guitar parts in a chopped up way and I can hear some lack of fluidity. None of the parts were difficult enough to get right to justify this type of recording but I was just in a rush to get something down. In general I think things just feel a bit choppy, but I suppose that’s the price of doing things on a time crunch.</p>
 
-<p>All in all, it was a fun project and it&#39;s alway nice to spend time recording.  Enjoy:</p>
+<p>All in all, it was a fun project and it’s alway nice to spend time recording.  Enjoy:</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137828215&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
 
 <p><strong>bonus thing!</strong></p>
 
-<p>I also posted a comic to <a href="http://mountsaintawesome.com/">Mount Saint Awesome</a> this week (the first in quite a while). It didn&#39;t feel like a big enough art project to be a full Thing a Week thing, but it&#39;s still worth <a href="http://mountsaintawesome.com/comic.php?id=78">checking out</a>.</p>
+<p>I also posted a comic to <a href="http://mountsaintawesome.com/">Mount Saint Awesome</a> this week (the first in quite a while). It didn’t feel like a big enough art project to be a full Thing a Week thing, but it’s still worth <a href="http://mountsaintawesome.com/comic.php?id=78">checking out</a>.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-7-flask">Thing A Week 7 - Flask</a></h2>
   <div class="post_date">February 24, 2014</div>
   <div class="post">
-    <p>Now, in my defense I was pretty sick for most of last week so I ended up not getting much done outside of work besides a lot of napping. I started with a vague plan to do <em>something</em> with <a href="http://flask.pocoo.org/">Flask</a>, the Python micro-webframework and to that end I succeeded in what I set out to do. It had been a while since I had done anything serious with Python and I&#39;ve been feeling the urge to get back into it.</p>
+    <p>Now, in my defense I was pretty sick for most of last week so I ended up not getting much done outside of work besides a lot of napping. I started with a vague plan to do <em>something</em> with <a href="http://flask.pocoo.org/">Flask</a>, the Python micro-webframework and to that end I succeeded in what I set out to do. It had been a while since I had done anything serious with Python and I’ve been feeling the urge to get back into it.</p>
 
-<p>I ended up spending a lot of time just getting my Python development environment set up. Apparently it&#39;s been so long since I&#39;ve done anything non-trivial in the language that I didn&#39;t even have basic tools set up well on this computer. I wanted to do things right and that took a bit of installing and uninstalling through various channels to get things just so. This meant Python installed threw Homebrew and then using that version of <code>pip</code> to install <code>virtualenv</code>. This way I didn&#39;t have to use <code>sudo</code> to install <code>virtualenv</code>. While this ended up being more frustrating than it should have been (and at one point led to me asking a <a href="http://stackoverflow.com/questions/21917619/error-with-installing-virtualenv-with-pip-and-homebrew">Stack Overflow question</a> that I later answered for myself) I did get things set up nicely, which is a major win.</p>
+<p>I ended up spending a lot of time just getting my Python development environment set up. Apparently it’s been so long since I’ve done anything non-trivial in the language that I didn’t even have basic tools set up well on this computer. I wanted to do things right and that took a bit of installing and uninstalling through various channels to get things just so. This meant Python installed threw Homebrew and then using that version of <code class="highlighter-rouge">pip</code> to install <code class="highlighter-rouge">virtualenv</code>. This way I didn’t have to use <code class="highlighter-rouge">sudo</code> to install <code class="highlighter-rouge">virtualenv</code>. While this ended up being more frustrating than it should have been (and at one point led to me asking a <a href="http://stackoverflow.com/questions/21917619/error-with-installing-virtualenv-with-pip-and-homebrew">Stack Overflow question</a> that I later answered for myself) I did get things set up nicely, which is a major win.</p>
 
-<p>Once I got down to setting up Flask thing were pretty smooth. For the basic stuff I was doing it felt very similar to Sinatra, which I&#39;ve worked with quite a bit. I finally got to use Python&#39;s method decorators in practice which was neat (they drive the routing around the functions related to the routes).</p>
+<p>Once I got down to setting up Flask thing were pretty smooth. For the basic stuff I was doing it felt very similar to Sinatra, which I’ve worked with quite a bit. I finally got to use Python’s method decorators in practice which was neat (they drive the routing around the functions related to the routes).</p>
 
-<p>The end result was a pretty basic first test site. Nothing really worth putting up anywhere. I&#39;d like to keep playing with Flask and get a bit more reacquainted with Python so unless I have another burning project come up, I might just stick with it this week too.</p>
+<p>The end result was a pretty basic first test site. Nothing really worth putting up anywhere. I’d like to keep playing with Flask and get a bit more reacquainted with Python so unless I have another burning project come up, I might just stick with it this week too.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-6-piano-bass-song">Thing A Week 6 - Piano and Bass Song</a></h2>
   <div class="post_date">February 17, 2014</div>
   <div class="post">
-    <p>I think that it&#39;s fair to call this Thing A Week a failure and I don&#39;t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn&#39;t go anywhere.</p>
+    <p>I think that it’s fair to call this Thing A Week a failure and I don’t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn’t go anywhere.</p>
 
-<p>This tends to happen to me a lot. My Garageband folder is full of 30 second long riffs and fleshed out song chunks, but I often hit a wall and I&#39;m not sure where to go from there. Last week I sat down and tried writing some stuff influenced by a couple songs that either did piano and bass or just bass licks well. The main ones I referred to were <a href="http://www.rdio.com/artist/Ben_Folds_Five/album/The_Sound_Of_The_Life_Of_The_Mind/track/Erase_Me/">Erase Me</a> by Ben Folds Five and <a href="http://www.rdio.com/artist/Brand_New/album/Deja_Entendu/track/Sic_Transit_Gloria_..._Glory_Fades/">Sic Transit Gloria...Glory Fades</a> by Brand New. They are both awesome songs and I especially love the way the piano and bass work together in the Ben Folds song but my ideas just weren&#39;t working. I ended up with some weird meandering minor bass parts thrown over some really weak piano parts.</p>
+<p>This tends to happen to me a lot. My Garageband folder is full of 30 second long riffs and fleshed out song chunks, but I often hit a wall and I’m not sure where to go from there. Last week I sat down and tried writing some stuff influenced by a couple songs that either did piano and bass or just bass licks well. The main ones I referred to were <a href="http://www.rdio.com/artist/Ben_Folds_Five/album/The_Sound_Of_The_Life_Of_The_Mind/track/Erase_Me/">Erase Me</a> by Ben Folds Five and <a href="http://www.rdio.com/artist/Brand_New/album/Deja_Entendu/track/Sic_Transit_Gloria_..._Glory_Fades/">Sic Transit Gloria…Glory Fades</a> by Brand New. They are both awesome songs and I especially love the way the piano and bass work together in the Ben Folds song but my ideas just weren’t working. I ended up with some weird meandering minor bass parts thrown over some really weak piano parts.</p>
 
 <p>I came back the next day and switched to a major key and started with the piano part first. From there I came up with something that I liked and wrote a simple bass part that just harmonized the piano roots in a few parts.</p>
 
-<p>And that&#39;s where I got stuck. I spent a bit of time playing around with some sparse guitar parts and a few of the new amp models in the new version of Garageband. I also played around with the new Drummer feature of Garageband. It was pretty cool and maybe the most redeeming quality of Garageband X (the removal of the old keyboard shortcuts and export to mp3 are driving me nuts and might send my back to version 6!). The drum sounds are great and it&#39;s a big step up from the midi drum parts I had been working with in the old version of Garageband, but I did feel a bit uncomfortable with the loss of control over every single hit. I suppose it&#39;s a decent compromise.</p>
+<p>And that’s where I got stuck. I spent a bit of time playing around with some sparse guitar parts and a few of the new amp models in the new version of Garageband. I also played around with the new Drummer feature of Garageband. It was pretty cool and maybe the most redeeming quality of Garageband X (the removal of the old keyboard shortcuts and export to mp3 are driving me nuts and might send my back to version 6!). The drum sounds are great and it’s a big step up from the midi drum parts I had been working with in the old version of Garageband, but I did feel a bit uncomfortable with the loss of control over every single hit. I suppose it’s a decent compromise.</p>
 
-<p>So here&#39;s what I came up with. I ended up just doing some random guitar riffing and bigger chords at some point, but it really just felt forced and didn&#39;t take the song anywhere. Take a listen, though, because the piano/bass part turned out pretty nice: </p>
+<p>So here’s what I came up with. I ended up just doing some random guitar riffing and bigger chords at some point, but it really just felt forced and didn’t take the song anywhere. Take a listen, though, because the piano/bass part turned out pretty nice:</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135426611&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
 
-<p>I&#39;d like to keep working with this song. It&#39;s different than most of the stuff I&#39;ve written lately. I think that throwing lyrics over it will be a bit of a challenge just because I don&#39;t quite trust my voice for something this mellow, but it&#39;s a fun part and I think it could turn into something cool.</p>
+<p>I’d like to keep working with this song. It’s different than most of the stuff I’ve written lately. I think that throwing lyrics over it will be a bit of a challenge just because I don’t quite trust my voice for something this mellow, but it’s a fun part and I think it could turn into something cool.</p>
 
-<p>This week I&#39;m leaning towards either a project with Python (I&#39;ve been meaning to brush up on my Python for a while) or something artistic. I&#39;m still not quite sure.</p>
+<p>This week I’m leaning towards either a project with Python (I’ve been meaning to brush up on my Python for a while) or something artistic. I’m still not quite sure.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-5-bird-watcher-part-2">Thing A Week 5 - Bird Watcher (Part 2)</a></h2>
   <div class="post_date">February 9, 2014</div>
   <div class="post">
-    <p>So I took this week to wrap up last week&#39;s project. I was having trouble getting the Twitter listener for my wedding photo project up and running on my server but I&#39;m pleased to report that I managed to get things up and running.</p>
+    <p>So I took this week to wrap up last week’s project. I was having trouble getting the Twitter listener for my wedding photo project up and running on my server but I’m pleased to report that I managed to get things up and running.</p>
 
-<p>I ended up changing the format of the project a bit. Instead of a full Sinatra application I put everything into a single Ruby file that I can just leave running whenever I want to fire up the listener. I didn&#39;t need this project to serve any content, only run Tweet Stream and write to a database, so Sinatra was probably overkill to begin with.</p>
+<p>I ended up changing the format of the project a bit. Instead of a full Sinatra application I put everything into a single Ruby file that I can just leave running whenever I want to fire up the listener. I didn’t need this project to serve any content, only run Tweet Stream and write to a database, so Sinatra was probably overkill to begin with.</p>
 
-<p>I had some trouble with <a href="http://sequel.jeremyevans.net/">Sequel</a>, the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn&#39;t work:</p>
+<p>I had some trouble with <a href="http://sequel.jeremyevans.net/">Sequel</a>, the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn’t work:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">store_image</span><span class="p">(</span><span class="n">tweet_photo_url</span><span class="p">,</span> <span class="n">tweet_user</span><span class="p">,</span> <span class="n">tweet_text</span><span class="p">)</span>
   <span class="p">.</span><span class="nf">.</span><span class="o">.</span>
@@ -153,20 +153,20 @@ This week we did a lot of planning and architecture for the project and I starte
 
 <p>It must have something to do with the way Ruby handles certain strings or how Sequel or Postgres handle certain strings in INSERTs.</p>
 
-<p>You can see the final file I&#39;m using <code>bird_watcher.rb</code> in the <a href="https://github.com/dorkrawk/bird-watcher">Github repo</a> for the project.  </p>
+<p>You can see the final file I’m using <code class="highlighter-rouge">bird_watcher.rb</code> in the <a href="https://github.com/dorkrawk/bird-watcher">Github repo</a> for the project.</p>
 
-<p>Next I&#39;ll need to write an Instragram listener. Hopefully that will be pretty quick as most of the mechanics will be identical to this listener. I might hold off on working on that for a bit, though. I&#39;m thinking about tackling a musical project next week.</p>
+<p>Next I’ll need to write an Instragram listener. Hopefully that will be pretty quick as most of the mechanics will be identical to this listener. I might hold off on working on that for a bit, though. I’m thinking about tackling a musical project next week.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/does-anyone-still-use-rss">Does Anyone Still Use RSS?</a></h2>
   <div class="post_date">February 6, 2014</div>
   <div class="post">
-    <p>Since the death of Google Reader I feel like I&#39;ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.</p>
+    <p>Since the death of Google Reader I feel like I’ve seen people use RSS less and less, but a quick informal survey of friends showed that some people still use it for some things so maybe this blog should have a feed, right?.</p>
 
-<p>I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra hybrid I have running and had a few minutes tonight so I decided to give it a shot. It turned out to not be bad.  I just followed <a href="http://blog.drewinglis.com/2013/03/18/adding-rss.html">this quick tutoral</a> and found <a href="https://github.com/snaptortoise/jekyll-rss-feeds">a nice template here</a> and 90% of the work was done (basically I just add another template to my Jekyll project and a few lines in my config and an xml file gets generated along with everything else when I run <code>jekyll build</code>.</p>
+<p>I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra hybrid I have running and had a few minutes tonight so I decided to give it a shot. It turned out to not be bad.  I just followed <a href="http://blog.drewinglis.com/2013/03/18/adding-rss.html">this quick tutoral</a> and found <a href="https://github.com/snaptortoise/jekyll-rss-feeds">a nice template here</a> and 90% of the work was done (basically I just add another template to my Jekyll project and a few lines in my config and an xml file gets generated along with everything else when I run <code class="highlighter-rouge">jekyll build</code>.</p>
 
-<p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: </p>
+<p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="n">file_path</span><span class="p">.</span><span class="nf">include?</span> <span class="s2">"rss.xml"</span>
   <span class="n">content_type</span> <span class="s1">'text/xml'</span>
@@ -182,15 +182,15 @@ This week we did a lot of planning and architecture for the project and I starte
   <h2 class="post_title"><a href="../blog/thing-a-week-4-bird-watcher">Thing A Week 4 - Bird Watcher</a></h2>
   <div class="post_date">February 4, 2014</div>
   <div class="post">
-    <p>This week might count as a partial failure plus I&#39;m getting the post up pretty late, so that&#39;s probably not good either.</p>
+    <p>This week might count as a partial failure plus I’m getting the post up pretty late, so that’s probably not good either.</p>
 
 <p>Once again I tackled a project for the wedding. I want to build a system that listens to Twitter and Instagram for photos that are tagged #daveandeileen then pulls them in and displays them somewhere at the wedding. This week I decided to finish up the Twitter listener.</p>
 
-<p>This listener is basically just a small Sinatra app that uses <a href="https://github.com/tweetstream/tweetstream">TweetStream</a> to listen for tagged tweets and then if it matches the criteria (has image and is properly tagged) it stores info about the tweet into a database. This same database will eventually hold Instagram (this was the whole reason I signed up for <a href="http://instagram.com/dorkrawk">Instragram</a>) data and then I&#39;ll need to write a nice front end that pulls the photo data out and displays the pictures in some nice way.</p>
+<p>This listener is basically just a small Sinatra app that uses <a href="https://github.com/tweetstream/tweetstream">TweetStream</a> to listen for tagged tweets and then if it matches the criteria (has image and is properly tagged) it stores info about the tweet into a database. This same database will eventually hold Instagram (this was the whole reason I signed up for <a href="http://instagram.com/dorkrawk">Instragram</a>) data and then I’ll need to write a nice front end that pulls the photo data out and displays the pictures in some nice way.</p>
 
-<p>I call this week a partial failure because I got the app working locally, but ran into some trouble getting it deployed properly. I am not a great sys admin, but I&#39;m learning a few things. This is also the first time I&#39;ve set up a database on my VPS. I&#39;ve really been spoiled by always working with databases through a nice visual interface so doing some Postgres work while sshed into my server felt like pulling teeth. I was just running into some issues pretty late on Sunday night so I ended up admitting defeat and went to bed. You can check out the code for this project on <a href="https://github.com/dorkrawk/bird-watcher">Github</a>.</p>
+<p>I call this week a partial failure because I got the app working locally, but ran into some trouble getting it deployed properly. I am not a great sys admin, but I’m learning a few things. This is also the first time I’ve set up a database on my VPS. I’ve really been spoiled by always working with databases through a nice visual interface so doing some Postgres work while sshed into my server felt like pulling teeth. I was just running into some issues pretty late on Sunday night so I ended up admitting defeat and went to bed. You can check out the code for this project on <a href="https://github.com/dorkrawk/bird-watcher">Github</a>.</p>
 
-<p>This next week (the week we are currently experiencing right now) is pretty busy. We&#39;re trying to finish up a bunch of other big wedding things (stuff that doesn&#39;t involve coding) and my parents are in town this weekend, so I know I&#39;m going to be limited for &quot;thing a week&quot; time. I would like to use this week to finish off the deployment for Bird Watcher. I feel bad about letting a project spread over two weeks but I think it&#39;s best for my schedule and this project. </p>
+<p>This next week (the week we are currently experiencing right now) is pretty busy. We’re trying to finish up a bunch of other big wedding things (stuff that doesn’t involve coding) and my parents are in town this weekend, so I know I’m going to be limited for “thing a week” time. I would like to use this week to finish off the deployment for Bird Watcher. I feel bad about letting a project spread over two weeks but I think it’s best for my schedule and this project.</p>
 
   </div>
 

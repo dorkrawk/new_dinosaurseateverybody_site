@@ -2,43 +2,43 @@
   <h2 class="post_title"><a href="../blog/thing-a-week-32-in-browser-audio-recording">Thing A Week 32 - In Browser Audio Recording</a></h2>
   <div class="post_date">September 2, 2014</div>
   <div class="post">
-    <p>This week my major work was around building an in-browser audio recording system. I&#39;ve been reading about using new HTML5 APIs to get access to the user&#39;s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff <strong>Basement</strong>.</p>
+    <p>This week my major work was around building an in-browser audio recording system. I’ve been reading about using new HTML5 APIs to get access to the user’s mic (and camera) for a while and I was finally able to sit down and start building something out. Because I feel the need to name everything I build, I had to name this as well. None of the bands I was in ever really practiced or recorded in a garage, they mostly worked out of basements. As a bit of a nod to (and departure from) Garageband, I decided to just call my recording stuff <strong>Basement</strong>.</p>
 
-<p>The core technology for this whole process is <a href="https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia">getUserMedia()</a>. This is what prompts the user to allow the page to access the mic (or camera or whatever) and then handle a <code>LocalMediaStream</code> object. From there you can work with whatever is being picked up by the mic.</p>
+<p>The core technology for this whole process is <a href="https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia">getUserMedia()</a>. This is what prompts the user to allow the page to access the mic (or camera or whatever) and then handle a <code class="highlighter-rouge">LocalMediaStream</code> object. From there you can work with whatever is being picked up by the mic.</p>
 
-<p>Outputing the audio in real time was very easy (hey I built a monitor!) and after doing a bit of research I found a fantastic library to help with the recording aspect of this project: <a href="https://github.com/mattdiamond/Recorderjs">Recorderjs</a>. It provides a nice <code>Recorder</code> object to work with and, best of all, it&#39;s a VERY small, easy to understand library so I can go through every line of code and understand exactly what is being done. This is very important because all of this in-browser media work is very new and deep tutorials are rare. Plus I&#39;m going to need to do a few things that haven&#39;t been done perfectly yet.</p>
+<p>Outputing the audio in real time was very easy (hey I built a monitor!) and after doing a bit of research I found a fantastic library to help with the recording aspect of this project: <a href="https://github.com/mattdiamond/Recorderjs">Recorderjs</a>. It provides a nice <code class="highlighter-rouge">Recorder</code> object to work with and, best of all, it’s a VERY small, easy to understand library so I can go through every line of code and understand exactly what is being done. This is very important because all of this in-browser media work is very new and deep tutorials are rare. Plus I’m going to need to do a few things that haven’t been done perfectly yet.</p>
 
-<p>Right now I&#39;m working on taking the recorded audio, which exists as a Blob tied to the page it was created on, and sending it back to the server to be uploaded in a way that works nicely with our existing <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> system. I&#39;m really digging into some of the new HTML5 APIs for all this work and it&#39;s been really interesting.</p>
+<p>Right now I’m working on taking the recorded audio, which exists as a Blob tied to the page it was created on, and sending it back to the server to be uploaded in a way that works nicely with our existing <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> system. I’m really digging into some of the new HTML5 APIs for all this work and it’s been really interesting.</p>
 
-<p>The in-browser recording is the last new major feature we need to build before polishing up the <a href="http://www.reclaboratory.com">RecLaboratory</a> site (which I updated this week, too!) for a very early, very small beta. I&#39;m really excited to get people using this tool soon!</p>
+<p>The in-browser recording is the last new major feature we need to build before polishing up the <a href="http://www.reclaboratory.com">RecLaboratory</a> site (which I updated this week, too!) for a very early, very small beta. I’m really excited to get people using this tool soon!</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-31-reclaboratory-instrument-icons">Thing A Week 31 - RecLaboratory Instrument Icons</a></h2>
   <div class="post_date">August 24, 2014</div>
   <div class="post">
-    <p>Along with some other RecLab stuff (which is coming along nicely), this week I finally tackled a little project that I&#39;ve been thinking about for a while. Unlike most of the RecLab work this was much more artistic than technical. I built the first first hand drawn icons for the site.</p>
+    <p>Along with some other RecLab stuff (which is coming along nicely), this week I finally tackled a little project that I’ve been thinking about for a while. Unlike most of the RecLab work this was much more artistic than technical. I built the first first hand drawn icons for the site.</p>
 
-<p>I knew that I wanted custom instrument, track, and song icons so I started out with a small set of 8 (with plans to make more as we need them). I did these icons the same way I do my comics: first drawing in pencil, then inking, then scanning into Photoshop, then cleaning up the lines and adding color in Illustrator. They had to look good at a wide range of sizes: 400px to 30px so I didn&#39;t add too much detail.</p>
+<p>I knew that I wanted custom instrument, track, and song icons so I started out with a small set of 8 (with plans to make more as we need them). I did these icons the same way I do my comics: first drawing in pencil, then inking, then scanning into Photoshop, then cleaning up the lines and adding color in Illustrator. They had to look good at a wide range of sizes: 400px to 30px so I didn’t add too much detail.</p>
 
 <p>To handle what I think will be the most commonly used instruments I started with (electric) guitar, (electric) bass, drums, keys, vocals, sax (perhaps my own bias), percussion, and general track.</p>
 
 <p>So here they are!</p>
 
-<p><img src="../blog_media/guitar-medium.png" title="guitar" class="inline_left">
-<img src="../blog_media/bass-medium.png" title="bass" class="inline_left">
-<img src="../blog_media/drums-medium.png" title="drums" class="inline_left">
-<img src="../blog_media/vocals-medium.png" title="vocals" class="inline_left">
-<img src="../blog_media/keys-medium.png" title="keys" class="inline_left">
-<img src="../blog_media/sax-medium.png" title="sax" class="inline_left">
-<img src="../blog_media/percussion-medium.png" title="percussion" class="inline_left">
-<img src="../blog_media/track-medium.png" title="general track" class="inline_left"></p>
+<p><img src="../blog_media/guitar-medium.png" title="guitar" class="inline_left" />
+<img src="../blog_media/bass-medium.png" title="bass" class="inline_left" />
+<img src="../blog_media/drums-medium.png" title="drums" class="inline_left" />
+<img src="../blog_media/vocals-medium.png" title="vocals" class="inline_left" />
+<img src="../blog_media/keys-medium.png" title="keys" class="inline_left" />
+<img src="../blog_media/sax-medium.png" title="sax" class="inline_left" />
+<img src="../blog_media/percussion-medium.png" title="percussion" class="inline_left" />
+<img src="../blog_media/track-medium.png" title="general track" class="inline_left" /></p>
 
-<p><br style="clear: both"></p>
+<p><br style="clear: both" /></p>
 
 <p>Guitars are still hard to draw.</p>
 
-<p>I used a small pallet of colors for all the icons in the hopes of creating an overall cohesive effect when they all get seen together on the site. Bobby doesn&#39;t like the percussion one very much and he&#39;s probably right. It&#39;s my least favorite too, but this seems like a good start and really adds some nice visual variety to the site. Plus it&#39;s always fun to draw things!</p>
+<p>I used a small pallet of colors for all the icons in the hopes of creating an overall cohesive effect when they all get seen together on the site. Bobby doesn’t like the percussion one very much and he’s probably right. It’s my least favorite too, but this seems like a good start and really adds some nice visual variety to the site. Plus it’s always fun to draw things!</p>
 
   </div>
 
@@ -47,15 +47,15 @@
   <div class="post">
     <p>So as of last week I have the RecLab Rails site up and running on Heroku and the audio processing API, Roctopus, up and running on my own server. Amazingly they are able to talk to each other and work pretty much as expected.</p>
 
-<p>There are still quite a few things to fix up, particularly with Rocktopus, but it&#39;s nice to see the full application working together on remote servers. While the Rails/Heroku setup was pretty straight forward, Rocktopus was uncharted territory for me.</p>
+<p>There are still quite a few things to fix up, particularly with Rocktopus, but it’s nice to see the full application working together on remote servers. While the Rails/Heroku setup was pretty straight forward, Rocktopus was uncharted territory for me.</p>
 
-<p>I had never &quot;launched&quot; a Flask application before so this was all a bit new. As a (<em>temporary, I swear!</em>) measure I moved the files to my server over SFTP and started up a <a href="http://gunicorn.org/">Gunicorn</a> server to run the application. I still need to put Nginx in front of all of this but for now it works as expected (though I can&#39;t imagine it would handle much traffic). I&#39;d also like to learn more about <a href="http://www.fabfile.org/">Fabric</a> for Python deployments. I&#39;ve never been much of a sysadmin, so this was all a bit new to me.</p>
+<p>I had never “launched” a Flask application before so this was all a bit new. As a (<em>temporary, I swear!</em>) measure I moved the files to my server over SFTP and started up a <a href="http://gunicorn.org/">Gunicorn</a> server to run the application. I still need to put Nginx in front of all of this but for now it works as expected (though I can’t imagine it would handle much traffic). I’d also like to learn more about <a href="http://www.fabfile.org/">Fabric</a> for Python deployments. I’ve never been much of a sysadmin, so this was all a bit new to me.</p>
 
 <p>The only really new thing I did for the Rails/Heroku app was add <a href="http://unicorn.bogomips.org/">Unicorn</a> as a server. Heroku has a <a href="https://devcenter.heroku.com/articles/rails-unicorn">great article</a> that held my hand through this setup.</p>
 
-<p>Also, as part of this setup I&#39;ve been playing around with <a href="https://slack.com/">Slack</a> and it&#39;s wonderful integrations for monitoring the app. So far I have it working with Heroku, PaperTrail, and Pingdom. Nothing&#39;s gone wrong yet, but I suppose that is to be expected when there are no users...</p>
+<p>Also, as part of this setup I’ve been playing around with <a href="https://slack.com/">Slack</a> and it’s wonderful integrations for monitoring the app. So far I have it working with Heroku, PaperTrail, and Pingdom. Nothing’s gone wrong yet, but I suppose that is to be expected when there are no users…</p>
 
-<p>As I mentioned, there are still quite a few rough edges to be worked out, a bunch of minor features, and at least one major feature that still needs to be built but this feels like a big step in getting <a href="http://reclaboratory.com">RecLaboratory</a> launched and letting people try it out. We have some people in mind for VERY early alpha testers, but please let me know if you&#39;re interested in trying it out when it&#39;s ready!</p>
+<p>As I mentioned, there are still quite a few rough edges to be worked out, a bunch of minor features, and at least one major feature that still needs to be built but this feels like a big step in getting <a href="http://reclaboratory.com">RecLaboratory</a> launched and letting people try it out. We have some people in mind for VERY early alpha testers, but please let me know if you’re interested in trying it out when it’s ready!</p>
 
   </div>
 
@@ -63,9 +63,9 @@
   <div class="post_date">August 7, 2014</div>
   <div class="post">
     <p><img src="../blog_media/ringbox_materials.jpg" class="inline_right" />
-So, you may have noticed that I&#39;ve missed the past few Thing a Week weeks. In my defense I did just get married last Saturday, so I&#39;ve been pretty busy with wedding related travel and planning so I haven&#39;t had much time for extra projects. The wedding was amazing and I now have a wife, which is fun. In the spirit of the wedding I wanted to share a project that I worked on a while ago but didn&#39;t want to show until now.</p>
+So, you may have noticed that I’ve missed the past few Thing a Week weeks. In my defense I did just get married last Saturday, so I’ve been pretty busy with wedding related travel and planning so I haven’t had much time for extra projects. The wedding was amazing and I now have a wife, which is fun. In the spirit of the wedding I wanted to share a project that I worked on a while ago but didn’t want to show until now.</p>
 
-<p>For the wedding I wanted to build a ring bearer box out of an old book. After looking around some used bookstores I picked an old Tarzan book because 1) it seemed common enough that I didn&#39;t feel bad using it as materials and 2) it had a cool elephant on the cover. I wanted to hollow out part the inside pages and create inlays to hold the rings (like a secret flask holder but for wedding stuff).</p>
+<p>For the wedding I wanted to build a ring bearer box out of an old book. After looking around some used bookstores I picked an old Tarzan book because 1) it seemed common enough that I didn’t feel bad using it as materials and 2) it had a cool elephant on the cover. I wanted to hollow out part the inside pages and create inlays to hold the rings (like a secret flask holder but for wedding stuff).</p>
 
 <p><img src="../blog_media/ringbox_slots.jpg" class="inline_left" />
 I started by covering the covers in plastic (to avoid getting glue on them) painting the sides of the pages with puzzle glue in order to stick all the pages together. I did about 5 coats of this. Once that glue was dried I measured out the inlay and started carving pieces out using an Excato knife. This took a lot longer than expected and when I was down about half an inch, I coded the new inner wall with glue to give it a nice solid feel.</p>
@@ -81,13 +81,13 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
   <h2 class="post_title"><a href="../blog/thing-a-week-28-not-much">Thing A Week 28 - Not Much</a></h2>
   <div class="post_date">July 22, 2014</div>
   <div class="post">
-    <p>So most of this week I was traveling so I wasn&#39;t able to get very much work done on any projects. I did, however, attend an Indian wedding in Long Island which was really cool so the week was not a total loss.</p>
+    <p>So most of this week I was traveling so I wasn’t able to get very much work done on any projects. I did, however, attend an Indian wedding in Long Island which was really cool so the week was not a total loss.</p>
 
-<p>The work I did get done earlier this week was mainly with the <a href="http://reclaboratory.com">RecLaboratory</a> interface to Rocktopus, our audio processing API. I built the interface to the <code>bounce_song</code> functionality, which will take all the individual tracks of a song and combine them into a single (probably .mp3) file.</p>
+<p>The work I did get done earlier this week was mainly with the <a href="http://reclaboratory.com">RecLaboratory</a> interface to Rocktopus, our audio processing API. I built the interface to the <code class="highlighter-rouge">bounce_song</code> functionality, which will take all the individual tracks of a song and combine them into a single (probably .mp3) file.</p>
 
-<p>I also set up a sort of hacky but effective, for now, &quot;loading screen&quot; to let users know that their audio is being uploaded/processes. It seems like a little thing but letting the page just hangs after clicking submit is really bad UI. This is a very early version of the product and we haven&#39;t given UI the full focus it needs but this was one thing that would be too awkward to not address early. It was a bit of an awkward fix because we&#39;re not actually doing the audio processing or uploading as a background process. Eventually I&#39;ll build a queuing/callback system in Rocktopus that will work much nicer, but this gets us going now.</p>
+<p>I also set up a sort of hacky but effective, for now, “loading screen” to let users know that their audio is being uploaded/processes. It seems like a little thing but letting the page just hangs after clicking submit is really bad UI. This is a very early version of the product and we haven’t given UI the full focus it needs but this was one thing that would be too awkward to not address early. It was a bit of an awkward fix because we’re not actually doing the audio processing or uploading as a background process. Eventually I’ll build a queuing/callback system in Rocktopus that will work much nicer, but this gets us going now.</p>
 
-<p>This next week is another busy week. It is the last week in SF before we fly back to Chicago for the wedding (which is less than 2 weeks away now...).  If I get anything Thing A Week thing done this week it will probably be something wedding related.</p>
+<p>This next week is another busy week. It is the last week in SF before we fly back to Chicago for the wedding (which is less than 2 weeks away now…).  If I get anything Thing A Week thing done this week it will probably be something wedding related.</p>
 
   </div>
 
@@ -96,38 +96,38 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
   <div class="post">
     <p>Once again, another busy week divided between wedding stuff and side projects.</p>
 
-<p>I spent this week adding more features to the <a href="http://reclaboratory.com">RecLaboratory</a> audio player and I feel like it&#39;s in a pretty good spot for now. Obviously, there&#39;s more I&#39;d like it to do but it&#39;s certainly at a point where it will work for basic track and song playback.</p>
+<p>I spent this week adding more features to the <a href="http://reclaboratory.com">RecLaboratory</a> audio player and I feel like it’s in a pretty good spot for now. Obviously, there’s more I’d like it to do but it’s certainly at a point where it will work for basic track and song playback.</p>
 
-<p>Here&#39;s a list of new features that got added this week:</p>
+<p>Here’s a list of new features that got added this week:</p>
 
 <ul>
-<li>Visual indicators on the in page play buttons to show what is playing in the global player</li>
-<li>Some basic layout polish and player styling</li>
-<li>Jump forward or back in the audio by clicking on the progress bar</li>
-<li>Play/pause using the space bar</li>
-<li>Some basic (if clunky) error checking to make sure files loaded</li>
+  <li>Visual indicators on the in page play buttons to show what is playing in the global player</li>
+  <li>Some basic layout polish and player styling</li>
+  <li>Jump forward or back in the audio by clicking on the progress bar</li>
+  <li>Play/pause using the space bar</li>
+  <li>Some basic (if clunky) error checking to make sure files loaded</li>
 </ul>
 
-<p>One really interesting thing I found this week that I didn&#39;t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the <code>sauropod.audio</code> object is empty and playback stops, but not if I&#39;m just clicking links on the site. I haven&#39;t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with <a href="https://github.com/rails/turbolinks">TurboLinks</a>.</p>
+<p>One really interesting thing I found this week that I didn’t expect is that audio playback is not interrupted by navigating around the site. If I reload the page the <code class="highlighter-rouge">sauropod.audio</code> object is empty and playback stops, but not if I’m just clicking links on the site. I haven’t had time to explore it completely yet but I suspect it has something to do with either the way Rails caches JavaScript or with <a href="https://github.com/rails/turbolinks">TurboLinks</a>.</p>
 
-<p>I&#39;m really happy that is &quot;just works&quot; that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand <strong><em>WHY</em></strong> it works. It seems dangerous to accidentally get a nice feature like this.</p>
+<p>I’m really happy that is “just works” that way, I was worried that I would have to go back and turn this whole project into a single page app eventually to get uninterrupted playback, so this is a nice win. I do need to spend some time testing things to make sure I understand <strong><em>WHY</em></strong> it works. It seems dangerous to accidentally get a nice feature like this.</p>
 
-<p>Like I said, while Sauropod is still a little rough around the edges, it&#39;s good enough to use for the site. I&#39;m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.</p>
+<p>Like I said, while Sauropod is still a little rough around the edges, it’s good enough to use for the site. I’m now moving on to fixing up the interface to Rocktopus for audio compression and song bouncing.</p>
 
-<p>This week I&#39;ll be traveling to New York for a friend&#39;s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me...</p>
+<p>This week I’ll be traveling to New York for a friend’s wedding, so my Thing A Week time may be limited. Also I need to eventually finish writing the ceremony script for my wedding or else some people are going to be mad at me…</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-26-more-sauropod">Thing A Week 26 - More Sauropod</a></h2>
   <div class="post_date">July 8, 2014</div>
   <div class="post">
-    <p>Another 7 days, another busy week. With the wedding growing ever closer I&#39;ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.</p>
+    <p>Another 7 days, another busy week. With the wedding growing ever closer I’ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.</p>
 
 <p><img src="../blog_media/sauropod1.png" /></p>
 
 <p>I got Sauropod hooked up into the asset pipeline of the <a href="http://reclaboratory.com">RecLab</a> Rails site and started attaching it to the various audio controls on the site. While <a href="https://github.com/goldfire/howler.js">Howler.js</a> handles loading the audio file and playing the sound in browser, I still needed to build all the hooks to control and monitor the audio.</p>
 
-<p>At this point I am able to click a &quot;play&quot; button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an <code>onprogress</code> event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn&#39;t very hard, I just used a <code>setInterval()</code> function around my own <code>sauropod.updateProgress()</code> function:</p>
+<p>At this point I am able to click a “play” button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an <code class="highlighter-rouge">onprogress</code> event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn’t very hard, I just used a <code class="highlighter-rouge">setInterval()</code> function around my own <code class="highlighter-rouge">sauropod.updateProgress()</code> function:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sauropod</span><span class="p">.</span><span class="nf">play</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">sauropod</span><span class="p">.</span><span class="nf">audio</span><span class="p">.</span><span class="nf">status</span> <span class="o">!=</span> <span class="s2">"playing"</span><span class="p">)</span> <span class="p">{</span>
@@ -138,11 +138,11 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>I still need to build all the hooks into playing a mutitrack song (though it should work based on how I&#39;ve built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.</p>
+<p>I still need to build all the hooks into playing a mutitrack song (though it should work based on how I’ve built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.</p>
 
 <p><strong>Thing A Week Progress Update</strong></p>
 
-<p>So this week marks half a year of this &quot;Thing A Week&quot; project. It hasn&#39;t been exactly what I planned, one discrete project finished every week, but it has really keep me focused on building things and I&#39;ve really enjoyed writing about my progress on all the things I&#39;ve been working on.</p>
+<p>So this week marks half a year of this “Thing A Week” project. It hasn’t been exactly what I planned, one discrete project finished every week, but it has really keep me focused on building things and I’ve really enjoyed writing about my progress on all the things I’ve been working on.</p>
 
   </div>
 
@@ -151,30 +151,30 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
   <div class="post">
     <p>As seems to be the trend lately, last week was <strong>very</strong> busy. Between work stuff, wedding stuff, seeing a <a href="http://triassicparq.com/">musical</a>, and going to a <a href="http://verucasalt.com/">show</a> it was hard to find time to get extra things done.</p>
 
-<p>Almost all of the weekend was devoted to knocking off extra wedding things, like designing take-home gifts for guests and buying a bunch of ties. There is a big list of things that we apparently need to do, but we&#39;re making good progress on it.</p>
+<p>Almost all of the weekend was devoted to knocking off extra wedding things, like designing take-home gifts for guests and buying a bunch of ties. There is a big list of things that we apparently need to do, but we’re making good progress on it.</p>
 
 <p>We had a really productive <a href="http://reclaboratory.com">RecLab</a> meeting on Tuesday where we worked out some good layout stuff and got the feed stuff into a good place. With the basic feed working, I am now able to move on to the audio player component: <strong>Sauropod</strong>.</p>
 
-<p>Why is called Sauropod? Well a while ago I had to build an HTML5 based mp3 player for a job interview and I decided to call it 5auropod because &#39;sauropod&#39; kind of sounded like &#39;iPod&quot; and the &#39;5&#39; because of HTML5. Also <a href="http://en.wikipedia.org/wiki/Sauropoda">sauropods</a> are cool, enormous dinosaurs. When I started working on a player for RecLab I wanted to use the same name, but I was worried about starting JavaScript variables with a number so I just used &quot;Sauropod&quot;. Convoluted, I know, but it makes sense to me.</p>
+<p>Why is called Sauropod? Well a while ago I had to build an HTML5 based mp3 player for a job interview and I decided to call it 5auropod because ‘sauropod’ kind of sounded like ‘iPod” and the ‘5’ because of HTML5. Also <a href="http://en.wikipedia.org/wiki/Sauropoda">sauropods</a> are cool, enormous dinosaurs. When I started working on a player for RecLab I wanted to use the same name, but I was worried about starting JavaScript variables with a number so I just used “Sauropod”. Convoluted, I know, but it makes sense to me.</p>
 
-<p>Right now Sauropod is in it&#39;s VERY early stages, mainly just building out method names to architect the system. The basic idea is to build a library to work with songs and tracks that contain metadata and possibly multiple audio tracks that need to be played simultaneously or adjusted individually. I&#39;m using <a href="https://github.com/goldfire/howler.js">Howler.js</a> to handle most of the audio heavy lifting. It&#39;s been pretty awesome so far. I&#39;m also trying out <a href="http://underscorejs.org/">Underscore.js</a> to give me a bit of functional programming in JavaScript. This is mainly to make working with arrays nicer, which I will have to do quite a bit with the arrays of Howler.js Sounds that make up songs.</p>
+<p>Right now Sauropod is in it’s VERY early stages, mainly just building out method names to architect the system. The basic idea is to build a library to work with songs and tracks that contain metadata and possibly multiple audio tracks that need to be played simultaneously or adjusted individually. I’m using <a href="https://github.com/goldfire/howler.js">Howler.js</a> to handle most of the audio heavy lifting. It’s been pretty awesome so far. I’m also trying out <a href="http://underscorejs.org/">Underscore.js</a> to give me a bit of functional programming in JavaScript. This is mainly to make working with arrays nicer, which I will have to do quite a bit with the arrays of Howler.js Sounds that make up songs.</p>
 
-<p>Sauropod is still in it&#39;s very early stages, but I have a pretty good architecture planned out and I&#39;m excited to see it develop.</p>
+<p>Sauropod is still in it’s very early stages, but I have a pretty good architecture planned out and I’m excited to see it develop.</p>
 
   </div>
 
   <h2 class="post_title"><a href="../blog/thing-a-week-24-reclab-feed">Thing A Week 24 - RecLab Feed</a></h2>
   <div class="post_date">June 23, 2014</div>
   <div class="post">
-    <p>This was another busy week but I manged to get some solid work done on <a href="http://reclaboratory.com">RecLaboratory</a> stuff. </p>
+    <p>This was another busy week but I manged to get some solid work done on <a href="http://reclaboratory.com">RecLaboratory</a> stuff.</p>
 
-<p>First I took some pictures to use as a cover photo on our <a href="https://twitter.com/reclaboratory">Twitter</a> and <a href="https://www.facebook.com/reclaboratory">Facebook</a> pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I&#39;m pleased with how it looks.  Feel free to follow/friend us on either. We&#39;re starting to post things.</p>
+<p>First I took some pictures to use as a cover photo on our <a href="https://twitter.com/reclaboratory">Twitter</a> and <a href="https://www.facebook.com/reclaboratory">Facebook</a> pages. This ended up being a big project that involved moving a bunch of my music equipment around and finding a clear area in my small apartment. I am not a great photographer but I’m pleased with how it looks.  Feel free to follow/friend us on either. We’re starting to post things.</p>
 
-<p>Last Wednesday night I just couldn&#39;t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn&#39;t just rig something together with a bunch of ugly table JOINs I ended up using the <a href="https://github.com/pokonski/public_activity">public_activity</a> gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.</p>
+<p>Last Wednesday night I just couldn’t sleep so I stayed up until 2:30 and knocked off a few bugs around comments but the major work I got done this week was around the event feed. I knew I couldn’t just rig something together with a bunch of ugly table JOINs I ended up using the <a href="https://github.com/pokonski/public_activity">public_activity</a> gem.  It listens for controller actions and makes an entry in a separate table for every event I want to show up in the feed. Most of our events are just the result of object creation and public_activity handles this really well right out of the box.</p>
 
-<p>Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I&#39;m using the public_activity <code>params</code> hash to avoid some n+1 database call issues but so far it&#39;s made it really easy to build feeds on User, Track, and Song pages. I&#39;m working on building the main homepage feed now, which is proving a little trickier. Obviously I&#39;d like to do this with a single call to the <code>Activities</code> model but because it&#39;s tracking polymorphic objects, the SQL is taking some work.</p>
+<p>Right now I just have basic events around Users, Comments, Tracks, and Songs and I need to clean up how I’m using the public_activity <code class="highlighter-rouge">params</code> hash to avoid some n+1 database call issues but so far it’s made it really easy to build feeds on User, Track, and Song pages. I’m working on building the main homepage feed now, which is proving a little trickier. Obviously I’d like to do this with a single call to the <code class="highlighter-rouge">Activities</code> model but because it’s tracking polymorphic objects, the SQL is taking some work.</p>
 
-<p>I&#39;m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too...</p>
+<p>I’m hoping to have the feed stuff done by next week and start setting up a non-local version of the Rails site + Rocktopus soon. Then I have BUNCH of WebAudio stuff to work on around the player/audio tools. Oh, and I should probably be planning my wedding at some point too…</p>
 
 <p><strong>bonus thing</strong></p>
 
@@ -187,17 +187,17 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
   <div class="post">
     <p>This weekend Eileen was out of the house for her bachelorette party so I tried to knock out a few outstanding wedding related projects (apparently that is coming up pretty quickly). The <a href="../blog/thing-a-week-4-bird-watcher">Bird Watcher</a> project had been dragging on for a while so I thought this would be a good time to wrap it up, too.</p>
 
-<p>For those who don&#39;t remember, Bird Watcher is a system that listens for photos with certain #hashtags and displays them to a live page. I plan to use it to let people take pictures during our wedding and show them on a projector during the reception.</p>
+<p>For those who don’t remember, Bird Watcher is a system that listens for photos with certain #hashtags and displays them to a live page. I plan to use it to let people take pictures during our wedding and show them on a projector during the reception.</p>
 
 <p>This project has spanned a few <a href="../blog/thing-a-week-4-bird-watcher">Thing</a> <a href="../blog/thing-a-week-5-bird-watcher-part-2">A</a> <a href="../blog/thing-a-week-12-filterfilter">Week</a> posts and involved playing with the <a href="https://dev.twitter.com/">Twitter</a> and <a href="http://instagram.com/developer/">Instagram</a> APIs, as well as learning a bit more about Postgresql and the Sequel gem.</p>
 
 <p>At this point most of the hard work had been done. I have Twitter and Instagram listeners (which both work in very different ways) that store info about photo posts in a database. I just needed to write something to pull them out and display them.</p>
 
-<p>Originally I had written some nice code for prioritizing new photos and minimizing database calls but that ended up being a scoping pain in the ass in Sinatra. I would have had to build some sort of session object persistence system and honestly, the scale of this project just wasn&#39;t worth it.</p>
+<p>Originally I had written some nice code for prioritizing new photos and minimizing database calls but that ended up being a scoping pain in the ass in Sinatra. I would have had to build some sort of session object persistence system and honestly, the scale of this project just wasn’t worth it.</p>
 
-<p>I ended up with a simple AJAX loop on a timer that pulls a random &quot;photo card&quot; with the image and some information about it, and displays it on a page that should work nicely full screened on a projector. I still need to run some tests to make sure I don&#39;t get any weird image sizes but it&#39;s working well right now.</p>
+<p>I ended up with a simple AJAX loop on a timer that pulls a random “photo card” with the image and some information about it, and displays it on a page that should work nicely full screened on a projector. I still need to run some tests to make sure I don’t get any weird image sizes but it’s working well right now.</p>
 
-<p>I&#39;m a little worried that I&#39;ll spend part of my own wedding reception tweaking code or sshing into my server to restart some service, but I think everything should run pretty smoothly. This was a fun little project and made me play with some new technologies. Hopefully lots of people use it at the wedding.</p>
+<p>I’m a little worried that I’ll spend part of my own wedding reception tweaking code or sshing into my server to restart some service, but I think everything should run pretty smoothly. This was a fun little project and made me play with some new technologies. Hopefully lots of people use it at the wedding.</p>
 
   </div>
 
