@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
-posts_dir='/Users/dave/Documents/Projects/new_dinosaurseateverybody_site/jekyll_blog/_posts/'
+script_dir=`dirname $0`
+cd $script_dir
+cd ../jekyll_blog/_posts
+
 title=$1
 title_stub=`echo $1 | tr "[:upper:]" "[:lower:]" | sed 's/[^a-z  A-Z]//g' | tr " " -`
 date=`date +%F`
 filename="${date}-${title_stub}.md"
 
-post_file_path="${posts_dir}${filename}"
+post_file_path="${filename}"
 
 echo "---" >> $post_file_path
 echo "layout: post" >> $post_file_path
