@@ -1,14 +1,14 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
-gem 'puma'
+gem "puma", ">= 6.3.1"
 
 gem 'sass'
 gem 'jekyll', '4.0.1'
 gem 'jekyll-paginate'
 gem 'pkg-config'
-gem 'nokogiri'
-gem 'rack'
+gem 'nokogiri', ">= 1.13.10"
+gem "rack", ">= 2.2.6.4"
 gem 'rack-protection', '>= 1.5.1'
 
 group :development do
