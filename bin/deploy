@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # run jekyl commands
-# TODO
 cd jekyll_blog
 jekyll build
 
@@ -9,4 +8,8 @@ jekyll build
 # bundle exec cap production deploy
 
 # deploy via Heroku
-git push heroku master
+# git push heroku master
+
+cd ..
+# deply via fly.io
+flyctl deploy
