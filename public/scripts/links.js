@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         comicUrls.push(link.href); // Store the href attribute (URL) of each link
       }
     }
-}
-  // const links = ["https://goodreads.com", "https://strava.com", "https://google.com"]; // Replace with your actual URLs
+  }
 
   document.addEventListener('keydown', function(event) {
       now = Date.now();
@@ -18,13 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (lastKeyPress[0] === 'o' && event.key === 'c' && timeSinceLastKeyPress < 1000) {
         comicUrls.forEach((url, index) => {
             setTimeout(() => {
-                console.log(url);
                 newWindow = window.open(url, '_blank');
-            }, index * 500); // Delay opening each tab by 100s
+            }, index * 200); // Delay opening each tab by 200ms
         });
       }
       lastKeyPress[0] = event.key; // Store the last key pressed
       lastKeyPress[1] = now; // time of last key press
-      console.log(lastKeyPress);
   });
 });
