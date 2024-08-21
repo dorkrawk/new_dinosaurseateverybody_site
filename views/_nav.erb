@@ -1,5 +1,6 @@
 <ul id="nav">
   <li><% if @page_title != "about" %><a href="../about" title="about me">about me</a><% else %>about me<% end %></li>
+  <li><% if @page_title != "now" %><a href="../now" title="now (last updated: <%= now_updated_at %>)">now</a><% else %>now<% end %></li>
   <li><% if @page_title != "projects" %><a href="../projects" title="projects">projects</a><% else %>projects<% end %></li>
   <li><% if @page_title != "music" %><a href="../music" title="music">music</a><% else %>music<% end %></li>
   <li><% if @page_title != "links" %><a href="../links" title="links">links</a><% else %>links<% end %></li>

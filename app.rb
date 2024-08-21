@@ -45,11 +45,21 @@ module DinosaursEatEverybody
       erb :projects
     end
 
+    get '/now' do
+      @page_title = "now"
+      erb :now
+    end
+
     helpers do
       def dave_fact
         the_facts = Facts.new
         fact_id = (0..the_facts.count-1).to_a.sample
         the_facts.get_fact(fact_id)
+      end
+
+      def now_updated_at
+        # I guess just update this when the Now page is updated...
+        "August 21, 2024"
       end
     end
 
