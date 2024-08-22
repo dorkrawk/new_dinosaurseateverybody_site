@@ -1,0 +1,58 @@
+
+  <h2 class="post_title"><a href="../blog/sinatra-jekyll-prose">Sinatra + Jekyll + Prose</a></h2>
+  <div class="post_date">November 5, 2013</div>
+  <div class="post">
+    <p>Welcome to the new Dinosaurs Eat Everybody blog! The old site/blog was an interesting mess of custom PHP and some custom build hooks into a Word Press blog and though it worked pretty well but I was tired of maintaining stuff in PHP so when my old hosting was about to expire I decided to move to a <a href="https://www.digitalocean.com/">VPS</a> and build something new. The result is what you see before you today.</p>
+
+<p>This new site is built mainly on <a href="http://www.sinatrarb.com/" title="I like my web frameworks like I like my brews, micro.">Sinatra</a> with <a href="http://jekyllrb.com/" title="a static file blogging platform">Jekyll</a> mixed in for some blogging functionality.  I didn’t really need any sort of content management system for most of the site so there is no database behind it and I’m using flat files (mostly just handwritten JSON) for anything that seems dynamic.</p>
+
+<p>The interesting part was adding a Jekyll blog to an existing Sinatra site. Jekyll is super easy to set up on its own but I didn’t want it to run the whole site. I wanted to be able to serve dynamic pages if I wanted.  With some help from <a href="http://derekeder.com/blog/hello-world-setting-up-a-jekyll-blog-in-sinatra">this</a> blog post it was actually pretty easy to get things up and running.  That post is a bit out of date but still very helpful.</p>
+
+<p>To add Jekyll to Sinatra I first just created a new Jekyll site in a seperate directory and copied it over into a <code class="highlighter-rouge">jekyll_blog/</code> folder in the root of my Sinatra project. I then removed the <code class="highlighter-rouge">.gitignore</code>, the <code class="highlighter-rouge">default.html</code> layout and the whole <code class="highlighter-rouge">css/</code> directory (after moving the Pygments <code class="highlighter-rouge">syntax.css</code> into my main stylesheet directory) from the new Jekyll directory. I also adjusted the <code class="highlighter-rouge">_post.html</code> layout to not have a layout of its own by just removing all the YAML Front-matter from the file. This is because I want Sinatra to handle the layouts for everything.</p>
+
+<p>The real meat of this is a custom function in the /blog route:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">'/blog/?*'</span> <span class="k">do</span>
+	<span class="n">jekyll_blog</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="nf">path</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">jekyll_blog</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="vi">@page_title</span> <span class="o">=</span> <span class="s2">"blog"</span>
+
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="kp">__FILE__</span><span class="p">),</span> <span class="s1">'jekyll_blog/_site'</span><span class="p">,</span>  <span class="n">path</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'/blog'</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span>
+  <span class="n">file_path</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">)</span> <span class="k">unless</span> <span class="n">file_path</span> <span class="o">=~</span> <span class="sr">/\.[a-z]+$/i</span> 
+
+  <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">read</span>
+    <span class="n">file</span><span class="p">.</span><span class="nf">close</span>
+
+    <span class="n">erb</span> <span class="n">contents</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This just calls the <code class="highlighter-rouge">jekyll_blog(path)</code> function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the <code class="highlighter-rouge">&lt;%= yield %&gt;</code> in my Sinatra erb layout.</p>
+
+<p>This is a pretty simplistic solution and I want to add better 404 checking and a way to pull the post title out for use in the page title, but it gets the job done by pulling out the content of the post html file generated by Jekyll and putting it into the content container of Sinatra.  Now all my layouts are handled by the same file and all my CSS comes from the same source.</p>
+
+<p>While I like the idea of being able to write my blog posts in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I’m trying <a href="http://prose.io/">Prose</a>. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven’t tried that yet).  I’ve included a <code class="highlighter-rouge">_prose.rb</code> config file that sends me right to the <code class="highlighter-rouge">_posts/</code> directory of this project when I’m working on it:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">prose:
+  rooturl: </span><span class="s1">'jekyll_blog/_posts'</span>
+  <span class="ss">media: </span><span class="s1">'public/images/blog_media'</span></code></pre></figure>
+
+<p>I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I’m still not totally won over by Prose but it has been really fun to set this up. I’d also like to add comments through <a href="http://disqus.com/">Disqus</a> soon. Hopefully now I’ll make this work worthwhile and actually write a few blog posts every now and then.</p>
+
+
+  </div>
+
+
+<div class="pagination">
+  
+    <a href="../blog/6" class="previous"><i class="icon-arrow-left"></i></a>
+  
+  <span class="page_number ">Page: 7 of 7</span>
+  
+    <span class="next "><i class="icon-arrow-right"></i></span>
+  
+</div>

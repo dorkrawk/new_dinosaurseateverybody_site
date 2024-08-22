@@ -7,6 +7,21 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Now</title>
+        <description>&lt;p&gt;So I added a &lt;a href=&quot;https://dinosaurseateverybody.com/now&quot;&gt;Now&lt;/a&gt; page to this site.&lt;/p&gt;
+
+&lt;p&gt;The purpose of a now page to write up what you’re doing right now. Basically what you’d tell someone if you were catching up and they asked “So what have you been up to lately?”. The idea has been attributed to &lt;a href=&quot;https://sive.rs/now&quot;&gt;Derek Sivers&lt;/a&gt; (who apparently is the guy who created CD Baby!).&lt;/p&gt;
+
+&lt;p&gt;Why did I add one? Do people really care what I’m up to now? I don’t know. But I’ve been growing a bit disenchanted with the state of the internet lately. It feels like a lot of people trying to squeeze posts in between ads on a handful of social networks. I miss when the internet was more distributed and a bit more personal and weird. This felt like a little push in that direction.&lt;/p&gt;
+
+&lt;p&gt;For more about now pages check out &lt;a href=&quot;https://nownownow.com/about&quot; title=&quot;now! now! now!&quot;&gt;nownownow.com&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Aug 2024 00:00:00 -0500</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/now</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/now</guid>
+      </item>
+    
+      <item>
         <title>And Or Not</title>
         <description>&lt;p&gt;tldr: I wrote and recorded a noisy, bass driven solo record. You should &lt;a href=&quot;https://andornot.bandcamp.com/album/the-infernal-machine&quot;&gt;check it out&lt;/a&gt;!&lt;/p&gt;
 
@@ -287,40 +302,6 @@ The enclosure that comes with the kit is… utilitarian, to say the least. This 
         <pubDate>Wed, 10 Feb 2016 00:00:00 -0600</pubDate>
         <link>http://dinosaurseateverybody.com/blog/new-guitar-pedal</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/new-guitar-pedal</guid>
-      </item>
-    
-      <item>
-        <title>Inktober 2015</title>
-        <description>&lt;p&gt;So this year I participated in &lt;a href=&quot;http://mrjakeparker.com/inktober&quot;&gt;Inktober&lt;/a&gt;, which is basically a month long event where artist attempt to produce an inked drawing every day in October. Obviously I didn’t have the time/focus to do all 31 days, but I did manage to produce 16 drawings and post them to &lt;a href=&quot;https://instagram.com/dorkrawk/&quot;&gt;Instagram&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As I’ve been sadly neglecting &lt;a href=&quot;http://mountsaintawesome.com&quot;&gt;Mount Saint Awesome&lt;/a&gt; these days, it was really nice to get back to drawing regularly. Doing this project really helped me explore other styles and techniques and also draw things that I might not have drawn for comics (like armadillos and astronauts). It was also good to work in just black and white. I’ve struggled with shading and shadows in black and white drawings in the past and it really helped to be constrained by this medium. There were a few drawings I wasn’t very happy with, like the Gameboy, but all in all I was pleased with most of the work.&lt;/p&gt;
-
-&lt;p&gt;Hopefully this rejuvenates my art as I’d really like to get back to making comics regularly.&lt;/p&gt;
-
-&lt;p&gt;Here are all 16 Inktober drawings I did:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/inktober1.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober2.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober3.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober4.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober5.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober6.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober7.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober8.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober9.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober10.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober11.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober12.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober13.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober14.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober15.JPG&quot; /&gt;
-&lt;img src=&quot;../blog_media/inktober16.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I’ve also posted these as one big image to &lt;a href=&quot;http://mountsaintawesome.com/comic.php?id=98&quot;&gt;Mount Saint Awesome&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Nov 2015 00:00:00 -0500</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/inktober-2015</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/inktober-2015</guid>
       </item>
     
   </channel>
