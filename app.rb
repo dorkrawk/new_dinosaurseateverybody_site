@@ -16,6 +16,11 @@ module DinosaursEatEverybody
   class App < Sinatra::Base
     use SassHandler
 
+    not_found do
+      status 404
+      erb :rawr_oh_rawr
+    end
+
     # routes
     get '/' do
       redirect '/blog'
