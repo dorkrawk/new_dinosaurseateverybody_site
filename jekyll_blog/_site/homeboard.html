@@ -1,0 +1,58 @@
+<h2 class="post_title">Homeboard</h2>
+<div class="post_date">September 11, 2024</div>
+
+<div class="post">
+<p>I always forget to move my car on street cleaning day.</p>
+
+<p>On the 1st Wednesday of the month I was always scrambling to move my street-parked car in the hopes of avoiding a ticket. Often too late. So I wanted something I looked at every day to remind me of things like this, just a little dashboard in my kitchen to let me know what was going on during the day.</p>
+
+<p>While this isn’t a particularly novel idea and I’m sure there are a few out of the box products that will do this, I just though it would be fun to build something custom for what I wanted. It ended up being a small Sinatra app and I decided to play around with <a href="https://htmx.org/">htmx</a> for most of the dynamic frontend stuff. The basic features I wanted were:</p>
+
+<ul>
+  <li>a big clock (date and time)</li>
+  <li>local weather</li>
+  <li>a QR code to log on to our local wifi network</li>
+  <li>events for today and tomorrow:
+    <ul>
+      <li>city events (street cleaning, garbage day, snow plowing, etc.)</li>
+      <li>birthdays (I don’t look at Facebook enough anymore for it to be a reliable reminder)</li>
+      <li>our shared Google calendar</li>
+    </ul>
+  </li>
+</ul>
+
+<p>This is what it ended up looking like:</p>
+
+<p><img src="../blog_media/homeboard2.jpg" /></p>
+
+<p>Some of these were pretty simple. The clock is just some plain old Javascript running client side. Birthdays come from a big hardcoded Hash that just looks up date. The city events came from some hardcoded logic based on the date, things like:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># first Wednesday of the month</span>
+<span class="n">applicable</span> <span class="o">=</span> <span class="no">STREET_CLEANING_MONTH_RANGE</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">month</span><span class="p">)</span> 
+<span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">wednesday?</span> <span class="o">||</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">tuesday?</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">mday</span> <span class="o">&lt;=</span> <span class="mi">7</span></code></pre></figure>
+
+<p>The QR code just seemed like a neat little feature. You can create QR codes that when scanned will allow you to join a local wifi network without manually entering the password. I just generated my code from something like <a href="https://www.qr-code-generator.com/solutions/wifi-qr-code/">this site</a>.</p>
+
+<p>For local weather I ended up making use of the <a href="https://openweathermap.org/api">OpenWeather API</a>. It refreshes infrequently enough that I can use it for free.</p>
+
+<p>The Google Calendar integration gave me the most trouble. For some reason it was WAY more of a pain in the ass to authenticate with Google and use the provided library to pull a list of calendar events than I figured it would be. It involved a lot of creating and refreshing access tokens and is still a little janky (but it work!).</p>
+
+<p>While I started doing the dynamic front end stuff with vanilla Javascript I ended up rewriting almost everything in Htmx, mainly because it seemed interesting and I wanted to play around with it. For the VERY simple stuff I was doing (mainly periodically refreshing parts of the dashboard to get updated content) it was very clean.</p>
+
+<p>For example, I want my weather to reload every hour so on the main dashboard page (the page that stays up all the time) there’s a div that looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content_box weather_box"</span> <span class="na">hx-get=</span><span class="s">"../api/weather_htmx"</span> 
+  <span class="na">hx-trigger=</span><span class="s">"load, every 3600s"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>It just pulls the contents of <code class="highlighter-rouge">/api/weather_htmx</code> (which is just some html, rendered with the updated weather info from an API call to OpenWeather) and puts it inside that div. Magic!</p>
+
+<p>I bought a cheap refurbished tablet to use as a display and it’s been a great addition to our kitchen!</p>
+
+<p><img src="../blog_media/homeboard1.jpg" /></p>
+
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="icon-arrow-left"></i> back to blog</a></div>
+

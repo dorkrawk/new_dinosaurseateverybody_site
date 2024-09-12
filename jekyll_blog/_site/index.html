@@ -1,4 +1,59 @@
 
+  <h2 class="post_title"><a href="../blog/homeboard">Homeboard</a></h2>
+  <div class="post_date">September 11, 2024</div>
+  <div class="post">
+    <p>I always forget to move my car on street cleaning day.</p>
+
+<p>On the 1st Wednesday of the month I was always scrambling to move my street-parked car in the hopes of avoiding a ticket. Often too late. So I wanted something I looked at every day to remind me of things like this, just a little dashboard in my kitchen to let me know what was going on during the day.</p>
+
+<p>While this isn’t a particularly novel idea and I’m sure there are a few out of the box products that will do this, I just though it would be fun to build something custom for what I wanted. It ended up being a small Sinatra app and I decided to play around with <a href="https://htmx.org/">htmx</a> for most of the dynamic frontend stuff. The basic features I wanted were:</p>
+
+<ul>
+  <li>a big clock (date and time)</li>
+  <li>local weather</li>
+  <li>a QR code to log on to our local wifi network</li>
+  <li>events for today and tomorrow:
+    <ul>
+      <li>city events (street cleaning, garbage day, snow plowing, etc.)</li>
+      <li>birthdays (I don’t look at Facebook enough anymore for it to be a reliable reminder)</li>
+      <li>our shared Google calendar</li>
+    </ul>
+  </li>
+</ul>
+
+<p>This is what it ended up looking like:</p>
+
+<p><img src="../blog_media/homeboard2.jpg" /></p>
+
+<p>Some of these were pretty simple. The clock is just some plain old Javascript running client side. Birthdays come from a big hardcoded Hash that just looks up date. The city events came from some hardcoded logic based on the date, things like:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># first Wednesday of the month</span>
+<span class="n">applicable</span> <span class="o">=</span> <span class="no">STREET_CLEANING_MONTH_RANGE</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">month</span><span class="p">)</span> 
+<span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">wednesday?</span> <span class="o">||</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">tuesday?</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">mday</span> <span class="o">&lt;=</span> <span class="mi">7</span></code></pre></figure>
+
+<p>The QR code just seemed like a neat little feature. You can create QR codes that when scanned will allow you to join a local wifi network without manually entering the password. I just generated my code from something like <a href="https://www.qr-code-generator.com/solutions/wifi-qr-code/">this site</a>.</p>
+
+<p>For local weather I ended up making use of the <a href="https://openweathermap.org/api">OpenWeather API</a>. It refreshes infrequently enough that I can use it for free.</p>
+
+<p>The Google Calendar integration gave me the most trouble. For some reason it was WAY more of a pain in the ass to authenticate with Google and use the provided library to pull a list of calendar events than I figured it would be. It involved a lot of creating and refreshing access tokens and is still a little janky (but it work!).</p>
+
+<p>While I started doing the dynamic front end stuff with vanilla Javascript I ended up rewriting almost everything in Htmx, mainly because it seemed interesting and I wanted to play around with it. For the VERY simple stuff I was doing (mainly periodically refreshing parts of the dashboard to get updated content) it was very clean.</p>
+
+<p>For example, I want my weather to reload every hour so on the main dashboard page (the page that stays up all the time) there’s a div that looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content_box weather_box"</span> <span class="na">hx-get=</span><span class="s">"../api/weather_htmx"</span> 
+  <span class="na">hx-trigger=</span><span class="s">"load, every 3600s"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>It just pulls the contents of <code class="highlighter-rouge">/api/weather_htmx</code> (which is just some html, rendered with the updated weather info from an API call to OpenWeather) and puts it inside that div. Magic!</p>
+
+<p>I bought a cheap refurbished tablet to use as a display and it’s been a great addition to our kitchen!</p>
+
+<p><img src="../blog_media/homeboard1.jpg" /></p>
+
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/now">Now</a></h2>
   <div class="post_date">August 21, 2024</div>
   <div class="post">
@@ -250,30 +305,6 @@
 <p>Art was a mild success. I did count my time doing <a href="../blog/inktober-2015">Inktober</a> because a lot of that was drawing novel subjects, but a lot of the other work was fundamental practice and sketchbook work. I also spent some time ramping up with drawing digitally, which I now use a lot for <a href="http://lookatmeimaracecar.tumblr.com">Look At Me I’m a Racecar</a> comics.</p>
 
 <p>This Input Coffee project has really been helpful in getting me to work on skills that I actually care about. Over the next year I’d like to hit 100 hours of guitar and branch out a bit to some under-practiced skills I’d like to have.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/new-guitar-pedal">New Guitar Pedal</a></h2>
-  <div class="post_date">February 10, 2016</div>
-  <div class="post">
-    <p>I built something!</p>
-
-<p>Once again I received a Build Your Own Clone pedal kit for Xmas, this year it was the <a href="http://buildyourownclone.com/collections/fx-kits/products/classic-compressor">Classic Compressor</a>. I’ve been playing a lot more guitar these days and I seemed like it would be fun to tighten up my sound a bit, so a compressor pedal seemed like a fun project.</p>
-
-<p>The build itself was pretty simple and straightforward. Soldier all the pieces together. Don’t burn myself. Don’t burn anything important. I’m actually getting pretty decent at soldiering, if I do say so myself! What I wanted to do differently with this build was the visual look of the pedal.</p>
-
-<p><img src="http://cdn.shopify.com/s/files/1/0568/4705/products/125bwebsite_compact.jpeg?v=1406158893" class="inline_left" />
-The enclosure that comes with the kit is… utilitarian, to say the least. This time I wanted to not only paint the enclosure, but also design and print my own decals for the pedal. The painting was pretty simple, I just sanded down the enclosure, put down a coat of primer, and then used several coats of spray paint.</p>
-
-<p>To do the design decals I ended up drawing some stuff using my Wacom tablet and then doing a layout in Photoshop and finally printing everything onto waterslide decals. For the design I ended up just drawing a simple coffee mug with the word “compresso” on it because it sort of sounds like espresso. Meh… it kinda works! The waterslide decals were pretty cool, you just print onto them, spray them with a clear sealant, wet them and then slide them onto the surface. Once it dried, I sprayed the whole thing with a few layers of clear sealant so the decal would chip or peal off as I stomped on it.</p>
-
-<p>Last, but not least, I wasn’t quite satisfied with the nobs that came with the kit. I wanted something a bit more retro looking so I bought some oven nob style nobs on Amazon to use. They didn’t quite fit the pots on the pedal so I had to Dremel them out a bit before I could put them on the pedal. It’s always fun to have an excuse to play with a Dremel.</p>
-
-<p>The end result looks pretty cool (and sounds pretty good too!) I actually took apart the first pedal I built, an overdrive, with the intention of painting and adding a decal to it as well. The stuff I learned doing this pedal will be very helpful.</p>
-
-<p>Here she is:</p>
-
-<p><img src="../blog_media/compressor_pedal1.jpg" /></p>
 
   </div>
 

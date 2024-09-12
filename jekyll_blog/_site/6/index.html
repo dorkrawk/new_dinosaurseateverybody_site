@@ -1,4 +1,25 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-6-piano-bass-song">Thing A Week 6 - Piano and Bass Song</a></h2>
+  <div class="post_date">February 17, 2014</div>
+  <div class="post">
+    <p>I think that it’s fair to call this Thing A Week a failure and I don’t really have a great excuse. I set out to write a song that revolved around the piano and bass and I ended up with a nice riff that didn’t go anywhere.</p>
+
+<p>This tends to happen to me a lot. My Garageband folder is full of 30 second long riffs and fleshed out song chunks, but I often hit a wall and I’m not sure where to go from there. Last week I sat down and tried writing some stuff influenced by a couple songs that either did piano and bass or just bass licks well. The main ones I referred to were <a href="http://www.rdio.com/artist/Ben_Folds_Five/album/The_Sound_Of_The_Life_Of_The_Mind/track/Erase_Me/">Erase Me</a> by Ben Folds Five and <a href="http://www.rdio.com/artist/Brand_New/album/Deja_Entendu/track/Sic_Transit_Gloria_..._Glory_Fades/">Sic Transit Gloria…Glory Fades</a> by Brand New. They are both awesome songs and I especially love the way the piano and bass work together in the Ben Folds song but my ideas just weren’t working. I ended up with some weird meandering minor bass parts thrown over some really weak piano parts.</p>
+
+<p>I came back the next day and switched to a major key and started with the piano part first. From there I came up with something that I liked and wrote a simple bass part that just harmonized the piano roots in a few parts.</p>
+
+<p>And that’s where I got stuck. I spent a bit of time playing around with some sparse guitar parts and a few of the new amp models in the new version of Garageband. I also played around with the new Drummer feature of Garageband. It was pretty cool and maybe the most redeeming quality of Garageband X (the removal of the old keyboard shortcuts and export to mp3 are driving me nuts and might send my back to version 6!). The drum sounds are great and it’s a big step up from the midi drum parts I had been working with in the old version of Garageband, but I did feel a bit uncomfortable with the loss of control over every single hit. I suppose it’s a decent compromise.</p>
+
+<p>So here’s what I came up with. I ended up just doing some random guitar riffing and bigger chords at some point, but it really just felt forced and didn’t take the song anywhere. Take a listen, though, because the piano/bass part turned out pretty nice:</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135426611&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+
+<p>I’d like to keep working with this song. It’s different than most of the stuff I’ve written lately. I think that throwing lyrics over it will be a bit of a challenge just because I don’t quite trust my voice for something this mellow, but it’s a fun part and I think it could turn into something cool.</p>
+
+<p>This week I’m leaning towards either a project with Python (I’ve been meaning to brush up on my Python for a while) or something artistic. I’m still not quite sure.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-5-bird-watcher-part-2">Thing A Week 5 - Bird Watcher (Part 2)</a></h2>
   <div class="post_date">February 9, 2014</div>
   <div class="post">
@@ -197,57 +218,6 @@ Before I pick up my phone and call you</p>
 <p>I’m really proud of how this song turned out.  I had a lot of fun with the style and its always rewarding to hear a completed project that has some complextiy to it. If you don’t want to travel all the way over to Soundcloud to hear the song, you can listen to it RIGHT HERE!</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/121317485&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/darwinning-my-ruby-gem-for-genetic-algorithms">Darwinning, My Ruby Gem for Genetic Algorithms</a></h2>
-  <div class="post_date">November 11, 2013</div>
-  <div class="post">
-    <p>Well, this writeup is a bit late. I wanted to write about Darwinning right after I launched it but here we are.</p>
-
-<p><strong>So, what is Darwinning?</strong></p>
-
-<p>Darwinning is a Ruby Gem built to help people write <a href="http://en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a>.  I got into genetic algorithms while taking a machine learning course during my masters and I’ve had a casual interest in them ever since. I even wrote <a href="http://mountsaintawesome.com/comic.php?id=30">a comic</a> about them! I have also been enjoying Ruby lately, so I wanted to learn how to build a Gem. This project was started to satisfy both of those interests.</p>
-
-<p>I also played with the Ruby unit testing framework, RSpec, for the first time with this project.  The test coverage for Darwinning isn’t great, but at least it’s a start.</p>
-
-<p><strong>So, how do I use Darwinning?</strong></p>
-
-<p>Darwinning is totally available via <a href="http://rubygems.org/gems/darwinning">RubyGems</a> so you can install it the same way you would install almost any Gem:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install </span>darwinning</code></pre></figure>
-
-<p>Once it’s installed you can make use of the <code class="highlighter-rouge">Population</code>, <code class="highlighter-rouge">Organism</code>, and <code class="highlighter-rouge">Gene</code> classes to build your own genetic algorithm based programs.</p>
-
-<p>Here’s an dumb example of how you might use Darwinning to solve a pointless problem:</p>
-
-<p>Let’s say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let’s solve it anyway.</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Triple</span> <span class="o">&lt;</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Organism</span>
-
-  <span class="vi">@name</span> <span class="o">=</span> <span class="s2">"Triple"</span>
-  <span class="vi">@genes</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"first digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"second digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">)),</span>
-      <span class="no">Darwinning</span><span class="o">::</span><span class="no">Gene</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"third digit"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">))</span>
-    <span class="p">]</span>
-
-  <span class="k">def</span> <span class="nf">fitness</span>
-    <span class="c1"># Try to get the sum of the 3 digits to add up to 15</span>
-    <span class="p">(</span><span class="n">genotypes</span><span class="p">.</span><span class="nf">inject</span><span class="p">{</span> <span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span> <span class="o">-</span> <span class="mi">15</span><span class="p">).</span><span class="nf">abs</span>
-  <span class="k">end</span>
-<span class="k">end</span> 
-
-<span class="nb">p</span> <span class="o">=</span> <span class="no">Darwinning</span><span class="o">::</span><span class="no">Population</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Triple</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">p</span><span class="p">.</span><span class="nf">evolve!</span>
-
-<span class="nb">p</span><span class="p">.</span><span class="nf">best_member</span><span class="p">.</span><span class="nf">nice_print</span> <span class="c1"># prints the member representing the solution</span></code></pre></figure>
-
-<p>This code declares an organism class that inherits from Darwinning’s Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.</p>
-
-<p><strong>So, what else can I do with it?</strong></p>
-
-<p>If any of this sounds remotely interesting to you, please check out the project on <a href="https://github.com/dorkrawk/darwinning">Github</a>. I’m always happy to take good pull requests if other people want to contribute. I haven’t been very active lately because I’ve been spending a lot of time on <a href="http://dinosaurseateverybody.com">this website</a> and my <a href="http://daveandeileen.com">wedding website</a>, but I do keep an eye on the project.</p>
 
   </div>
 
