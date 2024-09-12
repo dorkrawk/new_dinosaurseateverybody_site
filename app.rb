@@ -101,6 +101,9 @@ module DinosaursEatEverybody
         else
           erb contents
         end
+      else
+        status 404
+        erb :rawr_oh_rawr
       end
     end
 
