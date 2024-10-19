@@ -11,14 +11,14 @@ title: Your New Jekyll Site
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="../blog{{ paginator.previous_page_path }}" class="previous"><i class="icon-arrow-left"></i></a>
+    <a href="../blog{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-arrow-left"></i></a>
   {% else %}
-    <span class="previous"><i class="icon-arrow-left"></i></span>
+    <span class="previous"><i class="fa fa-arrow-left"></i></span>
   {% endif %}
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="../blog{{ paginator.next_page_path }}" class="next"><i class="icon-arrow-right"></i></a>
+    <a href="../blog{{ paginator.next_page_path }}" class="next"><i class="fa fa-arrow-right"></i></a>
   {% else %}
-    <span class="next "><i class="icon-arrow-right"></i></span>
+    <span class="next "><i class="fa fa-arrow-right"></i></span>
   {% endif %}
 </div>
