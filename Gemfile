@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem "puma", ">= 6.3.1"
 
-gem 'sass'
 gem 'jekyll', '4.0.1'
 gem 'jekyll-paginate'
 gem 'pkg-config'

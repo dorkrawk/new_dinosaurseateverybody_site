@@ -1,33 +1,33 @@
-/* fake black */
-/* light gray */
-/* pukey greenish */
-/* light pukey greenish */
-/* dark pukey greenish */
-/* line 9, ../../sass/style.scss */
+:root {
+  --bg_color: white;
+  --text_color: #66595c; /* fake black */
+  --light_text_color: #94908a; /* light gray */ 
+  --alt_color1: #8fae46; /* pukey greenish */ 
+  --alt_color2: #bad776; /* light pukey greenish */
+  --alt_color3: #567117; /* dark pukey greenish */
+  --title_size: 24px;
+}
+
 body {
-  background-color: white;
-  color: #66595c;
+  background-color: var(--bg_color);
+  color: var(--text_color);
   font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
   font-size: 14px;
 }
 
-/* line 16, ../../sass/style.scss */
 a {
   text-decoration: none;
-  color: #8fae46;
+  color: var(--alt_color1);
 }
 
-/* line 21, ../../sass/style.scss */
 a:hover {
-  color: #bad776;
+  color: var(--alt_color2);
 }
 
-/* line 25, ../../sass/style.scss */
 li {
   list-style: none;
 }
 
-/* line 29, ../../sass/style.scss */
 #shell {
   margin-right: auto;
   margin-left: auto;
@@ -35,43 +35,37 @@ li {
   min-width: 900px;
 }
 
-/* line 36, ../../sass/style.scss */
 header {
   width: 100%;
   clear: both;
   margin-bottom: 20px;
 }
 
-/* line 42, ../../sass/style.scss */
 .page_title {
   font-size: 50px;
-  color: #567117;
+  color: var(--alt_color3);
 }
 
-/* line 47, ../../sass/style.scss */
 .page_subtitle {
   margin-top: -40px;
-  color: #94908a;
+  color: var(--light_text_color);
 }
 
-/* line 52, ../../sass/style.scss */
 nav {
   float: left;
   width: 25%;
 }
 
-/* line 57, ../../sass/style.scss */
 ul#nav {
   margin-top: -8px;
 }
-/* line 60, ../../sass/style.scss */
+
 ul#nav li {
   margin-left: -40px;
   font-weight: bold;
   font-size: 40px;
 }
 
-/* line 67, ../../sass/style.scss */
 #content {
   float: right;
   width: 75%;
@@ -80,34 +74,30 @@ ul#nav li {
   word-wrap: break-word;
 }
 
-/* line 75, ../../sass/style.scss */
 footer {
   clear: both;
   display: block;
   width: 100%;
   text-align: center;
-  color: #94908a;
+  color: var(--light_text_color);
 }
 
 /* Page specific stuff */
-/* line 85, ../../sass/style.scss */
 .project_box {
   margin-bottom: 20px;
 }
-/* line 88, ../../sass/style.scss */
+
 .project_box .project_title {
   font-weight: bold;
   font-size: 20px;
 }
 
-/* line 94, ../../sass/style.scss */
 .back_to_blog {
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 100, ../../sass/style.scss */
 .pagination {
   width: 100%;
   text-align: center;
@@ -115,38 +105,28 @@ footer {
   margin-bottom: 10px;
 }
 
-/* line 107, ../../sass/style.scss */
 h2.post_title {
   font-size: 24px;
   margin-bottom: 2px;
   margin-top: 0px;
 }
 
-/* line 113, ../../sass/style.scss */
 .post_date {
-  color: #94908a;
+  color: var(--light_text_color);
 }
 
-/* line 117, ../../sass/style.scss */
 .post {
   margin-bottom: 30px;
 }
 
-/* line 121, ../../sass/style.scss */
 .highlight {
-  white-space: pre-wrap;
-  /* CSS3 */
-  white-space: -moz-pre-wrap;
-  /* Firefox */
-  white-space: -pre-wrap;
-  /* Opera <7 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* IE */
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
 }
 
-/* line 129, ../../sass/style.scss */
 .inline_right {
   float: right;
   margin-left: 5px;
@@ -154,7 +134,6 @@ h2.post_title {
   margin-top: 5px;
 }
 
-/* line 136, ../../sass/style.scss */
 .inline_left {
   float: left;
   margin-right: 5px;
