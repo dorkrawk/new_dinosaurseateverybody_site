@@ -1,20 +1,9 @@
 require 'sinatra/base'
-require 'sass'
 require 'nokogiri'
 require './models/facts'
 
-class SassHandler < Sinatra::Base
-  set :views, File.dirname(__FILE__) + '/templates/sass'
-
-  get '/stylesheets/*.css' do
-      filename = params[:splat].first
-      scss filename.to_sym
-  end
-end
-
 module DinosaursEatEverybody
   class App < Sinatra::Base
-    use SassHandler
 
     not_found do
       status 404
