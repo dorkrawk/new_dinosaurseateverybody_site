@@ -7,6 +7,25 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Don&apos;t Break Prod</title>
+        <description>&lt;p&gt;This all started with my irrational desire to build yet another blogging engine. The world doesn’t have enough of those right?&lt;/p&gt;
+
+&lt;p&gt;I’ll go into more detail about the software I built in a future post, but long story short I built a little blogging tool called &lt;a href=&quot;https://github.com/dorkrawk/postwave&quot;&gt;Postwave&lt;/a&gt; and I needed a site to put it through its paces. I needed something that I could make frequent posts to and see what it was like to really use what I had built. So I created &lt;a href=&quot;https://dontbreakprod.com/&quot;&gt;Don’t Break Prod&lt;/a&gt;, a collection of bite sized pieces of career advice for software engineers.&lt;/p&gt;
+
+&lt;p&gt;I’ve been thinking about mentorship and ways to have a good life as a software engineer for a long time. I have a bunch of notes and a decent outline for a book of engineering mentorship that I started and lost steam on a few years ago as well as insights gained from being both a mentor and mentee. Eileen and I have had great conversations about career stuff that I often walk away from with good insights. So I started writing down a list of ideas about how to make your life better as a software engineer. These range from simple technical ideas like, &lt;a href=&quot;https://dontbreakprod.com/posts/embrace-linters&quot;&gt;embracing linters&lt;/a&gt; to broader ideas about &lt;a href=&quot;https://dontbreakprod.com/posts/dont-burn-out&quot;&gt;avoiding burnout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The idea behind Don’t Break Prod is to do short form posts, something longer than a tweet but shorter than a full blog post. The title should give you the basic advice, the content should provide some food for thought around it. This has also lowered the activation energy for me to write new posts regularly, which helps a lot. I’ve deliberately avoided having a comment section because while I want people to read these and engage with them, I really didn’t feel like managing a community.&lt;/p&gt;
+
+&lt;p&gt;I’m not really sure what my big picture goals are for &lt;a href=&quot;https://dontbreakprod.com/&quot;&gt;Don’t Break Prod&lt;/a&gt;. It’s doing a good job as a testing ground for Postwave and in a time where it feels like most content just exists on a few social networks it feels good to be writing directly on a site run myself. As for the content of the site, I think that having a career tha makes you happy and fits into your life the way you want is important. Thinking about these posts has helped me articulate ideas that are useful for me and I hope other people find them valuable.&lt;/p&gt;
+
+&lt;p&gt;While I’ve been sporadically posting to the site for a few years now, I’ve recently been getting a little more serious about making regular posts and trying to share them more broadly. I’d love to reach as many people as possible, as long as I can keep writing posts and promoting them in my own weird way.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Mar 2025 00:00:00 -0600</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/dont-break-prod</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/dont-break-prod</guid>
+      </item>
+    
+      <item>
         <title>Homeboard</title>
         <description>&lt;p&gt;I always forget to move my car on street cleaning day.&lt;/p&gt;
 
@@ -302,37 +321,6 @@
         <pubDate>Sat, 17 Sep 2016 00:00:00 -0500</pubDate>
         <link>http://dinosaurseateverybody.com/blog/dont-screw-it-up</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/dont-screw-it-up</guid>
-      </item>
-    
-      <item>
-        <title>One Year of Input Coffee</title>
-        <description>&lt;p&gt;On May 25th of last year I started keeping track of my focused practice time for a few things I wanted to get better at. As mentioned in &lt;a href=&quot;../blog/input-coffee-v2&quot;&gt;this post&lt;/a&gt;, I was motivated by reading &lt;strong&gt;Make It Stick&lt;/strong&gt; and the idea that getting better at something didn’t always feel like progress simply because it should be hard.&lt;/p&gt;
-
-&lt;p&gt;I built a really basic time tracking tool, which turned out to be a really strong motivator. Seeing a graph of my practice time each week made me want to keep focused.  Here’s the graph from the past year:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/input_coffee_graph1.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I didn’t do as much as I had hoped but I feel like I made some decent progress.  My final numbers were:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;guitar: 81 hours&lt;/strong&gt; (128 posts)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;art: 21 hours&lt;/strong&gt; (39 posts)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;chess: 5 hours&lt;/strong&gt; (10 posts)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vocals: 1 hour&lt;/strong&gt; (2 posts)&lt;/p&gt;
-
-&lt;p&gt;Obviously I wasn’t that focused on vocals and I kind of gave up on chess pretty quickly, but I made a decent showing for guitar work.&lt;/p&gt;
-
-&lt;p&gt;I didn’t let myself count noodling while watching TV or going to band practice. This had to be focused practice where I was really trying to learn something new or fix something sloppy or work on a skill I was lacking. I would have liked to hit 100 hours but 81 is still a lot more than I’ve put in any year prior.&lt;/p&gt;
-
-&lt;p&gt;Art was a mild success. I did count my time doing &lt;a href=&quot;../blog/inktober-2015&quot;&gt;Inktober&lt;/a&gt; because a lot of that was drawing novel subjects, but a lot of the other work was fundamental practice and sketchbook work. I also spent some time ramping up with drawing digitally, which I now use a lot for &lt;a href=&quot;http://lookatmeimaracecar.tumblr.com&quot;&gt;Look At Me I’m a Racecar&lt;/a&gt; comics.&lt;/p&gt;
-
-&lt;p&gt;This Input Coffee project has really been helpful in getting me to work on skills that I actually care about. Over the next year I’d like to hit 100 hours of guitar and branch out a bit to some under-practiced skills I’d like to have.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 26 May 2016 00:00:00 -0500</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/one-year-of-input-coffee</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/one-year-of-input-coffee</guid>
       </item>
     
   </channel>
