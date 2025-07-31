@@ -7,6 +7,62 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Building A Programming Language In Crystal</title>
+        <description>&lt;p&gt;After doing a rotation on GitHub’s “Ruby Architecture” team a few years ago and learning more about how programming languages really work (and getting a &lt;a href=&quot;https://github.com/ruby/ruby/pull/6078&quot;&gt;few&lt;/a&gt; &lt;a href=&quot;https://github.com/ruby/ruby/pull/6079&quot;&gt;commits&lt;/a&gt; into the Ruby language myself) I’ve been trying to learn more about building languages. For the last year or so I’ve been very slowly working my way through the first half of &lt;a href=&quot;https://craftinginterpreters.com/&quot;&gt;Crafting Interpreters&lt;/a&gt; by Robert Nystrom, which has been a fantastic book on the topic. It starts by walking you step by step through the implementation of a language designed for the book called Lox. The book builds the language in Java, but I chose to implement it in &lt;a href=&quot;https://crystal-lang.org/&quot;&gt;Crystal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why Crystal? I like it. It’s syntax looks very Ruby-like but it has static (and sometimes explicit) typing. It’s reasonably fast when compiled. Plus, by implementing all the examples in a different language it forced me to understand what I was doing enough to translate from Java to Crystal. I’m not the first person to implement a Lox interpreter in Crystal, but it is a less common project.&lt;/p&gt;
+
+&lt;p&gt;For a “toy” language built as a learning tool, Lox implements some nontrivial things. A simple “Hello world” looks as expected:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print &quot;Hello world!&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It has loops! While loops and for loops (which are turned into while loops by the interpreter):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var k = 30;
+while(k &amp;lt; 40) {
+  print k;
+  k = k + 1;
+}
+
+for(var j = 30; j &amp;lt; 40; j = j + 1) {
+    print j;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And it has objects and inheritance!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Animal {
+  init(name) {
+    this.name = name;
+  }
+}
+
+class Cat &amp;lt; Animal {
+  meow() {
+    print &quot;meow&quot;;
+  }
+}
+
+var kitten = Cat(&quot;Mochi&quot;);
+kitten.meow();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;While this all feels like pretty standard stuff for any programming language you might use, it was really cool to build everything up from scratch. The parser was written from scratch in less than 500 lines of code, no using any big libraries like Bison or Yacc. The scanner handles a little over 40 tokens in less than 200 lines of code. It has a resolver to handle some scope ambiguities and static analysis. This is just been a really cool project.&lt;/p&gt;
+
+&lt;p&gt;In addition to all the cool programming language stuff I learned working on this I also used this project as an excuse to develop in Neovim on the Ubuntu laptop I set up a while ago (using DHH’s &lt;a href=&quot;https://omakub.org/&quot;&gt;Omakub&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Despite the code being a little messy in parts (sometimes I got impatient trying to handle Nils in Crystal) and containing some bugs, I’m sure, it’s still really cool have this project in a “done” state. I might come back later and clean up the code or add some features (this implementation of Lox lacks a way to take user input…) but for now I’m going to move on to the next section of the book where I’ll build Lox again, this time as a more optimized, compiled language implemented in C (I probably haven’t touched C since college…).&lt;/p&gt;
+
+&lt;p&gt;If you’re interested, check out my implementation of &lt;a href=&quot;https://github.com/dorkrawk/crlox&quot;&gt;crlox&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 30 Jul 2025 00:00:00 -0500</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/building-a-programming-language-in-crystal</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/building-a-programming-language-in-crystal</guid>
+      </item>
+    
+      <item>
         <title>Making Pizza</title>
         <description>&lt;p&gt;I like making pizza.&lt;/p&gt;
 
@@ -295,36 +351,6 @@ Finally, I’m looking around more for weird fun things on the internet. People 
         <pubDate>Mon, 06 Nov 2017 00:00:00 -0600</pubDate>
         <link>http://dinosaurseateverybody.com/blog/starting-a-skath-band</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/starting-a-skath-band</guid>
-      </item>
-    
-      <item>
-        <title>Making Moola</title>
-        <description>&lt;p&gt;If one listens to enough Ruby related blogs and talks and podcasts they are likely to run in to &lt;a href=&quot;https://crystal-lang.org/&quot;&gt;Crystal&lt;/a&gt;. Have you every thought, “I like Ruby, but I wish is were fast and compiled on LLVM”? Well, that’s Crystal. It’s a &lt;strong&gt;fast language with Ruby inspired syntax&lt;/strong&gt;. If the performance benchmarks shown on the Crystal site are even remotely accurate, it’s worth checking out.&lt;/p&gt;
-
-&lt;p&gt;I enjoy writing Ruby and I like things that are fast, so I’ve been trying it out. While it is still pre-1.0 it’s been pretty nice to work with. And since it’s a new language, there’s an opportunity to write new libraries (known as “&lt;a href=&quot;http://crystalshards.xyz/&quot;&gt;Shards&lt;/a&gt;” in Crystal).&lt;/p&gt;
-
-&lt;p&gt;My first Crystal Shard has been a money handling library, inspired by &lt;a href=&quot;https://github.com/RubyMoney/money&quot;&gt;Ruby Money&lt;/a&gt;, that I call &lt;a href=&quot;https://github.com/dorkrawk/moola&quot;&gt;Moola&lt;/a&gt;. It gives uses the ability to define Money objects and do basic operations and conversions with them.  Here are a few examples:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# creates a new Moola::Money object&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &quot;$42.00&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cents&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 4200&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;zero?&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# false&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_f&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 42.0&lt;/span&gt;
-
-&lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;USD&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;EUR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# false&lt;/span&gt;
-
-&lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Exchange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_conversion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Currency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;usd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Currency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cad&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;USD&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;convert_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Moola&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Currency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cad&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Moola::Money(1_30, &quot;cad&quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I don’t have much to say other than it seems like a great language if you like writing Ruby. For a newer language it’s been a joy to work with and it’s fun to build some basic libraries.&lt;/p&gt;
-
-&lt;p&gt;If you every find yourself writing Ruby and dealing with money, I encourage you to try out &lt;a href=&quot;https://github.com/dorkrawk/moola&quot;&gt;Moola&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 11 Jul 2017 00:00:00 -0500</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/making-moola</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/making-moola</guid>
       </item>
     
   </channel>

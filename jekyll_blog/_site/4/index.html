@@ -1,4 +1,21 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-30-reclaboratory-servers">Thing A Week 30 - RecLaboratory Servers</a></h2>
+  <div class="post_date">August 18, 2014</div>
+  <div class="post">
+    <p>So as of last week I have the RecLab Rails site up and running on Heroku and the audio processing API, Roctopus, up and running on my own server. Amazingly they are able to talk to each other and work pretty much as expected.</p>
+
+<p>There are still quite a few things to fix up, particularly with Rocktopus, but it’s nice to see the full application working together on remote servers. While the Rails/Heroku setup was pretty straight forward, Rocktopus was uncharted territory for me.</p>
+
+<p>I had never “launched” a Flask application before so this was all a bit new. As a (<em>temporary, I swear!</em>) measure I moved the files to my server over SFTP and started up a <a href="http://gunicorn.org/">Gunicorn</a> server to run the application. I still need to put Nginx in front of all of this but for now it works as expected (though I can’t imagine it would handle much traffic). I’d also like to learn more about <a href="http://www.fabfile.org/">Fabric</a> for Python deployments. I’ve never been much of a sysadmin, so this was all a bit new to me.</p>
+
+<p>The only really new thing I did for the Rails/Heroku app was add <a href="http://unicorn.bogomips.org/">Unicorn</a> as a server. Heroku has a <a href="https://devcenter.heroku.com/articles/rails-unicorn">great article</a> that held my hand through this setup.</p>
+
+<p>Also, as part of this setup I’ve been playing around with <a href="https://slack.com/">Slack</a> and it’s wonderful integrations for monitoring the app. So far I have it working with Heroku, PaperTrail, and Pingdom. Nothing’s gone wrong yet, but I suppose that is to be expected when there are no users…</p>
+
+<p>As I mentioned, there are still quite a few rough edges to be worked out, a bunch of minor features, and at least one major feature that still needs to be built but this feels like a big step in getting <a href="http://reclaboratory.com">RecLaboratory</a> launched and letting people try it out. We have some people in mind for VERY early alpha testers, but please let me know if you’re interested in trying it out when it’s ready!</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-29-wedding-ring-box">Thing A Week 29 - Wedding Ring Box</a></h2>
   <div class="post_date">August 7, 2014</div>
   <div class="post">
@@ -175,21 +192,6 @@ Again, this is sort of cheating because most of the creative work was done by ou
 <p>Once everything was actually printed on fancy paper we had to do all sorts of crafty things like tie twine around the jackets that hold the invitation and RSVP card, addressed all the envelopes, print return address labels, and puts stamps on everything. None of it was particularly hard (except for maybe addressing everything, but Eileen did that because my handwriting is illegible) but it just took a LONG TIME.</p>
 
 <p>On Saturday morning we got everything mailed out, which felt good. This was a much bigger project than I expected it to be, but they turned out really cool.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection">Thing A Week 20 - RecLab Layouts and Rocutopus Connection</a></h2>
-  <div class="post_date">May 25, 2014</div>
-  <div class="post">
-    <p><img src="../blog_media/reclab_screen2.png" class="inline_right" />
-This week I ended up getting quite a bit of RecLab work done, especially for a shortened week.</p>
-
-<p>The major breakthrough was getting the Rails site talking to Rocktopus, the audio processing API I’ve been writing. It’s not perfect but it has some basic authentication and the Rails Track model gets updated based on the response from Rocktopus. This is all just working locally right now but it shouldn’t be hard to set up a server to server connection once I have Rocktopus deployed somewhere.</p>
-
-<p>The other large chunk of work I got done was due to being home alone this weekend. With Eileen hanging out with friends in Napa I decided to start working on the first real site layouts. I made great progress on the user profile pages and started doing some of the url rewriting work. I considered dropping <a href="http://getbootstrap.com/">Bootstrap</a> in favor of <a href="http://bourbon.io/">Bourbon/Neat/Bitters</a> after exploring the latter libraries at work but I think for what we’re trying to build right now Bootstrap will get us up and running much faster.</p>
-
-<p>As always, there’s still a lot of work to be done but it felt good to make some serious progress this week. Again, if you are interested in this project head over to <a href="http://reclaboratory.com">reclaboratory.com</a> and enter your email. We’ll get in touch with you when we’re ready to start letting people try the site.</p>
-
 
   </div>
 
