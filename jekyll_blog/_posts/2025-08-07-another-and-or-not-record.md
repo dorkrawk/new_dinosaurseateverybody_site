@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Another And Or Not Record
-date: 2025-08-07
+date: 2025-08-13
 categories: 
 published: true
 ---
