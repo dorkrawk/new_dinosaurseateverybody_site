@@ -53,7 +53,7 @@ module DinosaursEatEverybody
 
       def now_updated_at
         # I guess just update this when the Now page is updated...
-        "July 23, 2025"
+        "Sept 1, 2025"
       end
     end
 
