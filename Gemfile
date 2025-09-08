@@ -10,6 +10,8 @@ gem 'nokogiri', ">= 1.18.5"
 gem "rackup", "~> 2.2"
 gem "rack", ">= 2.2.6.4"
 gem 'rack-protection', '>= 1.5.1'
+gem 'csv'
+gem "bigdecimal"
 
 group :development do
   gem 'shotgun'  # reloads app code so I don't have to restart Sinatra all the time
