@@ -16,4 +16,4 @@ Phones are amazing because they're a powerful computing device that is always wi
 
 First, you never have to prioritize things. You just do them as soon you think of them. Maybe you're multitasking during dinner to get things done that don't actually matter. It's really easy to end up busy but not productive.
 
-And second, you it's harder to fully focus on your task. 
+And second, it's harder to fully focus on your task. 
