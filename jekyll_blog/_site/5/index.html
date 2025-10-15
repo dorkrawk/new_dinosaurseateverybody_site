@@ -1,4 +1,23 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-23-bird-watcher-display">Thing A Week 23 - Bird Watcher Display</a></h2>
+  <div class="post_date">June 17, 2014</div>
+  <div class="post">
+    <p>This weekend Eileen was out of the house for her bachelorette party so I tried to knock out a few outstanding wedding related projects (apparently that is coming up pretty quickly). The <a href="../blog/thing-a-week-4-bird-watcher">Bird Watcher</a> project had been dragging on for a while so I thought this would be a good time to wrap it up, too.</p>
+
+<p>For those who don’t remember, Bird Watcher is a system that listens for photos with certain #hashtags and displays them to a live page. I plan to use it to let people take pictures during our wedding and show them on a projector during the reception.</p>
+
+<p>This project has spanned a few <a href="../blog/thing-a-week-4-bird-watcher">Thing</a> <a href="../blog/thing-a-week-5-bird-watcher-part-2">A</a> <a href="../blog/thing-a-week-12-filterfilter">Week</a> posts and involved playing with the <a href="https://dev.twitter.com/">Twitter</a> and <a href="http://instagram.com/developer/">Instagram</a> APIs, as well as learning a bit more about Postgresql and the Sequel gem.</p>
+
+<p>At this point most of the hard work had been done. I have Twitter and Instagram listeners (which both work in very different ways) that store info about photo posts in a database. I just needed to write something to pull them out and display them.</p>
+
+<p>Originally I had written some nice code for prioritizing new photos and minimizing database calls but that ended up being a scoping pain in the ass in Sinatra. I would have had to build some sort of session object persistence system and honestly, the scale of this project just wasn’t worth it.</p>
+
+<p>I ended up with a simple AJAX loop on a timer that pulls a random “photo card” with the image and some information about it, and displays it on a page that should work nicely full screened on a projector. I still need to run some tests to make sure I don’t get any weird image sizes but it’s working well right now.</p>
+
+<p>I’m a little worried that I’ll spend part of my own wedding reception tweaking code or sshing into my server to restart some service, but I think everything should run pretty smoothly. This was a fun little project and made me play with some new technologies. Hopefully lots of people use it at the wedding.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-22-reclab-routing">Thing A Week 22 - Reclab Routing</a></h2>
   <div class="post_date">June 10, 2014</div>
   <div class="post">
@@ -152,40 +171,6 @@ Once again this was another week where my main productivity was with RecLab. I�
 <p>Eileen got me a copy of Logic Pro X for my birthday and so the first thing I did with it was play with all the amp models and pile a bunch of guitar parts on top of each other. The <a href="https://soundcloud.com/dorkrawk/guitar-pile">resulting 30 second piece</a> ended up sounding like some kind of epic video game music:</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/144725898&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-13-reclab-and-roctopus">Thing A Week 13 - RecLab and Rocktopus</a></h2>
-  <div class="post_date">April 6, 2014</div>
-  <div class="post">
-    <p><img src="../blog_media/reclab2.png" class="inline_right" />
-This week was another mainly RecLab week. Actually I didn’t get much done on the RecLab Rails site outside of updating the look and feel with the new logo we’ve settled on (shown here…). I spent most of my time on our audio processing API, Rocktopus.</p>
-
-<p>The Rocktopus work has been going well. It’s nice to get back into writing some Python again and I’ve been enjoying working with Flask. One of my favorite recent additions is the <code class="highlighter-rouge">require_auth</code> decorator. Python decorators are pretty awesome and make it really simple to roll some common functionality into several methods.</p>
-
-<p>This allows me to write Flask endpoints like this:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/path_name'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
-<span class="o">@</span><span class="n">require_auth</span>
-<span class="k">def</span> <span class="nf">path_method</span><span class="p">():</span>
-  <span class="c1"># do a bunch of stuff for this endpoint
-</span>  <span class="c1"># but make sure the POST body contains the proper authentication</span></code></pre></figure>
-
-<p>The decorator itself is pretty simple and works something like this:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">require_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="o">@</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">validate_auth</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">response_arm</span><span class="p">.</span><span class="n">auth_fail</span><span class="p">()</span> <span class="c1"># return 401
-</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapped</span></code></pre></figure>
-
-<p>Rocktopus is really coming along nicely and I’m really close to getting it hooked up to the Rails site soon.</p>
-
-<p>This week I start my drawing classes. I haven’t had any formal art training since grade school and it seemed time to learn a bit more about drawing, given my interest in comics, so I signed up for a Drawing 101 course at a local art studio. Hopefully I’ll have some cool work from the class over the next few weeks to show off in these posts.</p>
 
   </div>
 
