@@ -1,4 +1,47 @@
 
+  <h2 class="post_title"><a href="../blog/darwinning-updates">Darwinning Updates</a></h2>
+  <div class="post_date">September 27, 2015</div>
+  <div class="post">
+    <p>One of the <a href="http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms">first posts</a> I wrote on the new version of this blog was about my genetic algorithm Ruby gem, <strong>Darwinning</strong>. I actually started building the library back in December of 2012 when I was first learning Ruby and it’s gone through several updates and periods of inactivity. Usually I’ll just add some tests or make a small update when I have some free time. It’s been a pretty casual project. I just didn’t think that there was that much of a need for a Ruby GA library, I just thought it would be fun to make.</p>
+
+<p>Recently I’ve seen a steady stream of people starring and forking the <a href="https://github.com/dorkrawk/darwinning">Darwinning repo</a> on Github and I’ve received some really thoughtful and helpful pull requests from people, so I wanted to give the library a bit more attention. I had some free time this weekend and used it to finish off a major feature that I had been working on and finally published the <a href="https://rubygems.org/gems/darwinning">0.1.0 version of the gem</a>!</p>
+
+<p>The major feature I added was the ability to use Darwinning in existing Ruby models via <code class="highlighter-rouge">include</code>. This lets you utilize the library in projects that might not be specifically about genetic algorithms.</p>
+
+<p>Here’s my dumb, contrived example:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'darwinning'</span>
+
+<span class="k">class</span> <span class="nc">Triple</span>
+  <span class="kp">include</span> <span class="no">Darwinning</span>
+
+  <span class="no">GENE_RANGES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">first_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
+    <span class="ss">second_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
+    <span class="ss">third_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:first_number</span><span class="p">,</span> <span class="ss">:second_number</span><span class="p">,</span> <span class="ss">:third_number</span>
+
+  <span class="k">def</span> <span class="nf">fitness</span>
+    <span class="c1"># Try to get the sum of the 3 digits to add up to 100</span>
+    <span class="p">(</span><span class="n">first_number</span> <span class="o">+</span> <span class="n">second_number</span> <span class="o">+</span> <span class="n">third_number</span> <span class="o">-</span> <span class="mi">100</span><span class="p">).</span><span class="nf">abs</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Then you can use some nice built in methods to generate a population of these objects and evolve them towards a fitness goal:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="no">Triple</span><span class="p">.</span><span class="nf">is_evolveable?</span>
+  <span class="n">triple_pop</span> <span class="o">=</span> <span class="no">Triple</span><span class="p">.</span><span class="nf">build_population</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+  <span class="n">triple_pop</span><span class="p">.</span><span class="nf">evolve!</span> <span class="c1"># evolve until fitness goal is or generations limit is met</span>
+
+  <span class="n">pp</span> <span class="s2">"Best member: </span><span class="si">#{</span><span class="n">triple_pop</span><span class="p">.</span><span class="nf">best_member</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>I’ve been having fun working on this project and it’s really cool to see some other people contribute to the project. If you want to play around with the library or have an interest in <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a> just <code class="highlighter-rouge">gem install darwinning</code> or check out the <a href="https://github.com/dorkrawk/darwinning">Darwinning Github repo</a>. There are always more updates to do, but it felt good to make some progress on this project.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/our-story-recording">Our Story Recording</a></h2>
   <div class="post_date">August 10, 2015</div>
   <div class="post">
@@ -202,21 +245,6 @@ This created something that just constantly made steady sine wave sounding noise
 After getting the in-browser track recording to a working place the previous week, I wanted to reuse most of that functionality in this new modal. Building this new feature on top of that existing code caused me to refactor a few things, which was great. I also had to add the ability to use multiple tracks as a “backing track” for the recording because I imagine that users won’t want to bounce the song after every recorded track. This takes advantage of the track pre-loading I had already built into the song page and a little bit of html5 audio object abuse.</p>
 
 <p>This is one of the last functional pieces of the site that needed to be built before we start soliciting alpha testers. Originally we had wanted to open RecLaboratory to early users on September 8th (almost exactly 6 months after Bobby and I first started talking about the idea) but we really wanted to get the last features in so that we could offer users a compelling reason to interact with the service. I think we’re getting REALLY close now!</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-34-instrumental-indie-music">Thing A Week 34 - Instrumental Indie Music</a></h2>
-  <div class="post_date">September 15, 2014</div>
-  <div class="post">
-    <p>Hey look! Another non-code related Thing a Week! On Saturday night, Eileen was at hockey so I grabbed my (much neglected) guitar and popped open Logic Pro for some quick recording. The end product was a nice, kind of dark sounding <a href="https://soundcloud.com/dorkrawk/indie-mess">instrumental track</a>.</p>
-
-<p>I had been messing around with a little arpeggiated riff and I wanted to build something pretty repetitive, getting away from a verse-chorus-bridge structure. After I had the riff, I started building the drum part. The real breakthrough there was throwing in the handclaps, which start off sounding so happy but then sound more ominous under the bass and main guitar riff. Despite being pretty core to the whole song, the bass part didn’t come in until much later in the writing process. I also ended up using amp models with a lot more reverb than I typically use. I have a tendency to seek out drier guitar tones, but the more spacious sounds really worked for this piece.</p>
-
-<p>I resisted the urge to just keep stacking more and more tracks on top of each other in this song and let some parts be pretty sparse. I think I could put some lyrics over this but it was getting late and nothing was really jumping out to me, so I’m pretty happy with it being instrumental for now.</p>
-
-<p>Enjoy!</p>
-
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/167850797&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
   </div>
 

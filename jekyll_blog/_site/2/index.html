@@ -1,4 +1,31 @@
 
+  <h2 class="post_title"><a href="../blog/and-or-not">And Or Not</a></h2>
+  <div class="post_date">December 6, 2023</div>
+  <div class="post">
+    <p>tldr: I wrote and recorded a noisy, bass driven solo record. You should <a href="https://andornot.bandcamp.com/album/the-infernal-machine">check it out</a>!</p>
+
+<iframe style="border: 0; width: 400px; height: 241px;" src="https://bandcamp.com/EmbeddedPlayer/album=165933545/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless=""><a href="https://andornot.bandcamp.com/album/the-infernal-machine">The Infernal Machine by And Or Not</a></iframe>
+
+<p>Earlier this year I was listening to a lot of Death From Above 1979 and just got the urge to write some fast, high energy song with just bass, keys, drums and vocals. Sort of a cursed jazz trio. I was also looking to push my drumming, which has been a focus this year.</p>
+
+<p>I started just writing and recording a bunch of bass riffs when I had random nights free and then I’d come back later, narrowing down which riffs I liked the best. Because I was just writing on bass I felt like I ended up writing riffs differently than I would if I were writing on guitar. I felt more free to wander out of keys and write more chromatically, since I wouldn’t have to fit things in a larger chord structure. It was really a fun way to write.</p>
+
+<p>From there I started piecing together some basic song structure and trying to figure out what to write lyrics about. I tired to let the topics of these songs be a bit more “whatever popped into my head”, worrying less about having central, cohesive ideas. I ended up writing about social media (Black Box), people reminding me to eat well (Eat This, You’ll Live Forever), and our cat, who likes to hunt our children (Natural Predator).</p>
+
+<p>Once I had the song structures down I recorded bass (DIed into Logic with a fuzzy amp model) and then started really working on writing/recording drums. This project ended up being a good excuse to dive a little deeper into recording drums at home. I picked up a kick drum mic off of Craigslist, gathered a bunch of 57s to mike the snare and both toms, and used one of my condenser mics as an overhead. It had fun playing around with getting a decent sound and learned a bit about recording drums. My basement is not the best space to record, but I made due.</p>
+
+<p>The drums took me a long time to record. Part of this was nailing down exactly what the drum part should be and part of this was playing it right. I’m really glad I did all the tracks to a grid. It helped to be able to follow a click and punch in where I needed to.</p>
+
+<p>After the drums were finished I worked on vocals. I was probably most nervous about this part since vocals have never really been a strength of mine. I tried to just let go, project, be loud where it made sense, be a little screamy where it worked, and just commit. I also leaned into using a bit of fuzz on the vocals, which fit nicely with the aesthetic of these songs. All in all it turned out well. It’s certainly not the greatest vocal performance, but there isn’t much that feels bad or like the vocals detract too much from the songs.</p>
+
+<p>While recording “Eat This, You’ll Live Forever” I had the kids come in and sing “Eat this!” and used their takes to build gang vocals in the outro. I’m really glad I got them involved and they seemed to really like hearing their vocals as I was mixing things.</p>
+
+<p>I finished up by adding some keys. Mainly synth or organ parts doing some countermelody or beefing up some parts. After that, a bit of mixing. I ended up doubling all the bass parts, one track with some fuzz/overdrive and another with a lower, cleaner sound to beef things up.</p>
+
+<p>In the end I came out with something that I was really proud of. This is the first time I’ve done a true solo record where I’ve played every instrument and done all the vocals (apart from some gang vocals by my kinds). I didn’t really know what to do with it so I just put it up on <a href="https://andornot.bandcamp.com/album/the-infernal-machine">Bandcamp</a> and sent the link around. I’d love for more people to listen to it, but honestly, I’m just happy I made it. And Or Not is a fun format, bass driven, high energy, so maybe I’ll do some more of these songs soon!</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/trackstar">Trackstar</a></h2>
   <div class="post_date">July 11, 2020</div>
   <div class="post">
@@ -266,49 +293,6 @@ The enclosure that comes with the kit is… utilitarian, to say the least. This 
 <img src="../blog_media/inktober16.JPG" /></p>
 
 <p><strong>Note:</strong> I’ve also posted these as one big image to <a href="http://mountsaintawesome.com/comic.php?id=98">Mount Saint Awesome</a>.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/darwinning-updates">Darwinning Updates</a></h2>
-  <div class="post_date">September 27, 2015</div>
-  <div class="post">
-    <p>One of the <a href="http://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms">first posts</a> I wrote on the new version of this blog was about my genetic algorithm Ruby gem, <strong>Darwinning</strong>. I actually started building the library back in December of 2012 when I was first learning Ruby and it’s gone through several updates and periods of inactivity. Usually I’ll just add some tests or make a small update when I have some free time. It’s been a pretty casual project. I just didn’t think that there was that much of a need for a Ruby GA library, I just thought it would be fun to make.</p>
-
-<p>Recently I’ve seen a steady stream of people starring and forking the <a href="https://github.com/dorkrawk/darwinning">Darwinning repo</a> on Github and I’ve received some really thoughtful and helpful pull requests from people, so I wanted to give the library a bit more attention. I had some free time this weekend and used it to finish off a major feature that I had been working on and finally published the <a href="https://rubygems.org/gems/darwinning">0.1.0 version of the gem</a>!</p>
-
-<p>The major feature I added was the ability to use Darwinning in existing Ruby models via <code class="highlighter-rouge">include</code>. This lets you utilize the library in projects that might not be specifically about genetic algorithms.</p>
-
-<p>Here’s my dumb, contrived example:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'darwinning'</span>
-
-<span class="k">class</span> <span class="nc">Triple</span>
-  <span class="kp">include</span> <span class="no">Darwinning</span>
-
-  <span class="no">GENE_RANGES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="ss">first_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
-    <span class="ss">second_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">),</span>
-    <span class="ss">third_number: </span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">100</span><span class="p">)</span>
-  <span class="p">}</span>
-
-  <span class="nb">attr_accessor</span> <span class="ss">:first_number</span><span class="p">,</span> <span class="ss">:second_number</span><span class="p">,</span> <span class="ss">:third_number</span>
-
-  <span class="k">def</span> <span class="nf">fitness</span>
-    <span class="c1"># Try to get the sum of the 3 digits to add up to 100</span>
-    <span class="p">(</span><span class="n">first_number</span> <span class="o">+</span> <span class="n">second_number</span> <span class="o">+</span> <span class="n">third_number</span> <span class="o">-</span> <span class="mi">100</span><span class="p">).</span><span class="nf">abs</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
-
-<p>Then you can use some nice built in methods to generate a population of these objects and evolve them towards a fitness goal:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="no">Triple</span><span class="p">.</span><span class="nf">is_evolveable?</span>
-  <span class="n">triple_pop</span> <span class="o">=</span> <span class="no">Triple</span><span class="p">.</span><span class="nf">build_population</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-  <span class="n">triple_pop</span><span class="p">.</span><span class="nf">evolve!</span> <span class="c1"># evolve until fitness goal is or generations limit is met</span>
-
-  <span class="n">pp</span> <span class="s2">"Best member: </span><span class="si">#{</span><span class="n">triple_pop</span><span class="p">.</span><span class="nf">best_member</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span></code></pre></figure>
-
-<p>I’ve been having fun working on this project and it’s really cool to see some other people contribute to the project. If you want to play around with the library or have an interest in <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a> just <code class="highlighter-rouge">gem install darwinning</code> or check out the <a href="https://github.com/dorkrawk/darwinning">Darwinning Github repo</a>. There are always more updates to do, but it felt good to make some progress on this project.</p>
 
   </div>
 
