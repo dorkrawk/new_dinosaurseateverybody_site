@@ -7,6 +7,40 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Postwave</title>
+        <description>&lt;p&gt;&lt;strong&gt;I probably like writing blog engines more than blog posts.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Earlier this year I &lt;a href=&quot;../blog/dont-break-prod&quot;&gt;wrote&lt;/a&gt; about &lt;a href=&quot;https://dontbreakprod.com/&quot;&gt;Don’t Break Prod&lt;/a&gt;, my software engineering career advice site. While I enjoy writing about this stuff, the original motivation for building the site was to test a new blog engine I’d been working on called Postwave.&lt;/p&gt;
+
+&lt;p&gt;For a long time I’ve been using weird, hacked together solutions to integrate blog posts into my sites. It started with my band and old personal sites where I used WordPress to write posts but then made custom functions to pull the posts directly from the database rather than letting WordPress render a nice site like a normal person would. Later, when I built this version of my site, I did something similar with a Jekyll backend and my &lt;a href=&quot;../blog/sinatra-jekyll-prose&quot;&gt;own custom hooks into the generated html&lt;/a&gt;. I liked being able to write posts in Markdown, but it felt silly to circumvent the whole static site generator to build a dynamic page.&lt;/p&gt;
+
+&lt;p&gt;So I did what any impractical programmer would do. I just built my own thing that works exactly the way I want, without any regard for general practicality.&lt;/p&gt;
+
+&lt;p&gt;This is where &lt;a href=&quot;https://postwave.blog/&quot;&gt;Postwave&lt;/a&gt; came from.&lt;/p&gt;
+
+&lt;p&gt;Named after a &lt;a href=&quot;https://open.spotify.com/album/2J2MincAYeWGK9k4jUzLz1?si=UPA8i-K-RdKI2z6rKKrrZg&quot;&gt;Blue Meanies album&lt;/a&gt; and built to do a very specific thing, Postwave is a fairly simple &lt;a href=&quot;https://rubygems.org/gems/postwave&quot;&gt;Ruby gem&lt;/a&gt; that lets me write posts in Markdown and then dynamically integrate them into a custom site. When I’m building a small site I usually reach for &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;. Most of the time I just want a simple web application with some dynamic endpoints and minimal JavaScript. And then I want a blog engine that just fits into that.&lt;/p&gt;
+
+&lt;p&gt;Postwave gives me simple methods objects and methods so I can use things like &lt;code class=&quot;highlighter-rouge&quot;&gt;post.title&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;post.body_html&lt;/code&gt; to build a post display page and &lt;code class=&quot;highlighter-rouge&quot;&gt;postwave_client.archive&lt;/code&gt; to get a structured archive.  It also autogenerates an RSS feed for me.&lt;/p&gt;
+
+&lt;p&gt;Postwave also has a few simple terminal commands for creating a new posts and “building” the blog, which updates the index, renames files based on post title, generates the RSS file, and a few other things. My workflow for writing posts is just to create a new post in the terminal, write the post in my code editor, rebuild the blog, and deploy the updated site.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../blog_media/postwave1.png &quot; title=&quot;Postwave in the terminal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s not &lt;em&gt;done&lt;/em&gt; (but what little personal project is?), but it is usable. I have an &lt;a href=&quot;https://postwave.blog/&quot;&gt;site/reference implementation&lt;/a&gt; for people to learn about it and the &lt;a href=&quot;https://github.com/dorkrawk/postwave&quot;&gt;code&lt;/a&gt; is available if anyone is interested.&lt;/p&gt;
+
+&lt;p&gt;So this site must be using Postwave under the hood, right?&lt;/p&gt;
+
+&lt;p&gt;Well… not yet. Dinosaurs Eat Everybody still uses my hacked together Jekyll solution, but that workflow is starting to annoy me so I’m eager to port it over to Postwave now. I’ve been using Postwave for a while on &lt;a href=&quot;https://dontbreakprod.com/&quot;&gt;Don’t Break Prod&lt;/a&gt; so I feel pretty confident that it’s ready for use elsewhere. I’d like to build some small tools to make it easy to migrate a Jekyll site to Postwave. The post format is very similar and it would just make my migration easier.&lt;/p&gt;
+
+&lt;p&gt;Postwave has been a great little “scratch your own itch” project for me. I’m looking forward to using it more for my own blogging needs. And if my problems sound similar to yours, &lt;a href=&quot;https://postwave.blog/&quot;&gt;try it out&lt;/a&gt;!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 15 Dec 2025 00:00:00 -0600</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/postwave</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/postwave</guid>
+      </item>
+    
+      <item>
         <title>Random Thoughts About AI</title>
         <description>&lt;p&gt;Just what the world needs, another software engineer pontificating about AI!&lt;/p&gt;
 
@@ -320,21 +354,6 @@ Finally, I’m looking around more for weird fun things on the internet. People 
         <pubDate>Wed, 11 Sep 2024 00:00:00 -0500</pubDate>
         <link>http://dinosaurseateverybody.com/blog/homeboard</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/homeboard</guid>
-      </item>
-    
-      <item>
-        <title>Now</title>
-        <description>&lt;p&gt;So I added a &lt;a href=&quot;https://dinosaurseateverybody.com/now&quot;&gt;Now&lt;/a&gt; page to this site.&lt;/p&gt;
-
-&lt;p&gt;The purpose of a now page to write up what you’re doing right now. Basically what you’d tell someone if you were catching up and they asked “So what have you been up to lately?”. The idea has been attributed to &lt;a href=&quot;https://sive.rs/now&quot;&gt;Derek Sivers&lt;/a&gt; (who apparently is the guy who created CD Baby!).&lt;/p&gt;
-
-&lt;p&gt;Why did I add one? Do people really care what I’m up to now? I don’t know. But I’ve been growing a bit disenchanted with the state of the internet lately. It feels like a lot of people trying to squeeze posts in between ads on a handful of social networks. I miss when the internet was more distributed and a bit more personal and weird. This felt like a little push in that direction.&lt;/p&gt;
-
-&lt;p&gt;For more about now pages check out &lt;a href=&quot;https://nownownow.com/about&quot; title=&quot;now! now! now!&quot;&gt;nownownow.com&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Aug 2024 00:00:00 -0500</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/now</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/now</guid>
       </item>
     
   </channel>
