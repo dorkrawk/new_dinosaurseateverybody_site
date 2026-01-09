@@ -4,6 +4,9 @@ require './models/facts'
 
 module DinosaursEatEverybody
   class App < Sinatra::Base
+    configure do
+      set :protection, except: :host_header
+    end
 
     not_found do
       status 404
