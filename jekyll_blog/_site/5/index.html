@@ -1,4 +1,32 @@
 
+  <h2 class="post_title"><a href="../blog/thing-a-week-26-more-sauropod">Thing A Week 26 - More Sauropod</a></h2>
+  <div class="post_date">July 8, 2014</div>
+  <div class="post">
+    <p>Another 7 days, another busy week. With the wedding growing ever closer I’ve been squeezing in time for other projects wherever I can.  This week I managed to make some good progress on Sauropod by putting in some work before I go to work and on the plane while traveling to Chicago for the 4th.</p>
+
+<p><img src="../blog_media/sauropod1.png" /></p>
+
+<p>I got Sauropod hooked up into the asset pipeline of the <a href="http://reclaboratory.com">RecLab</a> Rails site and started attaching it to the various audio controls on the site. While <a href="https://github.com/goldfire/howler.js">Howler.js</a> handles loading the audio file and playing the sound in browser, I still needed to build all the hooks to control and monitor the audio.</p>
+
+<p>At this point I am able to click a “play” button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an <code class="highlighter-rouge">onprogress</code> event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn’t very hard, I just used a <code class="highlighter-rouge">setInterval()</code> function around my own <code class="highlighter-rouge">sauropod.updateProgress()</code> function:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sauropod</span><span class="p">.</span><span class="nf">play</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">sauropod</span><span class="p">.</span><span class="nf">audio</span><span class="p">.</span><span class="nf">status</span> <span class="o">!=</span> <span class="s2">"playing"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">_</span><span class="p">.</span><span class="nf">each</span><span class="p">(</span><span class="n">sauropod</span><span class="p">.</span><span class="nf">audio</span><span class="p">.</span><span class="nf">tracks</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">s</span><span class="p">.</span><span class="nf">play</span><span class="p">()});</span>
+    <span class="n">sauropod</span><span class="p">.</span><span class="nf">audio</span><span class="p">.</span><span class="nf">status</span> <span class="o">=</span> <span class="s2">"playing"</span><span class="p">;</span>
+    <span class="n">sauropod</span><span class="p">.</span><span class="nf">updatePlayer</span><span class="p">();</span>
+    <span class="n">sauropod</span><span class="p">.</span><span class="nf">tid</span> <span class="o">=</span> <span class="n">setInterval</span><span class="p">(</span><span class="n">sauropod</span><span class="p">.</span><span class="nf">updateProgress</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>I still need to build all the hooks into playing a mutitrack song (though it should work based on how I’ve built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.</p>
+
+<p><strong>Thing A Week Progress Update</strong></p>
+
+<p>So this week marks half a year of this “Thing A Week” project. It hasn’t been exactly what I planned, one discrete project finished every week, but it has really keep me focused on building things and I’ve really enjoyed writing about my progress on all the things I’ve been working on.</p>
+
+  </div>
+
   <h2 class="post_title"><a href="../blog/thing-a-week-25-sauropod-and-wedding-stuff">Thing A Week 25 - Sauropod and Wedding Stuff</a></h2>
   <div class="post_date">June 30, 2014</div>
   <div class="post">
@@ -163,17 +191,6 @@ We didn’t want to it be an exact copy of the original so I tried to give it a 
 
 <p><img src="../blog_media/drawing02.jpg" class="inline_right" />
 The art class is going well. Value and shading are still pretty tough for me because I’ve spent the last few years just doing line drawings for comics. I also have a tendency to draw pretty lightly (which is probably also a result of erasing pencil lines for comics). I don’t think I’ll leave this class a brilliant artist, but but I’m certainly learning things and getting better.</p>
-
-  </div>
-
-  <h2 class="post_title"><a href="../blog/thing-a-week-16-no-thing-again">Thing A Week 16 - No Thing Again</a></h2>
-  <div class="post_date">April 28, 2014</div>
-  <div class="post">
-    <p>Once again I didn’t have a great Thing a Week week. I actually didn’t even get to the point of planning a project for the week. But I did accomplish one thing: <strong>I got a new job</strong>.</p>
-
-<p>I spent a bunch of time this week prepping for and going on interviews and on Thursday I accepted a position as a Senior Full-Stack Engineer at <a href="https://www.couchsurfing.org/">Couchsurfing</a>. Today was my first day and so far it’s an awesome gig. The office is amazing, it’s full of dogs, and I get lunch and dinner provided everyday by the staff chefs. The work seems like it will be a lot of fun too. I’m doing Rails development and it seems like I’ll be able to have a lot of say in how the product gets architected.</p>
-
-<p>While it wasn’t the most productive Thing a Week week, getting a new job certainly qualifies this as a pretty productive life week.</p>
 
   </div>
 

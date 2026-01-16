@@ -1,0 +1,65 @@
+<h2 class="post_title">Fine, I'll Do It Myself</h2>
+<div class="post_date">January 15, 2026</div>
+
+<div class="post">
+<p><strong>I recently moved all my small project sites over to a self-hosted solution using <a href="https://coolify.io/">Coolify</a>. It was pretty easy and really rewarding!</strong></p>
+
+<p>I miss Heroku.</p>
+
+<p>I know Heroku still exists, but I miss the generous free tier they offered. This was the perfect solution for spinning up relatively simple, low traffic, Ruby sites, which are what a lot of my projects are.</p>
+
+<p>When Heroku decided to kick out freeloaders (like me) I started looking around for other hosting options I could mooch from. I ended up moving most of my small sites/projects to <a href="https://fly.io/">Fly.io</a>. When I needed a small database, <a href="https://supabase.com/">Supabase</a> had a pretty good free tier and I ended up using <a href="https://umami.is/">Umami</a> for some simple site analytics.</p>
+
+<p>Honestly, this all worked pretty well. Fly.io had a good free tier. I only started incurring costs once I was hosting too many sites on my account. Umami worked fine, but the free tier only supported 3 sites and 6 months of data. I did run into a few issues with Fly.io deployments when they changed some configurations, but nothing major. I <em>probably</em> could have finagled a mostly workable, almost free hosting solution. But near the end of last year, I was fixing the deployment configs for one of my sites and I started thinking, <strong>“Why don’t I do this all myself and have it work exactly the way I want!?”</strong>.</p>
+
+<p>Always a dangerous thought.</p>
+
+<p>I’ve had a small Digital Ocean droplet for a while, just to play around with, but I wasn’t doing much with it, so I figured I could use that.  I started looking into “Heroku-like” self-hosting systems and landed on <a href="https://coolify.io/">Coolify</a>. I’m ok with a little DYI, but I didn’t really want to do a lot of serious Linux server maintenance and this seemed to fit the bill.  Setting up Coolify on a Digital Ocean droplet was pretty straightforward:</p>
+
+<p>Open up some ports:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw allow 8000/tcp
+ufw enable
+ufw status
+</code></pre></div></div>
+
+<p>Install Coolify:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
+</code></pre></div></div>
+
+<p>And then I had a web UI to start setting things up.</p>
+
+<p>Each site in Coolify is an application and applications are contained in projects. I ended up setting up two different projects “site” for all the applications that would be normal public facing websites and “tools” for things like analytics.</p>
+
+<p>To handle deploys, Coolify creates a GitHub app that you install on your account and then you give it read permissions on the repos you want to deploy from. This works with both public and private repos. Whenever I push to the <code class="highlighter-rouge">main</code> branch of the sites repo, Coolify gets a webhook and deploys.</p>
+
+<p>All of the sites I was trying to move over were pretty simple Sinatra sites and after a little bit of wresting with the configs (an a lot of asking ChatGPT questions), I got a pretty good pattern down for all the sites I wanted to deploy:</p>
+<ul>
+  <li>create an application that pulls from my GitHub app as a source and launches from a simple Dockerfle</li>
+  <li>once the site is deployed, Coolify provides a temporary url to test it out at</li>
+  <li>if everything looks good, just change the A record of the domain over to my Digital Ocean droplet’s IP</li>
+  <li>add the domain name to the Coolfiy application’s config (Coolify handles getting the https certificate!)</li>
+</ul>
+
+<p>I wanted to keep using Umami for site tracking, but just run my own instance, which ended up being pretty easy.  Coolify lets you create a new application from a public git repo (<code class="highlighter-rouge">https://github.com/umami-software/umami</code> in this case) and sets up the app from that. Coolify also has a simple flow for setting up a new database, so spinning up a Postgres instance for Umami was pretty easy. After getting that set up I moved all my sites over to my own instance of Umami, free of site and data retention limits!</p>
+
+<p>One other thing I wanted now that I was self hosting was a little sftp server where I could upload files and have a publicly accessible url for them. To do this I set up an sftp server and then a standalone Nginx server, both pointed as the same persistent storage. Now I don’t need to rely on a 3rd party service if I just want to share a <a href="https://stuff.toomuchcoffee.dev/dave_sketchy_100.png">small file</a>! Not necessary but I did it because it’s my server and I can!</p>
+
+<p>Now I’m happy to say I’m self-hosting the sites I run:</p>
+<ul>
+  <li><a href="https://dinosaurseateverybody.com/">dinosaurseateverybody.com</a> (the site you’re looking at right now!)</li>
+  <li><a href="https://dontbreakprod.com/">dontbreakprod.com</a></li>
+  <li><a href="https://postwave.blog/">postwave.blog</a></li>
+  <li><a href="https://evilbrain.band/">evilbrain.band</a></li>
+  <li>and a few small personal projects and the analytics for those sites</li>
+</ul>
+
+<p>I’m not really a big fan of doing dev ops stuff. I have a limited amount of time to spend on personal projects and I’d rather spend that time building and not messing with servers. But there’s something pretty satisfying about hosting your own sites. For me, Coolify was a pretty good paved path to get things up and running with a nice UI.</p>
+
+
+</div>
+
+<div class="back_to_blog"><a href="../blog"><i class="fa fa-arrow-left"></i> back to blog</a></div>
+

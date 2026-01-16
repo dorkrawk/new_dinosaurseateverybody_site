@@ -7,6 +7,70 @@
     <atom:link href="http://dinosaurseateverybody.com/blog/blog/rss.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Fine, I&apos;ll Do It Myself</title>
+        <description>&lt;p&gt;&lt;strong&gt;I recently moved all my small project sites over to a self-hosted solution using &lt;a href=&quot;https://coolify.io/&quot;&gt;Coolify&lt;/a&gt;. It was pretty easy and really rewarding!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I miss Heroku.&lt;/p&gt;
+
+&lt;p&gt;I know Heroku still exists, but I miss the generous free tier they offered. This was the perfect solution for spinning up relatively simple, low traffic, Ruby sites, which are what a lot of my projects are.&lt;/p&gt;
+
+&lt;p&gt;When Heroku decided to kick out freeloaders (like me) I started looking around for other hosting options I could mooch from. I ended up moving most of my small sites/projects to &lt;a href=&quot;https://fly.io/&quot;&gt;Fly.io&lt;/a&gt;. When I needed a small database, &lt;a href=&quot;https://supabase.com/&quot;&gt;Supabase&lt;/a&gt; had a pretty good free tier and I ended up using &lt;a href=&quot;https://umami.is/&quot;&gt;Umami&lt;/a&gt; for some simple site analytics.&lt;/p&gt;
+
+&lt;p&gt;Honestly, this all worked pretty well. Fly.io had a good free tier. I only started incurring costs once I was hosting too many sites on my account. Umami worked fine, but the free tier only supported 3 sites and 6 months of data. I did run into a few issues with Fly.io deployments when they changed some configurations, but nothing major. I &lt;em&gt;probably&lt;/em&gt; could have finagled a mostly workable, almost free hosting solution. But near the end of last year, I was fixing the deployment configs for one of my sites and I started thinking, &lt;strong&gt;“Why don’t I do this all myself and have it work exactly the way I want!?”&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Always a dangerous thought.&lt;/p&gt;
+
+&lt;p&gt;I’ve had a small Digital Ocean droplet for a while, just to play around with, but I wasn’t doing much with it, so I figured I could use that.  I started looking into “Heroku-like” self-hosting systems and landed on &lt;a href=&quot;https://coolify.io/&quot;&gt;Coolify&lt;/a&gt;. I’m ok with a little DYI, but I didn’t really want to do a lot of serious Linux server maintenance and this seemed to fit the bill.  Setting up Coolify on a Digital Ocean droplet was pretty straightforward:&lt;/p&gt;
+
+&lt;p&gt;Open up some ports:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw allow 8000/tcp
+ufw enable
+ufw status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install Coolify:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then I had a web UI to start setting things up.&lt;/p&gt;
+
+&lt;p&gt;Each site in Coolify is an application and applications are contained in projects. I ended up setting up two different projects “site” for all the applications that would be normal public facing websites and “tools” for things like analytics.&lt;/p&gt;
+
+&lt;p&gt;To handle deploys, Coolify creates a GitHub app that you install on your account and then you give it read permissions on the repos you want to deploy from. This works with both public and private repos. Whenever I push to the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; branch of the sites repo, Coolify gets a webhook and deploys.&lt;/p&gt;
+
+&lt;p&gt;All of the sites I was trying to move over were pretty simple Sinatra sites and after a little bit of wresting with the configs (an a lot of asking ChatGPT questions), I got a pretty good pattern down for all the sites I wanted to deploy:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;create an application that pulls from my GitHub app as a source and launches from a simple Dockerfle&lt;/li&gt;
+  &lt;li&gt;once the site is deployed, Coolify provides a temporary url to test it out at&lt;/li&gt;
+  &lt;li&gt;if everything looks good, just change the A record of the domain over to my Digital Ocean droplet’s IP&lt;/li&gt;
+  &lt;li&gt;add the domain name to the Coolfiy application’s config (Coolify handles getting the https certificate!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wanted to keep using Umami for site tracking, but just run my own instance, which ended up being pretty easy.  Coolify lets you create a new application from a public git repo (&lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/umami-software/umami&lt;/code&gt; in this case) and sets up the app from that. Coolify also has a simple flow for setting up a new database, so spinning up a Postgres instance for Umami was pretty easy. After getting that set up I moved all my sites over to my own instance of Umami, free of site and data retention limits!&lt;/p&gt;
+
+&lt;p&gt;One other thing I wanted now that I was self hosting was a little sftp server where I could upload files and have a publicly accessible url for them. To do this I set up an sftp server and then a standalone Nginx server, both pointed as the same persistent storage. Now I don’t need to rely on a 3rd party service if I just want to share a &lt;a href=&quot;https://stuff.toomuchcoffee.dev/dave_sketchy_100.png&quot;&gt;small file&lt;/a&gt;! Not necessary but I did it because it’s my server and I can!&lt;/p&gt;
+
+&lt;p&gt;Now I’m happy to say I’m self-hosting the sites I run:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dinosaurseateverybody.com/&quot;&gt;dinosaurseateverybody.com&lt;/a&gt; (the site you’re looking at right now!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dontbreakprod.com/&quot;&gt;dontbreakprod.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://postwave.blog/&quot;&gt;postwave.blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://evilbrain.band/&quot;&gt;evilbrain.band&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;and a few small personal projects and the analytics for those sites&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m not really a big fan of doing dev ops stuff. I have a limited amount of time to spend on personal projects and I’d rather spend that time building and not messing with servers. But there’s something pretty satisfying about hosting your own sites. For me, Coolify was a pretty good paved path to get things up and running with a nice UI.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 15 Jan 2026 00:00:00 -0600</pubDate>
+        <link>http://dinosaurseateverybody.com/blog/fine-ill-do-it-myself</link>
+        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/fine-ill-do-it-myself</guid>
+      </item>
+    
+      <item>
         <title>Postwave</title>
         <description>&lt;p&gt;&lt;strong&gt;I probably like writing blog engines more than blog posts.&lt;/strong&gt;&lt;/p&gt;
 
@@ -297,63 +361,6 @@ Finally, I’m looking around more for weird fun things on the internet. People 
         <pubDate>Mon, 03 Mar 2025 00:00:00 -0600</pubDate>
         <link>http://dinosaurseateverybody.com/blog/dont-break-prod</link>
         <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/dont-break-prod</guid>
-      </item>
-    
-      <item>
-        <title>Homeboard</title>
-        <description>&lt;p&gt;I always forget to move my car on street cleaning day.&lt;/p&gt;
-
-&lt;p&gt;On the 1st Wednesday of the month I was always scrambling to move my street-parked car in the hopes of avoiding a ticket. Often too late. So I wanted something I looked at every day to remind me of things like this, just a little dashboard in my kitchen to let me know what was going on during the day.&lt;/p&gt;
-
-&lt;p&gt;While this isn’t a particularly novel idea and I’m sure there are a few out of the box products that will do this, I just though it would be fun to build something custom for what I wanted. It ended up being a small Sinatra app and I decided to play around with &lt;a href=&quot;https://htmx.org/&quot;&gt;htmx&lt;/a&gt; for most of the dynamic frontend stuff. The basic features I wanted were:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a big clock (date and time)&lt;/li&gt;
-  &lt;li&gt;local weather&lt;/li&gt;
-  &lt;li&gt;a QR code to log on to our local wifi network&lt;/li&gt;
-  &lt;li&gt;events for today and tomorrow:
-    &lt;ul&gt;
-      &lt;li&gt;city events (street cleaning, garbage day, snow plowing, etc.)&lt;/li&gt;
-      &lt;li&gt;birthdays (I don’t look at Facebook enough anymore for it to be a reliable reminder)&lt;/li&gt;
-      &lt;li&gt;our shared Google calendar&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is what it ended up looking like:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/homeboard2.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Some of these were pretty simple. The clock is just some plain old Javascript running client side. Birthdays come from a big hardcoded Hash that just looks up date. The city events came from some hardcoded logic based on the date, things like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# first Wednesday of the month&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;applicable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;STREET_CLEANING_MONTH_RANGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;wednesday?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tuesday?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mday&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The QR code just seemed like a neat little feature. You can create QR codes that when scanned will allow you to join a local wifi network without manually entering the password. I just generated my code from something like &lt;a href=&quot;https://www.qr-code-generator.com/solutions/wifi-qr-code/&quot;&gt;this site&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For local weather I ended up making use of the &lt;a href=&quot;https://openweathermap.org/api&quot;&gt;OpenWeather API&lt;/a&gt;. It refreshes infrequently enough that I can use it for free.&lt;/p&gt;
-
-&lt;p&gt;The Google Calendar integration gave me the most trouble. For some reason it was WAY more of a pain in the ass to authenticate with Google and use the provided library to pull a list of calendar events than I figured it would be. It involved a lot of creating and refreshing access tokens and is still a little janky (but it work!).&lt;/p&gt;
-
-&lt;p&gt;While I started doing the dynamic front end stuff with vanilla Javascript I ended up rewriting almost everything in Htmx, mainly because it seemed interesting and I wanted to play around with it. For the VERY simple stuff I was doing (mainly periodically refreshing parts of the dashboard to get updated content) it was very clean.&lt;/p&gt;
-
-&lt;p&gt;For example, I want my weather to reload every hour so on the main dashboard page (the page that stays up all the time) there’s a div that looks like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content_box weather_box&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;hx-get=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;../api/weather_htmx&quot;&lt;/span&gt; 
-  &lt;span class=&quot;na&quot;&gt;hx-trigger=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;load, every 3600s&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It just pulls the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;/api/weather_htmx&lt;/code&gt; (which is just some html, rendered with the updated weather info from an API call to OpenWeather) and puts it inside that div. Magic!&lt;/p&gt;
-
-&lt;p&gt;I bought a cheap refurbished tablet to use as a display and it’s been a great addition to our kitchen!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../blog_media/homeboard1.jpg&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 11 Sep 2024 00:00:00 -0500</pubDate>
-        <link>http://dinosaurseateverybody.com/blog/homeboard</link>
-        <guid isPermaLink="true">http://dinosaurseateverybody.com/blog/homeboard</guid>
       </item>
     
   </channel>
