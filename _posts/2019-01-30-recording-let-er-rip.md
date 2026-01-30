@@ -1,0 +1,65 @@
+---
+title: Recording Let 'er RIP!
+date: 2019-01-30
+tags: music, songwriting
+---
+
+**At the end of October I put out a 3 song record, Let 'er RIP!, with my skath band, [Grave Danger](https://www.facebook.com/gravedangerskath).**
+
+<img src="../blog_media/let_er_rip_cover-500.jpg" />
+
+(It's available on [Spotify](https://open.spotify.com/album/5y1wpLaegWoOk2vJHVXAQS), [Apple Music](https://itunes.apple.com/us/album/let-er-rip-single/1440193477?app=apple%20music), [Bandcamp](https://gravedangerskath.bandcamp.com), [Soundcloud](https://soundcloud.com/gravedangerskath/sets/let-er-rip/s-4XXAz) and lots of other places!)
+
+I wrote about some of the songwriting in [this post](http://dinosaurseateverybody.com/blog/starting-a-skath-band) but the recording process for this record was very different from anything else I've ever worked on. Since I was playing a lot of the instruments and we were never going to have everybody in the band all together at once it would be a really piecemeal process.
+
+**The Rhythm Section**
+
+First Dane did some rough recordings of his drum parts using the demos I had created. This let me do my recording over a live drummer rather than programmed drums from Logic Pro. This really helped me get a better feel for the songs and made things feel much more organic. While I was recording over new drum parts I built the "working" versions of the songs from copies of the demos, that way I could just swap out the demo parts for final parts rather than having to build the song again from scratch. It was pretty cool to hear the songs evolve just by swapping in better recordings one instrument at a time.
+
+My first work was laying down guitars. I actually ended up using the same amp model I used in the demos for the clean track but did all of the heavy guitar parts through my Dual Rectifier miced with a SM-57. I ended up double tracking almost all of the rhythm guitar parts (both clean and heavy) and I was really happy with the thickness that gave me. Most of the miced recording was done in my bedroom (which is carpeted) with the amp facing a closet full of clothes. The tracks for Too Ghoul For School were done in the garage (mainly to make it easier to record while Elliot napped) and they ended up having a harsher sound.
+
+<img src="../blog_media/guitar_recording.jpg" />
+
+The bass work was pretty straightforward. I bough a DI box and recorded all my bass parts through that. I did take my bass (and old Washburn) to get tuned up before I did any of the recording and it really made a big difference. The keyboard work was also pretty cut and dry. I actually used some of the demo keyboard work for the final version (the first arpeggiated organ chord in Grave Danger, for example!).
+
+**The Horns**
+
+The horns were a little tricker. The horns in the demos were all done via keyboard and I needed to share the parts with the other horn players. For this I sat down with [MuseScore](https://musescore.org/en) (in awesome piece of free open source software fore creating sheet music) and transcribed all four horn parts. It was really cool to see the sheet music for my arrangements and I think it really helped Margret and Andy lay down the trombone and trumpet parts. 
+
+I was doing the tenor and bari sax parts, but I only owned a tenor (which I had bough earlier this year, specifically for this project) so I needed to track down a bari. This was actually harder than I expected. At one point I emailed a local high school band teacher to see if the school could loan me one. Ultimately I had to rent one from a music shop about an hour away. I only had it for a week and that was still pretty expensive.
+
+I recorded the tenor and bari parts and then sent Margret and Andy a mix of the songs with only the rhthym section and my sax parts so that they could record their parts on top of that. Dane set up some mics in his basement and over a few weekends they got all three songs done. I think this was a very new experience for them and it was awesome to hear all four horn parts together on real instruments.
+
+<img src="../blog_media/bari_sax_recording.jpg" />
+
+**The Drums (for real this time)**
+
+After recording the horns, it was time to do the REAL drum parts. After considering a few options we ended up going to Justin at [Waysound Studios](http://waysound.com/) for the drum tracking. I've worked with Justin on a lot of projects when I was in bands back in Chicago and he's always fantastic. There's actually a live recording of Dane tracking these songs, if you want to watch about [4 hours of drum recording](https://www.facebook.com/waysoundrecording/videos/742118122792285/?hc_ref=ARTD5lMg7XDeavGHpR0jlWvzyGozJbSvIV5uImjKlz0ioUgewmWf0NyAJxEx02Yp_qA&__xts__[0]=68.ARBv2iwLhfRe1ChJ5oM-7XapGmtz0cpln6XciNQO-3m20WmDkx5O1kc0bv7VCato2idHb5SshOMOPRuE2B5cfLYRCfnIdxS9_DLBjknHr1bNr-GVsV2n1Qc05tnrk8tSwGNBHRlMSEYU7ZWMExtFeGcwXRbANNg1nXcs-e6if9tPghtrnyxTDFKcfzf0sPKC-YGVfwtQ6HrqvjH8OVBaaodng_kn9K9NxZDx-2SH7E2bpzFUotmySTB0cLL14HXnPUqXW8pAUawYn1px7cY_2yOtd8ISG_uqlXZ5xXkKhAu1pTOafUDajeYgwdq8wKxnUg3zD_P6CejU5aGfCaBZPA&__tn__=FC-R)!
+
+The drums turned out fantastic and added so much depth to the songs. Now it was time to do vocals.
+
+**Vocals (and everything else)**
+
+Vocals were strange. I had an idea of how they should sort of sound in my head and I did the vocals on the demo, but I knew that Alan was the right person to sing for this record. The problem was that he was in Minnesota and  I was in California and we were only communicating through email. He did some rough demos of the vocals and I sent some notes back and then he recorded the final versions. The vocals were by far the weirdest thing to do remotely.
+
+I also wanted Josh and Chris to add harmonies so I just sent them a mix with Al's vocals and let them just record a bunch of takes and send me whatever they had. I wanted to add a few background vocals parts, too so I set up a mic in the garage and layed down some of my own parts.  I ultimately just picked a bunch of stuff that sounded good and pieced it all together.
+
+While I was blindly working with the vocalists, Dane and Emily were recording Emily's synth and organ parts. I didn't have these in mind when I was arranging the songs, but there are some synth parts that now seem like they obviously needed to be part of this music. They ended up being great additions.
+
+Finally, I wanted to get my family involved. First I had Eileen do some high harmonies and "oooo"s in Too Ghoul For School (which was ripe for vocal layering), then as I was mixing I heard Elliot repeating the work "ghoul" during the chorus, so I recording him and added his vocals into a few sections of Too Ghoul. It was really fun to be able to give him his first record credit before his second birthday.
+
+**Putting It All Together**
+
+Now I was sitting in front of three enormous Logic Pro projects with up to 60 tracks a piece. I was not remotely qualified to mix what would probably be a 9 or 10 piece band so again we turned to Justin at Waysound. After fooling around with some clever exporting techniques, I ended up just removing any EQ and effects from all the tracks and exporting them all to WAV files and then sending those over to him so he could work his magic.
+
+The whole recording, mixing, and mastering process took almost a year (with my "solo" recording using up the bulk of that time) but we had a finished product before our self imposed deadline of Halloween.
+
+Recording the record in this way had its advantages. I liked being able to work at my own pace and on my own schedule (which was really important with a kid). The process of migrating the demo into a final version piece by piece made it easier to work on my own, since I never had to bootstrap the songs from scratch.
+
+It was really hard to work in isolation though. I'm used to being in the studio with other people who can provide feedback and keep me from getting in my own head about guitar tone. I missed the comradery of hanging out in the studio with friends. I augmented this by texting Dane a lot during the process. Technically, if I did this again, I'd be more diligent about making sure EVERYTHING lined up with a click track from day one. When pulling in parts from many different sources, having one source of truth for timing is really important.
+
+I can't overstate how much fun I had making these three goofy songs with a bunch of friends. Even though they're ridiculous in subject, they really mean a lot to me and I loved the process working on them. I already have the seeds for several more Grave Danger songs and I'm excited to work on new material!
+
+If you haven't heard the record yet, please take a listen:
+
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3029029663/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://gravedangerskath.bandcamp.com/album/let-er-rip">Let &#39;er RIP! by Grave Danger</a></iframe>
