@@ -3,7 +3,7 @@
   <generator uri="https://github.com/dorkrawk/postwave" version="0.1.5">Postwave</generator>
   <link href="https://dinosaurseateverybody.com" rel="self" type="application/atom+xml" />
   <link href="https://dinosaurseateverybody.com" />
-  <updated>2026-01-29T23:10:31-06:00</updated>
+  <updated>2026-02-01T22:55:04-06:00</updated>
   <id>https://dinosaurseateverybody.com</id>
   <title type="html">Dinosaurs Eat Everybody</title>
   <subtitle>For all your Dave Schwantes related needs.</subtitle>
@@ -32,20 +32,20 @@
 
 <p>I've had a small Digital Ocean droplet for a while, just to play around with, but I wasn't doing much with it, so I figured I could use that.  I started looking into "Heroku-like" self-hosting systems and landed on <a href="https://coolify.io/">Coolify</a>. I'm ok with a little DYI, but I didn't really want to do a lot of serious Linux server maintenance and this seemed to fit the bill.  Setting up Coolify on a Digital Ocean droplet was pretty straightforward:</p>
 
-<p>Open up some ports:
-<code>
-ufw allow 22/tcp
+<p>Open up some ports:</p>
+
+<pre><code>ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
 ufw allow 8000/tcp
 ufw enable
 ufw status
-</code></p>
+</code></pre>
 
-<p>Install Coolify:
-<code>
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
-</code></p>
+<p>Install Coolify:</p>
+
+<pre><code>curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
+</code></pre>
 
 <p>And then I had a web UI to start setting things up.</p>
 
@@ -63,12 +63,15 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 
 <p>One other thing I wanted now that I was self hosting was a little sftp server where I could upload files and have a publicly accessible url for them. To do this I set up an sftp server and then a standalone Nginx server, both pointed as the same persistent storage. Now I don't need to rely on a 3rd party service if I just want to share a <a href="https://stuff.toomuchcoffee.dev/dave_sketchy_100.png">small file</a>! Not necessary but I did it because it's my server and I can!</p>
 
-<p>Now I'm happy to say I'm self-hosting the sites I run:
-- <a href="https://dinosaurseateverybody.com/">dinosaurseateverybody.com</a> (the site you're looking at right now!)
-- <a href="https://dontbreakprod.com/">dontbreakprod.com</a>
-- <a href="https://postwave.blog/">postwave.blog</a>
-- <a href="https://evilbrain.band/">evilbrain.band</a>
-- and a few small personal projects and the analytics for those sites</p>
+<p>Now I'm happy to say I'm self-hosting the sites I run:</p>
+
+<ul>
+<li><a href="https://dinosaurseateverybody.com/">dinosaurseateverybody.com</a> (the site you're looking at right now!)</li>
+<li><a href="https://dontbreakprod.com/">dontbreakprod.com</a></li>
+<li><a href="https://postwave.blog/">postwave.blog</a></li>
+<li><a href="https://evilbrain.band/">evilbrain.band</a></li>
+<li>and a few small personal projects and the analytics for those sites</li>
+</ul>
 
 <p>I'm not really a big fan of doing dev ops stuff. I have a limited amount of time to spend on personal projects and I'd rather spend that time building and not messing with servers. But there's something pretty satisfying about hosting your own sites. For me, Coolify was a pretty good paved path to get things up and running with a nice UI.</p>
 ]]>
@@ -462,13 +465,10 @@ Finally, I'm looking around more for weird fun things on the internet. People ju
 
 <p>Some of these were pretty simple. The clock is just some plain old Javascript running client side. Birthdays come from a big hardcoded Hash that just looks up date. The city events came from some hardcoded logic based on the date, things like:</p>
 
-<p>{% highlight ruby %}</p>
-
-<h1>first Wednesday of the month</h1>
-
-<p>applicable = STREET<em>CLEANING</em>MONTH_RANGE.include?(timestamp.month) 
+<pre><code class="ruby"># first Wednesday of the month
+applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month) 
 && (timestamp.wednesday? || timestamp.tuesday?) && timestamp.mday <= 7
-{% endhighlight %}</p>
+</code></pre>
 
 <p>The QR code just seemed like a neat little feature. You can create QR codes that when scanned will allow you to join a local wifi network without manually entering the password. I just generated my code from something like <a href="https://www.qr-code-generator.com/solutions/wifi-qr-code/">this site</a>.</p>
 
@@ -480,11 +480,10 @@ Finally, I'm looking around more for weird fun things on the internet. People ju
 
 <p>For example, I want my weather to reload every hour so on the main dashboard page (the page that stays up all the time) there's a div that looks like this:</p>
 
-<p>{% highlight html %}
-<div class="content_box weather_box" hx-get="../api/weather_htmx" 
+<pre><code class="html"><div class="content_box weather_box" hx-get="../api/weather_htmx" 
   hx-trigger="load, every 3600s">
 </div>
-{% endhighlight %}</p>
+</code></pre>
 
 <p>It just pulls the contents of <code>/api/weather_htmx</code> (which is just some html, rendered with the updated weather info from an API call to OpenWeather) and puts it inside that div. Magic!</p>
 
@@ -726,20 +725,19 @@ Finally, I'm looking around more for weird fun things on the internet. People ju
 
 <p>My first Crystal Shard has been a money handling library, inspired by <a href="https://github.com/RubyMoney/money">Ruby Money</a>, that I call <a href="https://github.com/dorkrawk/moola">Moola</a>. It gives uses the ability to define Money objects and do basic operations and conversions with them.  Here are a few examples:</p>
 
-<p>{% highlight ruby %}
-money = Moola.new(42<em>00) # creates a new Moola::Money object
+<pre><code class="ruby">money = Moola.new(42_00) # creates a new Moola::Money object
 money.format # "$42.00"
 money.cents  # 4200
 money.zero?  # false
-money.to</em>f # 42.0</p>
+money.to_f # 42.0
 
-<p>Moola::Money.new(5<em>00) == Moola::Money.new(5</em>00) # true
-Moola::Money.new(5<em>00, "USD") == Moola::Money.new(5</em>00, "EUR") # false</p>
+Moola::Money.new(5_00) == Moola::Money.new(5_00) # true
+Moola::Money.new(5_00, "USD") == Moola::Money.new(5_00, "EUR") # false
 
-<p>Moola::Exchange.add<em>conversion(Moola::Currency.find("usd"), Moola::Currency.find("cad"), 1.3)
-money = Moola.new(1</em>00, "USD")
-money.convert<em>to(Moola::Currency.find("cad")) # Moola::Money(1</em>30, "cad")
-{% endhighlight %}</p>
+Moola::Exchange.add_conversion(Moola::Currency.find("usd"), Moola::Currency.find("cad"), 1.3)
+money = Moola.new(1_00, "USD")
+money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
+</code></pre>
 
 <p>I don't have much to say other than it seems like a great language if you like writing Ruby. For a newer language it's been a joy to work with and it's fun to build some basic libraries.</p>
 
@@ -953,37 +951,35 @@ The enclosure that comes with the kit is... utilitarian, to say the least. This 
 
 <p>Here's my dumb, contrived example:</p>
 
-<p>{% highlight ruby %}
-require 'darwinning'</p>
+<pre><code class="ruby">require 'darwinning'
 
-<p>class Triple
-  include Darwinning</p>
+class Triple
+  include Darwinning
 
-<p>GENE<em>RANGES = {
-    first</em>number: (0..100),
-    second<em>number: (0..100),
-    third</em>number: (0..100)
-  }</p>
+  GENE_RANGES = {
+    first_number: (0..100),
+    second_number: (0..100),
+    third_number: (0..100)
+  }
 
-<p>attr<em>accessor :first</em>number, :second<em>number, :third</em>number</p>
+  attr_accessor :first_number, :second_number, :third_number
 
-<p>def fitness
+  def fitness
     # Try to get the sum of the 3 digits to add up to 100
-    (first<em>number + second</em>number + third_number - 100).abs
+    (first_number + second_number + third_number - 100).abs
   end
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>Then you can use some nice built in methods to generate a population of these objects and evolve them towards a fitness goal:</p>
 
-<p>{% highlight ruby %}
-if Triple.is<em>evolveable?
-  triple</em>pop = Triple.build<em>population(0, 10, 100)
-  triple</em>pop.evolve! # evolve until fitness goal is or generations limit is met</p>
+<pre><code class="ruby">if Triple.is_evolveable?
+  triple_pop = Triple.build_population(0, 10, 100)
+  triple_pop.evolve! # evolve until fitness goal is or generations limit is met
 
-<p>pp "Best member: #{triple<em>pop.best</em>member}"
+  pp "Best member: #{triple_pop.best_member}"
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>I've been having fun working on this project and it's really cool to see some other people contribute to the project. If you want to play around with the library or have an interest in <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a> just <code>gem install darwinning</code> or check out the <a href="https://github.com/dorkrawk/darwinning">Darwinning Github repo</a>. There are always more updates to do, but it felt good to make some progress on this project.</p>
 ]]>
@@ -1127,18 +1123,17 @@ Spent most of this session doing acoustic stuff...
 
 <p>The end result of this little project was <a href="https://github.com/dorkrawk/bloomfilter-rs">Bloomfilter-RS</a>, a small Rust library that implements a Bloom filter. It can be used like this to create a Bloom filter with 100 buckets and 5 hash functions:</p>
 
-<p>{% highlight rust %}
-let mut bf = BloomFilter::new(100, 5);</p>
+<pre><code class="rust">let mut bf = BloomFilter::new(100, 5);
 
-<p>bf.insert("hamster");
-bf.insert("coffee");</p>
+bf.insert("hamster");
+bf.insert("coffee");
 
-<p>bf.check("hamster");
-// (probably) true</p>
+bf.check("hamster");
+// (probably) true
 
-<p>bf.check("oatmeal");
+bf.check("oatmeal");
 // false
-{% endhighlight %}</p>
+</code></pre>
 
 <p>It was pretty interesting working with a lower level language coming from Ruby. I had to think about passing pointers and dealing with a much more robust type system. Fortunately working with Scala in the past prepared me a bit for dealing with generics and default immutability, but it really felt MUCH slower than working with a high level language like Ruby (which I suppose should be obvious).</p>
 
@@ -1602,18 +1597,17 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 
 <p>At this point I am able to click a "play" button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an <code>onprogress</code> event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn't very hard, I just used a <code>setInterval()</code> function around my own <code>sauropod.updateProgress()</code> function:</p>
 
-<p>{% highlight ruby %}</p>
-
-<p>sauropod.play = function() {
+<pre><code class="ruby">
+sauropod.play = function() {
   if (sauropod.audio.status != "playing") {
     _.each(sauropod.audio.tracks, function(s) {s.play()});
     sauropod.audio.status = "playing";
     sauropod.updatePlayer();
     sauropod.tid = setInterval(sauropod.updateProgress, 100);
   }
-}</p>
+}
 
-<p>{% endhighlight %}</p>
+</code></pre>
 
 <p>I still need to build all the hooks into playing a mutitrack song (though it should work based on how I've built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.</p>
 
@@ -1749,17 +1743,15 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
 
 <p>What's really cool about FriendlyId is that it can generate a slug that is unique across multiple fields in the object. For example, I want to allow user1 and user2 to both be able to have a song name "My Song One" so I want the path to each song to be something like <code>user1/songs/my-song-one</code> and <code>user2/songs/my-song-one</code>. Note that the song identifier "my-song-one" is only locally unique, not globally unique. To do this FriendlyId lets you scope slugs:</p>
 
-<p>{% highlight ruby %}
-extend FriendlyId
+<pre><code class="ruby">extend FriendlyId
 friendly_id :name, use: [:slugged, :finders, :scoped], scope: :user
-{% endhighlight %}</p>
+</code></pre>
 
 <p>Then, in order to get things to work with ActiveAdmin I had to make Songs "owned" by Users. If you don't do this, ActiveAdmin tries to use the FriendlyId slug as a globally unique identifier. This is an easy fix in the <code>/admin/song.rb</code>:</p>
 
-<p>{% highlight ruby %}
-ActiveAdmin.register Song do
+<pre><code class="ruby">ActiveAdmin.register Song do
   belongs_to :user
-{% endhighlight %}</p>
+</code></pre>
 
 <p>I still need to clean up the routing in the rest of the app but this was a big step forward to some nicer paths.</p>
 ]]>
@@ -1905,17 +1897,16 @@ We didn't want to it be an exact copy of the original so I tried to give it a di
 
 <p>While not the most productive RecLab week, I did finish the basic comment functionality for Users, Songs, and Tracks. I also learned about <code>seed.rb</code> and wrote some seed code for the Instruments data. The trick there was that I wanted to be able to run <code>rake db:seed</code> multiple times, so I needed seed code that would let me update or create records. I ended up with a nice solution that lets me break the instruments down into separate arrays by family and then loop through everything to create or update:</p>
 
-<p>{% highlight ruby %}
-instruments = [[strings, "strings"], [woodwinds, "woodwinds"], [brass, "brass"], [percussion, "percussion"], [keys, "keys"], [other, "other"]]</p>
+<pre><code class="ruby">instruments = [[strings, "strings"], [woodwinds, "woodwinds"], [brass, "brass"], [percussion, "percussion"], [keys, "keys"], [other, "other"]]
 
-<p>instruments.each do |f|
+instruments.each do |f|
   f[0].each do |i|
-    instr = Instrument.where(name: i).first<em>or</em>initialize
+    instr = Instrument.where(name: i).first_or_initialize
     instr.family = f[1]
     instr.save!
   end
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>Now I'll need to use a tagging system to attach both Instruments and general Tags to objects. I'm leaning toward <a href="https://github.com/mbleigh/acts-as-taggable-on">As Taggable On</a>, which apparently was written by an old childhood friend of mine. Awesome!</p>
 
@@ -2030,29 +2021,25 @@ This week was another mainly RecLab week. Actually I didn't get much done on the
 
 <p>This allows me to write Flask endpoints like this:</p>
 
-<p>{% highlight python %}
-@app.route('/path<em>name', methods=['POST'])
-@require</em>auth
+<pre><code class="python">@app.route('/path_name', methods=['POST'])
+@require_auth
 def path_method():
   # do a bunch of stuff for this endpoint
   # but make sure the POST body contains the proper authentication
-{% endhighlight %}</p>
+</code></pre>
 
 <p>The decorator itself is pretty simple and works something like this:</p>
 
-<p>{% highlight python %}
-def require<em>auth(f):
+<pre><code class="python">def require_auth(f):
     @wraps(f)
-    def wrapped(<em>args, *</em>kwargs):
-        data = request.get</em>json(force=True)
-        if not validate<em>auth(data):
-            return response</em>arm.auth_fail() # return 401</p>
+    def wrapped(*args, **kwargs):
+        data = request.get_json(force=True)
+        if not validate_auth(data):
+            return response_arm.auth_fail() # return 401
 
-<pre><code>    return f(*args, **kwargs)
-return wrapped
+        return f(*args, **kwargs)
+    return wrapped
 </code></pre>
-
-<p>{% endhighlight %}</p>
 
 <p>Rocktopus is really coming along nicely and I'm really close to getting it hooked up to the Rails site soon.</p>
 
@@ -2084,16 +2071,15 @@ return wrapped
 
 <p>Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:</p>
 
-<p>{% highlight ruby %}
-get '/instagram_stuff' do
+<pre><code class="ruby">get '/instagram_stuff' do
   params['hub.challenge'] # for when you register your callback endpoint
-end</p>
+end
 
-<p>post '/instagram_stuff' do
+post '/instagram_stuff' do
   # do stuff when Instagram tells you something 
   #    new has been posted
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>I was able to use a lot of the code I wrote for <a href="https://github.com/dorkrawk/bird-watcher">BirdWatcher</a> (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.</p>
 
@@ -2318,23 +2304,21 @@ This week we did a lot of planning and architecture for the project and I starte
 
 <p>I had some trouble with <a href="http://sequel.jeremyevans.net/">Sequel</a>, the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn't work:</p>
 
-<p>{% highlight ruby %}
-def store<em>image(tweet</em>photo<em>url, tweet</em>user, tweet<em>text)
+<pre><code class="ruby">def store_image(tweet_photo_url, tweet_user, tweet_text)
   ...
-  @db[:photos].insert( :photo</em>url => tweet<em>photo</em>url, :service => "twitter", :username => screen<em>name, :name => name, :photo</em>text => tweet_text)
+  @db[:photos].insert( :photo_url => tweet_photo_url, :service => "twitter", :username => screen_name, :name => name, :photo_text => tweet_text)
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>but this did:</p>
 
-<p>{% highlight ruby %}
-def store<em>image(tweet</em>photo<em>url, tweet</em>user, tweet<em>text)
+<pre><code class="ruby">def store_image(tweet_photo_url, tweet_user, tweet_text)
   ...
-  the</em>url = "#{tweet<em>photo</em>url}"</p>
+  the_url = "#{tweet_photo_url}"
 
-<p>@db[:photos].insert( :photo<em>url => the</em>url, :service => "twitter", :username => screen<em>name, :name => name, :photo</em>text => tweet_text)
+  @db[:photos].insert( :photo_url => the_url, :service => "twitter", :username => screen_name, :name => name, :photo_text => tweet_text)
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>It must have something to do with the way Ruby handles certain strings or how Sequel or Postgres handle certain strings in INSERTs.</p>
 
@@ -2370,14 +2354,13 @@ end
 
 <p>The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: </p>
 
-<p>{% highlight ruby %}
-if file<em>path.include? "rss.xml"
-  content</em>type 'text/xml'
+<pre><code class="ruby">if file_path.include? "rss.xml"
+  content_type 'text/xml'
   erb contents, :layout => false
 else 
   erb contents
 end
-{% endhighlight %}</p>
+</code></pre>
 
 <p>Now you can subscribe to this blog via <a href="http://dinosaurseateverybody.com/blog/rss.xml">RSS</a> is you so desire!</p>
 ]]>
@@ -2658,9 +2641,8 @@ Before I pick up my phone and call you</p>
 
 <p>Darwinning is totally available via <a href="http://rubygems.org/gems/darwinning">RubyGems</a> so you can install it the same way you would install almost any Gem:</p>
 
-<p>{% highlight bash %}
-gem install darwinning
-{% endhighlight %}</p>
+<pre><code class="bash">gem install darwinning
+</code></pre>
 
 <p>Once it's installed you can make use of the <code>Population</code>, <code>Organism</code>, and <code>Gene</code> classes to build your own genetic algorithm based programs.</p>
 
@@ -2668,27 +2650,26 @@ gem install darwinning
 
 <p>Let's say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let's solve it anyway.</p>
 
-<p>{% highlight ruby %}
-class Triple < Darwinning::Organism</p>
+<pre><code class="ruby">class Triple < Darwinning::Organism
 
-<p>@name = "Triple"
+  @name = "Triple"
   @genes = [
       Darwinning::Gene.new("first digit", (0..9)),
       Darwinning::Gene.new("second digit", (0..9)),
       Darwinning::Gene.new("third digit", (0..9))
-    ]</p>
+    ]
 
-<p>def fitness
+  def fitness
     # Try to get the sum of the 3 digits to add up to 15
     (genotypes.inject{ |sum, x| sum + x } - 15).abs
   end
-end </p>
+end 
 
-<p>p = Darwinning::Population.new(Triple, 10, 0, 0.1, 100)
-p.evolve!</p>
+p = Darwinning::Population.new(Triple, 10, 0, 0.1, 100)
+p.evolve!
 
-<p>p.best<em>member.nice</em>print # prints the member representing the solution
-{% endhighlight %}</p>
+p.best_member.nice_print # prints the member representing the solution
+</code></pre>
 
 <p>This code declares an organism class that inherits from Darwinning's Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.</p>
 
@@ -2724,28 +2705,25 @@ p.evolve!</p>
 
 <p>The real meat of this is a custom function in the /blog route:</p>
 
-<p>{% highlight ruby %}
-get '/blog/?*' do
+<pre><code class="ruby">get '/blog/?*' do
     jekyll_blog(request.path)
-end</p>
-
-<p>def jekyll<em>blog(path)
-  @page</em>title = "blog"</p>
-
-<p>file<em>path = File.join(File.dirname(</em><em>FILE</em><em>), 'jekyll</em>blog/<em>site',  path.gsub('/blog',''))
-  file</em>path = File.join(file<em>path, 'index.html') unless file</em>path =~ /.[a-z]+$/i </p>
-
-<p>if File.exist?(file<em>path)
-    file = File.open(file</em>path, "rb")
-    contents = file.read
-    file.close</p>
-
-<pre><code>erb contents
-</code></pre>
-
-<p>end
 end
-{% endhighlight %}</p>
+
+def jekyll_blog(path)
+  @page_title = "blog"
+
+  file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
+  file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i 
+
+  if File.exist?(file_path)
+    file = File.open(file_path, "rb")
+    contents = file.read
+    file.close
+
+    erb contents
+  end
+end
+</code></pre>
 
 <p>This just calls the <code>jekyll_blog(path)</code> function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the <code><%= yield %></code> in my Sinatra erb layout.</p>
 
@@ -2753,11 +2731,10 @@ end
 
 <p>While I like the idea of being able to write my blog posts in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I'm trying <a href="http://prose.io/">Prose</a>. Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven't tried that yet).  I've included a <code>_prose.rb</code> config file that sends me right to the <code>_posts/</code> directory of this project when I'm working on it:</p>
 
-<p>{% highlight ruby %}
-prose:
-  rooturl: 'jekyll<em>blog/</em>posts'
+<pre><code class="ruby">prose:
+  rooturl: 'jekyll_blog/_posts'
   media: 'public/images/blog_media'
-{% endhighlight %}</p>
+</code></pre>
 
 <p>I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I'm still not totally won over by Prose but it has been really fun to set this up. I'd also like to add comments through <a href="http://disqus.com/">Disqus</a> soon. Hopefully now I'll make this work worthwhile and actually write a few blog posts every now and then.</p>
 ]]>
