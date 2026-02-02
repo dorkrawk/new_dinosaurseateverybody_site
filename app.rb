@@ -24,22 +24,22 @@ module DinosaursEatEverybody
       redirect '/blog'
     end
 
-    get '/blog/?*' do
-      jekyll_blog(request.path)
-    end
-
-    get '/new_blog' do
+    get '/blog' do
       @posts = settings.postwave_client.posts(offset: 0, limit: POSTS_PER_PAGE)
       @pagination = settings.postwave_client.pagination(current_page: 1, per_page: POSTS_PER_PAGE)
 
       erb :posts
     end
 
-    get '/new_blog/:slug' do
+    get '/blog/:slug' do
       slug = params[:slug]
 
-      # handle paginated blog pages
-      if is_integer?(slug)
+      if slug == "rss.xml"
+        # handle RSS feed
+        content_type 'text/xml'
+        settings.postwave_client.rss
+      elsif is_integer?(slug)
+        # handle paginated blog pages
         @page = slug.to_i
         @page_title = "Posts"
         offset = (@page - 1) * POSTS_PER_PAGE
@@ -47,13 +47,18 @@ module DinosaursEatEverybody
         @posts = settings.postwave_client.posts(offset: offset, limit: POSTS_PER_PAGE)
         @pagination = settings.postwave_client.pagination(current_page: @page, per_page: POSTS_PER_PAGE)
 
-        return erb :posts
+        erb :posts
+      else
+        begin
+          @post = settings.postwave_client.post(slug)
+        rescue Postwave::PostNotFoundError
+          status 404
+          return erb :rawr_oh_rawr
+        end
+        @page_title = @post.title
+
+        erb :post
       end
-
-      @post = settings.postwave_client.post(slug)
-      @page_title = @post.title
-
-      erb :post
     end
 
     get '/archives' do
@@ -88,6 +93,10 @@ module DinosaursEatEverybody
       erb :now
     end
 
+    def is_integer?(str)
+      str.to_i.to_s == str
+    end
+
     helpers do
       def dave_fact
         the_facts = Facts.new
@@ -98,45 +107,6 @@ module DinosaursEatEverybody
       def now_updated_at
         # I guess just update this when the Now page is updated...
         "Sept 1, 2025"
-      end
-    end
-
-    def is_integer?(str)
-      str.to_i.to_s == str
-    end
-
-    def jekyll_blog(path)
-      @page_title = "blog"
-
-      file_name = path.split(File::SEPARATOR).last
-
-      file_path = File.join(File.dirname(__FILE__), 'jekyll_blog/_site',  path.gsub('/blog',''))
-      if file_path[-1] == "/" || is_integer?(File.split(file_path).last)
-        file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
-      else
-        file_path += '.html' unless file_path =~ /\.[a-z]+$/i
-      end
-
-      if File.exist?(file_path)
-        file = File.open(file_path, "rb")
-        contents = file.read
-        file.close
-
-        blog_parse = Nokogiri::XML.parse( open( file_path ))
-        blog_title = blog_parse.xpath("//h2[@class='post_title']/text()")[0]
-
-        @page_title = blog_title.nil? ? "blog" : blog_title
-        @page_title = "archives" if file_name == "archives"
-        
-        if file_path.include? "rss.xml"
-          content_type 'text/xml'
-          erb contents, :layout => false
-        else
-          erb contents
-        end
-      else
-        status 404
-        erb :rawr_oh_rawr
       end
     end
 
