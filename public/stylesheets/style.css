@@ -140,3 +140,34 @@ h2.post_title {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.pagination a,
+.pagination span {
+  text-decoration: none;
+  color: #457b9d;
+  font-size: 0.9rem;
+}
+
+.pagination a:hover {
+  color: #e63946;
+  text-decoration: underline;
+}
+
+.pagination .current {
+  color: #1d3557;
+  font-weight: 500;
+}
+
+.pagination .disabled {
+  color: #cbd5e0;
+}

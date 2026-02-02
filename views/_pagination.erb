@@ -1,0 +1,15 @@
+<div class="pagination">
+  <% if !pagination.prev_page.nil? %>
+    <a href="/blog/<%= pagination.prev_page %>" class="prev"><i class="fa fa-arrow-left"></i></a>
+  <% else %>
+    <span class="disabled"><i class="fa fa-arrow-left"></i></span>
+  <% end %>
+  
+  <span class="current">Page: <%= pagination.current_page %> of <%= pagination.total_pages %></span>
+  
+  <% if !pagination.next_page.nil? %>
+    <a href="/blog/<%= pagination.next_page %>" class="next"><i class="fa fa-arrow-right"></i></a>
+  <% else %>
+    <span class="disabled"><i class="fa fa-arrow-right"></i></span>
+  <% end %>
+</div>

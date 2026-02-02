@@ -1,3 +1,8 @@
-<h1 id="post_title"><%= @title %></h1>
+<h2 class="post_title"><%= @post.title %></h2>
+<div class="post_date"><%= @post.date.strftime("%B %e, %Y") %></div>
 
-<div id="post"><%= @body %></div>
+<div class="post">
+  <%= @post.body_html %>
+</div>
+
+<div class="back_to_blog"><a href="../blog" title="back to posts"><i class="fa fa-arrow-left"></i> back to blog</a></div>

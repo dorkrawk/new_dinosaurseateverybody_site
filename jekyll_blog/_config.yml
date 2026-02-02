@@ -1,9 +1,0 @@
-name: Dinosaurs Eat Everybody
-description: For all your Dave Schwantes related needs.
-url: http://dinosaurseateverybody.com/blog
-permalink: /:title
-baseurl: /blog
-plugins: [jekyll-paginate]
-paginate: 10
-paginate_path: /:num
-comments: true
