@@ -10,13 +10,13 @@ I was interested in how hard it would be to add RSS to this weird Jekyll/Sinatra
 
 The only custom part was adding a few lines to my Jekyll handler method in my main Sinatra app to suppress the layout template and render the RSS file as XML: 
 
-{% highlight ruby %}
+```ruby
 if file_path.include? "rss.xml"
   content_type 'text/xml'
   erb contents, :layout => false
 else 
   erb contents
 end
-{% endhighlight %}
+```
 
 Now you can subscribe to this blog via [RSS](http://dinosaurseateverybody.com/blog/rss.xml) is you so desire!

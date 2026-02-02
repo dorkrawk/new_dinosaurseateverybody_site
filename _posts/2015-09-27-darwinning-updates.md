@@ -12,7 +12,7 @@ The major feature I added was the ability to use Darwinning in existing Ruby mod
 
 Here's my dumb, contrived example:
 
-{% highlight ruby %}
+```ruby
 require 'darwinning'
 
 class Triple
@@ -31,17 +31,17 @@ class Triple
     (first_number + second_number + third_number - 100).abs
   end
 end
-{% endhighlight %}
+```
 
 Then you can use some nice built in methods to generate a population of these objects and evolve them towards a fitness goal:
 
-{% highlight ruby %}
+```ruby
 if Triple.is_evolveable?
   triple_pop = Triple.build_population(0, 10, 100)
   triple_pop.evolve! # evolve until fitness goal is or generations limit is met
 
   pp "Best member: #{triple_pop.best_member}"
 end
-{% endhighlight %}
+```
 
 I've been having fun working on this project and it's really cool to see some other people contribute to the project. If you want to play around with the library or have an interest in [genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm) just `gem install darwinning` or check out the [Darwinning Github repo](https://github.com/dorkrawk/darwinning). There are always more updates to do, but it felt good to make some progress on this project.

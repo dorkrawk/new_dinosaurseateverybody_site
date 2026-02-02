@@ -20,6 +20,7 @@ I've had a small Digital Ocean droplet for a while, just to play around with, bu
 
 
 Open up some ports:
+
 ```
 ufw allow 22/tcp
 ufw allow 80/tcp
@@ -30,6 +31,7 @@ ufw status
 ```
 
 Install Coolify:
+
 ```
 curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 ```
@@ -51,6 +53,7 @@ I wanted to keep using Umami for site tracking, but just run my own instance, wh
 One other thing I wanted now that I was self hosting was a little sftp server where I could upload files and have a publicly accessible url for them. To do this I set up an sftp server and then a standalone Nginx server, both pointed as the same persistent storage. Now I don't need to rely on a 3rd party service if I just want to share a [small file](https://stuff.toomuchcoffee.dev/dave_sketchy_100.png)! Not necessary but I did it because it's my server and I can!
 
 Now I'm happy to say I'm self-hosting the sites I run:
+
 - [dinosaurseateverybody.com](https://dinosaurseateverybody.com/) (the site you're looking at right now!)
 - [dontbreakprod.com](https://dontbreakprod.com/)
 - [postwave.blog](https://postwave.blog/)

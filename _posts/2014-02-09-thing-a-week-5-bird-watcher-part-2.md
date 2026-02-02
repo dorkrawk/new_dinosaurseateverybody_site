@@ -10,23 +10,23 @@ I ended up changing the format of the project a bit. Instead of a full Sinatra a
 
 I had some trouble with [Sequel](http://sequel.jeremyevans.net/), the Gem I was using to interface with the Postgres database but eventually got things worked out. The weirdest issue was with trying to store the url of the photo.  For some reason this didn't work:
 
-{% highlight ruby %}
+```ruby
 def store_image(tweet_photo_url, tweet_user, tweet_text)
   ...
   @db[:photos].insert( :photo_url => tweet_photo_url, :service => "twitter", :username => screen_name, :name => name, :photo_text => tweet_text)
 end
-{% endhighlight %}
+```
 
 but this did:
 
-{% highlight ruby %}
+```ruby
 def store_image(tweet_photo_url, tweet_user, tweet_text)
   ...
   the_url = "#{tweet_photo_url}"
   
   @db[:photos].insert( :photo_url => the_url, :service => "twitter", :username => screen_name, :name => name, :photo_text => tweet_text)
 end
-{% endhighlight %}
+```
 
 It must have something to do with the way Ruby handles certain strings or how Sequel or Postgres handle certain strings in INSERTs.
 

@@ -16,9 +16,9 @@ __So, how do I use Darwinning?__
 
 Darwinning is totally available via [RubyGems](http://rubygems.org/gems/darwinning) so you can install it the same way you would install almost any Gem:
 
-{% highlight bash %}
+```bash
 gem install darwinning
-{% endhighlight %}
+```
 
 Once it's installed you can make use of the `Population`, `Organism`, and `Gene` classes to build your own genetic algorithm based programs.
 
@@ -26,7 +26,7 @@ Here's an dumb example of how you might use Darwinning to solve a pointless prob
 
 Let's say for some reason you need a set of 3 number that add up to 15.  This is a strange problem to have, but let's solve it anyway.
 
-{% highlight ruby %}
+```ruby
 class Triple < Darwinning::Organism
 
   @name = "Triple"
@@ -46,7 +46,7 @@ p = Darwinning::Population.new(Triple, 10, 0, 0.1, 100)
 p.evolve!
 
 p.best_member.nice_print # prints the member representing the solution
-{% endhighlight %}
+```
 
 This code declares an organism class that inherits from Darwinning's Organism parent class to represent solutions.  Then we create a population of these solution organisms and evolve the population until a solution meets the fitness threshold or the generation limit is met.
 

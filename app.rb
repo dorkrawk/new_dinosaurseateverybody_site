@@ -1,11 +1,17 @@
 require 'sinatra/base'
+require 'postwave/client'
 require 'nokogiri'
 require './models/facts'
 
 module DinosaursEatEverybody
   class App < Sinatra::Base
+
+    POSTS_PER_PAGE = 10
+
     configure do
       set :protection, except: :host_header
+      postwave_config_path = File.join(settings.root, "postwave.yaml")
+      set :postwave_client, Postwave::Client.new(postwave_config_path)
     end
 
     not_found do
@@ -20,6 +26,41 @@ module DinosaursEatEverybody
 
     get '/blog/?*' do
       jekyll_blog(request.path)
+    end
+
+    get '/new_blog' do
+      @posts = settings.postwave_client.posts(offset: 0, limit: POSTS_PER_PAGE)
+      @pagination = settings.postwave_client.pagination(current_page: 1, per_page: POSTS_PER_PAGE)
+
+      erb :posts
+    end
+
+    get '/new_blog/:slug' do
+      slug = params[:slug]
+
+      # handle paginated blog pages
+      if is_integer?(slug)
+        @page = slug.to_i
+        @page_title = "Posts"
+        offset = (@page - 1) * POSTS_PER_PAGE
+
+        @posts = settings.postwave_client.posts(offset: offset, limit: POSTS_PER_PAGE)
+        @pagination = settings.postwave_client.pagination(current_page: @page, per_page: POSTS_PER_PAGE)
+
+        return erb :posts
+      end
+
+      @post = settings.postwave_client.post(slug)
+      @page_title = @post.title
+
+      erb :post
+    end
+
+    get '/archives' do
+      @page_title = "archives"
+      @archives = settings.postwave_client.archive
+
+      erb :archives
     end
 
     get '/about' do

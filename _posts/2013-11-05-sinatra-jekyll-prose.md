@@ -14,7 +14,7 @@ To add Jekyll to Sinatra I first just created a new Jekyll site in a seperate di
 
 The real meat of this is a custom function in the /blog route:
 
-{% highlight ruby %}
+```ruby
 get '/blog/?*' do
 	jekyll_blog(request.path)
 end
@@ -33,7 +33,7 @@ def jekyll_blog(path)
     erb contents
   end
 end
-{% endhighlight %}
+```
 
 This just calls the `jekyll_blog(path)` function whenever you go to a page that starts with /blog/ and that just pulls the html content of either the post or the Jekyll index.html and puts into the `<%= yield %>` in my Sinatra erb layout.
 
@@ -41,11 +41,11 @@ This is a pretty simplistic solution and I want to add better 404 checking and a
 
 While I like the idea of being able to write my blog posts in [Markdown](http://daringfireball.net/projects/markdown/) and from whatever editor I want I also wanted to have some sort of web based editor for my posts so I'm trying [Prose](http://prose.io/). Prose is basically a web based editor for Github files (which is where all the content for this site resides anyways.  It lets me go in and create new posts through a pretty nice looking Markdown editor with preview. It also helps with syntax and media uploading (though I haven't tried that yet).  I've included a `_prose.rb` config file that sends me right to the `_posts/` directory of this project when I'm working on it:
 
-{% highlight ruby %}
+```ruby
 prose:
   rooturl: 'jekyll_blog/_posts'
   media: 'public/images/blog_media'
-{% endhighlight %}
+```
 
 I think that the transiton from a really polished, very user friendly system like Word Press to something more technical like Jekyll will be interesting. I feel like I still need to work some kinks out of the system and I'm still not totally won over by Prose but it has been really fun to set this up. I'd also like to add comments through [Disqus](http://disqus.com/) soon. Hopefully now I'll make this work worthwhile and actually write a few blog posts every now and then.
 

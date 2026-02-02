@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <h2 class="post_title"><a href="/new_blog/<%= post.slug %>" title="<%= post.title %>"><%= post.title %></a></h2>
+  <div class="post_date"><%= post.date.strftime("%B %e, %Y") %></div>
+
+  <div class="post">
+    <%= post.body_html %>
+  </div>
+<% end %>
+
+<%= erb :_pagination, :layout => false, :locals => { :pagination => @pagination } %>

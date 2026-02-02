@@ -10,7 +10,7 @@ I enjoy writing Ruby and I like things that are fast, so I've been trying it out
 
 My first Crystal Shard has been a money handling library, inspired by [Ruby Money](https://github.com/RubyMoney/money), that I call [Moola](https://github.com/dorkrawk/moola). It gives uses the ability to define Money objects and do basic operations and conversions with them.  Here are a few examples:
 
-{% highlight ruby %}
+```ruby
 money = Moola.new(42_00) # creates a new Moola::Money object
 money.format # "$42.00"
 money.cents  # 4200
@@ -23,7 +23,7 @@ Moola::Money.new(5_00, "USD") == Moola::Money.new(5_00, "EUR") # false
 Moola::Exchange.add_conversion(Moola::Currency.find("usd"), Moola::Currency.find("cad"), 1.3)
 money = Moola.new(1_00, "USD")
 money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
-{% endhighlight %}
+```
 
 I don't have much to say other than it seems like a great language if you like writing Ruby. For a newer language it's been a joy to work with and it's fun to build some basic libraries.
 

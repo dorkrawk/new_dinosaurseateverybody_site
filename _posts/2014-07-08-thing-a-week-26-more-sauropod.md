@@ -12,7 +12,7 @@ I got Sauropod hooked up into the asset pipeline of the [RecLab](http://reclabor
 
 At this point I am able to click a "play" button next to a track and have Sauropod load the song and update global play/pause button, display the name and owner of the track (with links), and display a progress bar and time progress. I also have a global mute/unmute working and started on global volume controls. Most of the controls and UI updates were just simple hooks into Howler and some jQuery for display manipulation, but the progress bar and timer were a little tricky. While a regular HTML5 audio player sends an `onprogress` event that you can listen for to control the progress display I had to write my own listener that starts an stops with the audio. It wasn't very hard, I just used a `setInterval()` function around my own `sauropod.updateProgress()` function:
 
-{% highlight ruby %}
+```ruby
 
 sauropod.play = function() {
   if (sauropod.audio.status != "playing") {
@@ -23,7 +23,7 @@ sauropod.play = function() {
   }
 }
 
-{% endhighlight %}
+```
 
 I still need to build all the hooks into playing a mutitrack song (though it should work based on how I've built the system) and then work on the track editing features (muting/level adjustments at a per-track level). I also need a bit more robust error handling and a cleaner UI, but all in all the audio player is coming along nicely.
 

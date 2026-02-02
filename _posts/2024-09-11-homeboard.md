@@ -24,11 +24,11 @@ This is what it ended up looking like:
 
 Some of these were pretty simple. The clock is just some plain old Javascript running client side. Birthdays come from a big hardcoded Hash that just looks up date. The city events came from some hardcoded logic based on the date, things like:
 
-{% highlight ruby %}
+```ruby
 # first Wednesday of the month
 applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month) 
 && (timestamp.wednesday? || timestamp.tuesday?) && timestamp.mday <= 7
-{% endhighlight %}
+```
 
 The QR code just seemed like a neat little feature. You can create QR codes that when scanned will allow you to join a local wifi network without manually entering the password. I just generated my code from something like [this site](https://www.qr-code-generator.com/solutions/wifi-qr-code/).
 
@@ -40,11 +40,11 @@ While I started doing the dynamic front end stuff with vanilla Javascript I ende
 
 For example, I want my weather to reload every hour so on the main dashboard page (the page that stays up all the time) there's a div that looks like this:
 
-{% highlight html %}
+```html
 <div class="content_box weather_box" hx-get="../api/weather_htmx" 
   hx-trigger="load, every 3600s">
 </div>
-{% endhighlight %}
+```
 
 It just pulls the contents of `/api/weather_htmx` (which is just some html, rendered with the updated weather info from an API call to OpenWeather) and puts it inside that div. Magic!
 

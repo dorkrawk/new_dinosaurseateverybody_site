@@ -12,7 +12,7 @@ I needed a small project to build if I was going to learn anything about the lan
 
 The end result of this little project was [Bloomfilter-RS](https://github.com/dorkrawk/bloomfilter-rs), a small Rust library that implements a Bloom filter. It can be used like this to create a Bloom filter with 100 buckets and 5 hash functions:
 
-{% highlight rust %}
+```rust
 let mut bf = BloomFilter::new(100, 5);
 
 bf.insert("hamster");
@@ -23,7 +23,7 @@ bf.check("hamster");
 
 bf.check("oatmeal");
 // false
-{% endhighlight %}
+```
 
 It was pretty interesting working with a lower level language coming from Ruby. I had to think about passing pointers and dealing with a much more robust type system. Fortunately working with Scala in the past prepared me a bit for dealing with generics and default immutability, but it really felt MUCH slower than working with a high level language like Ruby (which I suppose should be obvious).
 

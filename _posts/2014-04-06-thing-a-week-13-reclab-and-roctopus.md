@@ -11,17 +11,17 @@ The Rocktopus work has been going well. It's nice to get back into writing some 
 
 This allows me to write Flask endpoints like this:
 
-{% highlight python %}
+```python
 @app.route('/path_name', methods=['POST'])
 @require_auth
 def path_method():
   # do a bunch of stuff for this endpoint
   # but make sure the POST body contains the proper authentication
-{% endhighlight %}
+```
 
 The decorator itself is pretty simple and works something like this:
 
-{% highlight python %}
+```python
 def require_auth(f):
     @wraps(f)
     def wrapped(*args, **kwargs):
@@ -31,7 +31,7 @@ def require_auth(f):
 
         return f(*args, **kwargs)
     return wrapped
-{% endhighlight %}
+```
 
 Rocktopus is really coming along nicely and I'm really close to getting it hooked up to the Rails site soon.
 

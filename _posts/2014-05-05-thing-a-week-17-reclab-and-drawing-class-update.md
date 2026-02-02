@@ -8,7 +8,7 @@ This week, while I was busy with the first week of my new job, I did manage to g
 
 While not the most productive RecLab week, I did finish the basic comment functionality for Users, Songs, and Tracks. I also learned about `seed.rb` and wrote some seed code for the Instruments data. The trick there was that I wanted to be able to run `rake db:seed` multiple times, so I needed seed code that would let me update or create records. I ended up with a nice solution that lets me break the instruments down into separate arrays by family and then loop through everything to create or update:
 
-{% highlight ruby %}
+```ruby
 instruments = [[strings, "strings"], [woodwinds, "woodwinds"], [brass, "brass"], [percussion, "percussion"], [keys, "keys"], [other, "other"]]
 
 instruments.each do |f|
@@ -18,7 +18,7 @@ instruments.each do |f|
     instr.save!
   end
 end
-{% endhighlight %}
+```
 
 Now I'll need to use a tagging system to attach both Instruments and general Tags to objects. I'm leaning toward [As Taggable On](https://github.com/mbleigh/acts-as-taggable-on), which apparently was written by an old childhood friend of mine. Awesome!
 

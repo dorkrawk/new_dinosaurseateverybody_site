@@ -10,7 +10,7 @@ The [Instagram API](http://instagram.com/developer/) works differently than Twit
 
 Here is the Sinatra code you might used to create the GET and POST endpoints to register and use the Instagram API:
 
-{% highlight ruby %}
+```ruby
 get '/instagram_stuff' do
   params['hub.challenge'] # for when you register your callback endpoint
 end
@@ -19,7 +19,7 @@ post '/instagram_stuff' do
   # do stuff when Instagram tells you something 
   #    new has been posted
 end
-{% endhighlight %}
+```
 
 I was able to use a lot of the code I wrote for [BirdWatcher](https://github.com/dorkrawk/bird-watcher) (the Twitter listener) to store this info, so that was nice. I still need to write a front end to display all of these photos but that will be done some other week. It would be nice to bundle all of this together and create some sort of product for people where they provide a hashtag or keyword and I provide a nice display of photos from various services with those keywords. Maybe someday, when I have time to clean up this code a bit.
 

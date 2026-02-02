@@ -10,16 +10,16 @@ I want Reclab to namespace songs and tracks by username, similar to the way Gith
 
 What's really cool about FriendlyId is that it can generate a slug that is unique across multiple fields in the object. For example, I want to allow user1 and user2 to both be able to have a song name "My Song One" so I want the path to each song to be something like `user1/songs/my-song-one` and `user2/songs/my-song-one`. Note that the song identifier "my-song-one" is only locally unique, not globally unique. To do this FriendlyId lets you scope slugs:
 
-{% highlight ruby %}
+```ruby
 extend FriendlyId
 friendly_id :name, use: [:slugged, :finders, :scoped], scope: :user
-{% endhighlight %}
+```
 
 Then, in order to get things to work with ActiveAdmin I had to make Songs "owned" by Users. If you don't do this, ActiveAdmin tries to use the FriendlyId slug as a globally unique identifier. This is an easy fix in the `/admin/song.rb`:
 
-{% highlight ruby %}
+```ruby
 ActiveAdmin.register Song do
   belongs_to :user
-{% endhighlight %}
+```
 
 I still need to clean up the routing in the rest of the app but this was a big step forward to some nicer paths.

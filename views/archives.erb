@@ -1,0 +1,20 @@
+<% @archives.each do |year, posts| %>
+  <div class="archive-year">
+    <h2 class="year"><%= year %></h2>
+
+        <ul class="archive-posts">
+          <% posts.reverse.each do |post| %>
+            <li class="post">
+              <span class="post-date archive-post-date">
+                <%= post.date.strftime("%B %e") %>
+              </span>
+              <span class="post-title archive-post-title">
+                <a href="../new_blog/<%= post.slug %>"><%= post.title %></a> 
+              </span>
+            </li>
+          <% end %> 
+        </ul>
+
+
+  </div>
+<% end %>
