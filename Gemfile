@@ -3,10 +3,7 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem "puma", ">= 6.3.1"
 
-gem 'jekyll', '4.0.1'
-gem 'jekyll-paginate'
 gem 'pkg-config'
-gem 'nokogiri', ">= 1.18.5"
 gem "rackup", "~> 2.2"
 gem "rack", ">= 2.2.6.4"
 gem 'rack-protection', '>= 1.5.1'

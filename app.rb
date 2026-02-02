@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require 'postwave/client'
-require 'nokogiri'
 require './models/facts'
 
 module DinosaursEatEverybody
