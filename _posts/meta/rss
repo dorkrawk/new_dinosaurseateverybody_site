@@ -3,10 +3,45 @@
   <generator uri="https://github.com/dorkrawk/postwave" version="0.1.5">Postwave</generator>
   <link href="https://dinosaurseateverybody.com" rel="self" type="application/atom+xml" />
   <link href="https://dinosaurseateverybody.com" />
-  <updated>2026-02-01T22:55:04-06:00</updated>
+  <updated>2026-02-06T15:32:41-06:00</updated>
   <id>https://dinosaurseateverybody.com</id>
   <title type="html">Dinosaurs Eat Everybody</title>
   <subtitle>For all your Dave Schwantes related needs.</subtitle>
+  
+  <entry>
+    <title>Powered By Postwave</title>
+    <link href="https://dinosaurseateverybody.com/blog/powered-by-postwave" rel="alternate" type="text/html" title="Powered By Postwave" />
+    <id>https://dinosaurseateverybody.com/blog/powered-by-postwave</id>
+    <published>2026-02-06T14:58:00-06:00</published>
+    <updated>2026-02-06T14:58:00-06:00</updated>
+    <author>
+      <name>Dinosaurs Eat Everybody</name>
+    </author>
+    <content type="html">
+      <![CDATA[<p><strong>This blog is now using my home-grown blogging library, <a href="https://postwave.blog/">Postwave</a>!</strong></p>
+
+<p>I <a href="../blog/postwave">wrote about Postwave</a> a little while ago, but at the time this site was still using the hacked together Jekyll-based solution that I had been using since around <a href="../blog/sinatra-jekyll-prose">2013</a>. It seemed a bit silly to build a blogging library but not use it for my own blog, but I was a little daunted by the task of migrating all my posts over in a way that didn't break everything.  I had hit the point where I was writing posts for this site and wished I could be using Postwave so when I had a little bit of free time one night last week so I decided to give it a shot and it turned out to be...</p>
+
+<p>Not that bad.</p>
+
+<p>Postwave posts look very similar to Jekyll posts. They are Markdown files with a little bit of header information:</p>
+
+<pre><code class="markdown">title: Powered By Postwave
+date: 2026-02-06 14:58
+tags:
+
+**This blog is now using my home-grown blogging library, [Postwave](https://postwave.blog/)!**
+</code></pre>
+
+<p>With a little help from Copilot, I wrote a basic script to migrate all the Jekyll posts over to the Postwave directories and make any formatting changes needed. I'm planning to use this script as the basis for a future <code>postwave migrate</code> command in the Postwave library.</p>
+
+<p>After this I just added some of the basic post display and archive code needed to make use of all those new Postwave-shaped Markdown files. Much of this code was lifted from the <a href="https://github.com/dorkrawk/postwave-site">Postwave example blog</a>.</p>
+
+<p>The whole process ended up being pretty easy and I was able to migrate things without really changing any of the urls for old posts. It's very likely (and intentional) that nobody else will notice the change, but I know and that's what matters. It's a really good feeling to use a tool that you made for yourself and works EXACTLY the way you want it to.</p>
+]]>
+    </content>
+    
+  </entry>
   
   <entry>
     <title>Fine, I&#39;ll Do It Myself</title>
