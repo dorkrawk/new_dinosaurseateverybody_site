@@ -8,3 +8,11 @@ track_list:
     audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01_lets_get_weird_again.mp3
     album: Stereoscopic
     year: 2025
+  - title: Bedrock
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/02_bedrock.mp3
+    album: Stereoscopic
+    year: 2025
+  - title: Top Me Off
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/03_top_me_off.mp3
+    album: Stereoscopic
+    year: 2025
