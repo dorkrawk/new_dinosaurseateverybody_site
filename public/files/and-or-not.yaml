@@ -1,0 +1,10 @@
+collection_name: And Or Not
+artist: And Or Not
+year: 2025
+art: images/album_art/andornot-stereoscopic.png
+
+track_list:
+  - title: Let's Get Weird Again
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01_lets_get_weird_again.mp3
+    album: Stereoscopic
+    year: 2025

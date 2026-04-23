@@ -26,4 +26,4 @@ With a little help from Copilot, I wrote a basic script to migrate all the Jekyl
 
 After this I just added some of the basic post display and archive code needed to make use of all those new Postwave-shaped Markdown files. Much of this code was lifted from the [Postwave example blog](https://github.com/dorkrawk/postwave-site).
 
-The whole process ended up being pretty easy and I was able to migrate things without really changing any of the urls for old posts. It's very likely (and intentional) that nobody else will notice the change, but I know and that's what matters. It's a really good feeling to use a tool that you made for yourself and works EXACTLY the way you want it to.
+The whole process ended up being pretty easy and I was able to migrate things without really changing any of the urls for old posts. It's very likely (and intentional) that nobody else will notice the change, but I know and that's what matters. It's a really goodv~ feeling to use a tool that you made for yourself and works EXACTLY the way you want it to.
