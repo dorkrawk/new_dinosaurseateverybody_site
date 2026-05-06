@@ -1,0 +1,14 @@
+collection_name: Packets and Waves
+artist: Packets and Waves
+art: images/album_art/packetsandwaves1.png
+
+track_list:
+  - title: Wine Women and Song
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/WineWomenAndSong.mp3
+    year: 2014
+  - title: Wanderlust
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/Wanderlust.mp3
+    year: 2010
+  - title: Jolene
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/Jolene%20(Dolly%20Parton%20cover).mp3
+    year: 2013
