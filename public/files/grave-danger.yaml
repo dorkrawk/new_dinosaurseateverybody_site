@@ -1,0 +1,54 @@
+collection_name: Grave Danger
+artist: Grave Danger
+
+track_list:
+  - title: Wake the Dead
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01%20Wake%20the%20Dead.mp3
+    album: Wake the Dead
+    art: images/album_art/gravedanger-wakethedead.png
+    year: 2022
+  - title: Specter Inspector
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01%20Specter%20Inspector.mp3
+    album: StereoscopicSpecter Inspector
+    art: images/album_art/gravedanger-specterinspector.png
+    year: 2021
+  - title: Give Up the Ghost
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01%20Give%20Up%20the%20Ghost.mp3
+    album: Tomb It May Concern
+    art: images/album_art/gravedanger-tombitmayconcern.png
+    year: 2019
+  - title: Bigfoot Beach
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/02%20Bigfoot%20Beach.mp3
+    album: Tomb It May Concern
+    art: images/album_art/gravedanger-tombitmayconcern.png
+    year: 2019
+  - title: Cemeterrarium
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/03%20Cemeterrarium.mp3
+    album: Tomb It May Concern
+    art: images/album_art/gravedanger-tombitmayconcern.png
+    year: 2019
+  - title: Halloween
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/04%20Halloween.mp3
+    album: Tomb It May Concern
+    art: images/album_art/gravedanger-tombitmayconcern.png
+    year: 2019
+  - title: Undead End Job
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/05%20Undead%20End%20Job.mp3
+    album: Tomb It May Concern
+    art: images/album_art/gravedanger-tombitmayconcern.png
+    year: 2019
+  - title: Grave Danger
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/01%20Grave%20Danger.mp3
+    album: Let 'er RIP!
+    art: images/album_art/gravedanger-leterrip.png
+    year: 2018
+  - title: Escape From Skull City
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/02%20Escape%20From%20Skull%20City.mp3
+    album: Let 'er RIP!
+    art: images/album_art/gravedanger-leterrip.png
+    year: 2019
+  - title: Too Ghoul For School
+    audio_file: https://pub-ad2e995e788447feadf41a21df005e4b.r2.dev/03%20Too%20Ghoul%20For%20School.mp3
+    album: Let 'er RIP
+    art: images/album_art/gravedanger-leterrip.png
+    year: 2019
