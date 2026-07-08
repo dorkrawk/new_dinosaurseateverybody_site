@@ -38,11 +38,14 @@ ascii art from https://mozz.us/ascii-art/2023-05-30/t-rex.html
   <title>Dinosaurs Eat Everybody :: <%= @page_title %></title>
   <meta property="og:image" content="https://dinosaurseateverybody.com/images/dinosaurseateverybody-oc-card.png" />
   <link href="../stylesheets/style.css" media="all" rel="stylesheet" type="text/css"/>
-  <link href="../stylesheets/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
   <link href="../stylesheets/syntax.css" media="all" rel="stylesheet" type="text/css"/>
 
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Dinosaurs Eat Everybody" href="http://dinosaurseateverybody.com/blog/rss.xml">
+
+  <link href="../fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="../fontawesome/css/solid.css" rel="stylesheet" />
 
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
@@ -65,10 +68,10 @@ ascii art from https://mozz.us/ascii-art/2023-05-30/t-rex.html
   	</header>
     <nav>
       <%= erb :_nav %>
-      <a href="https://twitter.com/dorkrawk" title="@dorkrawk"><i class="fa fa-twitter fa-3x"></i></a>
-      <a href="https://github.com/dorkrawk" title="dorkrawk on Github"><i class="fa fa-github fa-3x"></i></a>
-      <a href="https://instagram.com/dorkrawk" title="dorkrawk on Instagram"><i class="fa fa-instagram fa-3x"></i></a>
-      <a href="../blog/rss.xml" title="RSS for this blog"><i class="fa fa-rss fa-3x"></i></a>
+      <a href="https://bsky.app/profile/dorkrawk.bsky.social" title="@dorkrawk"><i class="fa-brands fa-bluesky fa-3x"></i></a>
+      <a href="https://github.com/dorkrawk" title="dorkrawk on Github"><i class="fa-brands fa-github fa-3x"></i></a>
+      <a href="https://instagram.com/dorkrawk" title="dorkrawk on Instagram"><i class="fa-brands fa-instagram fa-3x"></i></a>
+      <a href="../blog/rss.xml" title="RSS for this blog"><i class="fa-solid fa-rss fa-3x"></i></a>
     </nav>
     <div id="content">
   	 <%= yield %>
