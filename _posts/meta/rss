@@ -3,17 +3,51 @@
   <generator uri="https://github.com/dorkrawk/postwave" version="0.1.5">Postwave</generator>
   <link href="https://dinosaurseateverybody.com" rel="self" type="application/atom+xml" />
   <link href="https://dinosaurseateverybody.com" />
-  <updated>2026-05-07T20:28:03-05:00</updated>
+  <updated>2026-07-21T13:40:21-10:00</updated>
   <id>https://dinosaurseateverybody.com</id>
   <title type="html">Dinosaurs Eat Everybody</title>
   <subtitle>For all your Dave Schwantes related needs.</subtitle>
   
   <entry>
+    <title>Coding Used To Be Amazing</title>
+    <link href="https://dinosaurseateverybody.com/blog/coding-used-to-be-amazing" rel="alternate" type="text/html" title="Coding Used To Be Amazing" />
+    <id>https://dinosaurseateverybody.com/blog/coding-used-to-be-amazing</id>
+    <published>2026-07-21T13:12:00-10:00</published>
+    <updated>2026-07-21T13:12:00-10:00</updated>
+    <author>
+      <name>Dinosaurs Eat Everybody</name>
+    </author>
+    <content type="html">
+      <![CDATA[<p><strong>Coding, as a skill, used to be truly amazing.</strong></p>
+
+<p>I should be more clear.</p>
+
+<p>Code is still pretty impressive. It's neat that we can control computers well enough to do amazing things and people today are doing more with code than ever before.  But there was a time (let's say roughly the 2010s, plus or minus a few years) where it was both approachable, but came with enough friction that it was highly valued.</p>
+
+<p>I know lots of people who came from non-technical backgrounds who learned enough Javascript (or Ruby or Python or whatever) by working hard for a relatively short amount of time and then eventually landed high paying software engineering jobs. I helped run an <a href="https://tech.instacart.com/carrot-u-building-an-in-house-coding-bootcamp-d2c0a746dd73?gi=8306b63577db">in-house bootcamp</a> at an old job that helped people learn coding skills and many of those people are senior engineers today. This is amazing. </p>
+
+<p>During that time coding was in a sweet spot where there was enough maturity and tooling that coding was made both more accessible and more powerful, much more so than when I was studying CS in college. I don't remember very many people who weren't already "computer people" teaching themselves how to code in the early 2000s.</p>
+
+<p>Couple this with an explosion of educational resources, "learn to code" videos and tutorials, and bootcamps and there really was a path to learning these skills. And you could keep getting more skilled by learning about languages and design patterns and new technologies and algorithms and lots of other things that were non-trivial but approachable. What was incredible was that there was still high demand. The job market wasn't yet saturated, <a href="https://en.wikipedia.org/wiki/Zero_interest-rate_policy">ZIRP</a> still had tech companies hiring engineers like crazy, but coding was still esoteric enough that not EVERYBODY wanted to do it.</p>
+
+<p>Writing code used to be just hard enough AND just easy enough to be viable and valuable.</p>
+
+<p>Like every other piece of tech writing on the internet now, this one is kind of about AI. </p>
+
+<p>It's mind boggling that anybody can making complex applications through natural language prompting. People currently working in software are living in a sci fi fantasy world.  But powerful tools like this have made coding cheap, which is amazing in many ways, but it's ok to take a little time to morn that when things become cheap, they become less valued.</p>
+
+<p>While I'm enjoying all the productivity that AI has unlocked (I'm certainly tackling projects I wouldn't have previously approached) there's still a twinge of sadness because of the loss of coding as something that was just hard enough to be amazing.</p>
+]]>
+    </content>
+    
+  </entry>
+  
+  <entry>
     <title>It&#39;s Never Been Easier To Be Impractical</title>
     <link href="https://dinosaurseateverybody.com/blog/its-never-been-easier-to-be-impractical" rel="alternate" type="text/html" title="It&#39;s Never Been Easier To Be Impractical" />
     <id>https://dinosaurseateverybody.com/blog/its-never-been-easier-to-be-impractical</id>
-    <published>2026-05-07T12:32:00-05:00</published>
-    <updated>2026-05-07T12:32:00-05:00</updated>
+    <published>2026-05-07T12:32:00-10:00</published>
+    <updated>2026-05-07T12:32:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -58,8 +92,8 @@
     <title>Powered By Postwave</title>
     <link href="https://dinosaurseateverybody.com/blog/powered-by-postwave" rel="alternate" type="text/html" title="Powered By Postwave" />
     <id>https://dinosaurseateverybody.com/blog/powered-by-postwave</id>
-    <published>2026-02-06T14:58:00-06:00</published>
-    <updated>2026-02-06T14:58:00-06:00</updated>
+    <published>2026-02-06T14:58:00-10:00</published>
+    <updated>2026-02-06T14:58:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -93,8 +127,8 @@ tags:
     <title>Fine, I&#39;ll Do It Myself</title>
     <link href="https://dinosaurseateverybody.com/blog/fine-ill-do-it-myself" rel="alternate" type="text/html" title="Fine, I&#39;ll Do It Myself" />
     <id>https://dinosaurseateverybody.com/blog/fine-ill-do-it-myself</id>
-    <published>2026-01-15T00:00:00-06:00</published>
-    <updated>2026-01-15T00:00:00-06:00</updated>
+    <published>2026-01-15T00:00:00-10:00</published>
+    <updated>2026-01-15T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -164,8 +198,8 @@ ufw status
     <title>Postwave</title>
     <link href="https://dinosaurseateverybody.com/blog/postwave" rel="alternate" type="text/html" title="Postwave" />
     <id>https://dinosaurseateverybody.com/blog/postwave</id>
-    <published>2025-12-15T00:00:00-06:00</published>
-    <updated>2025-12-15T00:00:00-06:00</updated>
+    <published>2025-12-15T00:00:00-10:00</published>
+    <updated>2025-12-15T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -204,8 +238,8 @@ ufw status
     <title>Random Thoughts About AI</title>
     <link href="https://dinosaurseateverybody.com/blog/random-thoughts-about-ai" rel="alternate" type="text/html" title="Random Thoughts About AI" />
     <id>https://dinosaurseateverybody.com/blog/random-thoughts-about-ai</id>
-    <published>2025-10-21T00:00:00-05:00</published>
-    <updated>2025-10-21T00:00:00-05:00</updated>
+    <published>2025-10-21T00:00:00-10:00</published>
+    <updated>2025-10-21T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -232,8 +266,8 @@ ufw status
     <title>Just Use a Laptop</title>
     <link href="https://dinosaurseateverybody.com/blog/just-use-a-laptop" rel="alternate" type="text/html" title="Just Use a Laptop" />
     <id>https://dinosaurseateverybody.com/blog/just-use-a-laptop</id>
-    <published>2025-10-15T00:00:00-05:00</published>
-    <updated>2025-10-15T00:00:00-05:00</updated>
+    <published>2025-10-15T00:00:00-10:00</published>
+    <updated>2025-10-15T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -268,8 +302,8 @@ ufw status
     <title>Playing With Linux</title>
     <link href="https://dinosaurseateverybody.com/blog/playing-with-linux" rel="alternate" type="text/html" title="Playing With Linux" />
     <id>https://dinosaurseateverybody.com/blog/playing-with-linux</id>
-    <published>2025-09-08T00:00:00-05:00</published>
-    <updated>2025-09-08T00:00:00-05:00</updated>
+    <published>2025-09-08T00:00:00-10:00</published>
+    <updated>2025-09-08T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -318,8 +352,8 @@ ufw status
     <title>Another And Or Not Record</title>
     <link href="https://dinosaurseateverybody.com/blog/another-and-or-not-record" rel="alternate" type="text/html" title="Another And Or Not Record" />
     <id>https://dinosaurseateverybody.com/blog/another-and-or-not-record</id>
-    <published>2025-08-13T00:00:00-05:00</published>
-    <updated>2025-08-13T00:00:00-05:00</updated>
+    <published>2025-08-13T00:00:00-10:00</published>
+    <updated>2025-08-13T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -364,8 +398,8 @@ ufw status
     <title>Building A Programming Language In Crystal</title>
     <link href="https://dinosaurseateverybody.com/blog/building-a-programming-language-in-crystal" rel="alternate" type="text/html" title="Building A Programming Language In Crystal" />
     <id>https://dinosaurseateverybody.com/blog/building-a-programming-language-in-crystal</id>
-    <published>2025-07-30T00:00:00-05:00</published>
-    <updated>2025-07-30T00:00:00-05:00</updated>
+    <published>2025-07-30T00:00:00-10:00</published>
+    <updated>2025-07-30T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -426,8 +460,8 @@ kitten.meow();
     <title>Making Pizza</title>
     <link href="https://dinosaurseateverybody.com/blog/making-pizza" rel="alternate" type="text/html" title="Making Pizza" />
     <id>https://dinosaurseateverybody.com/blog/making-pizza</id>
-    <published>2025-04-17T00:00:00-05:00</published>
-    <updated>2025-04-17T00:00:00-05:00</updated>
+    <published>2025-04-17T00:00:00-10:00</published>
+    <updated>2025-04-17T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -458,8 +492,8 @@ kitten.meow();
     <title>Pragmatic Divesting From Enshitifcation</title>
     <link href="https://dinosaurseateverybody.com/blog/pragmatic-divesting-from-enshitifcation" rel="alternate" type="text/html" title="Pragmatic Divesting From Enshitifcation" />
     <id>https://dinosaurseateverybody.com/blog/pragmatic-divesting-from-enshitifcation</id>
-    <published>2025-03-19T00:00:00-05:00</published>
-    <updated>2025-03-19T00:00:00-05:00</updated>
+    <published>2025-03-19T00:00:00-10:00</published>
+    <updated>2025-03-19T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -489,8 +523,8 @@ Finally, I'm looking around more for weird fun things on the internet. People ju
     <title>Don&#39;t Break Prod</title>
     <link href="https://dinosaurseateverybody.com/blog/dont-break-prod" rel="alternate" type="text/html" title="Don&#39;t Break Prod" />
     <id>https://dinosaurseateverybody.com/blog/dont-break-prod</id>
-    <published>2025-03-03T00:00:00-06:00</published>
-    <updated>2025-03-03T00:00:00-06:00</updated>
+    <published>2025-03-03T00:00:00-10:00</published>
+    <updated>2025-03-03T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -515,8 +549,8 @@ Finally, I'm looking around more for weird fun things on the internet. People ju
     <title>Homeboard</title>
     <link href="https://dinosaurseateverybody.com/blog/homeboard" rel="alternate" type="text/html" title="Homeboard" />
     <id>https://dinosaurseateverybody.com/blog/homeboard</id>
-    <published>2024-09-11T00:00:00-05:00</published>
-    <updated>2024-09-11T00:00:00-05:00</updated>
+    <published>2024-09-11T00:00:00-10:00</published>
+    <updated>2024-09-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -580,8 +614,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>Now</title>
     <link href="https://dinosaurseateverybody.com/blog/now" rel="alternate" type="text/html" title="Now" />
     <id>https://dinosaurseateverybody.com/blog/now</id>
-    <published>2024-08-21T00:00:00-05:00</published>
-    <updated>2024-08-21T00:00:00-05:00</updated>
+    <published>2024-08-21T00:00:00-10:00</published>
+    <updated>2024-08-21T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -602,8 +636,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>And Or Not</title>
     <link href="https://dinosaurseateverybody.com/blog/and-or-not" rel="alternate" type="text/html" title="And Or Not" />
     <id>https://dinosaurseateverybody.com/blog/and-or-not</id>
-    <published>2023-12-06T00:00:00-06:00</published>
-    <updated>2023-12-06T00:00:00-06:00</updated>
+    <published>2023-12-06T00:00:00-10:00</published>
+    <updated>2023-12-06T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -640,8 +674,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>Trackstar</title>
     <link href="https://dinosaurseateverybody.com/blog/trackstar" rel="alternate" type="text/html" title="Trackstar" />
     <id>https://dinosaurseateverybody.com/blog/trackstar</id>
-    <published>2020-07-11T00:00:00-05:00</published>
-    <updated>2020-07-11T00:00:00-05:00</updated>
+    <published>2020-07-11T00:00:00-10:00</published>
+    <updated>2020-07-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -676,8 +710,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>Recording Let &#39;er RIP!</title>
     <link href="https://dinosaurseateverybody.com/blog/recording-let-er-rip" rel="alternate" type="text/html" title="Recording Let &#39;er RIP!" />
     <id>https://dinosaurseateverybody.com/blog/recording-let-er-rip</id>
-    <published>2019-01-30T00:00:00-06:00</published>
-    <updated>2019-01-30T00:00:00-06:00</updated>
+    <published>2019-01-30T00:00:00-10:00</published>
+    <updated>2019-01-30T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -754,8 +788,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>Starting A Skath Band</title>
     <link href="https://dinosaurseateverybody.com/blog/starting-a-skath-band" rel="alternate" type="text/html" title="Starting A Skath Band" />
     <id>https://dinosaurseateverybody.com/blog/starting-a-skath-band</id>
-    <published>2017-11-06T00:00:00-06:00</published>
-    <updated>2017-11-06T00:00:00-06:00</updated>
+    <published>2017-11-06T00:00:00-10:00</published>
+    <updated>2017-11-06T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -794,8 +828,8 @@ applicable = STREET_CLEANING_MONTH_RANGE.include?(timestamp.month)
     <title>Making Moola</title>
     <link href="https://dinosaurseateverybody.com/blog/making-moola" rel="alternate" type="text/html" title="Making Moola" />
     <id>https://dinosaurseateverybody.com/blog/making-moola</id>
-    <published>2017-07-11T00:00:00-05:00</published>
-    <updated>2017-07-11T00:00:00-05:00</updated>
+    <published>2017-07-11T00:00:00-10:00</published>
+    <updated>2017-07-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -836,8 +870,8 @@ money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
     <title>Inktober 2016</title>
     <link href="https://dinosaurseateverybody.com/blog/inktober-2016" rel="alternate" type="text/html" title="Inktober 2016" />
     <id>https://dinosaurseateverybody.com/blog/inktober-2016</id>
-    <published>2016-11-03T00:00:00-05:00</published>
-    <updated>2016-11-03T00:00:00-05:00</updated>
+    <published>2016-11-03T00:00:00-10:00</published>
+    <updated>2016-11-03T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -862,8 +896,8 @@ money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
     <title>Don&#39;t Screw It Up</title>
     <link href="https://dinosaurseateverybody.com/blog/dont-screw-it-up" rel="alternate" type="text/html" title="Don&#39;t Screw It Up" />
     <id>https://dinosaurseateverybody.com/blog/dont-screw-it-up</id>
-    <published>2016-09-17T00:00:00-05:00</published>
-    <updated>2016-09-17T00:00:00-05:00</updated>
+    <published>2016-09-17T00:00:00-10:00</published>
+    <updated>2016-09-17T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -900,8 +934,8 @@ money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
     <title>One Year of Input Coffee</title>
     <link href="https://dinosaurseateverybody.com/blog/one-year-of-input-coffee" rel="alternate" type="text/html" title="One Year of Input Coffee" />
     <id>https://dinosaurseateverybody.com/blog/one-year-of-input-coffee</id>
-    <published>2016-05-26T00:00:00-05:00</published>
-    <updated>2016-05-26T00:00:00-05:00</updated>
+    <published>2016-05-26T00:00:00-10:00</published>
+    <updated>2016-05-26T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -940,8 +974,8 @@ money.convert_to(Moola::Currency.find("cad")) # Moola::Money(1_30, "cad")
     <title>New Guitar Pedal</title>
     <link href="https://dinosaurseateverybody.com/blog/new-guitar-pedal" rel="alternate" type="text/html" title="New Guitar Pedal" />
     <id>https://dinosaurseateverybody.com/blog/new-guitar-pedal</id>
-    <published>2016-02-10T00:00:00-06:00</published>
-    <updated>2016-02-10T00:00:00-06:00</updated>
+    <published>2016-02-10T00:00:00-10:00</published>
+    <updated>2016-02-10T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -975,8 +1009,8 @@ The enclosure that comes with the kit is... utilitarian, to say the least. This 
     <title>Inktober 2015</title>
     <link href="https://dinosaurseateverybody.com/blog/inktober-2015" rel="alternate" type="text/html" title="Inktober 2015" />
     <id>https://dinosaurseateverybody.com/blog/inktober-2015</id>
-    <published>2015-11-01T00:00:00-05:00</published>
-    <updated>2015-11-01T00:00:00-05:00</updated>
+    <published>2015-11-01T00:00:00-10:00</published>
+    <updated>2015-11-01T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1018,8 +1052,8 @@ The enclosure that comes with the kit is... utilitarian, to say the least. This 
     <title>Darwinning Updates</title>
     <link href="https://dinosaurseateverybody.com/blog/darwinning-updates" rel="alternate" type="text/html" title="Darwinning Updates" />
     <id>https://dinosaurseateverybody.com/blog/darwinning-updates</id>
-    <published>2015-09-27T00:00:00-05:00</published>
-    <updated>2015-09-27T00:00:00-05:00</updated>
+    <published>2015-09-27T00:00:00-10:00</published>
+    <updated>2015-09-27T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1076,8 +1110,8 @@ end
     <title>Our Story Recording</title>
     <link href="https://dinosaurseateverybody.com/blog/our-story-recording" rel="alternate" type="text/html" title="Our Story Recording" />
     <id>https://dinosaurseateverybody.com/blog/our-story-recording</id>
-    <published>2015-08-10T00:00:00-05:00</published>
-    <updated>2015-08-10T00:00:00-05:00</updated>
+    <published>2015-08-10T00:00:00-10:00</published>
+    <updated>2015-08-10T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1114,8 +1148,8 @@ end
     <title>Input Coffee (v2)</title>
     <link href="https://dinosaurseateverybody.com/blog/input-coffee-v2" rel="alternate" type="text/html" title="Input Coffee (v2)" />
     <id>https://dinosaurseateverybody.com/blog/input-coffee-v2</id>
-    <published>2015-07-14T00:00:00-05:00</published>
-    <updated>2015-07-14T00:00:00-05:00</updated>
+    <published>2015-07-14T00:00:00-10:00</published>
+    <updated>2015-07-14T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1154,8 +1188,8 @@ Spent most of this session doing acoustic stuff...
     <title>Divorce and the American South Cover</title>
     <link href="https://dinosaurseateverybody.com/blog/divorce-and-the-american-south-cover" rel="alternate" type="text/html" title="Divorce and the American South Cover" />
     <id>https://dinosaurseateverybody.com/blog/divorce-and-the-american-south-cover</id>
-    <published>2015-05-11T00:00:00-05:00</published>
-    <updated>2015-05-11T00:00:00-05:00</updated>
+    <published>2015-05-11T00:00:00-10:00</published>
+    <updated>2015-05-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1190,8 +1224,8 @@ Spent most of this session doing acoustic stuff...
     <title>Bloomfilter RS</title>
     <link href="https://dinosaurseateverybody.com/blog/bloomfilter-rs" rel="alternate" type="text/html" title="Bloomfilter RS" />
     <id>https://dinosaurseateverybody.com/blog/bloomfilter-rs</id>
-    <published>2015-04-20T00:00:00-05:00</published>
-    <updated>2015-04-20T00:00:00-05:00</updated>
+    <published>2015-04-20T00:00:00-10:00</published>
+    <updated>2015-04-20T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1234,8 +1268,8 @@ bf.check("oatmeal");
     <title>Aaron West and the Roaring Twenties Drawings</title>
     <link href="https://dinosaurseateverybody.com/blog/aaron-west-and-the-roaring-twenties-drawings" rel="alternate" type="text/html" title="Aaron West and the Roaring Twenties Drawings" />
     <id>https://dinosaurseateverybody.com/blog/aaron-west-and-the-roaring-twenties-drawings</id>
-    <published>2015-02-07T00:00:00-06:00</published>
-    <updated>2015-02-07T00:00:00-06:00</updated>
+    <published>2015-02-07T00:00:00-10:00</published>
+    <updated>2015-02-07T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1269,8 +1303,8 @@ bf.check("oatmeal");
     <title>Thing A Week - Recap</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-recap" rel="alternate" type="text/html" title="Thing A Week - Recap" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-recap</id>
-    <published>2015-01-11T00:00:00-06:00</published>
-    <updated>2015-01-11T00:00:00-06:00</updated>
+    <published>2015-01-11T00:00:00-10:00</published>
+    <updated>2015-01-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1309,8 +1343,8 @@ bf.check("oatmeal");
     <title>Thing A Week 36 - Theremino</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-36-theremino" rel="alternate" type="text/html" title="Thing A Week 36 - Theremino" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-36-theremino</id>
-    <published>2014-10-20T00:00:00-05:00</published>
-    <updated>2014-10-20T00:00:00-05:00</updated>
+    <published>2014-10-20T00:00:00-10:00</published>
+    <updated>2014-10-20T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1347,8 +1381,8 @@ This created something that just constantly made steady sine wave sounding noise
     <title>RecLaboratory Early Tester Launch</title>
     <link href="https://dinosaurseateverybody.com/blog/reclaboratory-early-tester-launch" rel="alternate" type="text/html" title="RecLaboratory Early Tester Launch" />
     <id>https://dinosaurseateverybody.com/blog/reclaboratory-early-tester-launch</id>
-    <published>2014-10-14T00:00:00-05:00</published>
-    <updated>2014-10-14T00:00:00-05:00</updated>
+    <published>2014-10-14T00:00:00-10:00</published>
+    <updated>2014-10-14T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1373,8 +1407,8 @@ This created something that just constantly made steady sine wave sounding noise
     <title>Thing A Week 35 - RecLaboratory Record Track From Song</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song" rel="alternate" type="text/html" title="Thing A Week 35 - RecLaboratory Record Track From Song" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-35-reclaboratory-record-track-from-song</id>
-    <published>2014-09-22T00:00:00-05:00</published>
-    <updated>2014-09-22T00:00:00-05:00</updated>
+    <published>2014-09-22T00:00:00-10:00</published>
+    <updated>2014-09-22T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1400,8 +1434,8 @@ After getting the in-browser track recording to a working place the previous wee
     <title>Thing A Week 34 - Instrumental Indie Music</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music" rel="alternate" type="text/html" title="Thing A Week 34 - Instrumental Indie Music" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-34-instrumental-indie-music</id>
-    <published>2014-09-15T00:00:00-05:00</published>
-    <updated>2014-09-15T00:00:00-05:00</updated>
+    <published>2014-09-15T00:00:00-10:00</published>
+    <updated>2014-09-15T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1430,8 +1464,8 @@ After getting the in-browser track recording to a working place the previous wee
     <title>Thing A Week 33 - Watercolor Painting</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting" rel="alternate" type="text/html" title="Thing A Week 33 - Watercolor Painting" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-33-watercolor-painting</id>
-    <published>2014-09-08T00:00:00-05:00</published>
-    <updated>2014-09-08T00:00:00-05:00</updated>
+    <published>2014-09-08T00:00:00-10:00</published>
+    <updated>2014-09-08T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1461,8 +1495,8 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
     <title>Thing A Week 32 - In Browser Audio Recording</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording" rel="alternate" type="text/html" title="Thing A Week 32 - In Browser Audio Recording" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-32-in-browser-audio-recording</id>
-    <published>2014-09-02T00:00:00-05:00</published>
-    <updated>2014-09-02T00:00:00-05:00</updated>
+    <published>2014-09-02T00:00:00-10:00</published>
+    <updated>2014-09-02T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1491,8 +1525,8 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
     <title>Thing A Week 31 - RecLaboratory Instrument Icons</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons" rel="alternate" type="text/html" title="Thing A Week 31 - RecLaboratory Instrument Icons" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-31-reclaboratory-instrument-icons</id>
-    <published>2014-08-24T00:00:00-05:00</published>
-    <updated>2014-08-24T00:00:00-05:00</updated>
+    <published>2014-08-24T00:00:00-10:00</published>
+    <updated>2014-08-24T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1534,8 +1568,8 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
     <title>Thing A Week 30 - RecLaboratory Servers</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-30-reclaboratory-servers" rel="alternate" type="text/html" title="Thing A Week 30 - RecLaboratory Servers" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-30-reclaboratory-servers</id>
-    <published>2014-08-18T00:00:00-05:00</published>
-    <updated>2014-08-18T00:00:00-05:00</updated>
+    <published>2014-08-18T00:00:00-10:00</published>
+    <updated>2014-08-18T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1564,8 +1598,8 @@ After a trip to the <a href="http://www.waltdisney.org/">Walt Disney Museum</a>,
     <title>Thing A Week 29 - Wedding Ring Box</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-29-wedding-ring-box" rel="alternate" type="text/html" title="Thing A Week 29 - Wedding Ring Box" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-29-wedding-ring-box</id>
-    <published>2014-08-07T00:00:00-05:00</published>
-    <updated>2014-08-07T00:00:00-05:00</updated>
+    <published>2014-08-07T00:00:00-10:00</published>
+    <updated>2014-08-07T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1596,8 +1630,8 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
     <title>Thing A Week 28 - Not Much</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-28-not-much" rel="alternate" type="text/html" title="Thing A Week 28 - Not Much" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-28-not-much</id>
-    <published>2014-07-22T00:00:00-05:00</published>
-    <updated>2014-07-22T00:00:00-05:00</updated>
+    <published>2014-07-22T00:00:00-10:00</published>
+    <updated>2014-07-22T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1622,8 +1656,8 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
     <title>Thing A Week 27 - Even More Sauropod</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod" rel="alternate" type="text/html" title="Thing A Week 27 - Even More Sauropod" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-27-even-more-sauropod</id>
-    <published>2014-07-15T00:00:00-05:00</published>
-    <updated>2014-07-15T00:00:00-05:00</updated>
+    <published>2014-07-15T00:00:00-10:00</published>
+    <updated>2014-07-15T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1664,8 +1698,8 @@ I started by covering the covers in plastic (to avoid getting glue on them) pain
     <title>Thing A Week 26 - More Sauropod</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod" rel="alternate" type="text/html" title="Thing A Week 26 - More Sauropod" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-26-more-sauropod</id>
-    <published>2014-07-08T00:00:00-05:00</published>
-    <updated>2014-07-08T00:00:00-05:00</updated>
+    <published>2014-07-08T00:00:00-10:00</published>
+    <updated>2014-07-08T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1710,8 +1744,8 @@ sauropod.play = function() {
     <title>Thing A Week 25 - Sauropod and Wedding Stuff</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff" rel="alternate" type="text/html" title="Thing A Week 25 - Sauropod and Wedding Stuff" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-25-sauropod-and-wedding-stuff</id>
-    <published>2014-06-30T00:00:00-05:00</published>
-    <updated>2014-06-30T00:00:00-05:00</updated>
+    <published>2014-06-30T00:00:00-10:00</published>
+    <updated>2014-06-30T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1744,8 +1778,8 @@ sauropod.play = function() {
     <title>Thing A Week 24 - RecLab Feed</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed" rel="alternate" type="text/html" title="Thing A Week 24 - RecLab Feed" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-24-reclab-feed</id>
-    <published>2014-06-23T00:00:00-05:00</published>
-    <updated>2014-06-23T00:00:00-05:00</updated>
+    <published>2014-06-23T00:00:00-10:00</published>
+    <updated>2014-06-23T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1778,8 +1812,8 @@ sauropod.play = function() {
     <title>Thing A Week 23 - Bird Watcher Display</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-23-bird-watcher-display" rel="alternate" type="text/html" title="Thing A Week 23 - Bird Watcher Display" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-23-bird-watcher-display</id>
-    <published>2014-06-17T00:00:00-05:00</published>
-    <updated>2014-06-17T00:00:00-05:00</updated>
+    <published>2014-06-17T00:00:00-10:00</published>
+    <updated>2014-06-17T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1812,8 +1846,8 @@ sauropod.play = function() {
     <title>Thing A Week 22 - Reclab Routing</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-22-reclab-routing" rel="alternate" type="text/html" title="Thing A Week 22 - Reclab Routing" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-22-reclab-routing</id>
-    <published>2014-06-10T00:00:00-05:00</published>
-    <updated>2014-06-10T00:00:00-05:00</updated>
+    <published>2014-06-10T00:00:00-10:00</published>
+    <updated>2014-06-10T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1848,8 +1882,8 @@ friendly_id :name, use: [:slugged, :finders, :scoped], scope: :user
     <title>Thing A Week 21 - Wedding Invitations</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations" rel="alternate" type="text/html" title="Thing A Week 21 - Wedding Invitations" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-21-wedding-invitations</id>
-    <published>2014-06-03T00:00:00-05:00</published>
-    <updated>2014-06-03T00:00:00-05:00</updated>
+    <published>2014-06-03T00:00:00-10:00</published>
+    <updated>2014-06-03T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1877,8 +1911,8 @@ Again, this is sort of cheating because most of the creative work was done by ou
     <title>Thing A Week 20 - RecLab Layouts and Rocutopus Connection</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection" rel="alternate" type="text/html" title="Thing A Week 20 - RecLab Layouts and Rocutopus Connection" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-20-reclab-layouts-and-rocktopus-connection</id>
-    <published>2014-05-25T00:00:00-05:00</published>
-    <updated>2014-05-25T00:00:00-05:00</updated>
+    <published>2014-05-25T00:00:00-10:00</published>
+    <updated>2014-05-25T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1904,8 +1938,8 @@ This week I ended up getting quite a bit of RecLab work done, especially for a s
     <title>Thing A Week 19 - RecLab Online Presence</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence" rel="alternate" type="text/html" title="Thing A Week 19 - RecLab Online Presence" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-19-reclab-online-presence</id>
-    <published>2014-05-21T00:00:00-05:00</published>
-    <updated>2014-05-21T00:00:00-05:00</updated>
+    <published>2014-05-21T00:00:00-10:00</published>
+    <updated>2014-05-21T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1932,8 +1966,8 @@ This week I ended up getting quite a bit of RecLab work done, especially for a s
     <title>Thing A Week 18 - Wine Women and Song Cover</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover" rel="alternate" type="text/html" title="Thing A Week 18 - Wine Women and Song Cover" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-18-wine-women-and-song-cover</id>
-    <published>2014-05-11T00:00:00-05:00</published>
-    <updated>2014-05-11T00:00:00-05:00</updated>
+    <published>2014-05-11T00:00:00-10:00</published>
+    <updated>2014-05-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -1968,8 +2002,8 @@ We didn't want to it be an exact copy of the original so I tried to give it a di
     <title>Thing A Week 17 - RecLab and Drawing Class Update</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update" rel="alternate" type="text/html" title="Thing A Week 17 - RecLab and Drawing Class Update" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-17-reclab-and-drawing-class-update</id>
-    <published>2014-05-05T00:00:00-05:00</published>
-    <updated>2014-05-05T00:00:00-05:00</updated>
+    <published>2014-05-05T00:00:00-10:00</published>
+    <updated>2014-05-05T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2008,8 +2042,8 @@ The art class is going well. Value and shading are still pretty tough for me bec
     <title>Thing A Week 16 - No Thing Again</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again" rel="alternate" type="text/html" title="Thing A Week 16 - No Thing Again" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-16-no-thing-again</id>
-    <published>2014-04-28T00:00:00-05:00</published>
-    <updated>2014-04-28T00:00:00-05:00</updated>
+    <published>2014-04-28T00:00:00-10:00</published>
+    <updated>2014-04-28T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2030,8 +2064,8 @@ The art class is going well. Value and shading are still pretty tough for me bec
     <title>Thing A Week 15 - RecLab Song Collaboration</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-15-reclab-song-collaboration" rel="alternate" type="text/html" title="Thing A Week 15 - RecLab Song Collaboration" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-15-reclab-song-collaboration</id>
-    <published>2014-04-21T00:00:00-05:00</published>
-    <updated>2014-04-21T00:00:00-05:00</updated>
+    <published>2014-04-21T00:00:00-10:00</published>
+    <updated>2014-04-21T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2055,8 +2089,8 @@ Once again this was another week where my main productivity was with RecLab. I'm
     <title>Thing A Week 14 - Drawing Class</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-14-drawing-class" rel="alternate" type="text/html" title="Thing A Week 14 - Drawing Class" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-14-drawing-class</id>
-    <published>2014-04-14T00:00:00-05:00</published>
-    <updated>2014-04-14T00:00:00-05:00</updated>
+    <published>2014-04-14T00:00:00-10:00</published>
+    <updated>2014-04-14T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2089,8 +2123,8 @@ Once again this was another week where my main productivity was with RecLab. I'm
     <title>Thing A Week 13 - RecLab and Rocktopus</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-13-reclab-and-roctopus" rel="alternate" type="text/html" title="Thing A Week 13 - RecLab and Rocktopus" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-13-reclab-and-roctopus</id>
-    <published>2014-04-06T00:00:00-05:00</published>
-    <updated>2014-04-06T00:00:00-05:00</updated>
+    <published>2014-04-06T00:00:00-10:00</published>
+    <updated>2014-04-06T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2140,8 +2174,8 @@ def path_method():
     <title>Thing A Week 12 - FilterFilter</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter" rel="alternate" type="text/html" title="Thing A Week 12 - FilterFilter" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-12-filterfilter</id>
-    <published>2014-03-30T00:00:00-05:00</published>
-    <updated>2014-03-30T00:00:00-05:00</updated>
+    <published>2014-03-30T00:00:00-10:00</published>
+    <updated>2014-03-30T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2184,8 +2218,8 @@ end
     <title>Thing A Week 11 - More RecLab</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab" rel="alternate" type="text/html" title="Thing A Week 11 - More RecLab" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-11-more-reclab</id>
-    <published>2014-03-24T00:00:00-05:00</published>
-    <updated>2014-03-24T00:00:00-05:00</updated>
+    <published>2014-03-24T00:00:00-10:00</published>
+    <updated>2014-03-24T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2208,8 +2242,8 @@ end
     <title>Thing A Week 10 - RecLab Site</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-10-reclab-site" rel="alternate" type="text/html" title="Thing A Week 10 - RecLab Site" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-10-reclab-site</id>
-    <published>2014-03-17T00:00:00-05:00</published>
-    <updated>2014-03-17T00:00:00-05:00</updated>
+    <published>2014-03-17T00:00:00-10:00</published>
+    <updated>2014-03-17T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2237,8 +2271,8 @@ This week we did a lot of planning and architecture for the project and I starte
     <title>Thing A Week 9 - No Thing</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing" rel="alternate" type="text/html" title="Thing A Week 9 - No Thing" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-9-no-thing</id>
-    <published>2014-03-10T00:00:00-05:00</published>
-    <updated>2014-03-10T00:00:00-05:00</updated>
+    <published>2014-03-10T00:00:00-10:00</published>
+    <updated>2014-03-10T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2265,8 +2299,8 @@ This week we did a lot of planning and architecture for the project and I starte
     <title>Thing A Week 8 - In The Garage Cover</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-8-in-the-garage-cover" rel="alternate" type="text/html" title="Thing A Week 8 - In The Garage Cover" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-8-in-the-garage-cover</id>
-    <published>2014-03-03T00:00:00-06:00</published>
-    <updated>2014-03-03T00:00:00-06:00</updated>
+    <published>2014-03-03T00:00:00-10:00</published>
+    <updated>2014-03-03T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2307,8 +2341,8 @@ This week we did a lot of planning and architecture for the project and I starte
     <title>Thing A Week 7 - Flask</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-7-flask" rel="alternate" type="text/html" title="Thing A Week 7 - Flask" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-7-flask</id>
-    <published>2014-02-24T00:00:00-06:00</published>
-    <updated>2014-02-24T00:00:00-06:00</updated>
+    <published>2014-02-24T00:00:00-10:00</published>
+    <updated>2014-02-24T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2337,8 +2371,8 @@ This week we did a lot of planning and architecture for the project and I starte
     <title>Thing A Week 6 - Piano and Bass Song</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song" rel="alternate" type="text/html" title="Thing A Week 6 - Piano and Bass Song" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-6-piano-bass-song</id>
-    <published>2014-02-17T00:00:00-06:00</published>
-    <updated>2014-02-17T00:00:00-06:00</updated>
+    <published>2014-02-17T00:00:00-10:00</published>
+    <updated>2014-02-17T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2373,8 +2407,8 @@ This week we did a lot of planning and architecture for the project and I starte
     <title>Thing A Week 5 - Bird Watcher (Part 2)</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-5-bird-watcher-part-2" rel="alternate" type="text/html" title="Thing A Week 5 - Bird Watcher (Part 2)" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-5-bird-watcher-part-2</id>
-    <published>2014-02-09T00:00:00-06:00</published>
-    <updated>2014-02-09T00:00:00-06:00</updated>
+    <published>2014-02-09T00:00:00-10:00</published>
+    <updated>2014-02-09T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2423,8 +2457,8 @@ end
     <title>Does Anyone Still Use RSS?</title>
     <link href="https://dinosaurseateverybody.com/blog/does-anyone-still-use-rss" rel="alternate" type="text/html" title="Does Anyone Still Use RSS?" />
     <id>https://dinosaurseateverybody.com/blog/does-anyone-still-use-rss</id>
-    <published>2014-02-06T00:00:00-06:00</published>
-    <updated>2014-02-06T00:00:00-06:00</updated>
+    <published>2014-02-06T00:00:00-10:00</published>
+    <updated>2014-02-06T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2457,8 +2491,8 @@ end
     <title>Thing A Week 4 - Bird Watcher</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher" rel="alternate" type="text/html" title="Thing A Week 4 - Bird Watcher" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-4-bird-watcher</id>
-    <published>2014-02-04T00:00:00-06:00</published>
-    <updated>2014-02-04T00:00:00-06:00</updated>
+    <published>2014-02-04T00:00:00-10:00</published>
+    <updated>2014-02-04T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2489,8 +2523,8 @@ end
     <title>Thing A Week 3 - Save The Date Comic</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic" rel="alternate" type="text/html" title="Thing A Week 3 - Save The Date Comic" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-3-save-the-date-comic</id>
-    <published>2014-01-26T00:00:00-06:00</published>
-    <updated>2014-01-26T00:00:00-06:00</updated>
+    <published>2014-01-26T00:00:00-10:00</published>
+    <updated>2014-01-26T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2519,8 +2553,8 @@ end
     <title>Thing A Week 2 - Bass Overdrive Pedal</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal" rel="alternate" type="text/html" title="Thing A Week 2 - Bass Overdrive Pedal" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-2-bass-overdrive-pedal</id>
-    <published>2014-01-19T00:00:00-06:00</published>
-    <updated>2014-01-19T00:00:00-06:00</updated>
+    <published>2014-01-19T00:00:00-10:00</published>
+    <updated>2014-01-19T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2553,8 +2587,8 @@ end
     <title>Thing A Week 1 - Professor Rex VonScience Saves The World (an HTML5/JavaScript game)</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world" rel="alternate" type="text/html" title="Thing A Week 1 - Professor Rex VonScience Saves The World (an HTML5/JavaScript game)" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week-1-professor-rex-vonscience-saves-the-world</id>
-    <published>2014-01-12T00:00:00-06:00</published>
-    <updated>2014-01-12T00:00:00-06:00</updated>
+    <published>2014-01-12T00:00:00-10:00</published>
+    <updated>2014-01-12T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2587,8 +2621,8 @@ end
     <title>Thing A Week</title>
     <link href="https://dinosaurseateverybody.com/blog/thing-a-week" rel="alternate" type="text/html" title="Thing A Week" />
     <id>https://dinosaurseateverybody.com/blog/thing-a-week</id>
-    <published>2014-01-06T00:00:00-06:00</published>
-    <updated>2014-01-06T00:00:00-06:00</updated>
+    <published>2014-01-06T00:00:00-10:00</published>
+    <updated>2014-01-06T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2609,8 +2643,8 @@ end
     <title>Chess With a Child</title>
     <link href="https://dinosaurseateverybody.com/blog/chess-with-a-child" rel="alternate" type="text/html" title="Chess With a Child" />
     <id>https://dinosaurseateverybody.com/blog/chess-with-a-child</id>
-    <published>2013-12-08T00:00:00-06:00</published>
-    <updated>2013-12-08T00:00:00-06:00</updated>
+    <published>2013-12-08T00:00:00-10:00</published>
+    <updated>2013-12-08T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2635,8 +2669,8 @@ end
     <title>In My Head, Behind The Music</title>
     <link href="https://dinosaurseateverybody.com/blog/in-my-head-behind-the-music" rel="alternate" type="text/html" title="In My Head, Behind The Music" />
     <id>https://dinosaurseateverybody.com/blog/in-my-head-behind-the-music</id>
-    <published>2013-11-25T00:00:00-06:00</published>
-    <updated>2013-11-25T00:00:00-06:00</updated>
+    <published>2013-11-25T00:00:00-10:00</published>
+    <updated>2013-11-25T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2704,8 +2738,8 @@ Before I pick up my phone and call you</p>
     <title>Darwinning, My Ruby Gem for Genetic Algorithms</title>
     <link href="https://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms" rel="alternate" type="text/html" title="Darwinning, My Ruby Gem for Genetic Algorithms" />
     <id>https://dinosaurseateverybody.com/blog/darwinning-my-ruby-gem-for-genetic-algorithms</id>
-    <published>2013-11-11T00:00:00-06:00</published>
-    <updated>2013-11-11T00:00:00-06:00</updated>
+    <published>2013-11-11T00:00:00-10:00</published>
+    <updated>2013-11-11T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
@@ -2770,8 +2804,8 @@ p.best_member.nice_print # prints the member representing the solution
     <title>Sinatra + Jekyll + Prose</title>
     <link href="https://dinosaurseateverybody.com/blog/sinatra-jekyll-prose" rel="alternate" type="text/html" title="Sinatra + Jekyll + Prose" />
     <id>https://dinosaurseateverybody.com/blog/sinatra-jekyll-prose</id>
-    <published>2013-11-05T00:00:00-06:00</published>
-    <updated>2013-11-05T00:00:00-06:00</updated>
+    <published>2013-11-05T00:00:00-10:00</published>
+    <updated>2013-11-05T00:00:00-10:00</updated>
     <author>
       <name>Dinosaurs Eat Everybody</name>
     </author>
